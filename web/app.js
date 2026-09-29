@@ -199,7 +199,7 @@ function localSearch(q) {
   }
   const partial = terms.length > 1 && scored[0].hit < terms.length;
   status.innerHTML = `<p><b>ТОП-${Math.min(TOP, cards.length)}</b> по запросу «${esc(q)}» — подобраны по словам запроса ` +
-    `из ${fmt(INDEX.length)} сигналов демонстрационной выборки и упорядочены по совпадению и силе сигнала` +
+    `и упорядочены по совпадению и силе сигнала` +
     (cards.length > TOP ? `; ниже — ещё ${cards.length - TOP} по теме` : "") + `.</p>` +
     (partial ? `<div class="note">Точного совпадения со всеми словами запроса в выборке нет — показаны ближайшие ` +
       `по части слов.</div>` : "") +
