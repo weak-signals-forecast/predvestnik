@@ -1,0 +1,11 @@
+# Зависимости контейнера базы сигналов (Dockerfile.registry). torch ставится отдельно, CPU-сборка.
+sentence-transformers==5.*
+numpy==2.*
+pandas==2.*
+pyarrow==21.*
+requests==2.32.*
+fastapi==0.141.*
+uvicorn[standard]==0.53.*
+pydantic==2.*
+sqlalchemy==2.0.*
+psycopg[binary]==3.2.*

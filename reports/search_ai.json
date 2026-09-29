@@ -1,0 +1,3237 @@
+{
+ "query": "технологии в ИИ",
+ "seeds": [
+  "artificial intelligence",
+  "large language models",
+  "AI agents",
+  "generative AI"
+ ],
+ "date": "2026-09-19",
+ "model": "Логистическая регрессия",
+ "stats": {
+  "работ за 2025–2026": 594,
+  "работ за 2019–2022": 548,
+  "новых репозиториев": 298,
+  "заголовков новостей": 66,
+  "фраз-кандидатов": 235,
+  "отсеяно как штампы": 338,
+  "проверено кандидатов": 160,
+  "исключено на ступени 1 (публикации)": 93,
+  "исключено на ступени 2 (Википедия)": 5,
+  "исключено моделью и правилами": 28,
+  "слабых сигналов": 12,
+  "под наблюдением": 5,
+  "с уверенностью ≥ 75 %": 4,
+  "исключено": 126,
+  "секунд": 115
+ },
+ "signals": [
+  {
+   "technology": "память Plug and Play",
+   "technology_original": "plug-and-play memory",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.955,
+   "score_interval_90": [
+    0.635,
+    0.999
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "Блокчейн для кибербезопасности",
+    "query": "blockchain cybersecurity",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 0.74
+   },
+   "description": "«память Plug and Play» (plug-and-play memory): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 18 научных публикаций (рост ×8.0 к 2019–2021), 4 новости за год, 129 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "PlugMem: A single memory system adaptable across AI agent tasks",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ28zX3pfTjdYSE9tTThxaEhfejFBTzZDTjNFdU1xekRiRGtyUHYzTkFsdXR0OF92QUh4VUFJR1U5M3ZBU1ZWWGZ6c1BJTy1kR09YNUNlY01HbFUyemZZYXVOckxDNTJvUE9oalQ4Sk1MRG1keFBhZW5FeU81N2MtWE5RZHZWdFlVX01BQS1KLUVWUzZiemFicjlyVVJsLWlBb1pNc3dmUGpaWmg2Y2txTnhfUmNSazVCdWZFclhn?oc=5",
+    "source_name": "Microsoft",
+    "source_type": "новости",
+    "published": "2026-03-10",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 61%",
+    "↑ доля пресс-релизов: 25%",
+    "↑ упоминания в Википедии: 1",
+    "↑ число научных областей: 4"
+   ],
+   "takeoff": {
+    "probability": 0.85,
+    "percentile": 0.83,
+    "horizon": "2029–2031",
+    "baseline_per_year": 7.0,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.55,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 2.944,
+    "oa_recent_log": 2.084,
+    "oa_growth": 2.084,
+    "oa_age": 2.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.333,
+    "oa_preprint_share": 0.611,
+    "oa_company_share": 0.2,
+    "oa_fields": 4.0,
+    "news_1y": 4.0,
+    "news_30d_share": 0.0,
+    "news_sources": 4.0,
+    "news_press_share": 0.25,
+    "hn_12m_log": 0.0,
+    "hn_growth": 0.0,
+    "gh_total_log": 4.868,
+    "gh_new_share": 0.744,
+    "gh_max_stars_log": 7.776,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "KARMA: Augmenting Embodied AI Agents with Long-and-Short Term Memory Systems",
+     "url": "https://doi.org/10.1109/icra55743.2025.11128047",
+     "source_name": "OpenAlex",
+     "source_type": "научная публикация",
+     "published": "2025-05-19",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "KARMA: Augmenting Embodied AI Agents with Long-and-Short Term Memory Systems. Embodied AI agents responsible for executing interconnected, long-sequence household tasks often face difficulties with in-context memory, leading to inefficiencies and errors in task execution. To address this issue, we introduce KARMA, an innovative memory system that integrates longterm and short-term memory modules, enhancing large language models (LLMs) for planning in embodied agents through memory-augmented prompting. Karma distinguishes between long-term and short-term memory, with long-term memory capturing comprehensive 3D scene graphs as representations of the environment, while short-term memory dynamic",
+     "extra": {}
+    },
+    {
+     "title": "PlugMem: A single memory system adaptable across AI agent tasks",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ28zX3pfTjdYSE9tTThxaEhfejFBTzZDTjNFdU1xekRiRGtyUHYzTkFsdXR0OF92QUh4VUFJR1U5M3ZBU1ZWWGZ6c1BJTy1kR09YNUNlY01HbFUyemZZYXVOckxDNTJvUE9oalQ4Sk1MRG1keFBhZW5FeU81N2MtWE5RZHZWdFlVX01BQS1KLUVWUzZiemFicjlyVVJsLWlBb1pNc3dmUGpaWmg2Y2txTnhfUmNSazVCdWZFclhn?oc=5",
+     "source_name": "Microsoft",
+     "source_type": "новости",
+     "published": "2026-03-10",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "MemVerge Expands MemMachine Ecosystem and AI Memory System Capabilities",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb3BzVi1sU1pQM0xSekpCV2ZqNFRuR1NoWjZYSFN3RDFsMVpNSE16dDFfX0lNT2pHb0FpMllNZF9sVm00QnZPaGVfX0VKaC1ZaUR3WmZleWplN1JGQTFvV2xCbWN3VmtiZWd2QnhCQ1ZucnRYQmxvMUlkSFRYSFFiS3RNRGFkN1c1NEhEbThuemhKSGlEbXBaUzlQRnhURFdad2IybE1GblphcThCUGUxWFkyTnQ0aVZNa0tjQmNRcElTenppZVE?oc=5",
+     "source_name": "PR Newswire",
+     "source_type": "пресс-релиз",
+     "published": "2025-12-16",
+     "language": "en",
+     "trust": "пониженный",
+     "trust_reason": "пресс-релиз: первичный индикатор, требует независимого подтверждения",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Agentic Infrastructure: What Actually Goes in the Stack",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE90SnJIZG44T1J6U3FyQXFBYVhrM3l6NXBPazhHa0MtMm1FbV9mUXVGZFdTZG9Bbm9UYjNBYVBZQlR3VGFrTkdDOVR1U3A0TE1EaXczM3FZR09ZeGdabWtRQXBhdHRObjJ0WjE3eTFUUWQ?oc=5",
+     "source_name": "Augment Code",
+     "source_type": "новости",
+     "published": "2026-05-03",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "LUMIA-Group/MemoryDecoder: The official implementation of the paper \"Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models\" (NeurIPS 2025 Poster).",
+     "url": "https://github.com/LUMIA-Group/MemoryDecoder",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-09-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 78
+     }
+    }
+   ]
+  },
+  {
+   "technology": "защищённый агент ИИ",
+   "technology_original": "secure ai agent",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.897,
+   "score_interval_90": [
+    0.681,
+    0.977
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.66
+   },
+   "description": "«защищённый агент ИИ» (secure ai agent): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 86 научных публикаций (рост ×37.1 к 2019–2021), 61 новость за год, 1771 репозиторий. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "From protocol to practice: Secure the AI agent ecosystem with Duo",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1NZFYydXRVc0NxMXJtMzZRSHRBenB3SldVSmo4QWJoMGg0R3FXVmE4ZG0xM3dkTTdjeDl2UEF1cGswR3lmQ0psbHZOSUZrOUlmczZMa3VIVHhYN3RlLXhIRk15VkpsUQ?oc=5",
+    "source_name": "Cisco Duo",
+    "source_type": "новости",
+    "published": "2026-01-07",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 62%",
+    "↓ рост публикаций к 2019–2021: ×37.1",
+    "↑ упоминания в Википедии: 0",
+    "↓ число репозиториев: 1 771"
+   ],
+   "takeoff": {
+    "probability": 0.957,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 36.1,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.55,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.466,
+    "oa_recent_log": 3.613,
+    "oa_growth": 3.613,
+    "oa_age": 2.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.209,
+    "oa_preprint_share": 0.616,
+    "oa_company_share": 0.291,
+    "oa_fields": 6.0,
+    "news_1y": 61.0,
+    "news_30d_share": 0.295,
+    "news_sources": 51.0,
+    "news_press_share": 0.131,
+    "hn_12m_log": 1.946,
+    "hn_growth": 1.03,
+    "gh_total_log": 7.48,
+    "gh_new_share": 0.865,
+    "gh_max_stars_log": 11.222,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "AI Agents Under Threat: A Survey of Key Security Challenges and Future Pathways",
+     "url": "https://doi.org/10.1145/3716628",
+     "source_name": "ACM Computing Surveys",
+     "source_type": "научная публикация",
+     "published": "2025-02-07",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "AI Agents Under Threat: A Survey of Key Security Challenges and Future Pathways. An Artificial Intelligence (AI) agent is a software entity that autonomously performs tasks or makes decisions based on pre-defined objectives and data inputs. AI agents, capable of perceiving user inputs, reasoning and planning tasks, and executing actions, have seen remarkable advancements in algorithm development and task performance. However, the security challenges they pose remain under-explored and unresolved. This survey delves into the emerging security threats faced by AI agents, categorizing them into four critical knowledge gaps: unpredictability of multi-step user inputs, complexity in internal exec",
+     "extra": {}
+    },
+    {
+     "title": "From protocol to practice: Secure the AI agent ecosystem with Duo",
+     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1NZFYydXRVc0NxMXJtMzZRSHRBenB3SldVSmo4QWJoMGg0R3FXVmE4ZG0xM3dkTTdjeDl2UEF1cGswR3lmQ0psbHZOSUZrOUlmczZMa3VIVHhYN3RlLXhIRk15VkpsUQ?oc=5",
+     "source_name": "Cisco Duo",
+     "source_type": "новости",
+     "published": "2026-01-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Building Trust in AI Agent Ecosystems",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Rd1VXSVVxZE5zVVB3RHYycTVlQlF6dWk0ZXg2X2tRVldNS0RMR0RwekFVXzlGcnBUejFELVRVeUFZMFZ4UTRkT3JLNlBDY1VFZFlYR0k2UjZNWS1mSS16WXJUeFpYY2ctUkdPSHo4M0ZZNThn?oc=5",
+     "source_name": "Cisco Blogs",
+     "source_type": "новости",
+     "published": "2026-01-20",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Okta expands Cross App Access ecosystem to secure AI agent connections",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdXhxNjNBRnVmOTJITkJkM3FlSWlOWXdGOUg2ZXJ5MGpnUC1qR25zN1p2V1JYNy1ZZzFXRnF0QzNhWWVmSjV2ajhYdlRncXczYU5rZVk0S2YwMDNXYlp6dVIxakFFcEhSd0s5b01LMURFdDBiYVc0bnBNR3UxRjBGMnlaNFBEZko3R0xTb24zQ3czWHlOMnAycmFUb0lRZEFmVHZxdDVlQQ?oc=5",
+     "source_name": "siliconangle.com",
+     "source_type": "новости",
+     "published": "2026-06-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "профессиональное отраслевое или деловое СМИ",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "evelyyyyynnnnn/1.0-Secure-Ai-Agent-Infrastructure: Research prototypes and infrastructure tools for building secure AI agent systems using large language models, blockchain technologies, and distribut",
+     "url": "https://github.com/evelyyyyynnnnn/1.0-Secure-Ai-Agent-Infrastructure",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-18",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 191
+     }
+    }
+   ]
+  },
+  {
+   "technology": "дистилляция on-policy",
+   "technology_original": "on-policy distillation",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.864,
+   "score_interval_90": [
+    0.483,
+    0.973
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.59
+   },
+   "description": "«дистилляция on-policy» (on-policy distillation): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 982 научные публикации (рост ×28.7 к 2019–2021), 10 новостей за год, 1240 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "35 вопросов для собеседований по RL в 2026 году",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1jckNReW92VlRNZFJnYnlBR204b0RjUXV0Nkh4SzVmN0lVZlREU0NudzdkeE04bGZmc0l2OVkySlVZb2pkRC00NDI0WFMzZ9IBWEFVX3lxTFA1QlE3ODRBOWZaa2NjVUw2V1l0VGEyUzlaZjdnX19acXdnMlJ2ZTVzYldzMDIwTGg3YnNEVnl5aGpwcGR1TDR2bDVRNGo4OTNRczNZazcxb2E?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-07-04",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 77%",
+    "↑ рост обсуждений разработчиков: 2.83",
+    "↓ рост публикаций к 2019–2021: ×28.7",
+    "↓ доля свежих новостей за месяц: 100%"
+   ],
+   "takeoff": {
+    "probability": 0.946,
+    "percentile": 0.93,
+    "horizon": "2029–2031",
+    "baseline_per_year": 391.2,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 6.891,
+    "oa_recent_log": 5.972,
+    "oa_growth": 3.357,
+    "oa_age": 9.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.1,
+    "oa_preprint_share": 0.774,
+    "oa_company_share": 0.2,
+    "oa_fields": 12.0,
+    "news_1y": 10.0,
+    "news_30d_share": 1.0,
+    "news_sources": 10.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 2.833,
+    "hn_growth": 2.833,
+    "gh_total_log": 7.124,
+    "gh_new_share": 0.93,
+    "gh_max_stars_log": 10.062,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "35 вопросов для собеседований по RL в 2026 году",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1jckNReW92VlRNZFJnYnlBR204b0RjUXV0Nkh4SzVmN0lVZlREU0NudzdkeE04bGZmc0l2OVkySlVZb2pkRC00NDI0WFMzZ9IBWEFVX3lxTFA1QlE3ODRBOWZaa2NjVUw2V1l0VGEyUzlaZjdnX19acXdnMlJ2ZTVzYldzMDIwTGg3YnNEVnl5aGpwcGR1TDR2bDVRNGo4OTNRczNZazcxb2E?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-07-04",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "OpenBMB открыла код MiniCPM5-2B — лидер среди open-source моделей до 4B",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbV9Ca1l2N0xaZFBYWF9MdXRXaU8zVDYxN3U0eG54eDUxY2dwUnVBdjE1YU5uQWtoT09ZMF9yOFdUdGhKVWZaUktFZ09fN0VrTVBuX2dnZXpyeXVOcWtXcG9IWG16aGZxRlFTdVJWZERaNWgzVW8yeW9XU29iTjRIQjdzY3R0Zw?oc=5",
+     "source_name": "Techora.ru",
+     "source_type": "новости",
+     "published": "2026-09-07",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "GigaChat 3.5 Reasoning — первая в России открытая модель с рассуждениями / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4wOGVzWWF0Vm9MOGtnUEFyd20tck1BUy1PNzF2SThXU1QxMWtxVFZhd2QzckNUVTRPcUtKQnh3MmNQeWU3RFdmY3hJbXR0amZWcFBmLTA0RDEwbnZ6V1pRUDNzOUd0Rlk?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-09-10",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "OPD Support in Miles",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BNVVOYldBQkFwbWplQXI2REdXTnFrak1RQ2I4Qm9lRXdydlVMb3V0UkpjZW85M3BGdnhjRWZRaWlhNlZrMzE0dndJMjhCY21tSzZqU3Y1WGhxVkZOWnJiemhXY3RaY0xUcFE?oc=5",
+     "source_name": "LMSYS Org",
+     "source_type": "новости",
+     "published": "2026-07-18",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Just Now: Thinking Machines Lab Blog Reveals Qwen Cited 38 Times in Policy Distillation",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1BQl9yc3k5aF9oOXNwNHBFOTNKc1RSMTF0S2d0ZmYtTGVmMVh2aTBHSUhoX3Jac0pUWWNobHFwak56YW43VzVPSVBfUlBEb3cwSUhv?oc=5",
+     "source_name": "36 Kr",
+     "source_type": "новости",
+     "published": "2025-10-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "On-Policy Distillation LLMs Redefine Post-Training Efficiency",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWF9Qbmo1cy10d2ZHSV9IOTIxbkxreWs0SHVDYnNXdUVNWkU2QmhIUFE1VjZjWlhSYVA2ZWZZM05JdE9YWkVnMzVBdWNET1cwanhId3FHWmNxT2FHM1dZMVdLM0JVVnZDWi0yZ2g4YUxibnJ5SkNqdXd5azQ1V04wV0ZlWHRFMzE0Y0h2SEhDSEZxQzB6a0ZqTlNpclB2OVE5V0lNZzlPbWtaWUFXblM1bDRn?oc=5",
+     "source_name": "StartupHub.ai",
+     "source_type": "новости",
+     "published": "2025-10-28",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Thinking-Space/Rethinking-OPD: Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe",
+     "url": "https://github.com/Thinking-Space/Rethinking-OPD",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-12",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 1020
+     }
+    },
+    {
+     "title": "chrisliu298/awesome-on-policy-distillation: A curated collection of papers, technical reports, frameworks, and tools for on-policy distillation (OPD) of large language models",
+     "url": "https://github.com/chrisliu298/awesome-on-policy-distillation",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 835
+     }
+    }
+   ]
+  },
+  {
+   "technology": "навыки агентов",
+   "technology_original": "agent skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.773,
+   "score_interval_90": [
+    0.216,
+    0.974
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 6.65
+   },
+   "description": "«навыки агентов» (agent skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 1267 научных публикаций (рост ×71.9 к 2019–2021), 100 новостей за год, 241510 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Навыки агентов (Agent Skills): что это такое и почему это больше, чем «папка с промптами»",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Jb25tX3l2eF85NG9PYWxJUm9XWUYxMEVzS2tadEZOeW9LSmNSOEh4UXFkdWVPMmFraVUtQUQ0OHF5eF92Z3A5T2ZsZVpJcWs0RUJDc21WT2RHekdCMDNsM0ZRVdIBV0FVX3lxTE1LQkc4aDFhUVJscFljVEdTZUlHd3ZxYWNmWXRjQU1HZHhRRHU1SGVSU09ydklPbXRTY0hYejdodm1JUThfLVZBeldtOHZuMDdTS0Y2UHkzSQ?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-12-26",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 241 510",
+    "↑ рост обсуждений разработчиков: 5.33",
+    "↑ доля препринтов: 57%",
+    "↑ обсуждений разработчиков за год: 413"
+   ],
+   "takeoff": {
+    "probability": 0.99,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 525.9,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 3.17,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 7.145,
+    "oa_recent_log": 6.267,
+    "oa_growth": 4.275,
+    "oa_age": 16.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.026,
+    "oa_preprint_share": 0.572,
+    "oa_company_share": 0.179,
+    "oa_fields": 17.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.31,
+    "news_sources": 59.0,
+    "news_press_share": 0.03,
+    "hn_12m_log": 6.026,
+    "hn_growth": 5.333,
+    "gh_total_log": 12.395,
+    "gh_new_share": 0.997,
+    "gh_max_stars_log": 12.678,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.792
+   },
+   "sources": [
+    {
+     "title": "Навыки агентов (Agent Skills): что это такое и почему это больше, чем «папка с промптами»",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Jb25tX3l2eF85NG9PYWxJUm9XWUYxMEVzS2tadEZOeW9LSmNSOEh4UXFkdWVPMmFraVUtQUQ0OHF5eF92Z3A5T2ZsZVpJcWs0RUJDc21WT2RHekdCMDNsM0ZRVdIBV0FVX3lxTE1LQkc4aDFhUVJscFljVEdTZUlHd3ZxYWNmWXRjQU1HZHhRRHU1SGVSU09ydklPbXRTY0hYejdodm1JUThfLVZBeldtOHZuMDdTS0Y2UHkzSQ?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-12-26",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AI-скиллы для агентов: что это и как написать SKILL.md — журнал «Код»",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Sd25qcmhOTVFiNU5ZMktlcXhZOUhKNzVWZG5FeHRnTlhZeGtzbUJfTGIwdHQ5MkEzeXZYMXNYWXd4S204UUxZNFQxX0NhVGN0NjlDUVV1YWN1UzdxSUh1bw?oc=5",
+     "source_name": "Журнал «Код",
+     "source_type": "новости",
+     "published": "2026-07-03",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Anthropic сделала базовые навыки ИИ-агентов открытым стандартом",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWk45bUw0WVdXZG1qN09IblZ0eURaNWc5N19WM2JyQ0U0VWRKdFRmZjk2eTNOMlF1Y2J0U2J5YWFlVkxWNlROVkEteTBJTU91OHg1MFhqMTNVVl9EN18yN0hmNXBZNU9oYkdidkZnZXlId0s5dWt4UUNQUVI4SGVESEV4SlY2Z3hETEhhNnZqT3lOZ9IBlwFBVV95cUxOOVA4S0lGSHVLQjdnQlRLMk9xZFVXUjY4WXMwMXhfWm9VNjNIcVd2cDd3dGlDcE9LWWhXcFB5UEl5ZVVtSUd4eHlzUkJKZGF1eVdTWjMxVDIzRGZhOE82aThNb0NuMVFwRG9rYVpLMll4VTBHMGxManJ5UTRobmNNR0Q3aWF3bnRJeXlzdTRzSFROMkFMRkow?oc=5",
+     "source_name": "3DNews",
+     "source_type": "новости",
+     "published": "2025-12-23",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Equipping agents for the real world with Agent Skills",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWW0xVE5YRGtqWngtWmtwS0xPVkZqZWg1ck5OU2FpYVVHd1lBNHZyVmhGX1U2aTFBbHVycmVIYzNNSEJVbWFyTEdNM2FwNlBWTFBtakR6a3phZlZOM3NvQ2lTZmR1NWl5Y1ZHSTBaeXBybF9MOUdhdEJjNzVFc2ktazFEMXpfTVhidkY2cENZY2NJYmUxeGc?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "SkillOpt turns AI agent skills into trainable assets",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVnNvSVRPRlBOSkktb3ozS1BGeUU5ZmFJSGQzT04zQ0IzeDMtTGVxT1FXc1JQNm1LTTJ5NndZLXN1SE9tM3FBSkVsbWt2S3ZueWJSLXVTQmFRZTVaQ3A0aUE5anFPRWVfaXlLVHFFc0JOTW5VU3ZWUGUzb3lQZ1dkdzRNdEhwa3JkaEdIYnhEbWtmN1kwZ044?oc=5",
+     "source_name": "Microsoft",
+     "source_type": "новости",
+     "published": "2026-06-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "NVIDIA-Verified Agent Skills Provide Capability Governance for AI Agents | NVIDIA Technical Blog",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd2drOXFmNVBGaHFIY2FOMFpoOUpiTXJ0YmFmcVJTa0VZSjR4bjBfNnc5QW1RUGJUMjYtalVfZGU0YV9ZenRucXBGM1dJZzNxY2hJcXdKdVpuWGxsZUh6UGtZV0JDcTJqRGYwcHA0RlB3N2dTR2JLSGlETUhnUkhxRnVaN2Nfd2plRmJCVTNzRnZFMmZYSmh1R05raHh5d1NVa01XUllWZnVDMEE?oc=5",
+     "source_name": "NVIDIA Developer",
+     "source_type": "новости",
+     "published": "2026-05-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "DietrichGebert/ponytail: Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+     "url": "https://github.com/DietrichGebert/ponytail",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-06-12",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 142347
+     }
+    },
+    {
+     "title": "K-Dense-AI/scientific-agent-skills: Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ ",
+     "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-10-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 45600
+     }
+    }
+   ]
+  },
+  {
+   "technology": "память агентов",
+   "technology_original": "agent memory",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.723,
+   "score_interval_90": [
+    0.242,
+    0.945
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 4.97
+   },
+   "description": "«память агентов» (agent memory): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 1599 научных публикаций (рост ×88.6 к 2019–2021), 100 новостей за год, 57332 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Agentis Memory — Redis-совместимое хранилище со встроенным векторным поиском и локальными эмбеддингами",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1zYVFSZDNoYWFRX2RDZjR0bE9kTVM4cXhqZzI3elpoVU1BclFqREtPTS0tUnI2X3ZydEgwWmJrSk9seWJILTdIdVkzcm51d9IBWEFVX3lxTE0xc2ZBX0NyandpWFJrVmliNjc2a1VDZnFjY0hrNWtXalJGRGd3N2ZhdDFMbkFTRndGcWlJZ3pJb2ZDS0ppeU82Qkw3QVF2di1ZeVlCMm84X0M?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-04-03",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 57 332",
+    "↑ доля препринтов: 64%",
+    "↓ рост публикаций к 2019–2021: ×88.6",
+    "↑ обсуждений разработчиков за год: 251"
+   ],
+   "takeoff": {
+    "probability": 0.978,
+    "percentile": 0.98,
+    "horizon": "2029–2031",
+    "baseline_per_year": 678.4,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 3.2,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 7.378,
+    "oa_recent_log": 6.521,
+    "oa_growth": 4.484,
+    "oa_age": 16.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.061,
+    "oa_preprint_share": 0.635,
+    "oa_company_share": 0.272,
+    "oa_fields": 15.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.34,
+    "news_sources": 38.0,
+    "news_press_share": 0.03,
+    "hn_12m_log": 5.529,
+    "hn_growth": 3.087,
+    "gh_total_log": 10.957,
+    "gh_new_share": 0.923,
+    "gh_max_stars_log": 12.124,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.386
+   },
+   "sources": [
+    {
+     "title": "A Survey on the Memory Mechanism of Large Language Model-based Agents",
+     "url": "https://doi.org/10.1145/3748302",
+     "source_name": "ACM Transactions on Information Systems",
+     "source_type": "научная публикация",
+     "published": "2025-07-11",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "A Survey on the Memory Mechanism of Large Language Model-based Agents. Large language model (LLM)-based agents have recently attracted much attention from the research and industry communities. Compared with original LLMs, LLM-based agents are featured in their self-evolving capability, which is the basis for solving real-world problems that need long-term and complex agent-environment interactions. The key component to support agent-environment interactions is the memory of the agents. While previous studies have proposed many promising memory mechanisms, they are scattered in different papers, and there lacks a systematical review to summarize and compare these works from a holistic perspe",
+     "extra": {}
+    },
+    {
+     "title": "Agentis Memory — Redis-совместимое хранилище со встроенным векторным поиском и локальными эмбеддингами",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1zYVFSZDNoYWFRX2RDZjR0bE9kTVM4cXhqZzI3elpoVU1BclFqREtPTS0tUnI2X3ZydEgwWmJrSk9seWJILTdIdVkzcm51d9IBWEFVX3lxTE0xc2ZBX0NyandpWFJrVmliNjc2a1VDZnFjY0hrNWtXalJGRGd3N2ZhdDFMbkFTRndGcWlJZ3pJb2ZDS0ppeU82Qkw3QVF2di1ZeVlCMm84X0M?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-04-03",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Hermes Agent: установка, настройка и подключение — гайд — журнал «Код»",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1wZ1JQdkdveWU1NlN4M0hPLTVPNTFKUDNRWWYzeGpQRFVFMzlRSnB5WmliMVh0QVJzdUFGYmFZcjhKSkt6czNORWhna0ZxZXd6N3VLemJYSVVQaHZkT1VfMnd2WmxuSU84Qm1n?oc=5",
+     "source_name": "Журнал «Код",
+     "source_type": "новости",
+     "published": "2026-07-03",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Почему мы спорим о памяти для AI-агентов",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBRcWtScDVPbU1uc1RBV2Noam01aE9EZ3YtMGtwMTBIOUFNREl3VXNaZnVTSXJqRG55ajRTQkZDUENodlVSVHVveE1wRndiZ9IBWEFVX3lxTE9GVndacWE3NEl6RGlCdzFVNklObGctLV91ZFhNTlB1dnpSRDN6ZlRZcncyX3g1NWRlNUVuRUxUTG1Gb2NDM1hMNkxWVFQtcWluZDBLcmIydEo?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-06-12",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Agents that remember: introducing Agent Memory",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5WbUkxT0E0V0xRWG1MbG4wY25LX0NqdWhhd0hIRXJxS19SaGNBYkFVWEYwR0VGaFE3UWVQQV9oNGhvU2F5RWNNUG9QbnFENmZneTItVlRlTHRhS2FPVUg4ZlExVQ?oc=5",
+     "source_name": "Cloudflare Blog",
+     "source_type": "новости",
+     "published": "2026-04-17",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Oracle AI Agent Memory: A Governed, Unified Memory Core for Enterprise AI Agents",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPYnRIbmRfR2RkRGZKMjY5ZFgyaXpqdnRPU3llaVJUMFkyNnVLZVBOSVJ4bkJiZmRGSUJSaGJyRWlGRnpPTjdEUDJ1Y1R3Znl5NnFsbUFiYkF6SWVXdHJqSDBQVnQzazRoOS1TdTNMbmIzaEpaV2VQcFpONVphUGNEdFFyanFaTXZOeGVKSTdRN3BSMTZWSk81Rlo3c0VjV3FuNHc4elVMajJQdnFsSkRCQl96WWs?oc=5",
+     "source_name": "blogs.oracle.com",
+     "source_type": "новости",
+     "published": "2026-05-01",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Memory scaling for AI agents",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4yeWFaRFRhb1l1Q0ZXbFdIR0xTSXZYYkZyVWlCdXR4WUhWQlF0Zjl1ZVhfc3BGSVFZNDIwdVp6YnU0NXhxeWJfWU85ZFpZUjhvaG9neVRRUnpVa3dXYmxYaEhxY0tmN2M?oc=5",
+     "source_name": "Databricks",
+     "source_type": "новости",
+     "published": "2026-04-10",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "volcengine/OpenViking: Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+     "url": "https://github.com/volcengine/OpenViking",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 38071
+     }
+    },
+    {
+     "title": "TencentCloud/TencentDB-Agent-Memory: TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-W",
+     "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 26976
+     }
+    }
+   ]
+  },
+  {
+   "technology": "агент ИИ Skill",
+   "technology_original": "ai-agent skill",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.652,
+   "score_interval_90": [
+    0.324,
+    0.89
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 4.48
+   },
+   "description": "«агент ИИ Skill» (ai-agent skill): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 115 научных публикаций (рост ×54.3 к 2019–2021), 32 новости за год, 24699 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Фальшивый модуль для ИИ-агентов прошел проверку безопасности благодаря внешней ссылке",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5TV0pla2tKMy1EMGw5VGZnSzdzRzNYcXdXeE5Vei1RaWdLOXphLUg5azJtdWJySXNhVzRBZFp5RVZCQkxjS3dmdXgyS0tUbzRWZkZJaFZOdng0aUo1N0FtM1lwd9IBWEFVX3lxTE14Ry1raG9Qcnc3Z1hlR2VKS2wySkFHVTFUUng2XzlQMDlKNVEwVUdqLS1McUF3RElQRFg4U1B6d3A3d2dXaWdMMlNOUlhqYWRUY3dBZ1VDOVY?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-06-29",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 24 699",
+    "↓ рост публикаций к 2019–2021: ×54.3",
+    "↑ рост обсуждений разработчиков: 3",
+    "↑ доля препринтов: 38%"
+   ],
+   "takeoff": {
+    "probability": 0.991,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 53.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.66,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.754,
+    "oa_recent_log": 3.994,
+    "oa_growth": 3.994,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.0,
+    "oa_preprint_share": 0.383,
+    "oa_company_share": 0.175,
+    "oa_fields": 7.0,
+    "news_1y": 32.0,
+    "news_30d_share": 0.219,
+    "news_sources": 23.0,
+    "news_press_share": 0.031,
+    "hn_12m_log": 2.996,
+    "hn_growth": 2.996,
+    "gh_total_log": 10.115,
+    "gh_new_share": 0.971,
+    "gh_max_stars_log": 11.462,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Фальшивый модуль для ИИ-агентов прошел проверку безопасности благодаря внешней ссылке",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5TV0pla2tKMy1EMGw5VGZnSzdzRzNYcXdXeE5Vei1RaWdLOXphLUg5azJtdWJySXNhVzRBZFp5RVZCQkxjS3dmdXgyS0tUbzRWZkZJaFZOdng0aUo1N0FtM1lwd9IBWEFVX3lxTE14Ry1raG9Qcnc3Z1hlR2VKS2wySkFHVTFUUng2XzlQMDlKNVEwVUdqLS1McUF3RElQRFg4U1B6d3A3d2dXaWdMMlNOUlhqYWRUY3dBZ1VDOVY?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-06-29",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Evaluating AI Agent Skill Performance with NVIDIA SkillEvaluator",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdER1bHhETjhqNVZVeW9oNVJTR0psdzM0MExhUHpjNFFaUDNScWVoYl9FeWc3N2doT3hTSE1odTE5bWJ3TzlUakk0OENDOXdVQzd1M2Z3azVyVGx3d2RheHVzYU5TMWtkYVl4VUdzQU10amdOYmh3emYxa0tUTTRfRzlRdXFsQ0ZYSnN6ZFozQUZnQ0NVOHVpd0ZZeFpfTnZX?oc=5",
+     "source_name": "NVIDIA Developer",
+     "source_type": "новости",
+     "published": "2026-08-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Fake AI Agent Skill Passed Security Scans and Reportedly Reached 26,000 Agents",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UZXRfN2l4Z3ZzQzZnaEZ3bThqTXpiSmNkM2FZOU9WbHh5MGZaLUV3UFlrR0lOaUJudmRYMC1VT1o5Mm5YRmhIV0JQYTI0SjloSDhUVnRwdHZMakVCbl9LUTR1aXY3NGx0cS14VkNSNElpWm01bEpRc3N6QzZfQnM?oc=5",
+     "source_name": "The Hacker News",
+     "source_type": "новости",
+     "published": "2026-06-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How a malicious AI agent skill passed security checks and reached 26,000 users",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPd1hNRGNONFVKUElYWFpWV0dLR0M1M1ZOa1ZrTUc4U1pnR1pjY3ZRbGt1TFo2bnZ4WFp6MWhFOHBNYkdZX3RraWFSUXNmTlZPZ2tPVUhraElRNGRqdWsxOU5oQVVSUnM2M1JSaW1MTWYxbVF0MjVFRTZ1V0hGZHlKRWt5RnZ4dERqbzJUSE1EbmJncFViV2JXdUY4NkRIWHFrUFVGOEs4UnJqSTdQRjNtNVVCVUQ1LWlHUk52RlhadV9DUQ?oc=5",
+     "source_name": "csoonline.com",
+     "source_type": "новости",
+     "published": "2026-06-24",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "op7418/guizang-ppt-skill: AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+     "url": "https://github.com/op7418/guizang-ppt-skill",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 26587
+     }
+    },
+    {
+     "title": "chuspeeism/dashi-ppt-skill: An AI-agent skill that generates browser-editable presentations from multiple visual themes, exportable to HTML, PDF, and PPTX.",
+     "url": "https://github.com/chuspeeism/dashi-ppt-skill",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-06-10",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 8454
+     }
+    }
+   ]
+  },
+  {
+   "technology": "openai operator",
+   "technology_original": "openai operator",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.64,
+   "score_interval_90": [
+    0.15,
+    0.906
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Graphcore IPU",
+    "query": "Graphcore IPU",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 2.58
+   },
+   "description": "«openai operator» (openai operator): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 10 научных публикаций (рост ×5.2 к 2019–2021), 26 новостей за год, 586 репозиториев. Статья в Википедии появилась недавно.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Что такое Computer Use от Google, и в чем различие от Operator OpenAI и Comet Perplexity",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9JVlBhcXB6eEt4R2E2MEh3Wng3ZFIzZDVUQjFSTzF5bnczV0NnMHRCdC1GSGpvOUo1MVpqLTRjc3dlUWgxcm11dW5XMFfSAVdBVV95cUxOVmoxcHNPYUozYXN2QTA5R2hvdHRYc3N6akphMWdfT3FzVFVDUi1TTjd0QkhUQlhHRklKTm0zemdpXzBVRHRLcVBPdHRiOVd0RnR4anlyRUk?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-10-15",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 80%",
+    "↓ рост обсуждений разработчиков: -1.41",
+    "↓ просмотры статьи в Википедии: 14 738",
+    "↑ число научных областей: 4"
+   ],
+   "takeoff": {
+    "probability": 0.896,
+    "percentile": 0.87,
+    "horizon": "2029–2031",
+    "baseline_per_year": 4.2,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.55,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 2.398,
+    "oa_recent_log": 1.657,
+    "oa_growth": 1.657,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.3,
+    "oa_preprint_share": 0.8,
+    "oa_company_share": 0.2,
+    "oa_fields": 4.0,
+    "news_1y": 26.0,
+    "news_30d_share": 0.154,
+    "news_sources": 25.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 1.609,
+    "hn_growth": -1.411,
+    "gh_total_log": 6.375,
+    "gh_new_share": 0.729,
+    "gh_max_stars_log": 10.777,
+    "wiki_article": 1.0,
+    "wiki_age": 1.0,
+    "wiki_views_log": 9.598,
+    "wiki_mentions_log": 1.792
+   },
+   "sources": [
+    {
+     "title": "Infrastructure for AI Agents",
+     "url": "https://doi.org/10.48550/arxiv.2501.10114",
+     "source_name": "arXiv (Cornell University)",
+     "source_type": "препринт",
+     "published": "2025-01-17",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "Infrastructure for AI Agents. AI agents plan and execute interactions in open-ended environments. For example, OpenAI's Operator can use a web browser to do product comparisons and buy online goods. Much research on making agents useful and safe focuses on directly modifying their behaviour, such as by training them to follow user instructions. Direct behavioural modifications are useful, but do not fully address how heterogeneous agents will interact with each other and other actors. Rather, we will need external protocols and systems to shape such interactions. For instance, agents will need more efficient protocols to communicate with each other and form agreements. Attributing an agent's",
+     "extra": {}
+    },
+    {
+     "title": "Что такое Computer Use от Google, и в чем различие от Operator OpenAI и Comet Perplexity",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9JVlBhcXB6eEt4R2E2MEh3Wng3ZFIzZDVUQjFSTzF5bnczV0NnMHRCdC1GSGpvOUo1MVpqLTRjc3dlUWgxcm11dW5XMFfSAVdBVV95cUxOVmoxcHNPYUozYXN2QTA5R2hvdHRYc3N6akphMWdfT3FzVFVDUi1TTjd0QkhUQlhHRklKTm0zemdpXzBVRHRLcVBPdHRiOVd0RnR4anlyRUk?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-15",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Исследование: явные и мнимые ИИ-агенты",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZjJiODRXRmZoVjhubS1HM1BnUHBTQU1mZUxDYWlqcWtfcnVEZVBNUnZBbUlzNWpNbjNDNFJxejZ1V3l6VWIzMndzNmNvamZYeHVCT25DXzBqVC1ZWDhEa2VkeDdCZzR6VnQyWGJfREZtVks1T0pFcW42Qk1MSHQwWWRfVVoySWxo?oc=5",
+     "source_name": "telecomdaily.ru",
+     "source_type": "новости",
+     "published": "2026-07-31",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Пользователь уходит из приложения: рынок забирают API, данные и ИИ-агенты",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5MVlEzX0llQlVJZERaODJOYXJTZU85Tm05dndaV1B6S1FRaG4xRnltRXIwOXVZakgzSUpHQzJscDZlOVNkQU1BWWFEbzF0d9IBWEFVX3lxTE9MYzVBZmNfeXVzLXAwcU5yaXB5c2dsYUdfUzVDSXkwM08yQjJ4LWpwRDBENUFxRWJCUlIwODVNSHYzWDJwNWdXR0JxVUU4Um5TUDBONk5BSjM?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-03-09",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Some Thoughts on ChatGPT Atlas",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ldlN3RWNkUXdHckZLRmE2ZmlvTHZ1aWFhLVhiSkc3RE5RTXlJcDE0dkkwSmxpaW9EOHlsMWU0X1ZEeEw0bF9IbGh0X0pqbUpMd01kQjFsZ0xzZw?oc=5",
+     "source_name": "spyglass.org",
+     "source_type": "новости",
+     "published": "2025-10-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Microsoft Releases Fara1.5: A Family of Browser Computer-Use Agents (4B/9B/27B) That Outperform OpenAI Operator and Gemini 2.5 Computer Use on Online-Mind2Web",
+     "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPd1NtQmQ4S0Zfb3pxNk5GS2dnV21mMFdLVUlZYUJyY20tb1V2NUdHMVBqbVN3MWIzSXdoLURzaWxwdHJCcXF3Zm9VcFJWWjMweFIwbDZHbTdlQmtvZTRTaGVQNEFEcFNiaXViSUFXeE5rWVU3WUt2Q25idW1kWmpkdFg2X09KNTdLc1hlN1VCcmJXdjBEa3pSNzFROE51bm00OVFYVUxGTTFtaHFLVDN5MWJ0ZXd6ampPazE3NVpuQ2M0ODNwOVA2ZmQ3aE9mZjBMaFJJRVJQWEs5bER2ejhGbENPM1hnM2wtUVB5Q2p6Ym5SajB0THdoVlhVelMxTGpnMEdtN21TWUU4R1hKMXFtWlo0a2ZBb0Q1SjhWMGpTZlJTQQ?oc=5",
+     "source_name": "MarkTechPost",
+     "source_type": "новости",
+     "published": "2026-05-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "OpenAGI's Lux outperforms OpenAI's Operator",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaFlGNXRMUlZmZVNFakkxRmR6bXFFQkUteW5fU3poQV9paTdYQ0V3ZEswQ1V1YmJIUFlUVWRaQXk4QmkzU0V4SEx0T2RQMjl1bUlNLWZmbFNGOWZjTjZtWXE4U3BfczJfcFpEOG1sajdhS05MM3Q2UXJINFNnSTVGUDhDczhPdXJ6VHo1Vi1yY1FRUWJXa2ZRR3lDb0lmVkZ0d1lGWHZ2THlyakxHbmpn?oc=5",
+     "source_name": "VentureBeat",
+     "source_type": "новости",
+     "published": "2025-12-01",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "JoseAngelSolorzanoLuna/UFO-Cathedral-v6.4-FailSafe-Free-AI: 100% Free, Offline, 8GB RAM Computer-Artificial Intelligence + Formal Safety (Gate + Ledger + Council + Shadow Mode) — Free alternative to $",
+     "url": "https://github.com/JoseAngelSolorzanoLuna/UFO-Cathedral-v6.4-FailSafe-Free-AI",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-09-03",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 13
+     }
+    }
+   ]
+  },
+  {
+   "technology": "навыки MCP",
+   "technology_original": "mcp skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.616,
+   "score_interval_90": [
+    0.135,
+    0.983
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 2.56
+   },
+   "description": "«навыки MCP» (mcp skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 22 научные публикации (рост ×10.3 к 2019–2021), 9 новостей за год, 14039 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Очередная методичка разработки с LLM: работает только если ты разработчик",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1mN0VBY1QzY1QyUFlEUVQwbEZRb1A1a0poWGNIMWVsZmVvNm1nU0dzb0ZmbnhOVkNrcEVRRkRYQ0dramR4bEMwekRscy1zQdIBWEFVX3lxTFBjcldaZW42OXFpZXRVZFBqNGRuX1pHUnlqMGp1b2k1bWd6UFk1R3d1Zm5fa2Q2TDYwUHYxcmNHWWg1bE8xNjBsVFBxeUxrQlNDZzVMMGdCMU0?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-05-10",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 14 039",
+    "↑ доля препринтов: 55%",
+    "↑ доля пресс-релизов: 22%",
+    "↓ близость к пику публикаций: 0.67"
+   ],
+   "takeoff": {
+    "probability": 0.98,
+    "percentile": 0.98,
+    "horizon": "2029–2031",
+    "baseline_per_year": 9.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.66,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.135,
+    "oa_recent_log": 2.336,
+    "oa_growth": 2.336,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 0.667,
+    "oa_last_share": 0.045,
+    "oa_preprint_share": 0.545,
+    "oa_company_share": 0.208,
+    "oa_fields": 3.0,
+    "news_1y": 9.0,
+    "news_30d_share": 0.667,
+    "news_sources": 7.0,
+    "news_press_share": 0.222,
+    "hn_12m_log": 2.197,
+    "hn_growth": 2.197,
+    "gh_total_log": 9.55,
+    "gh_new_share": 0.984,
+    "gh_max_stars_log": 12.463,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.099
+   },
+   "sources": [
+    {
+     "title": "Очередная методичка разработки с LLM: работает только если ты разработчик",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1mN0VBY1QzY1QyUFlEUVQwbEZRb1A1a0poWGNIMWVsZmVvNm1nU0dzb0ZmbnhOVkNrcEVRRkRYQ0dramR4bEMwekRscy1zQdIBWEFVX3lxTFBjcldaZW42OXFpZXRVZFBqNGRuX1pHUnlqMGp1b2k1bWd6UFk1R3d1Zm5fa2Q2TDYwUHYxcmNHWWg1bE8xNjBsVFBxeUxrQlNDZzVMMGdCMU0?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-05-10",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Как купить подписку Cursor из России в 2026 году: разбираем способы оплаты Курсор АИ",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA4WUhqQXBzRTZXdmlocW9sR3VCdnpRSWdQRWIxdHh6YVJoM3VfYTFUb0lCU3lSc05VRnZqejNVTXh1NnFSZkliYlYxSVhuOHpfeGc?oc=5",
+     "source_name": "sostav.ru",
+     "source_type": "новости",
+     "published": "2026-06-05",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Летний дайджест конструкторов сайтов: куда движутся uCoz, Tilda, Яндекс и мировой рынок",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5UUWVqNXllWmhicWZpQnBwaEFzNHI5U3AycGZ1WWJka0t4N2V0U1lKZmhqOWpIa0QxMkM4RzdlU0VuR3d1UlJ3NTNPaEpud9IBWEFVX3lxTE9lNHM0VmNpQUlQWmZ4aEVtekpVNTR4akhIUWZYRGVfNi05UVI3ckJZQmlyaDRiYUtKbi1DdjBja05rMnptMjFFaHd6a3N2RjhYcENZdV9FdTg?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-08-28",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Extend what Rovo can do across your stack with MCP",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0zUXFBUzVLLTNNam5nZGx0dklVb2sxMTYtOGZuWFRIRVNOb1pQUWR5OGRac29ZX29fcjZSbFJFb2lVQ0M0YzRCZ3ZocHRZeVVzdV9WN1JVMnRqeW5IeGJFRG5B?oc=5",
+     "source_name": "Atlassian",
+     "source_type": "новости",
+     "published": "2026-02-25",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AiChemy: Next-generation agent with MCP, skills and custom data for drug discovery",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOT21zODFFNWpFVmg0WjhKZzQySjk5UGpHdjItWWw3LUtlUGh3bEM3U1FFMXp3QzIweDRhYWJTV2RvaFBDeHpvdUgxSXFiTGV3QkN6VTJKSjBVV2JteGxzdjdhX0hNNjI3VmxDSGZMTDdKUnJGLWZBTi0yck9hOVVwQjAxNXpQTFIyNWkwYjdJdDMtU0RsRTZyX3BoSl9XdTY3bUxycjB3?oc=5",
+     "source_name": "Databricks",
+     "source_type": "новости",
+     "published": "2026-04-03",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "This week: NODES, StrangerGraphs, Claude skills, MCP",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1F1cXYxQVJyRWtmbzhYZzlqR0tVNHlseUNmbzFYelFUWG5USm1DeDhMY0dPSmJvSFdnd2RFWmFEN3NtZldRRW9fWGtSSGE4NnNCU2J3TzBGRndnRk5jUGl6Q2RRR2JIYVFCVHF0Uk12cGpvdFJmTVhoYVl6TFJLb0xKcXNfYXFwRTliWDNtMEllS1dt?oc=5",
+     "source_name": "Neo4j",
+     "source_type": "новости",
+     "published": "2025-11-21",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "NVIDIA/SkillSpector: Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex",
+     "url": "https://github.com/NVIDIA/SkillSpector",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-21",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 17819
+     }
+    },
+    {
+     "title": "op7418/CodePilot: A multi-model AI agent desktop client — connect any AI provider, extend with MCP & skills, control from your phone. Built with Electron + Next.js.",
+     "url": "https://github.com/op7418/CodePilot",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-06",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 6469
+     }
+    }
+   ]
+  },
+  {
+   "technology": "сжатие токенов",
+   "technology_original": "token compression",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.615,
+   "score_interval_90": [
+    0.262,
+    0.858
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Цифровые валюты центробанков",
+    "query": "central bank digital currency",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.57
+   },
+   "description": "«сжатие токенов» (token compression): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 651 научная публикация (рост ×274.2 к 2019–2021), 11 новостей за год, 3339 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "В один эмбеддинг можно впихнуть больше тысячи токенов, но что с этим не так? / Хабр",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE54OERDUlk4UzNYREZ2aFVINHkyRmtyblVIbGhLU3pwVmYtZUljcnFHcXl0dXlYYW85RDVBQlBjRFNnZ2s4cl9FSzFzLUwydXJxVnNvWmFWV2RSRFliT1hIQzFn?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-07-27",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 70%",
+    "↓ рост публикаций к 2019–2021: ×274.2",
+    "↓ число репозиториев: 3 339",
+    "↑ упоминания в Википедии: 0"
+   ],
+   "takeoff": {
+    "probability": 0.961,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 273.2,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 6.48,
+    "oa_recent_log": 5.614,
+    "oa_growth": 5.614,
+    "oa_age": 3.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.232,
+    "oa_preprint_share": 0.699,
+    "oa_company_share": 0.193,
+    "oa_fields": 11.0,
+    "news_1y": 11.0,
+    "news_30d_share": 0.545,
+    "news_sources": 7.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 2.708,
+    "hn_growth": 2.015,
+    "gh_total_log": 8.114,
+    "gh_new_share": 0.887,
+    "gh_max_stars_log": 11.188,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "В один эмбеддинг можно впихнуть больше тысячи токенов, но что с этим не так? / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE54OERDUlk4UzNYREZ2aFVINHkyRmtyblVIbGhLU3pwVmYtZUljcnFHcXl0dXlYYW85RDVBQlBjRFNnZ2s4cl9FSzFzLUwydXJxVnNvWmFWV2RSRFliT1hIQzFn?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-07-27",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Contribution-aware Token Compression for Efficient Video Understanding via Reinforcement Learning",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1VDJyYU82Y2lMUHRES1VNdTFmN19uRkFvWS1IajMxc2NXcmRlVTBKbno3OGJjTmd4ajdxZkFSMUItZVI4dTV0Q0dWRGZxbmFsVTJBTWhKc3ROQ1k4STI1M1NUaWc?oc=5",
+     "source_name": "The Association for the Advancement of Artificial Intelligence",
+     "source_type": "новости",
+     "published": "2026-03-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Untitled",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUDRKWXhEbzdmbW92NGJnX2p3UVdCNVVUa0QwSHEwbDFNSXo0Z1BGQnR4SjRMR0FXS3RZZVRudUZsZjVFVzNNM3k3YV9oWXpZUkF1UGZnR3lvTzAxQXZKclFtWHVhYzRzOUpYYlBSN3JDMTFVN1RpUlNyOXV3WEhFazJ4VnJlLTZNSEhpb3NuSDZBZ1M0OUdlNzAyRmZ4UQ?oc=5",
+     "source_name": "SitePoint",
+     "source_type": "новости",
+     "published": "2026-06-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "CompTrack: Information Bottleneck-Guided Low-Rank Dynamic Token Compression for Point Cloud Tracking",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hSngwazMxa3FqeHctNk02cEpvUG1DMEtXWFdhVzY5Z2FYOFExejFRLUNrTjJHUU5KLTNNX2hUb2JIR20xQkt0YmZYVkZUYV82ZWZJVFVxdFdTbFJtUWlST0c5dUY?oc=5",
+     "source_name": "The Association for the Advancement of Artificial Intelligence",
+     "source_type": "новости",
+     "published": "2026-03-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "yaolinli/MLLM-Token-Compression: Towards Efficient Multimodal Large Language Models: A Survey on Token Compression",
+     "url": "https://github.com/yaolinli/MLLM-Token-Compression",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-11-26",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 225
+     }
+    },
+    {
+     "title": "Fanziyang-v/FlashVID: [ICLR 2026 Oral] FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging",
+     "url": "https://github.com/Fanziyang-v/FlashVID",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 119
+     }
+    }
+   ]
+  },
+  {
+   "technology": "сжатие контекста",
+   "technology_original": "context compression",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.608,
+   "score_interval_90": [
+    0.297,
+    0.845
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 4.17
+   },
+   "description": "«сжатие контекста» (context compression): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 533 научные публикации (рост ×81.7 к 2019–2021), 17 новостей за год, 12572 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Как китайцы (опять) всё украли у Antropic",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBCeXhXZEJnNElDdHR1Mm9Vb1ZDOGpQaDRUTHNGVngxY2kzbWtyZ2VNUWpjYU8xM3ZlOWtya05fQkJTQjlYZDJkR25naUlud9IBWEFVX3lxTE9mTG1SX1F6X1BsS3lSeWVKekNkZEgzeGFiZVFodTdOcVVkd3lCUS14OURnV1dIOUozcEhuek10U1VMeDFFMUFDQzFlVUpNS2phWldUdnRJczQ?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-03-04",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 61%",
+    "↓ число репозиториев: 12 572",
+    "↓ рост публикаций к 2019–2021: ×81.7",
+    "↑ рост обсуждений разработчиков: 2.94"
+   ],
+   "takeoff": {
+    "probability": 0.957,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 216.7,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.55,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 6.28,
+    "oa_recent_log": 5.383,
+    "oa_growth": 4.402,
+    "oa_age": 12.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.18,
+    "oa_preprint_share": 0.61,
+    "oa_company_share": 0.235,
+    "oa_fields": 14.0,
+    "news_1y": 17.0,
+    "news_30d_share": 0.588,
+    "news_sources": 14.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 2.944,
+    "hn_growth": 2.944,
+    "gh_total_log": 9.439,
+    "gh_new_share": 0.953,
+    "gh_max_stars_log": 11.103,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Cognitive Edge Computing: A Comprehensive Survey on Optimizing Large Models and AI Agents for Pervasive Deployment",
+     "url": "https://doi.org/10.22541/au.176348756.61222219/v1",
+     "source_name": "OpenAlex",
+     "source_type": "препринт",
+     "published": "2025-11-18",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "Cognitive Edge Computing: A Comprehensive Survey on Optimizing Large Models and AI Agents for Pervasive Deployment. This article surveys Cognitive Edge Computing as a practical and methodical pathway for deploying reasoning-capable Large Language Models (LLMs) and autonomous AI agents on resource-constrained devices at the network edge. We present a unified, cognition-preserving framework spanning: (1) model optimization (quantization, sparsity, low-rank adaptation, distillation) aimed at retaining multi-step reasoning under tight memory/compute budgets; (2) system architecture (on-device inference, elastic offloading, cloud-edge collaboration) that trades off latency, energy, privacy, and c",
+     "extra": {}
+    },
+    {
+     "title": "Как китайцы (опять) всё украли у Antropic",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBCeXhXZEJnNElDdHR1Mm9Vb1ZDOGpQaDRUTHNGVngxY2kzbWtyZ2VNUWpjYU8xM3ZlOWtya05fQkJTQjlYZDJkR25naUlud9IBWEFVX3lxTE9mTG1SX1F6X1BsS3lSeWVKekNkZEgzeGFiZVFodTdOcVVkd3lCUS14OURnV1dIOUozcEhuek10U1VMeDFFMUFDQzFlVUpNS2phWldUdnRJczQ?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-03-04",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Эволюция подхода к сжатию контекста в AI Агентах / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9kSWh5bWV4SjI3UXY5NmRYUWp0dGNjY0VrdEJpNjZLVGFNZmNMYTZGN25oQVlHTE93bEVsSXJLMmZGVHc3VE8zSklLeE55Zw?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-08-12",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "LLM context compression at 16x beats KV cache",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQnVqRzJoRUdzZGhNeTBRcmI3SFZqRXI5Tng1eV9NdlkxWHlyR3BXakNSZGxKWjNqZTNvWnFnRXpjdUJSSGhnTDFOREszV3FsOE9UaE11NTZOd1RvZXNzU0RTZ1JRQ196enQ3b01HVWFUcTJNZ1V6M1FMYUxiTVRkSEdjcHJwa1k5OXlxRUYtQ1Rya1ZuOFlhX21kZmdqN0xsblh4YzhWVzQtVFpTYXB3S3hJYWd6ZUFXTjZwNGo5Vm02RnFBMDNtVmpRdW53QQ?oc=5",
+     "source_name": "VentureBeat",
+     "source_type": "новости",
+     "published": "2026-06-11",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Researchers Achieve 16x Compression Breakthrough to Challenge Bigger AI Context Windows",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQzQzZUNtX0lCNWlycXFXTzFRM0ZFeTZjOGRId3U4c0RuLV9mcVNCcmlHanNfUWpkR1B1X0pOUTYxMGxsQ2Vka3Nla0U4c2xwUFBueGpXajFzS3BndC1MREs0M05oUFFRdGJMSXVXMWtJWllLclRVV0ZqUUF0Nm5YSHdnR3lHQ3BCN25zUTExU25ielU1WmExNTJ6OXEtNGV6Zm1OQzVDV3FxcGtXQ0w4azZZZDdQMGY1aXFLOERXTVNQeWV2dHB6TENn?oc=5",
+     "source_name": "HPCwire",
+     "source_type": "новости",
+     "published": "2026-06-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "DeepSeek AI Unveils DeepSeek-OCR: Vision-Based Context Compression Redefines Long-Text Processing",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4xOEhOeHlaRGxPWk5kYVpRLW4weVo4Z1hZY0NZeDEtVW1ab2tCSHlESlpSR0RqbVA0Qy1Xa0RIMy1lc09wQUVGaE9iQ2dNQlZyRHM2Nmx0ck9xeTdv?oc=5",
+     "source_name": "infoq.com",
+     "source_type": "новости",
+     "published": "2025-10-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "broalantaps/Awesome-Context-Compression-LLMs: 🚀 A curated list of awesome resources focusing on Context Compression techniques for Large Language Models(LLMs).",
+     "url": "https://github.com/broalantaps/Awesome-Context-Compression-LLMs",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-12-01",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 78
+     }
+    }
+   ]
+  },
+  {
+   "technology": "агент Harness",
+   "technology_original": "agent harness",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.586,
+   "score_interval_90": [
+    0.03,
+    0.96
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Play-to-earn",
+    "query": "play-to-earn",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 6.66
+   },
+   "description": "«агент Harness» (agent harness): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 789 научных публикаций (рост ×105.9 к 2019–2021), 100 новостей за год, 37472 репозитория. Статья в Википедии появилась недавно.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Agent Harness: одна LLM, разные результаты — в чем секрет?",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBjN2NheW5CT3VpaGtvMlFtSDB1MzV1SGR6VmFrbzVTZ0owY2tnMkRzUm1ONGh1LXE1eEZqdmJ6UmhLOFA5WVdhN29ldlVlZ9IBWEFVX3lxTE92RGRuZExhb1JuNWFPbUoyUmIxUzVqZnN2c0F6RHdXZGlpWUIydlc3SWx2eEtydmJzNERzSFdVRnFjalJ4S2V3ekRRaHlFRHJncllaVlpRWmk?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-04-08",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 71%",
+    "↓ число репозиториев: 37 472",
+    "↑ рост обсуждений разработчиков: 5.37",
+    "↓ рост публикаций к 2019–2021: ×105.9"
+   ],
+   "takeoff": {
+    "probability": 0.992,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 352.0,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 6.672,
+    "oa_recent_log": 5.867,
+    "oa_growth": 4.663,
+    "oa_age": 6.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.016,
+    "oa_preprint_share": 0.706,
+    "oa_company_share": 0.211,
+    "oa_fields": 19.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.38,
+    "news_sources": 50.0,
+    "news_press_share": 0.01,
+    "hn_12m_log": 5.371,
+    "hn_growth": 5.371,
+    "gh_total_log": 10.531,
+    "gh_new_share": 0.99,
+    "gh_max_stars_log": 12.873,
+    "wiki_article": 1.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 8.841,
+    "wiki_mentions_log": 2.708
+   },
+   "sources": [
+    {
+     "title": "Agent Harness: одна LLM, разные результаты — в чем секрет?",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBjN2NheW5CT3VpaGtvMlFtSDB1MzV1SGR6VmFrbzVTZ0owY2tnMkRzUm1ONGh1LXE1eEZqdmJ6UmhLOFA5WVdhN29ldlVlZ9IBWEFVX3lxTE92RGRuZExhb1JuNWFPbUoyUmIxUzVqZnN2c0F6RHdXZGlpWUIydlc3SWx2eEtydmJzNERzSFdVRnFjalJ4S2V3ekRRaHlFRHJncllaVlpRWmk?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-04-08",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Agent Harness — каркас, который превращает ИИ-модель в агента",
+     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9MVnVaV1pjRG0wajRlUVpUOHFwb2JyWnY1NnR6bllrNVhqSy1hN1FBN1liXzl3TWdYRm0xOUFuMmFmbUc4LUhV?oc=5",
+     "source_name": "Т—Ж",
+     "source_type": "новости",
+     "published": "2026-06-04",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Харнесс, который мы заслужили: как я собираю AI-систему для разработки SaaS (orca + pi agent)",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9kRXFUWVE0bnphSFNsczlmaVppUFJ3WVVxemdQVTY5b1pITllJRXNkUUZoZ3dHTHVVS1FwVmtGMGp3bk8tMHNrMlU3dFhlUdIBWEFVX3lxTE85U1ZZRUU0a0JYQ3plQm9DckVBMXA4RzJBRFV5MjNsa3hyQlBrOFkwLWkwckRfbzFteXRlWnYyOHdDSW90V2QteU1VQ21rVE1EYVZ4Tl9hWFQ?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-07-06",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Six Agent Harness Capabilities for Higher Model Performance | NVIDIA Technical Blog",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQ0JaelBGOWdfcTFDTm9RRjEyakZad3VOekxQRm1ZWFZNSVg4bGkzUGtGR3MwLTBCODN1akY1QWpMU0hUWHViVnp4RkRDeDJwaEFuTW51YTM0MWNzN096UkJmTXFSRkZDcFlUZTFJeVoxTWNsbXBmdUtXd2hFS2YyMFNZeVJFZ25CY0d4TThJYWZvNTBLOGlweWRB?oc=5",
+     "source_name": "NVIDIA Developer",
+     "source_type": "новости",
+     "published": "2026-07-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Effective harnesses for long-running agents",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbDhIQzg0T0dXZmVTVlR1ZjF5U1JLSGtRN213VmFIMHlPUFlEWGN4QkhLSDR6OEY4dGhVSDk2bElFUGEtQXJUNXpIdzF0MkRBTlNicmN4LThWb2hYdk54VEpNZE9uM25FSGpweGs1V2FWb0V5eEtKc3FSQkgzSXA3TmlfSkpVQUoy?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-11-26",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "What Is an Agent Harness? The Key to Reliable AI",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZamtSLUtxa05qLW50V3ljZ21mMmdQNjZISFk4a0tHbUp5d1p3OGJmOGdNR3BlZFBWcElVWFhGbHdVRFFFTEt0T3dFaVZpLUJWU0MzOTZibXZxYWJLeGZrRVB5Y1RlWGU4NjZMOTIwdw?oc=5",
+     "source_name": "Salesforce",
+     "source_type": "новости",
+     "published": "2026-01-29",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Gloriaameng/Awesome-Agent-Harness: Agent Harness for Large Language Model Agents: A Survey. Survey on LLM agentharnessengineering with a taxonomy. 110+papers, 23 systems analyzed.",
+     "url": "https://github.com/Gloriaameng/Awesome-Agent-Harness",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-03",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 356
+     }
+    },
+    {
+     "title": "ai-boost/awesome-harness-engineering: Awesome list for AI agent harness engineering: tools, patterns, evals, memory, MCP, permissions, observability, and orchestration.",
+     "url": "https://github.com/ai-boost/awesome-harness-engineering",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-29",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 4386
+     }
+    }
+   ]
+  },
+  {
+   "technology": "навыки Openclaw",
+   "technology_original": "openclaw skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.523,
+   "score_interval_90": [
+    0.097,
+    0.928
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 4.24
+   },
+   "description": "«навыки Openclaw» (openclaw skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 21 научная публикация (рост ×10.7 к 2019–2021), 83 новости за год, 24713 репозиториев. Статья в Википедии появилась недавно.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Как я установил OpenClaw на Wiren Board / Хабр",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9WSGRHSS1aN2dQTnNfeElqMzJ1QmZZa0FHNkVfdmpDNUo5V2xlLTAyZDZkNHZaUXVsX3k4S3dUcXF4WHo2LUh3aHljbUN4Rkp4cnU3TExRd296VGs4ZTB5Nk9HZkxFc0M1U1E?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-04-30",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 24 713",
+    "↑ доля препринтов: 48%",
+    "↑ рост обсуждений разработчиков: 2.83",
+    "↓ просмотры статьи в Википедии: 1 495 436"
+   ],
+   "takeoff": {
+    "probability": 0.991,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 9.7,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.66,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.091,
+    "oa_recent_log": 2.373,
+    "oa_growth": 2.373,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.0,
+    "oa_preprint_share": 0.476,
+    "oa_company_share": 0.429,
+    "oa_fields": 1.0,
+    "news_1y": 83.0,
+    "news_30d_share": 0.048,
+    "news_sources": 54.0,
+    "news_press_share": 0.012,
+    "hn_12m_log": 2.833,
+    "hn_growth": 2.833,
+    "gh_total_log": 10.115,
+    "gh_new_share": 0.999,
+    "gh_max_stars_log": 11.841,
+    "wiki_article": 1.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 14.218,
+    "wiki_mentions_log": 1.099
+   },
+   "sources": [
+    {
+     "title": "Как я установил OpenClaw на Wiren Board / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9WSGRHSS1aN2dQTnNfeElqMzJ1QmZZa0FHNkVfdmpDNUo5V2xlLTAyZDZkNHZaUXVsX3k4S3dUcXF4WHo2LUh3aHljbUN4Rkp4cnU3TExRd296VGs4ZTB5Nk9HZkxFc0M1U1E?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-04-30",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Исследователи нашли сотни вредоносных навыков для OpenClaw",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9tOTRYZ2lnNmgxV0R4dEtlYkdIZDNrUzNjREhOTTUwSnY3OFNQVzJWTGsxbWZLV0Z4aTZMbzFMWXJkYWNKbTFSMXJDWjM0TEcwTXg2Tm55bw?oc=5",
+     "source_name": "Xakep.ru",
+     "source_type": "новости",
+     "published": "2026-02-04",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Как я подключил 3 маркетплейса к AI-агенту за 25 минут / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBhVkFDNVFSRTBQeHhmdjIyNTlmT05sZGtuSVZhTjFsRHpiRXdON0VncmRNNUNyTEY0bkRheVp6R2VFQi1mdndIYlNZWHVvdw?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-02-19",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "More Malicious OpenClaw Skills Threaten AI Supply Chain",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNREcxTkFCcHJldlQ3ZnRqZ2VuTGEzZjJQNFpDRC11RWthb1pGYnBDem9mSkRzVXBOdGJubXVmWVRELW5yQU14TVNRSWZFQlNwUXJORXZBVjdBX0lpQnVnVFlXMklCUDN6X2VzTnp6THY2T0dLUGNFSjhFbVdyNVMwdWVHanF6QTJtLUNRMnpwODJtdXBhV1Z0dUFET0UyQQ?oc=5",
+     "source_name": "Dark Reading",
+     "source_type": "новости",
+     "published": "2026-06-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "OpenClaw’s Skill Marketplace and the Emerging AI Supply Chain Threat",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBHQmllMHJVbC1pVG1xTzJlX2hEU0Z5bWo4Ykt6dGdHQWxxSnd4ZXFieENpX3l2NGdyZGJZZFJyQUlFMHNyc0RTQjE2czVvdktTdm1xdjF2czVhYno2NXNJNVdwY3ZXcXctOHNJMWJwMFZndG5h?oc=5",
+     "source_name": "Unit 42",
+     "source_type": "новости",
+     "published": "2026-06-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How to use OpenClaw safely",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVEl1NnhwckN6Zm1HQkVqUTljeDZ5VEJMX0pFb3did3VscEl2VUs1X2RCaDFZR29GWEZ2cGk1QmJuYXJfMWJTR052TGVGTmE2UkdfS202QXRFNDM1eV9GSDY0SjhGZDdOTTcxdGp2dVdYbzh5R2EwdzZUUHlJbzRDZHZkdzRON2NDeTBmb2w2R2FHU0xJcFE?oc=5",
+     "source_name": "gendigital.com",
+     "source_type": "новости",
+     "published": "2026-02-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "teng-lin/notebooklm-py: Unofficial Python API and agentic skill for Google Gemini Notebook. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Pytho",
+     "url": "https://github.com/teng-lin/notebooklm-py",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 19384
+     }
+    },
+    {
+     "title": "anbeime/skill: 收录最全、更新最快的技能Skills商店：精选原创技能包（涵盖文档处理、内容创作、编程开发、机器学习、自动化工作流），全部打包好可直接安装使用！同时自动抓取GitHub上万个Skills项目，按分类、更新时间、Star数量整理。The most comprehensive and frequently updated AI Agent skill library, f",
+     "url": "https://github.com/anbeime/skill",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 6952
+     }
+    }
+   ]
+  },
+  {
+   "technology": "MCP cli",
+   "technology_original": "cli mcp",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.492,
+   "score_interval_90": [
+    0.228,
+    0.767
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 3.73
+   },
+   "description": "«MCP cli» (cli mcp): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 24 научные публикации (рост ×12.1 к 2019–2021), 10 новостей за год, 23212 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Dart 3.9: актуальность новых фич",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1fTG9MVGx2aUJVWHV6amRGOWRhQmRuTUNmc1R4STdDbTVzclRYVVB4WC1MTkN2bGE2VzBFQ0Jzd1hWVmViYWdFQnQ3ZnnSAVdBVV95cUxNZmthMHpiUFo2Wm9WQzYtdV9LUXdmNzFFcVZKd0otdGxvMi1KQW4zUDFYS3dfajRMMFpoMVpXaUZFUElWdGFRc0Z0RnFnc3NnY2x1VzFmbUU?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-10-25",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 23 212",
+    "↑ упоминания в Википедии: 0",
+    "↑ рост обсуждений разработчиков: 2.64",
+    "↑ обсуждений разработчиков за год: 27"
+   ],
+   "takeoff": {
+    "probability": 0.993,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 11.1,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.66,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.219,
+    "oa_recent_log": 2.495,
+    "oa_growth": 2.495,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.0,
+    "oa_preprint_share": 0.167,
+    "oa_company_share": 0.211,
+    "oa_fields": 3.0,
+    "news_1y": 10.0,
+    "news_30d_share": 0.3,
+    "news_sources": 6.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 3.332,
+    "hn_growth": 2.639,
+    "gh_total_log": 10.052,
+    "gh_new_share": 0.937,
+    "gh_max_stars_log": 11.462,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Dart 3.9: актуальность новых фич",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1fTG9MVGx2aUJVWHV6amRGOWRhQmRuTUNmc1R4STdDbTVzclRYVVB4WC1MTkN2bGE2VzBFQ0Jzd1hWVmViYWdFQnQ3ZnnSAVdBVV95cUxNZmthMHpiUFo2Wm9WQzYtdV9LUXdmNzFFcVZKd0otdGxvMi1KQW4zUDFYS3dfajRMMFpoMVpXaUZFUElWdGFRc0Z0RnFnc3NnY2x1VzFmbUU?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-25",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Как OpenAI похоронила традиционный BI — и что пришло ему на смену / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9XNDF0NDJlWE9rcE5rcUpXazZUQkJNUi14Q1lxNnlvM2xzVjRySTJ4YWRPcDhkb2FQLXJOTWZCOTQyN0ljNWRBYnAwcUFwUQ?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-02-21",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Cost Analysis for Amazon CloudWatch Using Amazon Q CLI and MCP servers | Amazon Web Services",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdmN1bWlTYnpCY3F5V1Fwbjk0SEY4NWhJZ3YtSThFVjN3WlFLXzlIUFlCa09uVlNNMTdCUWpyYjdhLTl6czJwN19YOUNKX0o5NFlOQ3RQUGJFZ0lhck1ybXlwNW81OG9rQXVQUWo0YnFDd1gtcFlONm9OX2NLRXlySWNWZjFySXZueWh6N081ZVNSOHRYLU81NkhibkYwR3hFZEt0bGlDVzN5eENDdDRKdWVOMnM0R19VeXNzLXdaaWNQekdYblJzWXRGaw?oc=5",
+     "source_name": "aws.amazon.com",
+     "source_type": "новости",
+     "published": "2025-10-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "New Google Workspace CLI Offers Built-In MCP Server for AI Agents",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPX19lYS1rdjVDMHNjQlZDb2MzbGgtamFVUXEtWlFsZ29ubzNyRWpDcW9hMkN3ZjJKUFNlXzBNWjk2WjNDWTNVUVRtaFJ0SnRLRmRFTE84Ynl2QlVRVWNUNng0Tlo1VUhodmQwMWF6Z1Rhd3hWLXZuSlRCTHlXQ0tfNlhLcTU3QlNsX2c?oc=5",
+     "source_name": "winbuzzer.com",
+     "source_type": "новости",
+     "published": "2026-03-06",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "What happens when your agent can touch money",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1OV1FadldidUpXVFk1TUhtanBmaGNZR0IwSERJcDZlNlJWbEcxWEtldFRBODlocHplV1FKXzNGWGJ3ZzE1UVJaTnNpSlYxcDh2cFhMQm05Z2NoQTAxVEhIT0dpX01vdXRSNk9BLUtGams4TGlkS3VTcEh3?oc=5",
+     "source_name": "Gradient Flow | Ben Lorica",
+     "source_type": "новости",
+     "published": "2026-07-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "pascalorg/editor: Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+     "url": "https://github.com/pascalorg/editor",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 24134
+     }
+    },
+    {
+     "title": "epiral/bb-browser: Your browser is the API. CLI + MCP server for AI agents to control Chrome with your login state.",
+     "url": "https://github.com/epiral/bb-browser",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-31",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 6222
+     }
+    }
+   ]
+  },
+  {
+   "technology": "навыки Claude",
+   "technology_original": "claude skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.47,
+   "score_interval_90": [
+    0.078,
+    0.9
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 5.78
+   },
+   "description": "«навыки Claude» (claude skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 85 научных публикаций (рост ×40.3 к 2019–2021), 100 новостей за год, 209636 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Навыки (Skills) для Claude: почему папка с Markdown-файлами может оказаться важнее кастомных GPT",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tSkRIcU1IRjRkZ3dUNkx0US05NUFITHZyY1JhREl4YTR4VzNQZzgtTE45NFBWYlQ0dGtIbU5FNEd1cG9VaUVId1ducHjSAVdBVV95cUxQUjZUODVLckNUVUctUnBvYzJTNEEwS3JCQngxTXJ2QXJCQkUyNzNPRW55UDFha2NOak1fVWRPVlZCM0pzVkdneWpZaVVPVWlfcVVjUDZtYVU?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-10-17",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 209 636",
+    "↑ рост обсуждений разработчиков: 4.86",
+    "↑ обсуждений разработчиков за год: 128",
+    "↓ рост публикаций к 2019–2021: ×40.3"
+   ],
+   "takeoff": {
+    "probability": 0.997,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 39.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.76,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.454,
+    "oa_recent_log": 3.695,
+    "oa_growth": 3.695,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.012,
+    "oa_preprint_share": 0.035,
+    "oa_company_share": 0.133,
+    "oa_fields": 4.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.1,
+    "news_sources": 62.0,
+    "news_press_share": 0.01,
+    "hn_12m_log": 4.86,
+    "hn_growth": 4.86,
+    "gh_total_log": 12.253,
+    "gh_new_share": 1.005,
+    "gh_max_stars_log": 12.463,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "Навыки (Skills) для Claude: почему папка с Markdown-файлами может оказаться важнее кастомных GPT",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tSkRIcU1IRjRkZ3dUNkx0US05NUFITHZyY1JhREl4YTR4VzNQZzgtTE45NFBWYlQ0dGtIbU5FNEd1cG9VaUVId1ducHjSAVdBVV95cUxQUjZUODVLckNUVUctUnBvYzJTNEEwS3JCQngxTXJ2QXJCQkUyNzNPRW55UDFha2NOak1fVWRPVlZCM0pzVkdneWpZaVVPVWlfcVVjUDZtYVU?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-17",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Предприниматели и Claude Code Skills: как зафиксировать рутину в навык вместо повторного промпта",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5DTXN0ZnliNEdfYllnZlJjRUJkWjZWS1Z5bmd6N2dnLTRLVHJZMTZLNDRId1ptbDA2ZzJ4d3B5NjluektNaGQ2NFpuWFctOTNsZXc?oc=5",
+     "source_name": "sostav.ru",
+     "source_type": "новости",
+     "published": "2026-07-22",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Вот почему Claude Skills намного лучше MCP",
+     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1rQThqV1ItSkFHTElDZl80cWVkU05MMDlpLXZGRkVHSWZ5eW1sdGRiTnlZaTFQUWxIUy1obXVYTk9FZEVuM25z0gFXQVVfeXFMTm5iMkpsVEYxejZldUFKUzNIOU9BdWFKcFJuTnZGSTNKZlZac1VIV2E2VV9XSlNGazFqQ2EtUGJtUG50MVN4dU8yNUtibnMzd1FVX1dLVENr?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-18",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Equipping agents for the real world with Agent Skills",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWW0xVE5YRGtqWngtWmtwS0xPVkZqZWg1ck5OU2FpYVVHd1lBNHZyVmhGX1U2aTFBbHVycmVIYzNNSEJVbWFyTEdNM2FwNlBWTFBtakR6a3phZlZOM3NvQ2lTZmR1NWl5Y1ZHSTBaeXBybF9MOUdhdEJjNzVFc2ktazFEMXpfTVhidkY2cENZY2NJYmUxeGc?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How to build reusable Skills in Anthropic’s Claude AI",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSGNLOEhCZmR2bHZVVXF5UHJDRWlRTkNCbjB1MklxMDJVb25TRjRLYlgxeHdzeGpHQ1lLdXlZOS1KVVhuTjBJVWFQc0dnOUxIWlBkRWlFaVEzUXFOajBGSWJHbGhMeGJmWGZsWWlvYi1tay1oSFVPUk1qNW50eVNzRFlHMEZ2ZUFZX1J0bnNMcG16dy1Mc0w5LWYtOUxjS2swanRvN1FkMTBvUQ?oc=5",
+     "source_name": "Journal of Accountancy",
+     "source_type": "новости",
+     "published": "2026-06-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Top 7 Claude Skills for Product Managers",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fdnF2YW0yNWVSLW1UZVpKSmJ4c2RKNEo0dEJ0YXRGc0YxNU81N0diSE44Q0YyVjh4MDFEdEdrdU5oaTBXd25Hang1TXRLUHdvR052OENVcGl6WWdxdnowdm1LemdjOHJ0NXBjNE5n?oc=5",
+     "source_name": "Snyk",
+     "source_type": "новости",
+     "published": "2026-04-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "delphicleancode/delphi-spec-kit: An opinionated ecosystem of rules, skills, and steerings to elevate Delphi development to a state-of-the-art level with Artificial Intelligence.",
+     "url": "https://github.com/delphicleancode/delphi-spec-kit",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-20",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 51
+     }
+    },
+    {
+     "title": "K-Dense-AI/scientific-agent-skills: Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ ",
+     "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-10-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 45600
+     }
+    }
+   ]
+  },
+  {
+   "technology": "code codex",
+   "technology_original": "code codex",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.454,
+   "score_interval_90": [
+    0.104,
+    0.85
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "Play-to-earn",
+    "query": "play-to-earn",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 5.85
+   },
+   "description": "«code codex» (code codex): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 215 научных публикаций (рост ×95.4 к 2019–2021), 98 новостей за год, 84001 репозиторий. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Claude Code, Cursor и Codex: какой AI-агент выбрать — журнал «Код»",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBabG9mY1d4cEFyLW5WWGExcl9CT1lwcXlIcFBLN3IzTEd4aVlHQ2hZR3VhWGpZNHhFQlh0Ni1NZFpKY0NoMzlFamhRd1ZfOXZyaWI0VWhOaDNtMzRIT0lZOUJTMEZGcTdI?oc=5",
+    "source_name": "Журнал «Код",
+    "source_type": "новости",
+    "published": "2026-07-08",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 84 001",
+    "↑ обсуждений разработчиков за год: 360",
+    "↑ рост обсуждений разработчиков: 4.38",
+    "↓ рост публикаций к 2019–2021: ×95.4"
+   ],
+   "takeoff": {
+    "probability": 0.997,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 94.4,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.88,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.375,
+    "oa_recent_log": 4.558,
+    "oa_growth": 4.558,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.028,
+    "oa_preprint_share": 0.284,
+    "oa_company_share": 0.186,
+    "oa_fields": 9.0,
+    "news_1y": 98.0,
+    "news_30d_share": 0.194,
+    "news_sources": 60.0,
+    "news_press_share": 0.02,
+    "hn_12m_log": 5.889,
+    "hn_growth": 4.385,
+    "gh_total_log": 11.339,
+    "gh_new_share": 0.993,
+    "gh_max_stars_log": 12.478,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 2.708
+   },
+   "sources": [
+    {
+     "title": "Claude Code, Cursor и Codex: какой AI-агент выбрать — журнал «Код»",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBabG9mY1d4cEFyLW5WWGExcl9CT1lwcXlIcFBLN3IzTEd4aVlHQ2hZR3VhWGpZNHhFQlh0Ni1NZFpKY0NoMzlFamhRd1ZfOXZyaWI0VWhOaDNtMzRIT0lZOUJTMEZGcTdI?oc=5",
+     "source_name": "Журнал «Код",
+     "source_type": "новости",
+     "published": "2026-07-08",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Почему Claude Code и Codex не ускоряют команду: у компании нет общей памяти / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9RbHd4WXFGNzBpUFVrWk9aS3lacjJQVXZlWG9yWVhqRUVyNHFJQzVSSnl2TjI0cjljdXM2U01mVVpVQnBpcjEtTGotWU93UQ?oc=5",
+     "source_name": "habr.com",
+     "source_type": "новости",
+     "published": "2026-06-04",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "профессиональное отраслевое или деловое СМИ",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Codex: как пользоваться ИИ‑агентом для программирования в ChatGPT",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5wem1pN0VITjFnalR5NGRnd21obmRNZXd5clBjWm1zX1Rrc19DcmJzZXJjd0VzaFZGSHNPTzNVaXBtU1VEUC1qeXJ0WldtUQ?oc=5",
+     "source_name": "skillbox.ru",
+     "source_type": "новости",
+     "published": "2026-09-09",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How I stopped fighting AI and started shipping features 10x faster with Claude Code and Codex",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWlV2Mzdvam9WWUZaYTE5OS1wM0t3VEc1S2JuWld4OTFwRXZaTVJfTXhCanRxek9pTk1EQ1BwNXlRQ0M3YzVyb3J2OVFTWWFPTjl2N29IVjIzVXJMdnFVRXZYLUNxWDdNZEpoQ0Utcm5tWEhUSVRLbkY1X0dnTUFCUEF2US1oRy00V3hWRTNCQ1N0X1ptYW5LN1UwYWpaSWhUNHY1MkFpMWFaUnVEY042VkNDQVYwdlk?oc=5",
+     "source_name": "HackerNoon",
+     "source_type": "новости",
+     "published": "2026-01-06",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "I gave Claude Code, Codex, and Cursor the same memory, and stopped repeating myself",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1IR2EyalQ2X3RfTGkwZ2RlOFE4TnZPeEtLbVVUTEpBUTJOc3BpV29vTVhhRGVqNzZhR1BOOTF3SFZuMWRnUF81dG9RTjJ2X0RNaGpibVJsWEpLTFlUSzUzVHlUX2h2eTJuZTM1UXZjWVVxWFJoSDk2VWtsS1Jkdw?oc=5",
+     "source_name": "XDA",
+     "source_type": "новости",
+     "published": "2026-08-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Claude Code vs. Codex vs. Cursor vs. GitHub Copilot: Which AI Coding Tool Is Best?",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUVNIajNVS1QydTlxNVJna24tNjFxRkt6dURoNklwajRlNjlXelVZQ2g3Z1VNVzdrSS1rTThrUFZDUWo2eGZKQUVpR0NkQ1EzbjhLMWRNMGJ3cjl1UDhUcm9UbVBFMlZzNEprTWphQ3psbFRjdWtSWm1QYThYZm1ZQUlRR2Mwdw?oc=5",
+     "source_name": "Built In",
+     "source_type": "новости",
+     "published": "2026-05-13",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "K-Dense-AI/scientific-agent-skills: Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ ",
+     "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-10-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 45600
+     }
+    },
+    {
+     "title": "teng-lin/notebooklm-py: Unofficial Python API and agentic skill for Google Gemini Notebook. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Pytho",
+     "url": "https://github.com/teng-lin/notebooklm-py",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 19384
+     }
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "technology": "Промпт-инъекции",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4281 публикаций, первые работы 9 лет назад"
+  },
+  {
+   "technology": "Тиринг KV-кэша",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4817 публикаций, первые работы 10 лет назад"
+  },
+  {
+   "technology": "протокол MCP",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3399 публикаций, первые работы 12 лет назад"
+  },
+  {
+   "technology": "инженерия Prompt",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 13935 публикаций, первые работы 15 лет назад"
+  },
+  {
+   "technology": "agentic ai",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 15929 публикаций, первые работы 15 лет назад"
+  },
+  {
+   "technology": "агент Coding",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3874 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "протокол контекста",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4601 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "ai safety",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7314 публикаций, первые работы 10 лет назад"
+  },
+  {
+   "technology": "ai assistant",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6055 публикаций, первые работы 9 лет назад"
+  },
+  {
+   "technology": "semantic communication",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3967 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агент Framework",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 10866 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агент Collaboration",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3356 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "OWASP Top 10 для LLM",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "video generation",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6980 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "бенчмарки Evaluation",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5112 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "LLM-генерация кода ПЛК на IEC 61131-3 Structured Text с замыканием на…",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 21851 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "рассуждение Visual",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3349 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Дистилляция знаний",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 22298 публикаций, первые работы 13 лет назад"
+  },
+  {
+   "technology": "hardware constraints",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4221 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "server installation",
+   "score": 0.0,
+   "reason": "угасающая тема: публикаций в 2025 году меньше половины от пикового года"
+  },
+  {
+   "technology": "cognitive architecture",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 10209 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "making it ideal",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 14382 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "command line",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 27481 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "execute code",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4508 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Автономные агенты закупок и цепей поставок, работающие в ERP/e-mail/м…",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16194 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "incident response",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9093 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "rest apis",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6630 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "human creativity",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6597 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "web scraping",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7439 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "automated workflows",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6700 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "image generation",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 24807 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агент Multi",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 137964 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "while preserving",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 162671 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инженерия Reliability",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4320 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "оптимизация Bayesian",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 24053 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "real-time communication",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8972 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Предиктивное обслуживание",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 32441 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "provide real-time",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 29058 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "real-time processing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 22314 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "all while",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 14634 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "attention mechanism",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 139148 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "adversarial attacks",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 25540 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "вычисления Scientific",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 11634 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "обучение Reinforcement",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 230261 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "penetration testing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 17653 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "квантовые вычисления",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 61182 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Domains",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3384 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "such as claude",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 78199 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Risks",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 37269 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "image datasets",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 50414 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "pattern matching",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16228 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "creative problem-solving",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8260 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инженерия Software",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 65719 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "computational biology",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 12726 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "datasets used",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 76530 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "поиск web",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 14723 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "higher education students",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 15455 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Периферийные вычисления",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 66025 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "black boxes",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 111631 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "game design",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 19681 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "scientific discovery",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 22280 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "машинное обучение Algorithms",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 195584 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "help developers",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5038 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "educational practices",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 50245 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "computer architecture",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7819 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Прунинг нейросетей",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 1707881 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "clinical decision",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 155074 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "policy decisions",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 45570 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "electronic health",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 107881 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "defense mechanisms",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 49203 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "память Long Term",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 24797 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "traditional chinese",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 133428 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "image classification",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 85060 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "energy sector",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 54561 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "fault diagnosis",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 73987 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "powerful tool",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 181587 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "medical imaging",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 151114 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "english as foreign",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3799 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "knowledge base",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 147121 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "quality assessment",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 139884 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "hypothesis testing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 114065 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "поиск Engine",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 80257 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "pre-service teachers",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 42066 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "field experiment",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 169451 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "efficient way",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 63029 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "smart grid",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 79241 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "natural sciences",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 82423 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "work has",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 248104 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "focus groups",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 334348 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "social science",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 339728 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "breast cancer",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 681253 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "high school",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 486141 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агенты not",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 2830170 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "github copilot",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 5 лет"
+  },
+  {
+   "technology": "агент Infrastructure",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 17 лет"
+  },
+  {
+   "technology": "github io",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 18 лет"
+  },
+  {
+   "technology": "автоматизация Workflow",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 24 лет"
+  },
+  {
+   "technology": "инструменты Developer",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 20 лет"
+  },
+  {
+   "technology": "claude code",
+   "score": 0.007,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "mcp server",
+   "score": 0.008,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "инференс LLM",
+   "score": 0.079,
+   "reason": "модель не относит к слабым сигналам (уверенность 8%)"
+  },
+  {
+   "technology": "llm evaluation",
+   "score": 0.071,
+   "reason": "модель не относит к слабым сигналам (уверенность 7%)"
+  },
+  {
+   "technology": "deepseek r1",
+   "score": 0.001,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "instruction tuning",
+   "score": 0.014,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "google gemini",
+   "score": 0.0,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "инструменты LLM",
+   "score": 0.059,
+   "reason": "модель не относит к слабым сигналам (уверенность 6%)"
+  },
+  {
+   "technology": "инструменты ИИ Generative",
+   "score": 0.001,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "generative ai gai",
+   "score": 0.075,
+   "reason": "модель не относит к слабым сигналам (уверенность 8%)"
+  },
+  {
+   "technology": "оркестрация агентов",
+   "score": 0.08,
+   "reason": "модель не относит к слабым сигналам (уверенность 8%)"
+  },
+  {
+   "technology": "Автономные агенты закупок и цепей поставок, работающие в ERP/e-mail/м…",
+   "score": 0.079,
+   "reason": "модель не относит к слабым сигналам (уверенность 8%)"
+  },
+  {
+   "technology": "ai-driven educational",
+   "score": 0.035,
+   "reason": "модель не относит к слабым сигналам (уверенность 4%)"
+  },
+  {
+   "technology": "gans diffusion",
+   "score": 0.104,
+   "reason": "модель не относит к слабым сигналам (уверенность 10%)"
+  },
+  {
+   "technology": "llama cpp",
+   "score": 0.042,
+   "reason": "модель не относит к слабым сигналам (уверенность 4%)"
+  },
+  {
+   "technology": "natural language prompts",
+   "score": 0.04,
+   "reason": "модель не относит к слабым сигналам (уверенность 4%)"
+  },
+  {
+   "technology": "агенты ИИ Specialized",
+   "score": 0.226,
+   "reason": "модель не относит к слабым сигналам (уверенность 23%)"
+  },
+  {
+   "technology": "hugging face",
+   "score": 0.001,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "агенты ИИ Multimodal",
+   "score": 0.295,
+   "reason": "модель не относит к слабым сигналам (уверенность 30%)"
+  },
+  {
+   "technology": "ai-driven drug discovery",
+   "score": 0.09,
+   "reason": "модель не относит к слабым сигналам (уверенность 9%)"
+  },
+  {
+   "technology": "автоматизация Browser",
+   "score": 0.216,
+   "reason": "модель не относит к слабым сигналам (уверенность 22%)"
+  },
+  {
+   "technology": "инструменты агентов",
+   "score": 0.29,
+   "reason": "модель не относит к слабым сигналам (уверенность 29%)"
+  },
+  {
+   "technology": "dsh plugin",
+   "score": 0.259,
+   "reason": "модель не относит к слабым сигналам (уверенность 26%)"
+  },
+  {
+   "technology": "code github",
+   "score": 0.033,
+   "reason": "модель не относит к слабым сигналам (уверенность 3%)"
+  },
+  {
+   "technology": "local first",
+   "score": 0.028,
+   "reason": "модель не относит к слабым сигналам (уверенность 3%)"
+  },
+  {
+   "technology": "lightweight open-source",
+   "score": 0.121,
+   "reason": "модель не относит к слабым сигналам (уверенность 12%)"
+  },
+  {
+   "technology": "агент Integration",
+   "score": 0.212,
+   "reason": "модель не относит к слабым сигналам (уверенность 21%)"
+  },
+  {
+   "technology": "short drama",
+   "score": 0.008,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  }
+ ]
+}

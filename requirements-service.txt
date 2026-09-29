@@ -1,0 +1,16 @@
+# Зависимости сервиса в Docker: сбор, модель, API, интерфейс, PostgreSQL.
+# Версии scikit-learn и joblib совпадают с теми, на которых обучена модель, иначе сериализованная модель не загрузится.
+# Без torch и transformers: в контейнере запрос переводится словарём направлений или разрешённой LLM по API.
+requests==2.32.*
+pandas==3.0.*
+numpy==2.5.*
+scikit-learn==1.9.0
+joblib==1.6.*
+pyyaml==6.*
+openpyxl==3.1.*
+fastapi==0.141.*
+uvicorn[standard]==0.53.*
+pydantic==2.*
+sqlalchemy==2.0.*
+psycopg[binary]==3.2.*
+streamlit==1.63.*

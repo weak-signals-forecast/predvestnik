@@ -1,0 +1,12 @@
+requests
+python-dotenv
+pyyaml
+google-cloud-bigquery
+sentence-transformers
+umap-learn
+hdbscan
+scikit-learn
+numpy
+pandas
+pyarrow
+matplotlib

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Предвестник — ранние технологические сигналы</title>
+  <meta name="description" content="Технологии на ранней стадии — по данным науки, стартапов и прессы">
+  <link rel="stylesheet" href="styles.css?v=29">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Предвестник</h1>
+      <p class="lead">Ранние технологические сигналы для бизнеса — <b>с объяснением: почему именно эта технология и почему сейчас</b>. Технологии, которые уже изучают учёные и пробуют стартапы, но которые ещё не стали массовыми.</p>
+      <div class="tags"><span>ТОП-15 по запросу в свободной форме</span><span>источники с уровнем доверия</span><span>объяснение каждого сигнала</span><span>проверка на прошлом</span></div>
+    </div>
+  </header>
+  <div class="ornament" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <form id="search" class="search" role="search" autocomplete="off">
+      <label for="q" class="visually-hidden">Направление или вопрос</label>
+      <input id="q" name="q" type="search" placeholder="Например: перспективные технологии в финтехе" required>
+      <button type="submit">Найти</button>
+    </form>
+    <div class="examples" aria-label="Примеры запросов">
+      <span class="muted">Примеры:</span>
+      <div id="examples" class="chips"></div>
+    </div>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="results" aria-live="polite"></section>
+
+    <details class="about" id="time-machine-box">
+      <summary>Проверка на прошлом: что система сказала бы в конце 2021 года</summary>
+      <div id="time-machine"></div>
+    </details>
+
+    <details class="about">
+      <summary>Как это работает</summary>
+      <ol>
+        <li><b>Не верить машине на слово.</b> Слабый сигнал — вывод в условиях неопределённости. Поэтому у каждого вывода видна его база: источники с датой и дословной цитатой, данные по годам, вклад каждого признака в балл. Эксперт проверяет, почему система так решила, и решает сам, а не следует за моделью вслепую.</li>
+        <li><b>Реестр заранее.</b> По миллионам научных работ (OpenAlex, arXiv), заголовкам Hacker News, стартапам Y Combinator и прессе заранее собран реестр технологий с рядами по годам. Запрос не ходит в интернет — выдача опирается на измеренные данные.</li>
+        <li><b>Отбор по смыслу.</b> Запрос сопоставляется с реестром по смыслу, поэтому можно писать по-русски своими словами.</li>
+        <li><b>Балл ранжирования.</b> Градиентный бустинг, обученный на ≈1 000 размеченных технологиях (слабый сигнал или нет), оценивает, насколько технология похожа на ранний сигнал, а не на зрелую технологию, академическую нишу или угасший хайп. Для каждой технологии видно, из чего сложилась оценка (SHAP).</li>
+        <li><b>Где найден сигнал.</b> В каких слоях корпуса есть технология: наука, сообщество разработчиков, стартапы, пресса, энциклопедия. Это то, что показывают данные, без выводов о зрелости.</li>
+      </ol>
+      <div id="model-global"></div>
+    </details>
+  </main>
+
+  <footer class="wrap foot" id="foot"></footer>
+
+  <template id="row-tpl">
+    <article class="row">
+      <button class="row-head" type="button" aria-expanded="false">
+        <span class="rank"></span>
+        <span class="names"><span class="name"></span><span class="orig"></span></span>
+        <span class="mid"><span class="why"></span><span class="stage"></span></span>
+        <span class="meter" role="img"><span class="bar"><span class="fill"></span></span><span class="val"></span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </button>
+      <div class="card" hidden></div>
+    </article>
+  </template>
+
+  <script src="app.js?v=29"></script>
+</body>
+</html>

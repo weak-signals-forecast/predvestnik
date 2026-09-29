@@ -1,0 +1,3035 @@
+{
+ "query": "слабые сигналы в кибербезопасности",
+ "seeds": [
+  "cybersecurity",
+  "AI security"
+ ],
+ "date": "2026-09-19",
+ "model": "Логистическая регрессия",
+ "stats": {
+  "работ за 2025–2026": 272,
+  "работ за 2019–2022": 222,
+  "новых репозиториев": 394,
+  "заголовков новостей": 14,
+  "фраз-кандидатов": 290,
+  "отсеяно как штампы": 54,
+  "проверено кандидатов": 160,
+  "исключено на ступени 1 (публикации)": 90,
+  "исключено на ступени 2 (Википедия)": 18,
+  "исключено моделью и правилами": 31,
+  "слабых сигналов": 6,
+  "под наблюдением": 8,
+  "с уверенностью ≥ 75 %": 3,
+  "исключено": 139,
+  "секунд": 96
+ },
+ "signals": [
+  {
+   "technology": "open-source adversarial",
+   "technology_original": "open-source adversarial",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.885,
+   "score_interval_90": [
+    0.755,
+    0.95
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "Блокчейн для кибербезопасности",
+    "query": "blockchain cybersecurity",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 1.72
+   },
+   "description": "«open-source adversarial» (open-source adversarial): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 21 научная публикация (рост ×9.2 к 2019–2021), 10 новостей за год, 71 репозиторий. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "OpenAEV: Open-source adversarial exposure validation platform",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOR19jb3R5d1AyV3gzc2dZZjNveGw4SnRRRVc1V3RkN3hNSnh2RDR2M2p2T3c5cEdfWlo2UXRnbDQ5WW1aeVRxRXMyT3lsME5KWnFieWVsSDZqSG5DM0dLQ01pcHFWVWtQU2I5TzdYSHNVdDRrY1Z6WF9wT25zQ0d5OGUxRUFLcDNUM2pVUFBMdXJJMnduZHB4QjZETWlQZENtQ2JQMEM0RQ?oc=5",
+    "source_name": "Help Net Security",
+    "source_type": "новости",
+    "published": "2026-01-05",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 62%",
+    "↑ упоминания в Википедии: 1",
+    "↑ число научных областей: 1",
+    "↑ число репозиториев: 71"
+   ],
+   "takeoff": {
+    "probability": 0.916,
+    "percentile": 0.88,
+    "horizon": "2029–2031",
+    "baseline_per_year": 8.2,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.82,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.091,
+    "oa_recent_log": 2.222,
+    "oa_growth": 2.222,
+    "oa_age": 2.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.238,
+    "oa_preprint_share": 0.619,
+    "oa_company_share": 0.25,
+    "oa_fields": 1.0,
+    "news_1y": 10.0,
+    "news_30d_share": 0.1,
+    "news_sources": 7.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 0.0,
+    "hn_growth": 0.0,
+    "gh_total_log": 4.277,
+    "gh_new_share": 0.901,
+    "gh_max_stars_log": 7.263,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "AI Security Policy Should Assess Systems, Not Only Models",
+     "url": "https://openalex.org/W7161091027",
+     "source_name": "arXiv (Cornell University)",
+     "source_type": "препринт",
+     "published": "2026-05-10",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "AI Security Policy Should Assess Systems, Not Only Models. We present swarm-attack, an open-source adversarial testing framework in which multiple lightweight LLM agents coordinate through shared memory, parallel exploration, and evolutionary optimization. Together, our results demonstrate that both safety bypass of frontier models and software vulnerability discovery, i.e., the capability class that motivated restricted release of Anthropic's Mythos Preview, are achievable at effectively zero cost using commodity hardware and openly available models. We report two experiments. In the first, five instances of a 1.2 billion parameter model conducted 225 jailbreak attacks each against GPT-4o a",
+     "extra": {}
+    },
+    {
+     "title": "OpenAEV: Open-source adversarial exposure validation platform",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOR19jb3R5d1AyV3gzc2dZZjNveGw4SnRRRVc1V3RkN3hNSnh2RDR2M2p2T3c5cEdfWlo2UXRnbDQ5WW1aeVRxRXMyT3lsME5KWnFieWVsSDZqSG5DM0dLQ01pcHFWVWtQU2I5TzdYSHNVdDRrY1Z6WF9wT25zQ0d5OGUxRUFLcDNUM2pVUFBMdXJJMnduZHB4QjZETWlQZENtQ2JQMEM0RQ?oc=5",
+     "source_name": "Help Net Security",
+     "source_type": "новости",
+     "published": "2026-01-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Asimov’s three laws of robotics survived 82 years, we broke them in 30 minutes, costs 80 cents, and then remade them",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQeWNSMnVtNDdDTXdSNkViZlRXam5mMVFjVTBTU1hqSnVDc1Ryc1M3UndMaVF5RzdVdWcza3ZKRTlldzJfZm5TaTVwYlRuYUdXXzJ1QzlkSWtjdjl0M0dKMGxZOVN4bk5QMW9Va2ljX29vVmhsT1Jwal9ZLTd5MzJXUkgzcml1bEFHbTlJVWhqMDZpUHp4cnVMeUJ5VHlaMXFKZ0RzWWF4eUpkQ1VNRTNRZXJiejhEU2RDT3JQbkM3bFd5empfRkp0T3pIRWQ2WV9EY1J1VHhMWDVTbTFZelltLTlNRmw?oc=5",
+     "source_name": "Adafruit",
+     "source_type": "новости",
+     "published": "2026-04-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Understanding ML Model Poisoning: How it Happens and How to Detect it",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1NQmV3WkxHa2RqMlo4aF9SSHBxY01YamZxRVllb05UZ3FxZW50Q2k5alJQWDlUc3dmM2FicWFESk5LWnY5Wm1od2ZETXpnMUhPQjlSaEtsVjVWc3YxdnVNNHZWQVhGbHRrRGhVWEtrdkZMZw?oc=5",
+     "source_name": "infoq.com",
+     "source_type": "новости",
+     "published": "2026-06-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "humanbound/humanbound: Open-source adversarial testing engine, SDK, and CLI for AI agents. Runs locally or against the Humanbound Platform.",
+     "url": "https://github.com/humanbound/humanbound",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 149
+     }
+    }
+   ]
+  },
+  {
+   "technology": "тестирование на проникновение с ИИ",
+   "technology_original": "ai pentesting",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.862,
+   "score_interval_90": [
+    0.45,
+    0.96
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.28
+   },
+   "description": "«тестирование на проникновение с ИИ» (ai pentesting): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 8 научных публикаций (рост ×4.3 к 2019–2021), 68 новостей за год, 1247 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "What Is AI Pentesting? A Practical Guide",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5yRWhhQWVxaUhBQVpUM3ZPcDIxM1diWjdwQml0ZUI5dEt1WlFUUERBb2t1UUpyMU1Td1ROclF6ZzNpV2FLSTZmLTEwRVMxZGhZWkpuZnZR?oc=5",
+    "source_name": "XBOW",
+    "source_type": "новости",
+    "published": "2026-02-02",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 38%",
+    "↓ число репозиториев: 1 247",
+    "↑ упоминания в Википедии: 1",
+    "↑ число научных областей: 3"
+   ],
+   "takeoff": {
+    "probability": 0.961,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 3.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.5,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 2.197,
+    "oa_recent_log": 1.462,
+    "oa_growth": 1.462,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.375,
+    "oa_preprint_share": 0.375,
+    "oa_company_share": 0.0,
+    "oa_fields": 3.0,
+    "news_1y": 68.0,
+    "news_30d_share": 0.088,
+    "news_sources": 31.0,
+    "news_press_share": 0.088,
+    "hn_12m_log": 2.303,
+    "hn_growth": 0.916,
+    "gh_total_log": 7.129,
+    "gh_new_share": 0.872,
+    "gh_max_stars_log": 11.043,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "What Is AI Pentesting? A Practical Guide",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5yRWhhQWVxaUhBQVpUM3ZPcDIxM1diWjdwQml0ZUI5dEt1WlFUUERBb2t1UUpyMU1Td1ROclF6ZzNpV2FLSTZmLTEwRVMxZGhZWkpuZnZR?oc=5",
+     "source_name": "XBOW",
+     "source_type": "новости",
+     "published": "2026-02-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "What Is AI Pentesting and How Does It Works?",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA4eDBRd2JxLWkwWllJS0NPeFVOdVJpRmVtaXUwVDhCWE5fMm14SV9xLTlDeUxuTkptZGtvQ3pzUzBNWHhTeC1DNDdwb0xvNVNRQUJwaGFn?oc=5",
+     "source_name": "Snyk",
+     "source_type": "новости",
+     "published": "2026-07-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Open-source AI pentesting tools are getting uncomfortably good",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQR2FqS0prZVIxZ09TU1hLM2thNFlEUjlSQkc2MTYtVEMwaWp0WkY2dlM4UnBCLXhlVTlHb3gwUEtXSjhfYU42M0x5c2pmSFpUQzJlLW05MTNGcEZ5M1M0bmpGQmtKRlNESVJsNTJ6YW5QWTZjSHp2c2FpNHROUHk0czV1endtNm8?oc=5",
+     "source_name": "Help Net Security",
+     "source_type": "новости",
+     "published": "2026-02-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "CyberStrikeus/CyberStrike: Open-source AI-powered offensive security harness for automated penetration testing.",
+     "url": "https://github.com/CyberStrikeus/CyberStrike",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 2812
+     }
+    },
+    {
+     "title": "0xSteph/pentest-ai: Open-source AI pentester that proves every finding. Machine oracles re-run each exploit; verified bugs ship a proof capsule you can replay yourself.",
+     "url": "https://github.com/0xSteph/pentest-ai",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-04",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 1684
+     }
+    }
+   ]
+  },
+  {
+   "technology": "навыки агентов",
+   "technology_original": "agent skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.773,
+   "score_interval_90": [
+    0.216,
+    0.974
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 6.65
+   },
+   "description": "«навыки агентов» (agent skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 1267 научных публикаций (рост ×71.9 к 2019–2021), 100 новостей за год, 241510 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Навыки агентов (Agent Skills): что это такое и почему это больше, чем «папка с промптами»",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Jb25tX3l2eF85NG9PYWxJUm9XWUYxMEVzS2tadEZOeW9LSmNSOEh4UXFkdWVPMmFraVUtQUQ0OHF5eF92Z3A5T2ZsZVpJcWs0RUJDc21WT2RHekdCMDNsM0ZRVdIBV0FVX3lxTE1LQkc4aDFhUVJscFljVEdTZUlHd3ZxYWNmWXRjQU1HZHhRRHU1SGVSU09ydklPbXRTY0hYejdodm1JUThfLVZBeldtOHZuMDdTS0Y2UHkzSQ?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-12-26",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 241 510",
+    "↑ рост обсуждений разработчиков: 5.33",
+    "↑ доля препринтов: 57%",
+    "↑ обсуждений разработчиков за год: 413"
+   ],
+   "takeoff": {
+    "probability": 0.99,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 525.9,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.5,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 7.145,
+    "oa_recent_log": 6.267,
+    "oa_growth": 4.275,
+    "oa_age": 16.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.026,
+    "oa_preprint_share": 0.572,
+    "oa_company_share": 0.179,
+    "oa_fields": 17.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.31,
+    "news_sources": 59.0,
+    "news_press_share": 0.03,
+    "hn_12m_log": 6.026,
+    "hn_growth": 5.333,
+    "gh_total_log": 12.395,
+    "gh_new_share": 0.997,
+    "gh_max_stars_log": 12.678,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.792
+   },
+   "sources": [
+    {
+     "title": "Навыки агентов (Agent Skills): что это такое и почему это больше, чем «папка с промптами»",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Jb25tX3l2eF85NG9PYWxJUm9XWUYxMEVzS2tadEZOeW9LSmNSOEh4UXFkdWVPMmFraVUtQUQ0OHF5eF92Z3A5T2ZsZVpJcWs0RUJDc21WT2RHekdCMDNsM0ZRVdIBV0FVX3lxTE1LQkc4aDFhUVJscFljVEdTZUlHd3ZxYWNmWXRjQU1HZHhRRHU1SGVSU09ydklPbXRTY0hYejdodm1JUThfLVZBeldtOHZuMDdTS0Y2UHkzSQ?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-12-26",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AI-скиллы для агентов: что это и как написать SKILL.md — журнал «Код»",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Sd25qcmhOTVFiNU5ZMktlcXhZOUhKNzVWZG5FeHRnTlhZeGtzbUJfTGIwdHQ5MkEzeXZYMXNYWXd4S204UUxZNFQxX0NhVGN0NjlDUVV1YWN1UzdxSUh1bw?oc=5",
+     "source_name": "Журнал «Код",
+     "source_type": "новости",
+     "published": "2026-07-03",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Anthropic сделала базовые навыки ИИ-агентов открытым стандартом",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWk45bUw0WVdXZG1qN09IblZ0eURaNWc5N19WM2JyQ0U0VWRKdFRmZjk2eTNOMlF1Y2J0U2J5YWFlVkxWNlROVkEteTBJTU91OHg1MFhqMTNVVl9EN18yN0hmNXBZNU9oYkdidkZnZXlId0s5dWt4UUNQUVI4SGVESEV4SlY2Z3hETEhhNnZqT3lOZ9IBlwFBVV95cUxOOVA4S0lGSHVLQjdnQlRLMk9xZFVXUjY4WXMwMXhfWm9VNjNIcVd2cDd3dGlDcE9LWWhXcFB5UEl5ZVVtSUd4eHlzUkJKZGF1eVdTWjMxVDIzRGZhOE82aThNb0NuMVFwRG9rYVpLMll4VTBHMGxManJ5UTRobmNNR0Q3aWF3bnRJeXlzdTRzSFROMkFMRkow?oc=5",
+     "source_name": "3DNews",
+     "source_type": "новости",
+     "published": "2025-12-23",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Equipping agents for the real world with Agent Skills",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWW0xVE5YRGtqWngtWmtwS0xPVkZqZWg1ck5OU2FpYVVHd1lBNHZyVmhGX1U2aTFBbHVycmVIYzNNSEJVbWFyTEdNM2FwNlBWTFBtakR6a3phZlZOM3NvQ2lTZmR1NWl5Y1ZHSTBaeXBybF9MOUdhdEJjNzVFc2ktazFEMXpfTVhidkY2cENZY2NJYmUxeGc?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "SkillOpt turns AI agent skills into trainable assets",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVnNvSVRPRlBOSkktb3ozS1BGeUU5ZmFJSGQzT04zQ0IzeDMtTGVxT1FXc1JQNm1LTTJ5NndZLXN1SE9tM3FBSkVsbWt2S3ZueWJSLXVTQmFRZTVaQ3A0aUE5anFPRWVfaXlLVHFFc0JOTW5VU3ZWUGUzb3lQZ1dkdzRNdEhwa3JkaEdIYnhEbWtmN1kwZ044?oc=5",
+     "source_name": "Microsoft",
+     "source_type": "новости",
+     "published": "2026-06-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "NVIDIA-Verified Agent Skills Provide Capability Governance for AI Agents | NVIDIA Technical Blog",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd2drOXFmNVBGaHFIY2FOMFpoOUpiTXJ0YmFmcVJTa0VZSjR4bjBfNnc5QW1RUGJUMjYtalVfZGU0YV9ZenRucXBGM1dJZzNxY2hJcXdKdVpuWGxsZUh6UGtZV0JDcTJqRGYwcHA0RlB3N2dTR2JLSGlETUhnUkhxRnVaN2Nfd2plRmJCVTNzRnZFMmZYSmh1R05raHh5d1NVa01XUllWZnVDMEE?oc=5",
+     "source_name": "NVIDIA Developer",
+     "source_type": "новости",
+     "published": "2026-05-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Batman0506/openclaw-sec-skills: 🛡️ 网络安全/AI Agent Skills 集合 | Cybersecurity Security Skills Collection",
+     "url": "https://github.com/Batman0506/openclaw-sec-skills",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-10",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 331
+     }
+    },
+    {
+     "title": "7WaySecurity/ai_osint: 🤖 Curated AI OSINT resources — Google dorks, Shodan queries, GitHub dorks, and techniques to discover exposed LLM endpoints, leaked AI API keys, misconfigured vector databases, ",
+     "url": "https://github.com/7WaySecurity/ai_osint",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 165
+     }
+    }
+   ]
+  },
+  {
+   "technology": "Безопасность MCP-серверов",
+   "technology_original": "mcp security",
+   "name_source": "словарь терминов проекта",
+   "score": 0.698,
+   "score_interval_90": [
+    0.343,
+    0.862
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "TinyML",
+    "query": "TinyML",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.03
+   },
+   "description": "«Безопасность MCP-серверов» (mcp security): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 92 научные публикации (рост ×23.5 к 2019–2021), 78 новостей за год, 5861 репозиторий. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Защита MCP серверов со Spring AI",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RVTJrU2Q0QUJ1QkF5U09Ka1gzdWdiS3NjMEQ1VUNSMWVuS0FYSjV2d3l1N0IwWjZhVmVqVGhTYmlNOGVKajVTZUk4THNDc01rQnNLVEFhbUZqM01iVi1tbDB1eVQ0Ylly0gFXQVVfeXFMUHpENE9CY25Ma2l5UGFMZGVVbjRUTm92QTlkQ0ltNXNCMlowRXA4aEt5WDF2RG9WNmZmT0tCc1dCT01RSHJKTUUxU210ams4Nl9tYVg0NUln?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-10-09",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 5 861",
+    "↑ доля препринтов: 43%",
+    "↓ рост публикаций к 2019–2021: ×23.5",
+    "↑ обсуждений разработчиков за год: 33"
+   ],
+   "takeoff": {
+    "probability": 0.983,
+    "percentile": 0.99,
+    "horizon": "2029–2031",
+    "baseline_per_year": 38.2,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.88,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.533,
+    "oa_recent_log": 3.669,
+    "oa_growth": 3.158,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.087,
+    "oa_preprint_share": 0.435,
+    "oa_company_share": 0.167,
+    "oa_fields": 4.0,
+    "news_1y": 78.0,
+    "news_30d_share": 0.103,
+    "news_sources": 48.0,
+    "news_press_share": 0.013,
+    "hn_12m_log": 3.526,
+    "hn_growth": 0.754,
+    "gh_total_log": 8.676,
+    "gh_new_share": 0.905,
+    "gh_max_stars_log": 10.908,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.386
+   },
+   "sources": [
+    {
+     "title": "Защита MCP серверов со Spring AI",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RVTJrU2Q0QUJ1QkF5U09Ka1gzdWdiS3NjMEQ1VUNSMWVuS0FYSjV2d3l1N0IwWjZhVmVqVGhTYmlNOGVKajVTZUk4THNDc01rQnNLVEFhbUZqM01iVi1tbDB1eVQ0Ylly0gFXQVVfeXFMUHpENE9CY25Ma2l5UGFMZGVVbjRUTm92QTlkQ0ltNXNCMlowRXA4aEt5WDF2RG9WNmZmT0tCc1dCT01RSHJKTUUxU210ams4Nl9tYVg0NUln?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-09",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Охота на AI-инфраструктуру: ханипот поймал сканер MCP-серверов / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBKMFNuUzdlNTFfWlZQejZ6R256ME9LRUZQMFJSNUpVeXdXOWxXNm5qb3N4cG9KSVJyYkRyb1BaOWNyR19hODdmNHJqU09zZw?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-03-10",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Киберугрозы веб-приложений и инфраструктуры разработки: тренды и прогнозы 2026–2027",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbzNPTERhc0hhNmc4N013UzY5T0c4cC03TDBxalJKc2lFWWRlM2hBYjhxVlhWOHM2aGRnYUp6M042QmtQaFVSdHVmQWNxbzZrS0NhVk9Wc21tZ1pheVMxQXVKb1cyUU9sWllNVHFxc1hrRVpfQ3R2RjNrNThFZDBGaUN4ZmpVaDl1NmZaQTZOMEU1RGt3LWhZb0g1S2VKRHp5Yi1aMFNpTVBGM0t2RGJqWk5HMGVoWVlJN1NQMmd4OTNvYk5HWjZFRVp4M2ZFQQ?oc=5",
+     "source_name": "ptsecurity.com",
+     "source_type": "новости",
+     "published": "2026-06-17",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "NSA Releases Security Design Considerations for AI-Driven Automation Leveraging the Model Context Protocol",
+     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOYjF3OE1ZZ2F5UThUSjBZcEJsa2xTWnhCZFZvNEM0UjdJWWVwelFTVGtKY1FYOVpiX0JnWFdJQlBhZlpUemI1RWZBc0FoMDJMLVR4SzBybkJvZldrSk1NYk1paThaXzBGdmpGSWZSeloyR0VMekR4WEprVXhvckZfMl9HTEp4R2FNcDlzQUc5bk9mdnhWZGJObXY5REVzbHVkUUZ5X1Y5aWl5cWQ2ZG4zX2hhOGYwai03dzM1VVpQWEZveW0yUExnSFk3TkJEYlZoaTE3cFFDZ3pVUTdyWWtYVUJ6X1RDa01ZMEJRaTF4UjRRN3piSGVPdm1oMElONGNUaXc?oc=5",
+     "source_name": "National Security Agency (.gov)",
+     "source_type": "новости",
+     "published": "2026-05-20",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "A Security Engineer's Guide to MCP",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1GWktFM1JvSVdCWXJkcUFiZGtWejNsSk5lR0xoR1pCVnlsNlNCRGppMmpfdlVubVpDdDloNFFldWppbU9PWVdpOEk1dko4OXFod0oyRmg1dXZuWl9rTHFsbVRnOUlROWpQOWVBemx3Zno?oc=5",
+     "source_name": "Semgrep",
+     "source_type": "новости",
+     "published": "2025-09-29",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "The Mother of All AI Supply Chains: Critical, Systemic Vulnerability at the Core of Anthropic’s MCP",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQLTFFczJfemlJZG1TR2tiM3RCNElHRnc2RThEWEl1M3lITzkzLUNkVzI3aGhYZklBWnBER1NSRzZWbnBLNkd4QlBDWmdHaWxSdUN3RzFnMWxVQ3lON2dGMEx4Z1JLaTFpYS1jNkJtQTktQzFIY1JHeWtLWGZtWVB6NVJMbUpnZ0p2WS10UGwtRF83bUJNT1pfSnZzT2ctZGxqaG5wanljUTlyNUJ1WkxSdFlNaXJiemtYMnZR?oc=5",
+     "source_name": "OX Security",
+     "source_type": "новости",
+     "published": "2026-04-15",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "node9-ai/node9-proxy: The Execution Security Layer for the Agentic Era. Providing deterministic \"Sudo\" governance and audit logs for autonomous AI agents.",
+     "url": "https://github.com/node9-ai/node9-proxy",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 214
+     }
+    },
+    {
+     "title": "7WaySecurity/ai_osint: 🤖 Curated AI OSINT resources — Google dorks, Shodan queries, GitHub dorks, and techniques to discover exposed LLM endpoints, leaked AI API keys, misconfigured vector databases, ",
+     "url": "https://github.com/7WaySecurity/ai_osint",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 165
+     }
+    }
+   ]
+  },
+  {
+   "technology": "агентная безопасность",
+   "technology_original": "agentic security",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.695,
+   "score_interval_90": [
+    0.239,
+    0.911
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.9
+   },
+   "description": "«агентная безопасность» (agentic security): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 798 научных публикаций (рост ×30.4 к 2019–2021), 100 новостей за год, 18592 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "OWASP выпустил второй отчёт по ИИ-агентам — теперь с реальными инцидентами, CVE и российскими спецами в команде",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBXNVRPVEFzVHp2T2t3SHczcWtmVlpVVW85dExpYUUtRlVTaEdtZ3ZoaXJONUpieWZoVmZPOE9DOU9pRThqYkJrbzRXeE9VdnBQV1dOSg?oc=5",
+    "source_name": "SecurityLab.ru",
+    "source_type": "новости",
+    "published": "2026-06-06",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "профессиональное отраслевое или деловое СМИ",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 18 592",
+    "↑ доля препринтов: 41%",
+    "↓ рост публикаций к 2019–2021: ×30.4",
+    "↑ рост обсуждений разработчиков: 2.2"
+   ],
+   "takeoff": {
+    "probability": 0.933,
+    "percentile": 0.89,
+    "horizon": "2029–2031",
+    "baseline_per_year": 282.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 6.683,
+    "oa_recent_log": 5.647,
+    "oa_growth": 3.413,
+    "oa_age": 16.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.076,
+    "oa_preprint_share": 0.415,
+    "oa_company_share": 0.195,
+    "oa_fields": 15.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.42,
+    "news_sources": 62.0,
+    "news_press_share": 0.11,
+    "hn_12m_log": 2.89,
+    "hn_growth": 2.197,
+    "gh_total_log": 9.831,
+    "gh_new_share": 0.918,
+    "gh_max_stars_log": 10.87,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "OWASP выпустил второй отчёт по ИИ-агентам — теперь с реальными инцидентами, CVE и российскими спецами в команде",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBXNVRPVEFzVHp2T2t3SHczcWtmVlpVVW85dExpYUUtRlVTaEdtZ3ZoaXJONUpieWZoVmZPOE9DOU9pRThqYkJrbzRXeE9VdnBQV1dOSg?oc=5",
+     "source_name": "SecurityLab.ru",
+     "source_type": "новости",
+     "published": "2026-06-06",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "профессиональное отраслевое или деловое СМИ",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AI-security развивается, но единого стандарта пока нет: как бизнесу защищать ML-модели и AI-агентов",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBRM0sxRlBOVjZ4cHVFSTZkMnY3OUNpRVRoNTU2RlcxbW5rUEZvdmpyckltX3dUY29yemJ0djNveTNkOC1NUnA5RS0xa2R4UW1zZ2k5aGdNcGdjbzNETkIzUTByWlpSUE3SAVhBVV95cUxNRFNzNF9rWnJ2VlJ0Q2tmZzBVdkEyUnozNnlMeUZuVTVBSllfM0lrQjhrSmR4RExkWkJsTEhIRTlwNzY3akcta1F3eWQ1dXp0cjUwVmV2S1Qy?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-02-26",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Николай Арефьев (Технологии Киберугроз) про базы знаний по угрозам и роль ИИ",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWFuSDNYV2RVdjcwTnA5cnFFV0E1ZzNHR1gtT3h3aXpob09MNjkxbDlnaWVaRjI3RDZZWkl3bU9ZU3RYRnNlelp1UHdYZWVxYkI0TXNZNGFPV2FqNU04X3o2a2RSdUxMTnFmaGFJQ3NYRDRjOS1Vbi0xYmRXU1VmczNlWm5ucGVFOVVsVzNjWGFENzBEMVNvVW5hSDZfRnpOOUw4UE9jMA?oc=5",
+     "source_name": "cisoclub",
+     "source_type": "новости",
+     "published": "2025-12-16",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Four security principles for agentic AI systems",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNckQ2OUNMODZ1N2tycXktYTFsQjRKNkpvZmd2OU5BZWx2ZTlBdHBhQjdGdHFMOVBveE1tTmhCdWNoVXdOdDl2NHhjWWpHblkwc3FLeEpsU0tzc2J2a1hEbHo1R2tKeE9oOWt3bTFMRXFOd3cyVWFGenctS01pUks5TTVRYTlodTNadTZ5M0I1TQ?oc=5",
+     "source_name": "aws.amazon.com",
+     "source_type": "новости",
+     "published": "2026-04-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Microsoft launches agentic security platform designed to combat AI-based attacks",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOandqbEhVeXZJTUQtWFN2M1B6QXlOVElhR2taMnlrdk1wOHlEMlBnQVQyZTlHMmwyRjRMb2NqaVdQMDlZbWhVRklOem9JUTZ0V1ZlMUZoT2wwQkowSUQxOGFOQlBiVHg0MDhtTEVfd3hjQTQ2Rlp3X2ZlSW4tdmpHX0VUV1Y3ZmV0OUNQdVZ6RnE3YzhleGp1Mg?oc=5",
+     "source_name": "Cybersecurity Dive",
+     "source_type": "новости",
+     "published": "2026-07-28",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Microsoft Sentinel: The security platform for the agentic era",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd3M2S0YtX055U1BlTXJRMlQ0bXdBU2tJemhoU3lkSmFwQ1RZXzdrVWx3Xy1RSHp6RUZHNXVocWdsZ3I5Tm5zQ1lVdUZMVW1RYmFrMVlmVU1PZnpFbEY0Tk9ZSFdOaEVSMUt4ZHplbU00cnZhN0lzUUt3SVQwUmVsTWZqUGxNYmxERDVpTkdnempPLXo3MWhkLXBrUElIMEJRWDBlbHNQUDc1UmRNaGlwRUV6akNxSHlkQl91VW55ajhmc1ZGSnc?oc=5",
+     "source_name": "Microsoft",
+     "source_type": "новости",
+     "published": "2025-09-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "backbay-labs/clawdstrike: Agentic AI EDR for developer workstations and autonomous agent swarms. Build Swarm Detection & Response platforms with Clawdstrike.",
+     "url": "https://github.com/backbay-labs/clawdstrike",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-31",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 288
+     }
+    },
+    {
+     "title": "cynative/cynative: Open-source security agents for cloud, code and runtime. 45 built-in agents audit AWS, GCP, Azure, Kubernetes, GitHub and GitLab for privilege escalation, public exposure, supply ch",
+     "url": "https://github.com/cynative/cynative",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-06-24",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 203
+     }
+    }
+   ]
+  },
+  {
+   "technology": "отравление RAG",
+   "technology_original": "rag poisoning",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.588,
+   "score_interval_90": [
+    0.389,
+    0.79
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.11
+   },
+   "description": "«отравление RAG» (rag poisoning): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 66 научных публикаций (рост ×29.8 к 2019–2021), 10 новостей за год, 1291 репозиторий. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "AI security agents increasingly rely on Retrieval-Augmented Generation (RAG) to use external security knowledge for vulnerability analysis and exploit reasoning.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Летальное трио агентской разработки: как ИИ‑агенты открывают доступ к инфраструктуре и что с этим делать",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SQ1RYa1RZelpxeGpad3Jib1ZuWXJ0X0VqamM2YzU5TV9rcGl5YmpDeVhVNDA4dHl1OTZlcFhCaFotWkxwM0RjanhTeTNZVld3bk4ydVJyeWxnOExvQW4wU0dreWJ3TklaWGfSAVhBVV95cUxOek5MNXBNX2c1bXBiOXVxNkJTekxYNkd0dlFRUDMtY01jc0FVeVBLSlREem93WHRINGhMTWs1bGRJQmZxeVo1aFcybDZWcGtaYmxGYzc1TWI2?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-08-20",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 42%",
+    "↓ рост публикаций к 2019–2021: ×29.8",
+    "↓ число репозиториев: 1 291",
+    "↑ рост обсуждений разработчиков: 1.39"
+   ],
+   "takeoff": {
+    "probability": 0.966,
+    "percentile": 0.96,
+    "horizon": "2029–2031",
+    "baseline_per_year": 28.8,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.55,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.205,
+    "oa_recent_log": 3.393,
+    "oa_growth": 3.393,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.182,
+    "oa_preprint_share": 0.424,
+    "oa_company_share": 0.139,
+    "oa_fields": 6.0,
+    "news_1y": 10.0,
+    "news_30d_share": 0.0,
+    "news_sources": 10.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 1.386,
+    "hn_growth": 1.386,
+    "gh_total_log": 7.164,
+    "gh_new_share": 0.957,
+    "gh_max_stars_log": 8.527,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.386
+   },
+   "sources": [
+    {
+     "title": "Poisoned Playbooks: Demystifying Knowledge Poisoning Effects on AI Security Agents",
+     "url": "https://doi.org/10.48550/arxiv.2606.24402",
+     "source_name": "arXiv (Cornell University)",
+     "source_type": "препринт",
+     "published": "2026-06-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "Poisoned Playbooks: Demystifying Knowledge Poisoning Effects on AI Security Agents. AI security agents increasingly rely on Retrieval-Augmented Generation (RAG) to use external security knowledge for vulnerability analysis and exploit reasoning. This creates a new risk: poisoned write-ups can be operationalized into incorrect exploit behavior. Yet, prior work on RAG poisoning has mostly studied answer corruption in QA settings, much less is known about action-taking security agents. This paper aims to reveal such characteristics with crafted poisons about real-world challenges and AI agents. First, we demonstrate how a crafted single poisoned write-up injected into public-style security know",
+     "extra": {}
+    },
+    {
+     "title": "Летальное трио агентской разработки: как ИИ‑агенты открывают доступ к инфраструктуре и что с этим делать",
+     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SQ1RYa1RZelpxeGpad3Jib1ZuWXJ0X0VqamM2YzU5TV9rcGl5YmpDeVhVNDA4dHl1OTZlcFhCaFotWkxwM0RjanhTeTNZVld3bk4ydVJyeWxnOExvQW4wU0dreWJ3TklaWGfSAVhBVV95cUxOek5MNXBNX2c1bXBiOXVxNkJTekxYNkd0dlFRUDMtY01jc0FVeVBLSlREem93WHRINGhMTWs1bGRJQmZxeVo1aFcybDZWcGtaYmxGYzc1TWI2?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-08-20",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Российская пропаганда в ответах ИИ: как ее распознать, объяснили в Минцифры",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVThJYW12YWZQeUUxRm50WFFaRE1nZjlRenFtYUg5dVpQcFN0UkMwNlBUX3M2YlBSNE81ZE4tall2dzFHLU5QQmRydTVKVlVydFplX19tcnJxRzJGSVlNMENJaGJLNjdacFVSOTUzU2hXRkNCa2VCSWp0TFBydDlWeWpvSGQyTi10RkU1b1huQy1EWUtkWktfdmNfaFJYZXF2?oc=5",
+     "source_name": "kanaldim.tv",
+     "source_type": "новости",
+     "published": "2026-08-31",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Исследование: ИИ воспроизводит российские фейки",
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5zeF96R0YtVjJuOTZKY0ZaVXM5SURfWHY0aGJmM2pLd09mdlpyczdFRW1NZjAybDktd1oxWUpqeDcxS3pmRjM5WkMwRURwbUFZLUFYOVdobkJXSXpGVG1tN1Rhd1RKMF9tdTdhTjdBRERLNUJobjRUUmVWVdIBgAFBVV95cUxOOUp6NVRZY2tFa0VYRnVraW95NDJUTkJodFdXWl9kWlFVcmhzRDBaeDMweThucDNnak9vQ01yZEFQQ3pVc3p3VVlHYkxnd0t4MzVNNXVNYWM1bnJwR19WeGVPM2RxbkJDcmh0cE5VOXM5NjhLdWF5RWtJZ1dFMDZlaQ?oc=5",
+     "source_name": "Дзеркало тижня",
+     "source_type": "новости",
+     "published": "2026-07-29",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Draincode Achieves 85% Latency Increase Via RAG Context",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQVW1NWHhES1pqTW9iekxGWVlPcFVsVm9LbU9ZZ2lZNUFQekhLRFpsM3E5RHBjUlJ3UmNJWFhDV2RuS2R1Z29JeG11ZTJXZFV2cU1CRHVDNjNRNkJPUVNSYXByQmlmVU50eDBDb3RZWVRFcDJ2cmNGakVXb05hRUhlNzQ5cw?oc=5",
+     "source_name": "Quantum Zeitgeist",
+     "source_type": "новости",
+     "published": "2026-01-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Information warfare: Russia poisoning AI tools to amplify false claims, think tank claims",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQUFJ4ZTJ3TmptcmxxcDJzLXJXMXp0WUJsQkFsNk4zYXo5MlpnNVdiRjdjNG5QZ3IzSUEtNDJUZXBVYTU0TmxWT09TcnJEcmxFNVNRQUo0LWVOazVWd21WSWpYWFR6a0NCVFppd01HOHJTZW1HVU9fZmlkaEtJZG9QcmYxRE5Pb09hcjZvYlRPSXdtM0lyNVFyZTg3TmFwY2lfejhlTXZINTN2Z3RrSjhCVUVWTTVyc1JsTXllY1l3WUo5Y1JhQVZlanFVcU1lcDjSAdQBQVVfeXFMUEczaFVqOW1EQkFXUW0tMG9vV2tkNjM0ZXNCRzNUcUtxXzI3NE1nS0JUQ3M2RTFSeEF4X2ljeGozb2ttR2NYZU0wWHFZYjUzZjhHMldLX29KcVhiRG9CTUxGMlFscGlDSzYySXBrUU12aENWZFdDYm9aWUgyQlJROXJPRDRCM3JjaGJWSXZUOTMwVGNvbVJyN3ZkWnE2Mk5BWkFPMDQwODU1ZFNDM2owWjYtYmd6akJ4M3JLV1ZXa09UU0U4UmNNcUlGdVJtTGNPcTlJNlk?oc=5",
+     "source_name": "WION",
+     "source_type": "новости",
+     "published": "2026-07-28",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Common Agentic Attack Patterns: 6 Layers Explained",
+     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5uOGsyR1FIR3dPWlpRRVkzLTJEaS01elRvVE83dnVBZUk2TFB1RUtseHZ6dDNJQU9Ub1VibVpmZFJRSDR4UUtkYnV2MTNsYWdWTXdPWW13ck9mNlBuRUtYRXZIdlY3alNUNjI0b1FaWi1NUUE?oc=5",
+     "source_name": "Augment Code",
+     "source_type": "новости",
+     "published": "2026-05-18",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "r00tb3/RAG-Poisoning-Lab: RAG Poisoning Lab — Educational AI Security Exercise",
+     "url": "https://github.com/r00tb3/RAG-Poisoning-Lab",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-12-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 10
+     }
+    },
+    {
+     "title": "hartescout/ai-security-toolkit: Initial research on RAG Poisoning and Prompt Injection with detectors and a POC for poisoning.",
+     "url": "https://github.com/hartescout/ai-security-toolkit",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-21",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 5
+     }
+    }
+   ]
+  },
+  {
+   "technology": "ai hacking",
+   "technology_original": "ai hacking",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.499,
+   "score_interval_90": [
+    0.137,
+    0.77
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "Buy now pay later",
+    "query": "buy now pay later",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.63
+   },
+   "description": "«ai hacking» (ai hacking): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 45 научных публикаций (рост ×5.3 к 2019–2021), 100 новостей за год, 2296 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "OpenAI Didn’t Notice Its AI Agents Using a Message Board to Plan Their Hacking Spree",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUEp4QUZxZUl2d2NKdWFSdjA2NF8yRTE4Ul8xV3RQdG5BWDYyNnBGSDBfYUJPNjFQd2xuYlJUYzBTNl9JVlNmRUo3N1hmN01FR2FqQXBkLWJ4c1czZEQzZTY3UFQwenNsVmt2TU9Xa3hsSnN0NGFuYjNrcWphbnF4b2hPNEhPVGYzcHBOcV8yX05pbl8zZFNFWlhkZDVINU5FMGZrM1dNbTRJS0hFZDFyTTFR?oc=5",
+    "source_name": "wired.com",
+    "source_type": "новости",
+    "published": "2026-08-05",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "профессиональное отраслевое или деловое СМИ",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 2 296",
+    "↑ обсуждений разработчиков за год: 31",
+    "↓ доля свежих новостей за месяц: 87%",
+    "↑ рост обсуждений разработчиков: 1.67"
+   ],
+   "takeoff": {
+    "probability": 0.961,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 13.1,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.15,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.829,
+    "oa_recent_log": 2.644,
+    "oa_growth": 1.663,
+    "oa_age": 5.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.111,
+    "oa_preprint_share": 0.178,
+    "oa_company_share": 0.133,
+    "oa_fields": 9.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.87,
+    "news_sources": 75.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 3.466,
+    "hn_growth": 1.674,
+    "gh_total_log": 7.739,
+    "gh_new_share": 0.631,
+    "gh_max_stars_log": 11.043,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.099
+   },
+   "sources": [
+    {
+     "title": "OpenAI Didn’t Notice Its AI Agents Using a Message Board to Plan Their Hacking Spree",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUEp4QUZxZUl2d2NKdWFSdjA2NF8yRTE4Ul8xV3RQdG5BWDYyNnBGSDBfYUJPNjFQd2xuYlJUYzBTNl9JVlNmRUo3N1hmN01FR2FqQXBkLWJ4c1czZEQzZTY3UFQwenNsVmt2TU9Xa3hsSnN0NGFuYjNrcWphbnF4b2hPNEhPVGYzcHBOcV8yX05pbl8zZFNFWlhkZDVINU5FMGZrM1dNbTRJS0hFZDFyTTFR?oc=5",
+     "source_name": "wired.com",
+     "source_type": "новости",
+     "published": "2026-08-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "профессиональное отраслевое или деловое СМИ",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Anthropic says human error let Claude AI models escape test environment and hack third parties",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5",
+     "source_name": "Cybersecurity Dive",
+     "source_type": "новости",
+     "published": "2026-07-31",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Anthropic discloses fourth AI hacking incident missed in earlier review",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5",
+     "source_name": "Reuters",
+     "source_type": "новости",
+     "published": "2026-09-10",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AIPentest/CyberStrikeAI: The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
+     "url": "https://github.com/AIPentest/CyberStrikeAI",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-11-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 6926
+     }
+    },
+    {
+     "title": "CyberStrikeus/CyberStrike: Open-source AI-powered offensive security harness for automated penetration testing.",
+     "url": "https://github.com/CyberStrikeus/CyberStrike",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 2812
+     }
+    }
+   ]
+  },
+  {
+   "technology": "отравление данных Injection",
+   "technology_original": "injection data poisoning",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.49,
+   "score_interval_90": [
+    0.265,
+    0.684
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 1.76
+   },
+   "description": "«отравление данных Injection» (injection data poisoning): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 44 научные публикации (рост ×18.8 к 2019–2021), 10 новостей за год, 214 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Data Privacy and Foundation Models: Can We Have Both?",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOcmpoNFhhN0FpLUJEd2ZrTkRLNC1yQmpYdEUxOUMzVTZJMlFCR2FzYXhlZjBtQXlzSXVJQlJiSDQ2by1GNlRiazhaNldHOEttSDYwQnc0SEJIdktzYmJZQ2JRVWRSSXJrcGl6NjJieVk3RzRGMlZQX09MeS11QjN3dmd3clVaS3BUVkRn?oc=5",
+    "source_name": "Stanford HAI",
+    "source_type": "новости",
+    "published": "2026-04-08",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ упоминания в Википедии: 0",
+    "↓ рост публикаций к 2019–2021: ×18.8",
+    "↑ доля препринтов: 27%",
+    "↑ просмотры статьи в Википедии: 0"
+   ],
+   "takeoff": {
+    "probability": 0.905,
+    "percentile": 0.88,
+    "horizon": "2029–2031",
+    "baseline_per_year": 17.8,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.82,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.807,
+    "oa_recent_log": 2.932,
+    "oa_growth": 2.932,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.25,
+    "oa_preprint_share": 0.273,
+    "oa_company_share": 0.14,
+    "oa_fields": 6.0,
+    "news_1y": 10.0,
+    "news_30d_share": 0.2,
+    "news_sources": 10.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 0.0,
+    "hn_growth": 0.0,
+    "gh_total_log": 5.371,
+    "gh_new_share": 0.879,
+    "gh_max_stars_log": 7.077,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Enhancing AI Security through CIA+",
+     "url": "https://doi.org/10.1109/fllm67465.2025.11391166",
+     "source_name": "OpenAlex",
+     "source_type": "научная публикация",
+     "published": "2025-11-25",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Enhancing AI Security through CIA+. The three fundamental principles of information security—Confidentiality, Integrity and Availability (CIA)— have long been regarded as the core framework in traditional ICT environments. However, the rapid advancement and widespread adoption of Artificial Intelligence (AI) have introduced novel security threats that cannot be sufficiently addressed by the CIA triad alone. AI-specific vulnerabilities such as prompt injection, data poisoning, model extraction and adversarial sample attacks pose significant risks to confidentiality, integrity, availability across data, models and infrastructures. To address these challenges, this study proposes an extended se",
+     "extra": {}
+    },
+    {
+     "title": "Data Privacy and Foundation Models: Can We Have Both?",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOcmpoNFhhN0FpLUJEd2ZrTkRLNC1yQmpYdEUxOUMzVTZJMlFCR2FzYXhlZjBtQXlzSXVJQlJiSDQ2by1GNlRiazhaNldHOEttSDYwQnc0SEJIdktzYmJZQ2JRVWRSSXJrcGl6NjJieVk3RzRGMlZQX09MeS11QjN3dmd3clVaS3BUVkRn?oc=5",
+     "source_name": "Stanford HAI",
+     "source_type": "новости",
+     "published": "2026-04-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Securing the Future of AI",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1IaXI2WTlkYmlnQ2ZpdHdSMFl3b2E2QW9PRGlnSGd6NmxfWmdkZGZZYTdmU2RJYTJ0bzQxU0ZmYnhfeHpJeWlQLVduVFg4dTB3TV9kRm1kQkNpUUxiQjlfclFlQ3FEWDNrV0QybzkwUklHVXcySFMzTkVPZl8?oc=5",
+     "source_name": "Palo Alto Networks",
+     "source_type": "новости",
+     "published": "2025-09-17",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AI Security Projects for Practice: 10 Hands-On Labs",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOWs2OFhoWHo5QW5FWWZlZjJ1XzRFR0pNSTVpdjJUOHQxQVJuZGpVYVJOSTYtSTBzNTN0TW5TSUVfdktFaXNqYV81bEZxMlNITXNNSzZOb1RJdDEtTkN2NDNoVDNjeDNISWpuX3kyVENBNDBPY3dIcFRwUDlGYVlKNEZzQzBKUjRMMjl3bExjQ2hreG9zU2IxZVR2TGdLWmdZaERjZlNhdUVxdE4ybUpyeGdOZG1VX3Y0cnBnLVFLdGVieFk?oc=5",
+     "source_name": "Blockchain Council",
+     "source_type": "новости",
+     "published": "2026-04-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "madhucnghubphilips/AI-SEC-LLM-Workshop: Learn AI security through hands-on, real-world scenarios based on the OWASP Top10 for LLMs. Explore practical attacks & defenses across Banking, Finance, Media ",
+     "url": "https://github.com/madhucnghubphilips/AI-SEC-LLM-Workshop",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-08-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 5
+     }
+    }
+   ]
+  },
+  {
+   "technology": "smart grid cybersecurity",
+   "technology_original": "smart grid cybersecurity",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.48,
+   "score_interval_90": [
+    0.29,
+    0.676
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "Квантизация моделей",
+    "query": "model quantization",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 1.99
+   },
+   "description": "«smart grid cybersecurity» (smart grid cybersecurity): 4 свежие работы по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 172 научные публикации (рост ×6.8 к 2019–2021), 10 новостей за год, 53 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "The overall efficiency, reliability, and resilience of the smart grid will be inextricably linked to the exchange of information between these devices.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Smart Grid Cybersecurity Market Size, Forecast 2025-2034",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNVJ4dlNBTU0yeFBBZ0hnR1dSRk04N3kyOWRHSUJ3Y1ZJUGtEMmthTHJhZ1hOcm5UQWFZQmt5UEgtVXcwa01SN1BTMWxveFo4cktYYVJSaWRxMFJXUW5ZdGFCYXRqSU04ZWxVa3R1MkJ1OGpPb3dKMXhNYnZoZ0dVLU1n?oc=5",
+    "source_name": "Global Market Insights Inc.",
+    "source_type": "новости",
+    "published": "2025-10-27",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ число репозиториев: 53",
+    "↑ упоминания в Википедии: 1",
+    "↑ просмотры статьи в Википедии: 0",
+    "↑ число научных областей: 5"
+   ],
+   "takeoff": {
+    "probability": 0.627,
+    "percentile": 0.68,
+    "horizon": "2029–2031",
+    "baseline_per_year": 42.1,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.21,
+    "recent_docs": 4,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.153,
+    "oa_recent_log": 3.762,
+    "oa_growth": 1.917,
+    "oa_age": 14.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.238,
+    "oa_preprint_share": 0.087,
+    "oa_company_share": 0.054,
+    "oa_fields": 5.0,
+    "news_1y": 10.0,
+    "news_30d_share": 0.3,
+    "news_sources": 8.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 0.0,
+    "hn_growth": -0.405,
+    "gh_total_log": 3.989,
+    "gh_new_share": 0.736,
+    "gh_max_stars_log": 3.219,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "Security of Smart Grid: Cybersecurity Issues, Potential Cyberattacks, Major Incidents, and Future Directions",
+     "url": "https://doi.org/10.3390/en18010141",
+     "source_name": "Energies",
+     "source_type": "научная публикация",
+     "published": "2025-01-01",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Security of Smart Grid: Cybersecurity Issues, Potential Cyberattacks, Major Incidents, and Future Directions. Despite the fact that countless IoT applications are arising frequently in various fields, such as green cities, net-zero decarbonization, healthcare systems, and smart vehicles, the smart grid is considered the most critical cyber–physical IoT application. With emerging technologies supporting the much-anticipated smart energy systems, particularly the smart grid, these smart systems will continue to profoundly transform our way of life and the environment. Energy systems have improved over the past ten years in terms of intelligence, efficiency, decentralization, and ICT usage. On ",
+     "extra": {}
+    },
+    {
+     "title": "Quantum Key Distribution Applicability to Smart Grid Cybersecurity Systems",
+     "url": "https://doi.org/10.1109/access.2025.3533942",
+     "source_name": "IEEE Access",
+     "source_type": "научная публикация",
+     "published": "2025-01-01",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Quantum Key Distribution Applicability to Smart Grid Cybersecurity Systems. To meet the increasing demand for electricity and to have a more reliable and resilient electric grid against conventional and extreme events, grid modernization is more crucial now than ever before. This will require the development and deployment of devices that provide advanced communication capabilities. The overall efficiency, reliability, and resilience of the smart grid will be inextricably linked to the exchange of information between these devices. Unfortunately, the increased information flow will increase the potential attack surface and introduce new vulnerabilities. While a smarter grid will depend criti",
+     "extra": {}
+    },
+    {
+     "title": "Cybersecurity and Resilience of Smart Grids: A Review of Threat Landscape, Incidents, and Emerging Solutions",
+     "url": "https://doi.org/10.3390/app16020981",
+     "source_name": "Applied Sciences",
+     "source_type": "научная публикация",
+     "published": "2026-01-18",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Cybersecurity and Resilience of Smart Grids: A Review of Threat Landscape, Incidents, and Emerging Solutions. The digital transformation of electric power systems into smart grids has significantly expanded the cybersecurity risk landscape of the energy sector. While advanced sensing, communication, automation, and data-driven control improve efficiency, flexibility, and renewable energy integration, they also introduce complex cyber–physical interdependencies and new vulnerabilities across interconnected technical and organisational domains. This study adopts a scoping review methodology in accordance with PRISMA-ScR to systematically analyse smart grid cybersecurity from an architecture-aw",
+     "extra": {}
+    },
+    {
+     "title": "Smart Grid Cybersecurity Market Size, Forecast 2025-2034",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNVJ4dlNBTU0yeFBBZ0hnR1dSRk04N3kyOWRHSUJ3Y1ZJUGtEMmthTHJhZ1hOcm5UQWFZQmt5UEgtVXcwa01SN1BTMWxveFo4cktYYVJSaWRxMFJXUW5ZdGFCYXRqSU04ZWxVa3R1MkJ1OGpPb3dKMXhNYnZoZ0dVLU1n?oc=5",
+     "source_name": "Global Market Insights Inc.",
+     "source_type": "новости",
+     "published": "2025-10-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "[Latest] Global Smart Grid Cybersecurity Market Size/Share Worth USD 67.02 Billion by 2035 at a 28.2% CAGR: Custom Market Insights (Analysis, Outlook, Leaders, Report, Trends, Forecast, Segmentation, Growth Rate, Value, SWOT Analysis)",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQNC0wUnYxX21DTVNzLW5hTTBreUJ0QnJpTFJqVEI4Wld6RjZaTC02ZUV6ZnBTRjRhMnpJVFI0U3c3SEV4OENlcnB4c0lMWVhJYUdnVGtVdnlSejVqNzNXTWpXZ2RWSUFSMjJINVBZVTJoMFBmQktFRHFSRDVjYzQwNV9jRkZCcFBKZG0zN1ZEMDhBRUcwbVEyc1pRMA?oc=5",
+     "source_name": "Yahoo Finance",
+     "source_type": "новости",
+     "published": "2026-05-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Smart Grid Security Market Size, Share & Growth Report 2035 | MRFR",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRlBxZ2V2WmtMdDFiZ1hBQzlvNVFQYS1tQ0ZyQzczeUNETUphY2tMbkRzSEViR1lENDFqY25tbWk4ZG9id0lTQ3Zzc0gxQVR2WHZ4SXl2dUFIOXdsTzNTbDJuZjE5dWNTMmtwbG03TFBhbklNa1RQeVF6Qk55WERUaEJ3?oc=5",
+     "source_name": "Market Research Future",
+     "source_type": "новости",
+     "published": "2026-08-24",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    }
+   ]
+  },
+  {
+   "technology": "навыки Claude",
+   "technology_original": "claude skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.47,
+   "score_interval_90": [
+    0.078,
+    0.9
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 5.78
+   },
+   "description": "«навыки Claude» (claude skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 85 научных публикаций (рост ×40.3 к 2019–2021), 100 новостей за год, 209636 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Навыки (Skills) для Claude: почему папка с Markdown-файлами может оказаться важнее кастомных GPT",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tSkRIcU1IRjRkZ3dUNkx0US05NUFITHZyY1JhREl4YTR4VzNQZzgtTE45NFBWYlQ0dGtIbU5FNEd1cG9VaUVId1ducHjSAVdBVV95cUxQUjZUODVLckNUVUctUnBvYzJTNEEwS3JCQngxTXJ2QXJCQkUyNzNPRW55UDFha2NOak1fVWRPVlZCM0pzVkdneWpZaVVPVWlfcVVjUDZtYVU?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-10-17",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 209 636",
+    "↑ рост обсуждений разработчиков: 4.86",
+    "↑ обсуждений разработчиков за год: 128",
+    "↓ рост публикаций к 2019–2021: ×40.3"
+   ],
+   "takeoff": {
+    "probability": 0.997,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 39.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.454,
+    "oa_recent_log": 3.695,
+    "oa_growth": 3.695,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.012,
+    "oa_preprint_share": 0.035,
+    "oa_company_share": 0.133,
+    "oa_fields": 4.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.1,
+    "news_sources": 62.0,
+    "news_press_share": 0.01,
+    "hn_12m_log": 4.86,
+    "hn_growth": 4.86,
+    "gh_total_log": 12.253,
+    "gh_new_share": 1.005,
+    "gh_max_stars_log": 12.463,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "Навыки (Skills) для Claude: почему папка с Markdown-файлами может оказаться важнее кастомных GPT",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tSkRIcU1IRjRkZ3dUNkx0US05NUFITHZyY1JhREl4YTR4VzNQZzgtTE45NFBWYlQ0dGtIbU5FNEd1cG9VaUVId1ducHjSAVdBVV95cUxQUjZUODVLckNUVUctUnBvYzJTNEEwS3JCQngxTXJ2QXJCQkUyNzNPRW55UDFha2NOak1fVWRPVlZCM0pzVkdneWpZaVVPVWlfcVVjUDZtYVU?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-17",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Предприниматели и Claude Code Skills: как зафиксировать рутину в навык вместо повторного промпта",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5DTXN0ZnliNEdfYllnZlJjRUJkWjZWS1Z5bmd6N2dnLTRLVHJZMTZLNDRId1ptbDA2ZzJ4d3B5NjluektNaGQ2NFpuWFctOTNsZXc?oc=5",
+     "source_name": "sostav.ru",
+     "source_type": "новости",
+     "published": "2026-07-22",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Вот почему Claude Skills намного лучше MCP",
+     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1rQThqV1ItSkFHTElDZl80cWVkU05MMDlpLXZGRkVHSWZ5eW1sdGRiTnlZaTFQUWxIUy1obXVYTk9FZEVuM25z0gFXQVVfeXFMTm5iMkpsVEYxejZldUFKUzNIOU9BdWFKcFJuTnZGSTNKZlZac1VIV2E2VV9XSlNGazFqQ2EtUGJtUG50MVN4dU8yNUtibnMzd1FVX1dLVENr?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-18",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Equipping agents for the real world with Agent Skills",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWW0xVE5YRGtqWngtWmtwS0xPVkZqZWg1ck5OU2FpYVVHd1lBNHZyVmhGX1U2aTFBbHVycmVIYzNNSEJVbWFyTEdNM2FwNlBWTFBtakR6a3phZlZOM3NvQ2lTZmR1NWl5Y1ZHSTBaeXBybF9MOUdhdEJjNzVFc2ktazFEMXpfTVhidkY2cENZY2NJYmUxeGc?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How to build reusable Skills in Anthropic’s Claude AI",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSGNLOEhCZmR2bHZVVXF5UHJDRWlRTkNCbjB1MklxMDJVb25TRjRLYlgxeHdzeGpHQ1lLdXlZOS1KVVhuTjBJVWFQc0dnOUxIWlBkRWlFaVEzUXFOajBGSWJHbGhMeGJmWGZsWWlvYi1tay1oSFVPUk1qNW50eVNzRFlHMEZ2ZUFZX1J0bnNMcG16dy1Mc0w5LWYtOUxjS2swanRvN1FkMTBvUQ?oc=5",
+     "source_name": "Journal of Accountancy",
+     "source_type": "новости",
+     "published": "2026-06-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Top 7 Claude Skills for Product Managers",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fdnF2YW0yNWVSLW1UZVpKSmJ4c2RKNEo0dEJ0YXRGc0YxNU81N0diSE44Q0YyVjh4MDFEdEdrdU5oaTBXd25Hang1TXRLUHdvR052OENVcGl6WWdxdnowdm1LemdjOHJ0NXBjNE5n?oc=5",
+     "source_name": "Snyk",
+     "source_type": "новости",
+     "published": "2026-04-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "jherrodthomas/automotive-skills-suite: 100+ installable Claude skills covering Engineering areas such as, ISO 26262 functional safety, ISO/SAE 21434 cybersecurity, ISO 21448 SOTIF, AIAG-VDA quality (A",
+     "url": "https://github.com/jherrodthomas/automotive-skills-suite",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-05-01",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 2715
+     }
+    },
+    {
+     "title": "Masriyan/Claude-Code-CyberSecurity-Skill: 22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat hunt",
+     "url": "https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 430
+     }
+    }
+   ]
+  },
+  {
+   "technology": "безопасность ИИ Tool",
+   "technology_original": "ai security tool",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.452,
+   "score_interval_90": [
+    0.075,
+    0.816
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.11
+   },
+   "description": "«безопасность ИИ Tool» (ai security tool): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 14 научных публикаций (рост ×6.5 к 2019–2021), 36 новостей за год, 941 репозиторий. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Top AI Security Tools for the Cloud: Secure AI Workloads",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1DeUJrMlBaQ0hwX0hRV1YyWm1lbmFhUEZDRmlGaEdBcXRDRHcwT2dpZmZWTmNZSjNCQWdrYUlVQkN5czJ5TUIySFcwcWtRZEdjWXBBN3lva192LTVBbHExODA2bm9jNFU?oc=5",
+    "source_name": "wiz.io",
+    "source_type": "новости",
+    "published": "2026-05-08",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ упоминания в Википедии: 0",
+    "↓ доля авторов из компаний: 50%",
+    "↓ число репозиториев: 941",
+    "↑ число научных областей: 3"
+   ],
+   "takeoff": {
+    "probability": 0.955,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 5.5,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 3.17,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 2.708,
+    "oa_recent_log": 1.872,
+    "oa_growth": 1.872,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.143,
+    "oa_preprint_share": 0.143,
+    "oa_company_share": 0.5,
+    "oa_fields": 3.0,
+    "news_1y": 36.0,
+    "news_30d_share": 0.111,
+    "news_sources": 33.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 0.693,
+    "hn_growth": 0.693,
+    "gh_total_log": 6.848,
+    "gh_new_share": 0.837,
+    "gh_max_stars_log": 10.398,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Top AI Security Tools for the Cloud: Secure AI Workloads",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1DeUJrMlBaQ0hwX0hRV1YyWm1lbmFhUEZDRmlGaEdBcXRDRHcwT2dpZmZWTmNZSjNCQWdrYUlVQkN5czJ5TUIySFcwcWtRZEdjWXBBN3lva192LTVBbHExODA2bm9jNFU?oc=5",
+     "source_name": "wiz.io",
+     "source_type": "новости",
+     "published": "2026-05-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AI can now hunt software bugs on its own. Anthropic is turning that into a security tool",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOVHQxLVpuZ0wtSlRnT0VCQ1Fnb0M4MzE0TkhNNmFmcm1TMkt6YWtELS1oS3RzZEdCcm0zbGRTRnNBMjhDT3RhV2FLSzNaeTQ1V2lDNFRQc1hkZVZ4WXpzNjNFVEZLSlA1b2ZfWFYtVzJOWmhyVkVpTUw0UlRhdTBMd1diUXlNemFfckNTdTF2VWw2UDBMUWRscnFwUTRNR0VSQ0tfWFdueDJmci05U1R4WXNQQWxTeHpDRFIzejZ1Y1JRa2kwTlNkMUxiLTAwSDJKNE5fSy01ZzE3SnlFaDJibWtidFA1Ykp0bEE?oc=5",
+     "source_name": "Fortune",
+     "source_type": "новости",
+     "published": "2026-02-20",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Anthropic's New Claude AI Security Tool Wipes Out Over $15 Billion From Cybersecurity Stocks",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONkxDb2dhejV2M3BaX0gyRUI0VWQzMHVRNDUycTRnemVnTkVOcWZHRVQ0OGlVTVNrWU5qN0Q3dXk4SFQwaFVhNF9JME9ic1pmUVNua0FXQ2x4YWlCZXJpaVlITzJ4X2hnNm9objlXamNHd3lRd2tmYlRTdmFxR0VhM1B0UVJibDFEYm9wTEZB?oc=5",
+     "source_name": "LinkedIn",
+     "source_type": "новости",
+     "published": "2026-02-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AIPentest/CyberStrikeAI: The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
+     "url": "https://github.com/AIPentest/CyberStrikeAI",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-11-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 6926
+     }
+    },
+    {
+     "title": "SanMuzZzZz/LuaN1aoAgent: LuaN1aoAgent is a fully autonomous AI-driven penetration testing agent powered by graph-based cognitive reasoning.",
+     "url": "https://github.com/SanMuzZzZz/LuaN1aoAgent",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-12-04",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 1314
+     }
+    }
+   ]
+  },
+  {
+   "technology": "безопасность RAG",
+   "technology_original": "rag security",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.421,
+   "score_interval_90": [
+    0.178,
+    0.596
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.35
+   },
+   "description": "«безопасность RAG» (rag security): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 36 научных публикаций (рост ×16.2 к 2019–2021), 10 новостей за год, 1766 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "LLM Firewall: устарел, не успев родиться? Почему защита чатов не работает в мире AI-агентов",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5xWTJMZzRLeTlYY2gxdm4tRXpPN2dERnkyc1dwVGo1c1FiT05VNjZYd1h2M3NWUVBfY2FUZGVjNjZCUDA4cXl3SWlhUGFtTVdIeWxIRjcxci0xZmp6NEhKVVhxRdIBWEFVX3lxTFBydXk2bTM5ZjNTWUNBWGNFZDM4cHdXZ0pDOWV1b1JqUWE2Nlo3QU9GWFhzU0U2bGV6NVFjQTRuOG1ENHJ6TnlnUlpEZVJyb1R6N2tMellyOHY?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2026-04-09",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ упоминания в Википедии: 0",
+    "↓ число репозиториев: 1 766",
+    "↓ рост публикаций к 2019–2021: ×16.2",
+    "↑ доля препринтов: 31%"
+   ],
+   "takeoff": {
+    "probability": 0.952,
+    "percentile": 0.94,
+    "horizon": "2029–2031",
+    "baseline_per_year": 15.2,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.5,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.611,
+    "oa_recent_log": 2.788,
+    "oa_growth": 2.788,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.278,
+    "oa_preprint_share": 0.306,
+    "oa_company_share": 0.37,
+    "oa_fields": 4.0,
+    "news_1y": 10.0,
+    "news_30d_share": 0.3,
+    "news_sources": 8.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 1.099,
+    "hn_growth": 1.099,
+    "gh_total_log": 7.477,
+    "gh_new_share": 0.948,
+    "gh_max_stars_log": 10.29,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "LLM Firewall: устарел, не успев родиться? Почему защита чатов не работает в мире AI-агентов",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5xWTJMZzRLeTlYY2gxdm4tRXpPN2dERnkyc1dwVGo1c1FiT05VNjZYd1h2M3NWUVBfY2FUZGVjNjZCUDA4cXl3SWlhUGFtTVdIeWxIRjcxci0xZmp6NEhKVVhxRdIBWEFVX3lxTFBydXk2bTM5ZjNTWUNBWGNFZDM4cHdXZ0pDOWV1b1JqUWE2Nlo3QU9GWFhzU0U2bGV6NVFjQTRuOG1ENHJ6TnlnUlpEZVJyb1R6N2tMellyOHY?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-04-09",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Protecting federal AI systems: A primer on RAG and securing AI-driven data workflows",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOQ0NTOFNaU2JoMnc0emNsZGt5bWpYb2luMEJsQW40VlVIUHBGM0VRSnNfTGM3VXRXM2Naa0FFY2gzOW9hRGE5cm1lcTNVQThBamZIenduSFVjU3Y4cDhZbExyc1dZSExiR2NDX3lvRTNpRmR2OE1PVXhQMXB4dnBsNlJLbE5LUk5QUDRRMU9LZUVneWg2WmVOcGI1Q0JaZVJVZnNBSHNwRU13VWw1Ty12NDJ1RWhodzIxUFpwZHhrY09uZXlTOTF4NjBkdXIyclE?oc=5",
+     "source_name": "Federal News Network",
+     "source_type": "новости",
+     "published": "2026-05-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "CISO's guide to RAG data security risks and protection strategies",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUlAzb3VvcjU3ODNEWTFEYVNSZ21fNWFvNDU2bXpDZFU2NHJ3LXpDempfa3ZBbFlTMjhXOVlkOHVIWkQ3a3BPelpQMklFczdIak9MVDFzTU5SWkwtZGZTWU9QN19MZGZfMjNoSzNFX2lGQVZSa1BaNHJobjRwUlZ0Z0ZUVGV6RXhYYm1NZGQ3cE1pQmc0Nnp2QUgxUnFYRXFFeXdmQ2N5Nmw1dG5KcmfSAbYBQVVfeXFMT29pRmNjQWprVHc1VTN3SHlncmhWbW1rUnpXdWpnZm5tQlFCTzRDN2U2elB1bHVwSkRyVDJSZjVud010a3lZZExBbmt1WGIyQm1wM1ZZalMwMlYyZWxhQ3J5M0NJRGFCQUI1NTF0eWJVazd3OEdTUEdSZkdtQm9kRERCbzhqX1BYblVhRkpUN1ktQ181QkhYckk0a1R1aE1sb193UlJQMTJmUHVCVFdRV3E2VUpmS3c?oc=5",
+     "source_name": "TechTarget",
+     "source_type": "новости",
+     "published": "2026-08-24",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Unleashing AI across the US government: The data security challenge holding back decision advantage",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxObS1rSmhaVDF2a3lSNXZSZkJIUFc5TDBnYTV3RjZyWkE0cWREdjNGVHZCUTNBNVdpMHBvNTFXNkxDYkJUNkctM3A5M01MblA3ajlWbXpNMmZaQ0RqaFlMVExHd18tY0tQWVhVNDhMOFB1dVRfM2hrSFlzNmhwallCcUEwbkVzTFo0OVNaNjJHSWd1eWdhcElBVkl1ZGU2ck1BS3VSVGRtQ3kyZWFCeHhmMG1VS25SdHNLS2lhQWprYnJwOERFS3VteFdOdFhCeXg2NUE?oc=5",
+     "source_name": "Nextgov/FCW",
+     "source_type": "новости",
+     "published": "2026-05-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AICyberShubham/ai-security-engineer-roadmap: Complete roadmap to become an AI Security Engineer from zero to advanced — covering Python, ML, Deep Learning, LLM Engineering, RAG Security, Intrusion Det",
+     "url": "https://github.com/AICyberShubham/ai-security-engineer-roadmap",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-11-24",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 31
+     }
+    },
+    {
+     "title": "sonuoffsec/AI-Security-Hub: A comprehensive AI Security Hub featuring payloads, cheat sheets, hands-on labs, security tools, MCP security, RAG security, agent security, CTF challenges, and research re",
+     "url": "https://github.com/sonuoffsec/AI-Security-Hub",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-06-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 18
+     }
+    }
+   ]
+  },
+  {
+   "technology": "безопасность LLM",
+   "technology_original": "llm security",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.417,
+   "score_interval_90": [
+    0.099,
+    0.634
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "Объяснимый ИИ",
+    "query": "explainable AI",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.8
+   },
+   "description": "«безопасность LLM» (llm security): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 392 научные публикации (рост ×159.8 к 2019–2021), 66 новостей за год, 8999 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "КНДР превратила криптокражи в промышленный бизнес и заработала 2 миллиарда за 2025 год",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcGdUQnNRVjNVN190U1BpTFUxTG04ZGZRakQ3WGRTQk51TnZBa0RzTDdGNlY3TEJCdUxLNUNrUTY5elRfR2JQeTJOWEVYVy1yRUFBTFd3MVd5ejBjUGQxNncxRnUxeVNYOHlnNzBXTzI0MnR2N3FGSE9BSXI4Wkl2TGZDTjlrbVA2TXpFcEE2QTRoUVk0MWJZU1VTckVEMDVDazEyX21aSjQzbnZr?oc=5",
+    "source_name": "cisoclub",
+    "source_type": "новости",
+    "published": "2026-05-15",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ рост публикаций к 2019–2021: ×159.8",
+    "↓ число репозиториев: 8 999",
+    "↑ доля препринтов: 45%",
+    "↑ обсуждений разработчиков за год: 25"
+   ],
+   "takeoff": {
+    "probability": 0.957,
+    "percentile": 0.95,
+    "horizon": "2029–2031",
+    "baseline_per_year": 158.8,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 4.49,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.974,
+    "oa_recent_log": 5.074,
+    "oa_growth": 5.074,
+    "oa_age": 3.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.245,
+    "oa_preprint_share": 0.449,
+    "oa_company_share": 0.161,
+    "oa_fields": 11.0,
+    "news_1y": 66.0,
+    "news_30d_share": 0.136,
+    "news_sources": 46.0,
+    "news_press_share": 0.03,
+    "hn_12m_log": 3.258,
+    "hn_growth": 0.732,
+    "gh_total_log": 9.105,
+    "gh_new_share": 0.82,
+    "gh_max_stars_log": 11.324,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "КНДР превратила криптокражи в промышленный бизнес и заработала 2 миллиарда за 2025 год",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcGdUQnNRVjNVN190U1BpTFUxTG04ZGZRakQ3WGRTQk51TnZBa0RzTDdGNlY3TEJCdUxLNUNrUTY5elRfR2JQeTJOWEVYVy1yRUFBTFd3MVd5ejBjUGQxNncxRnUxeVNYOHlnNzBXTzI0MnR2N3FGSE9BSXI4Wkl2TGZDTjlrbVA2TXpFcEE2QTRoUVk0MWJZU1VTckVEMDVDazEyX21aSjQzbnZr?oc=5",
+     "source_name": "cisoclub",
+     "source_type": "новости",
+     "published": "2026-05-15",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Защита LLM за 3ms: как я построил open-source иммунную систему для AI / Хабр",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5wWG8telUtVEMxWWxFRGlzNXhVZE9mLXh0dXRSeV8tRVpCMTEtWDcwUlA3Mm1LcEJHTGJlUEc2RGFEdXF2ODY2UXdwZmo?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-02-16",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Промпт-инъекции и атаки на LLM: как защитить ИИ-модели и ИИ-агентов - Anti-Malware.ru",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNSlpNeHpuOEs2cmNzQ25jOS10OXlWaUI1WE9NbHVoczlOVlBTTnpMRXI0M0Q4Z0ZCSVllUWRJZmp5Mjl1OWgzbXB2MGVsMkhHSS15a1BJVUdUTVNQYzFweXVqQ09pTDNhYUU2SHkwckl2aHpxQWFtQ0NhcUpmakFKZGJtMjA1NFRLaUVoU1BBZjlQUQ?oc=5",
+     "source_name": "Anti-Malware.ru",
+     "source_type": "новости",
+     "published": "2026-06-22",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "LLM Security: Protecting Models, RAG & Data Pipelines",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1INGZJTUVtQUxoOHRpZ2VidDBvSVlqVWY1X25CS19IVHFqbmdjSThaSU1yNmdaUlMwU3J6ZjdmYW1NbllfYUZVYUNrdmFTV1pMS3ZmWTZPWlA3a1dGQzAxWQ?oc=5",
+     "source_name": "wiz.io",
+     "source_type": "новости",
+     "published": "2026-02-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "LLM Security | Prevent Vulnerabilities & Boost Application Security",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMEZENGlDc2hpdXQ0Tm1XSG8zTWVtNHMwX3dOeUFTOUhjeXdnOExEZkZZbHlSWHlod2Q1VGY0R2VHZlg2RURSQklKUUNsNU9pOUJkTHdWLXNMTldudDdHejdLeGd4ejhfWWdiMDR6WWVYNDBwQmNRbXN6blpGb1ZhT3dEMzdzVms1aHNlMzJPRXNpelZtVWJ3eU5WT204SlY4b25tZEZZbFEta3dtN2ktMXBLQmZZWDg?oc=5",
+     "source_name": "Qualys",
+     "source_type": "новости",
+     "published": "2025-12-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "What researchers learned about building an LLM security workflow",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9lVE4zRWt4VGd3M1BGaDFjZHB4TDBZTk9DUWsxSEhnTnozMTZnbDNYRHZqMEdsRGtib0V3Q2RwNVVkU2xsSm1OYWh0UV92SXNjSFlfVWQ0WlB3VjU1UHNHdWRfWFloZERkUFJxZlZYNUFtZnJwcGVtbGdrVmlQb0U?oc=5",
+     "source_name": "Help Net Security",
+     "source_type": "новости",
+     "published": "2026-05-04",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "CyberStrikeus/CyberStrike: Open-source AI-powered offensive security harness for automated penetration testing.",
+     "url": "https://github.com/CyberStrikeus/CyberStrike",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 2812
+     }
+    },
+    {
+     "title": "Zyrexnn/Cybermes: Autonomous Offensive Security, Bug Bounty & Red Teaming Agent Framework powered by Hermes Agent, specialized reasoning skills, and multi-model LLM orchestration.",
+     "url": "https://github.com/Zyrexnn/Cybermes",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-08-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 859
+     }
+    }
+   ]
+  },
+  {
+   "technology": "ai red team",
+   "technology_original": "ai red team",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.386,
+   "score_interval_90": [
+    0.15,
+    0.605
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "RAG",
+    "query": "retrieval-augmented generation",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.33
+   },
+   "description": "«ai red team» (ai red team): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 159 научных публикаций (рост ×49.1 к 2019–2021), 52 новости за год, 3892 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Как CyberYozh делает цифровой мир безопаснее и при чем тут ИИ",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9vNV95NERKT2FoZ093VXN4V1l2NjdObS04bU8zVUU2NG41NklOdFBlT2Q0T0M1b3ZubS1EY2VFcHRJVUFsZThfYmpUQmtjVXREOFV3?oc=5",
+    "source_name": "Xakep.ru",
+    "source_type": "новости",
+    "published": "2026-09-14",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля препринтов: 47%",
+    "↓ рост публикаций к 2019–2021: ×49.1",
+    "↓ число репозиториев: 3 892",
+    "↑ упоминания в Википедии: 2"
+   ],
+   "takeoff": {
+    "probability": 0.915,
+    "percentile": 0.88,
+    "horizon": "2029–2031",
+    "baseline_per_year": 64.4,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.075,
+    "oa_recent_log": 4.181,
+    "oa_growth": 3.893,
+    "oa_age": 3.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.27,
+    "oa_preprint_share": 0.472,
+    "oa_company_share": 0.322,
+    "oa_fields": 11.0,
+    "news_1y": 52.0,
+    "news_30d_share": 0.135,
+    "news_sources": 36.0,
+    "news_press_share": 0.038,
+    "hn_12m_log": 1.386,
+    "hn_growth": 0.693,
+    "gh_total_log": 8.267,
+    "gh_new_share": 0.833,
+    "gh_max_stars_log": 12.814,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.099
+   },
+   "sources": [
+    {
+     "title": "Как CyberYozh делает цифровой мир безопаснее и при чем тут ИИ",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9vNV95NERKT2FoZ093VXN4V1l2NjdObS04bU8zVUU2NG41NklOdFBlT2Q0T0M1b3ZubS1EY2VFcHRJVUFsZThfYmpUQmtjVXREOFV3?oc=5",
+     "source_name": "Xakep.ru",
+     "source_type": "новости",
+     "published": "2026-09-14",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Регуляторные документы РФ по безопасности ИИ — с чем мы вступаем в 2026 год",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1yd1V5RFd6bDRQYmc2bHd2MFVnVVJwTFJjZ3BMVzREZXBpWFlyMU5xMXowSThQZ09MbXFCYVQ4ZlBqY29NYU9PMGs2eXTSAVdBVV95cUxNNXBRNW1OWEVTT2g5MFdySXpaVl90ckVvTXlraXpUWW5tMU1LUV9ZUkdLenhlbUdYZzRBZlhKZjRoMkI3cjNwNUhiYjRjeTZQRHJQRTFrXzA?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-01-31",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "ИИ изменил физику кибербезопасности — Microsoft представила Perception",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPenRkQXU2T1pUck5PRVIzdE5JZ19oQmI0Q3FycFNPZUh2MnMtaVhRb3ExQk5xR2Nfa1F0VXdiLXlnSG9XaDJaTm9RQWdUVXkxTGl5QVpzenRIenJ1VVFzN3FKYXVZNzFQWXB4MWtjaE5GaE1oNGdRR3VVcERBSVFySkhYMFFoYTZzeWJJZlB6d1Y1YkFLTS04?oc=5",
+     "source_name": "Techora.ru",
+     "source_type": "новости",
+     "published": "2026-07-28",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Enhancing AI security through global AI red teaming",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSUhubHFveXVXUUlhZ3VsLWVROWJ4UlNZNWdBUFVMdFFLVEFHNkpZaWF2VjNUWUd2UVJaTmhQbFBVcHJJVS12VWdyYWhNVXFtdmgwY1JlLWd3Sk1DaWktNGpDUTg2bXFYakpNRjhFQW5HX05OVmtqSTJEV2FZOGdSbWxibV9XVTNKc1pYQmtDcE41R0pSdUhyV214d1BicFFXWnlBV1hQcWR5LXFmNVE?oc=5",
+     "source_name": "Microsoft",
+     "source_type": "новости",
+     "published": "2026-07-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How To Build AI Red Teams That Actually Work",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPNTBfZU5JM1NicEN4MmtSZzMtSTY1bkdFQmpEamlJbnh1Y29FQXp0Q0N3c2N5ZFVFZUJpYzdNaDJlU0tiR1c5RWJGREp4WUxaM2Fpc1ZOR3JNZ0xkNE50ZzV5NkNkdUE2eWJVcWRIbEM5UnQyVXJncXVTcWRSN0dya2lKYw?oc=5",
+     "source_name": "forrester.com",
+     "source_type": "новости",
+     "published": "2025-09-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Meet Rampart and Clarity, Microsoft’s new red team combo AI agents",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWGNDaGw3cE9XdkV3RXlfQzdOX05GMS1uOTcyOUxhaHJ2S2hJWjZSUS16djlfZzZCRXhhbnBDbFhsQllqb2VJeEdhRENzQWRUa0FFQWlWNWpRcFpONHRkS3JQMDhqUVhWSENvR0VxWXloSFpacU1FZUQtTkZfQWFnOUxJei04NzdUQzNlNTlTcVY?oc=5",
+     "source_name": "CyberScoop",
+     "source_type": "новости",
+     "published": "2026-05-20",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "DmitrL-dev/AISecurity: Open-source AI security lab: EN/RU academy, public Rust defenses, research and local input evaluation. Explore Spectorn for live protection.",
+     "url": "https://github.com/DmitrL-dev/AISecurity",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-12-09",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 111
+     }
+    },
+    {
+     "title": "Stickman230/claude-pentest: An open source plugin for enabeling claude to gain offensive pentesting capabilities",
+     "url": "https://github.com/Stickman230/claude-pentest",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 104
+     }
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "technology": "Промпт-инъекции",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4281 публикаций, первые работы 9 лет назад"
+  },
+  {
+   "technology": "nist ai rmf",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "eu ai act",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "OWASP Top 10 для LLM",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "agentic ai",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 15929 публикаций, первые работы 15 лет назад"
+  },
+  {
+   "technology": "инженерия Prompt",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 13935 публикаций, первые работы 15 лет назад"
+  },
+  {
+   "technology": "протокол MCP",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3399 публикаций, первые работы 12 лет назад"
+  },
+  {
+   "technology": "агенты Coding",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3777 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "ai safety",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7314 публикаций, первые работы 10 лет назад"
+  },
+  {
+   "technology": "nist csf",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "mitre att ck",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "сканер безопасность",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3179 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "управление ИИ",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 18769 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агент ИИ",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 26714 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Автоматизированный red-teaming ИИ-моделей как услуга",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4613 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инструменты ИИ",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 55874 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "OWASP Top 10 для LLM",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "threat intelligence",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7698 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "детекция Threat",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16861 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инструменты безопасность",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3961 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Архитектура нулевого доверия",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4080 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Posture",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4842 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "incident response",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9093 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Автономные агенты закупок и цепей поставок, работающие в ERP/e-mail/м…",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16194 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Operations",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6104 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "real-time anomaly",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3349 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "attack patterns",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5460 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Testing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4772 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "penetration testing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 17653 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "code quality",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5378 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "сканер Port",
+   "score": 0.0,
+   "reason": "угасающая тема: публикаций в 2025 году меньше половины от пикового года"
+  },
+  {
+   "technology": "attack surface",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 11421 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "комплаенс Regulatory",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 38790 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "modular architecture",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 10688 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "cyber defense",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5355 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "обучение безопасность",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "attack vectors",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9521 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "управление безопасность",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4973 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Постквантовая криптография в финансовой инфраструктуре",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8201 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "injection tool",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "reference architecture",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9081 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "EDR",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "безопасность Application",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5425 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "dark web",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "безопасность Hardware",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "evil twin",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "агенты безопасность",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "безопасность Intrusion",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "cyber threats",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 36973 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "real-world scenarios",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 50289 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Reference",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "инженерия Reverse",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 21452 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "верификация безопасность",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "безопасность Research",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8124 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инструменты Standards",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "инженерия безопасность",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "безопасность Architecture",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 10678 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "adversarial attacks",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 25540 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "digital forensics",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 13083 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Vulnerabilities",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 17806 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Domains",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3384 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "threat modeling",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 11506 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "generate realistic",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 11246 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агент Multi Systems",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 55578 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность сеть",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 40402 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "secure software",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3147 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Privacy",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9730 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Assessment",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8409 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "vulnerability assessment",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 18950 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Flaws",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3431 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "while minimizing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 81444 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "квантовые вычисления",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 61182 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "мониторинг сеть",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7844 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "privacy preserving",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 68101 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инструменты Open Source",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 14295 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Incidents",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6349 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "инженерия Software",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 65719 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "public safety",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 39787 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "сеть Traffic",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 44228 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "critical infrastructure",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 39662 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Периферийные вычисления",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 66025 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "access control",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 69350 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "students researchers",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 33497 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "defense mechanisms",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 49203 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "research papers",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 72347 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "distributed energy",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 35121 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "extremely difficult",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 28554 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "cyber physical",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 58962 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "protection against",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 145933 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "san francisco",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 68094 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "threat hunting",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 10 лет"
+  },
+  {
+   "technology": "безопасность Offensive",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 11 лет"
+  },
+  {
+   "technology": "bug bounty",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 12 лет"
+  },
+  {
+   "technology": "автоматизация безопасность",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 19 лет"
+  },
+  {
+   "technology": "software supply",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 11 лет"
+  },
+  {
+   "technology": "privilege escalation",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 22 лет"
+  },
+  {
+   "technology": "безопасность Supply Chain",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 21 лет"
+  },
+  {
+   "technology": "active directory",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 25 лет"
+  },
+  {
+   "technology": "kali linux",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 13 лет"
+  },
+  {
+   "technology": "сканер Vulnerability",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 23 лет"
+  },
+  {
+   "technology": "zero-day exploits",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 11 лет"
+  },
+  {
+   "technology": "blue team",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 21 лет"
+  },
+  {
+   "technology": "безопасность Audit",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 21 лет"
+  },
+  {
+   "technology": "cybersecurity education",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 8 лет"
+  },
+  {
+   "technology": "безопасность Gateway",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 17 лет"
+  },
+  {
+   "technology": "vulnerability discovery",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 17 лет"
+  },
+  {
+   "technology": "безопасность Platform",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 19 лет"
+  },
+  {
+   "technology": "инструменты Developer",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 20 лет"
+  },
+  {
+   "technology": "claude code",
+   "score": 0.007,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "mcp servers",
+   "score": 0.012,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "протокол моделей контекста",
+   "score": 0.002,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "инструменты LLM",
+   "score": 0.059,
+   "reason": "модель не относит к слабым сигналам (уверенность 6%)"
+  },
+  {
+   "technology": "mitre atlas",
+   "score": 0.177,
+   "reason": "модель не относит к слабым сигналам (уверенность 18%)"
+  },
+  {
+   "technology": "gemini cli",
+   "score": 0.346,
+   "reason": "модель не относит к слабым сигналам (уверенность 35%)"
+  },
+  {
+   "technology": "RAG",
+   "score": 0.0,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "open-source ai-powered",
+   "score": 0.232,
+   "reason": "модель не относит к слабым сигналам (уверенность 23%)"
+  },
+  {
+   "technology": "cloud dependency",
+   "score": 0.209,
+   "reason": "модель не относит к слабым сигналам (уверенность 21%)"
+  },
+  {
+   "technology": "osint tool",
+   "score": 0.111,
+   "reason": "модель не относит к слабым сигналам (уверенность 11%)"
+  },
+  {
+   "technology": "безопасность агентов",
+   "score": 0.35,
+   "reason": "модель не относит к слабым сигналам (уверенность 35%)"
+  },
+  {
+   "technology": "cli tool",
+   "score": 0.059,
+   "reason": "модель не относит к слабым сигналам (уверенность 6%)"
+  },
+  {
+   "technology": "api keys",
+   "score": 0.011,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "mitre attack",
+   "score": 0.122,
+   "reason": "модель не относит к слабым сигналам (уверенность 12%)"
+  },
+  {
+   "technology": "инженерия детекция",
+   "score": 0.176,
+   "reason": "модель не относит к слабым сигналам (уверенность 18%)"
+  },
+  {
+   "technology": "adversarial testing",
+   "score": 0.219,
+   "reason": "модель не относит к слабым сигналам (уверенность 22%)"
+  },
+  {
+   "technology": "real-time threat",
+   "score": 0.01,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "безопасность Windows",
+   "score": 0.004,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "безопасность на блокчейне",
+   "score": 0.054,
+   "reason": "модель не относит к слабым сигналам (уверенность 5%)"
+  },
+  {
+   "technology": "безопасность Assistant",
+   "score": 0.113,
+   "reason": "модель не относит к слабым сигналам (уверенность 11%)"
+  },
+  {
+   "technology": "adversarial threats",
+   "score": 0.141,
+   "reason": "модель не относит к слабым сигналам (уверенность 14%)"
+  },
+  {
+   "technology": "secure scalable",
+   "score": 0.038,
+   "reason": "модель не относит к слабым сигналам (уверенность 4%)"
+  },
+  {
+   "technology": "инструменты Pentesting",
+   "score": 0.255,
+   "reason": "модель не относит к слабым сигналам (уверенность 25%)"
+  },
+  {
+   "technology": "ethical hacking",
+   "score": 0.014,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "инструменты ctf",
+   "score": 0.042,
+   "reason": "угасающая тема: публикаций в 2025 году меньше половины от пикового года"
+  },
+  {
+   "technology": "безопасность Validation",
+   "score": 0.159,
+   "reason": "модель не относит к слабым сигналам (уверенность 16%)"
+  },
+  {
+   "technology": "toolkit designed",
+   "score": 0.065,
+   "reason": "модель не относит к слабым сигналам (уверенность 7%)"
+  },
+  {
+   "technology": "безопасность web",
+   "score": 0.018,
+   "reason": "модель не относит к слабым сигналам (уверенность 2%)"
+  },
+  {
+   "technology": "threat mitigation",
+   "score": 0.014,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "rule engine",
+   "score": 0.051,
+   "reason": "модель не относит к слабым сигналам (уверенность 5%)"
+  },
+  {
+   "technology": "навыки безопасность",
+   "score": 0.254,
+   "reason": "модель не относит к слабым сигналам (уверенность 25%)"
+  }
+ ]
+}

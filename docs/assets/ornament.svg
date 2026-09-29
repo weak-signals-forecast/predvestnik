@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="18" viewBox="0 0 1200 18" aria-hidden="true">
+  <defs>
+    <pattern id="z" width="32" height="18" patternUnits="userSpaceOnUse">
+      <path d="M0 9 L8 2 L16 9 L24 2 L32 9 M0 9 L8 16 L16 9 L24 16 L32 9" fill="none" stroke="#1f5fd1" stroke-width="1.4"/>
+      <path d="M8 6 L11 9 L8 12 L5 9 Z M24 6 L27 9 L24 12 L21 9 Z" fill="#1f5fd1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="18" fill="url(#z)" opacity="0.6"/>
+</svg>

@@ -1,0 +1,51 @@
+{
+ "Финтех": [
+  "Машинное обучение с нулевым знанием (zero knowledge machine learning)",
+  "абстракция учётных записей (account abstraction)"
+ ],
+ "Защита ИИ": [
+  "Red Teaming для систем ИИ (ai red teaming)",
+  "агенты безопасности ИИ (ai security agents)",
+  "миграция постквантовой криптографии (post quantum cryptography migration)",
+  "Отравление инструментов (tool poisoning)",
+  "возникшее рассогласование (emergent misalignment)",
+  "Защита от внедрения промптов (prompt injection defense)",
+  "Шифрованный ИИ (encrypted ai)",
+  "Постквантовая миграция (post quantum migration)",
+  "протокол агента (agent protocol)",
+  "атака запутанного заместителя (confused deputy)",
+  "Автоматизированный ремонт уязвимостей (automated vulnerability repair)",
+  "вредоносная тонкая настройка (harmful fine tuning)",
+  "ИИ в центрах управления безопасностью (ai soc)",
+  "Приватный вывод LLM (private llm inference)"
+ ],
+ "Роботы": [
+  "локомоторная манипуляция всем телом (whole body loco manipulation)",
+  "модель мира, обусловленная действием (action conditioned world model)",
+  "Промышленные человекоподобные роботы (industrial humanoid robots)",
+  "Сбор данных роботами (robot data collection)",
+  "Телеуправление гуманоидом (humanoid teleoperation)"
+ ],
+ "Индустриальный ИИ": [
+  "Реляционное глубокое обучение (relational deep learning)",
+  "табличные базовые модели (tabular foundation models)",
+  "Основанные на патологии модели (pathology foundation models)",
+  "ИИ-ассистированная инженерия (ai assisted engineering)",
+  "Агентивная память (agentic memory)",
+  "Обнаружение промышленных аномалий без примеров (zero shot industrial anomaly)"
+ ],
+ "другое": [
+  "Нечеловеческая идентичность (non human identity)",
+  "Термодинамические вычисления (thermodynamic computing)",
+  "Компанйонство ИИ (ai companionship)",
+  "особенности разреженного автоэнкодера (sparse autoencoder features)",
+  "Модель Vision-Tactile-Language-Action (vision tactile language action)"
+ ],
+ "Инфраструктура ИИ": [
+  "Ультраэфирнет (ultra ethernet)"
+ ],
+ "Edge": [
+  "Маршрутизация вывода (inference routing)",
+  "Локальный вывод больших языковых моделей (local llm inference)"
+ ]
+}

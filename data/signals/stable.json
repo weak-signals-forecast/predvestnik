@@ -1,0 +1,5885 @@
+[
+ {
+  "name": "sustainable aviation",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 3,
+  "rank_min": 2,
+  "rank_max": 6,
+  "score_mean": 2.77,
+  "layers_max": 3,
+  "layers": [
+   "всплеск термина",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 152,
+  "birth_year": 2020,
+  "growth": 1.6,
+  "sparkline": "▁▁▁▁▁▁▁▃▂▃▆█",
+  "counts": [
+   2,
+   2,
+   1,
+   2,
+   1,
+   5,
+   8,
+   17,
+   16,
+   22,
+   43,
+   66
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: всплеск термина, рождение кластера, тема.",
+   "Уже подхвачено индустрией: ExxonMobil (United States), Hyundai Motors (South Korea), Saipem (Italy), Saudi Aramco (United States).",
+   "Мост между направлениями: 33% ближайших соседей из других областей.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.72 (2023-25 к 2019-21), у 51% соседей свежих статей нет более ранних прецедентов, рождение темы 2022.",
+   "Термин «sustainable aviation»: 0 документов в 2017-2019, 33 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.84).",
+   "Термин «aviation fuel»: 0 документов в 2017-2019, 30 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.89).",
+   "Термин «sustainable aviation fuel»: 0 документов в 2017-2019, 22 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.94).",
+   "Термин «power-to-liquid»: 0 документов в 2017-2019, 23 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.81).",
+   "Термин «ptl»: 0 документов в 2017-2019, 18 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.86).",
+   "Термин «fuel saf»: 0 документов в 2017-2019, 15 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.95).",
+   "В окне 2025-2026 кластер из 48 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.94.",
+   "Термин «aviation»: 3 документов в 2017-2019, 63 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.67)."
+  ],
+  "top_orgs": [
+   "University of Central Florida",
+   "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)",
+   "University of Sheffield",
+   "Norwegian University of Science and Technology",
+   "Cranfield University"
+  ],
+  "top_countries": [
+   "US 33",
+   "DE 23",
+   "GB 21",
+   "CN 14",
+   "CA 9"
+  ],
+  "industry": [
+   "ExxonMobil (United States)",
+   "Hyundai Motors (South Korea)",
+   "Saipem (Italy)",
+   "Saudi Aramco (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Sustainable aviation fuel pathways: Emissions, costs and uncertainty",
+    "year": 2025,
+    "url": "https://openalex.org/W4406342028",
+    "venue": "Resources Conservation and Recycling"
+   },
+   {
+    "title": "Sustainable Aviation Fuels: A Review of Current Techno Economic Viability and Life Cycle Impacts",
+    "year": 2025,
+    "url": "https://openalex.org/W4415357519",
+    "venue": "Energies"
+   },
+   {
+    "title": "Life cycle CO2e intensity of power-to-liquid sustainable aviation fuel scenarios and specific use cases",
+    "year": 2025,
+    "url": "https://openalex.org/W4414827670",
+    "venue": "Advances in Applied Energy"
+   }
+  ],
+  "aliases": [],
+  "rank": 1
+ },
+ {
+  "name": "hydrogen pipelines",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 5,
+  "rank_min": 4,
+  "rank_max": 40,
+  "score_mean": 2.09,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "тема"
+  ],
+  "n_docs": 288,
+  "birth_year": 2016,
+  "growth": 1.95,
+  "sparkline": "▁▁▁▁▁▁▁▂▃▅▇█",
+  "counts": [
+   1,
+   4,
+   1,
+   8,
+   11,
+   6,
+   4,
+   15,
+   30,
+   52,
+   84,
+   99
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: всплеск термина, тема.",
+   "Уже подхвачено индустрией: Air Liquide (France), Carbon Engineering (Canada), China National Petroleum Corporation (China), Eni (Italy), Gazprom (Russia).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Термин «hydrogen pipelines»: 0 документов в 2017-2019, 42 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.74).",
+   "Тема растёт: лог-рост +1.89 (2023-25 к 2019-21), у 65% соседей свежих статей нет более ранних прецедентов, рождение темы 2016."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, East China",
+   "G.V. Karpenko Physical-Mechanical Institute",
+   "National Academy of Sciences of Ukraine",
+   "Ghent University",
+   "SINTEF"
+  ],
+  "top_countries": [
+   "CN 68",
+   "US 24",
+   "CA 21",
+   "AU 20",
+   "IT 16"
+  ],
+  "industry": [
+   "Air Liquide (France)",
+   "Carbon Engineering (Canada)",
+   "China National Petroleum Corporation (China)",
+   "Eni (Italy)",
+   "Gazprom (Russia)",
+   "Hyundai Heavy Industries (South Korea)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Saipem (Italy)"
+  ],
+  "examples": [
+   {
+    "title": "Hydrogen blending in existing natural gas transmission pipelines: a review of hydrogen embrittlement, governing codes, and life prediction methods",
+    "year": 2023,
+    "url": "https://openalex.org/W4327736690",
+    "venue": "Corrosion Reviews"
+   },
+   {
+    "title": "Hydrogen pipelines and embrittlement in gaseous environments: An up-to-date review",
+    "year": 2025,
+    "url": "https://openalex.org/W4408099325",
+    "venue": "Applied Energy"
+   },
+   {
+    "title": "Probabilistic modeling of uncertainties in reliability analysis of mid- and high-strength steel pipelines under hydrogen-induced damage",
+    "year": 2025,
+    "url": "https://openalex.org/W4406145405",
+    "venue": "International Journal of Structural Integrity"
+   }
+  ],
+  "aliases": [],
+  "rank": 2
+ },
+ {
+  "name": "digital twin",
+  "domain": "Трубопроводы",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 7,
+  "rank_min": 1,
+  "rank_max": 16,
+  "score_mean": 2.76,
+  "layers_max": 4,
+  "layers": [
+   "всплеск термина",
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 102,
+  "birth_year": 2020,
+  "growth": 1.27,
+  "sparkline": "▁▁▁▁▁▁▁▁▁▂▄█",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   4,
+   6,
+   4,
+   6,
+   13,
+   28,
+   64
+  ],
+  "signals": [
+   "Независимо подтверждено 4 детекторами: всплеск термина, подтема без предшественников, рождение кластера, тема.",
+   "Доля китайских аффилиаций выросла с 6% до 25%.",
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China), PetroChina Southwest Oil and Gas Field Company (China), Sinopec (China), Universiti Teknologi Petronas.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2025-2026 кластер из 32 статей появился без родителя: сходство с лучшим кандидатом 0.90 не выше, чем с соседней темой того же окна 0.92.",
+   "Тема растёт: лог-рост +0.89 (2023-25 к 2019-21), у 58% соседей свежих статей нет более ранних прецедентов, рождение темы 2021.",
+   "В окне 2025-2026 группа из 36 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна.",
+   "Термин «digital twin»: 1 документов в 2017-2019, 37 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.66)."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, Beijing",
+   "North Dakota State University",
+   "Purdue University West Lafayette",
+   "Qatar University",
+   "Azerbaijan State Oil and Industry University"
+  ],
+  "top_countries": [
+   "CN 26",
+   "US 19",
+   "GB 11",
+   "CA 7",
+   "AU 5"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Sinopec (China)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "A digital twin framework for liquefied natural gas import terminals: Deep reinforcement learning for spot procurement in the Gulf region",
+    "year": 2026,
+    "url": "https://openalex.org/W7168363083",
+    "venue": "SSRN Electronic Journal"
+   },
+   {
+    "title": "DEVELOPMENT OF ELECTRIC DRIVES DIGITAL TWINS FOR THE OIL AND GAS INDUSTRY",
+    "year": 2026,
+    "url": "https://openalex.org/W7153766652",
+    "venue": "Электротехнические и информационные комплексы и системы"
+   },
+   {
+    "title": "Development of a Digital Twin of the Fuel and Energy Complex of the Russian Federation",
+    "year": 2026,
+    "url": "https://openalex.org/W7171799596",
+    "venue": "Финансы и управление"
+   }
+  ],
+  "aliases": [
+   "digital, pipeline, algorithm, real time, operational, twins"
+  ],
+  "rank": 3
+ },
+ {
+  "name": "mofs",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 7,
+  "rank_min": 1,
+  "rank_max": 9,
+  "score_mean": 2.45,
+  "layers_max": 4,
+  "layers": [
+   "всплеск термина",
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 300,
+  "birth_year": 2015,
+  "growth": 1.52,
+  "sparkline": "▁▂▁▁▁▂▂▃▃▆▇█",
+  "counts": [
+   10,
+   12,
+   0,
+   3,
+   10,
+   11,
+   11,
+   23,
+   31,
+   54,
+   72,
+   84
+  ],
+  "signals": [
+   "Независимо подтверждено 4 детекторами: всплеск термина, подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Carbon Engineering (Canada), ExxonMobil (Germany), ExxonMobil (United States), Saudi Aramco (Saudi Arabia), Saudi Aramco (United States).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.42 (2023-25 к 2019-21), у 52% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "Термин «mofs»: 5 документов в 2017-2019, 78 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.78).",
+   "В окне 2023-2024 кластер из 70 статей появился без родителя: сходство с лучшим кандидатом 0.93 не выше, чем с соседней темой того же окна 0.94.",
+   "В окне 2025-2026 группа из 24 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "University of Chinese Academy of Sciences",
+   "Chinese Academy of Sciences",
+   "Georgia Institute of Technology",
+   "National Energy Technology Laboratory",
+   "Zhejiang University"
+  ],
+  "top_countries": [
+   "CN 88",
+   "US 84",
+   "KR 23",
+   "GB 21",
+   "SA 17"
+  ],
+  "industry": [
+   "Carbon Engineering (Canada)",
+   "ExxonMobil (Germany)",
+   "ExxonMobil (United States)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Saudi Aramco (United States)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Water-stable metal–organic frameworks (MOFs): rational construction and carbon dioxide capture",
+    "year": 2024,
+    "url": "https://openalex.org/W4390700274",
+    "venue": "Chemical Science"
+   },
+   {
+    "title": "Challenges and Opportunities: Metal–Organic Frameworks for Direct Air Capture",
+    "year": 2023,
+    "url": "https://openalex.org/W4387604848",
+    "venue": "Advanced Functional Materials"
+   },
+   {
+    "title": "Water-stable MOFs and hydrophobically encapsulated MOFs for CO2 capture from ambient air and wet flue gas",
+    "year": 2023,
+    "url": "https://openalex.org/W4353048813",
+    "venue": "Materials Today"
+   }
+  ],
+  "aliases": [],
+  "rank": 4
+ },
+ {
+  "name": "ammonia oxidation reaction",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 9,
+  "rank_min": 7,
+  "rank_max": 13,
+  "score_mean": 2.12,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "тема"
+  ],
+  "n_docs": 58,
+  "birth_year": 2020,
+  "growth": 1.39,
+  "sparkline": "▁▁▁▁▁▂▂▂▄▃█▆",
+  "counts": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   3,
+   4,
+   4,
+   9,
+   7,
+   21,
+   14
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: всплеск термина, тема.",
+   "Уже подхвачено индустрией: Flinders University, Shell (United States).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.22 (2023-25 к 2019-21), у 54% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "Термин «ammonia oxidation reaction»: 0 документов в 2017-2019, 25 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.81).",
+   "Термин «reaction aor»: 0 документов в 2017-2019, 18 в 2023-2025, сконцентрирован в немногих темах (концентрация 1.00).",
+   "Термин «direct ammonia fuel»: 0 документов в 2017-2019, 15 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.94).",
+   "Термин «ammonia fuel cells»: 0 документов в 2017-2019, 14 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.93)."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, East China",
+   "Monash University",
+   "Qilu University of Technology",
+   "Shandong Academy of Sciences",
+   "Ruhr University Bochum"
+  ],
+  "top_countries": [
+   "CN 25",
+   "KR 10",
+   "DE 9",
+   "US 8",
+   "AU 7"
+  ],
+  "industry": [
+   "Flinders University",
+   "Shell (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Green Chemistry: Advanced Electrocatalysts and System Design for Ammonia Oxidation",
+    "year": 2023,
+    "url": "https://openalex.org/W4318200071",
+    "venue": "Small Structures"
+   },
+   {
+    "title": "Progress in the design and performance evaluation of catalysts for low-temperature direct ammonia fuel cells",
+    "year": 2024,
+    "url": "https://openalex.org/W4399364729",
+    "venue": "Green Chemical Engineering"
+   },
+   {
+    "title": "High‐Performance NiCu Hydroxide Self‐Supported Electrode as a Bifunctional Catalyst for AOR and OER",
+    "year": 2025,
+    "url": "https://openalex.org/W4408319270",
+    "venue": "Battery energy"
+   }
+  ],
+  "aliases": [],
+  "rank": 5
+ },
+ {
+  "name": "liquid organic",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 10,
+  "rank_min": 2,
+  "rank_max": 34,
+  "score_mean": 2.21,
+  "layers_max": 3,
+  "layers": [
+   "всплеск термина",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 121,
+  "birth_year": 2020,
+  "growth": 1.42,
+  "sparkline": "▁▁▁▁▁▂▂▂▃▅█▆",
+  "counts": [
+   0,
+   1,
+   0,
+   2,
+   2,
+   8,
+   7,
+   8,
+   15,
+   25,
+   40,
+   27
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: всплеск термина, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Eni (Italy), Linde (Germany), Woodside (Australia).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Термин «liquid organic»: 1 документов в 2017-2019, 64 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.67).",
+   "Термин «lohc»: 0 документов в 2017-2019, 27 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.70).",
+   "Термин «organic hydrogen carriers»: 1 документов в 2017-2019, 43 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.69).",
+   "Термин «organic hydrogen»: 2 документов в 2017-2019, 62 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.66).",
+   "Тема растёт: лог-рост +0.73 (2023-25 к 2019-21), у 48% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "В окне 2025-2026 кластер из 17 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.92.",
+   "Термин «organic hydrogen carrier»: 0 документов в 2017-2019, 20 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.70)."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "Korea Institute of Science and Technology",
+   "Utrecht University",
+   "Monash University",
+   "Forschungszentrum Jülich"
+  ],
+  "top_countries": [
+   "DE 19",
+   "CN 17",
+   "KR 15",
+   "AU 13",
+   "US 9"
+  ],
+  "industry": [
+   "Eni (Italy)",
+   "Linde (Germany)",
+   "Woodside (Australia)"
+  ],
+  "examples": [
+   {
+    "title": "Impact of catalyst type on the techno-economics of dibenzyl toluene as a liquid organic hydrogen carrier",
+    "year": 2026,
+    "url": "https://openalex.org/W7163808910",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Recent Advances in Homogeneous/Heterogeneous Catalytic Hydrogenation and Dehydrogenation for Potential Liquid Organic Hydrogen Carrier (LOHC) Systems",
+    "year": 2021,
+    "url": "https://openalex.org/W4200415094",
+    "venue": "Catalysts"
+   },
+   {
+    "title": "Comparative Study of Hydrogen Storage and Metal Hydride Systems: Future Energy Storage Solutions",
+    "year": 2025,
+    "url": "https://openalex.org/W4410368210",
+    "venue": "Processes"
+   }
+  ],
+  "aliases": [],
+  "rank": 6
+ },
+ {
+  "name": "hydrogen, gas, natural gas, natural, blending, network",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 10,
+  "rank_min": 8,
+  "rank_max": 12,
+  "score_mean": 2.08,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера"
+  ],
+  "n_docs": 47,
+  "birth_year": 2021,
+  "growth": -1.73,
+  "sparkline": "▁▁▁▁▁▁▄█▁▁▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   14,
+   33,
+   0,
+   0,
+   0,
+   0
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, рождение кластера.",
+   "Уже подхвачено индустрией: BP (Canada), China National Petroleum Corporation (China), National Grid (United States), Saipem (Italy), Woodside (Australia)."
+  ],
+  "detectors": [
+   "В окне 2021-2022 кластер из 47 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.92.",
+   "В окне 2021-2022 группа из 11 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Beijing Institute of Petrochemical Technology",
+   "China University of Petroleum, Beijing",
+   "China University of Petroleum, East China",
+   "Stony Brook University",
+   "Shanghai Jiao Tong University"
+  ],
+  "top_countries": [
+   "CN 19",
+   "US 6",
+   "AU 5",
+   "GB 3",
+   "IT 2"
+  ],
+  "industry": [
+   "BP (Canada)",
+   "China National Petroleum Corporation (China)",
+   "National Grid (United States)",
+   "Saipem (Italy)",
+   "Woodside (Australia)"
+  ],
+  "examples": [
+   {
+    "title": "Study on leakage and explosion consequence for hydrogen blended natural gas in urban distribution networks",
+    "year": 2022,
+    "url": "https://openalex.org/W4283688462",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "The present condition and outlook for hydrogen-natural gas blending technology",
+    "year": 2022,
+    "url": "https://openalex.org/W4206272257",
+    "venue": "Korean Journal of Chemical Engineering"
+   },
+   {
+    "title": "Decompression modelling of natural gas-hydrogen mixtures using the Peng-Robinson equation of state",
+    "year": 2021,
+    "url": "https://openalex.org/W3134545051",
+    "venue": "International Journal of Hydrogen Energy"
+   }
+  ],
+  "aliases": [
+   "orifice, pipeline, ies, energy, power, gas"
+  ],
+  "rank": 7
+ },
+ {
+  "name": "green hydrogen produced",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 10,
+  "rank_min": 5,
+  "rank_max": 31,
+  "score_mean": 1.95,
+  "layers_max": 3,
+  "layers": [
+   "всплеск термина",
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 105,
+  "birth_year": 2020,
+  "growth": 1.5,
+  "sparkline": "▁▁▁▁▁▁▃▅▆▆██",
+  "counts": [
+   0,
+   0,
+   2,
+   0,
+   0,
+   3,
+   9,
+   16,
+   20,
+   19,
+   25,
+   28
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: всплеск термина, подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Equinor (Norway), National Grid (United States), Saipem (Italy)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.34 (2023-25 к 2019-21), у 60% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "В окне 2023-2024 группа из 11 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "Термин «green hydrogen produced»: 0 документов в 2017-2019, 17 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.74)."
+  ],
+  "top_orgs": [
+   "Politecnico di Milano",
+   "University of Calgary",
+   "Qatar University",
+   "Rice University",
+   "ETH Zurich"
+  ],
+  "top_countries": [
+   "US 15",
+   "IT 10",
+   "GB 9",
+   "CN 8",
+   "CA 6"
+  ],
+  "industry": [
+   "Equinor (Norway)",
+   "National Grid (United States)",
+   "Saipem (Italy)"
+  ],
+  "examples": [
+   {
+    "title": "Introduction to Green Hydrogen",
+    "year": 2024,
+    "url": "https://openalex.org/W4405287784",
+    "venue": "Chemical Reviews"
+   },
+   {
+    "title": "Review of Sustainable Hydrogen Energy Processes: Production, Storage, Transportation, and Color-Coded Classifications",
+    "year": 2024,
+    "url": "https://openalex.org/W4404505811",
+    "venue": "Energy & Fuels"
+   },
+   {
+    "title": "Anion-Exchange Membrane Water Electrolyzers for Green Hydrogen Generation: Advancement and Challenges for Industrial Application",
+    "year": 2024,
+    "url": "https://openalex.org/W4402032881",
+    "venue": "ACS Applied Energy Materials"
+   }
+  ],
+  "aliases": [
+   "green hydrogen",
+   "hydrogen, green hydrogen, green, blue, hydrogen production, blue hydrogen",
+   "hydrogen, green, blue, green hydrogen, energy, blue hydrogen"
+  ],
+  "rank": 8
+ },
+ {
+  "name": "hydrogen-blended",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 12,
+  "rank_min": 6,
+  "rank_max": 29,
+  "score_mean": 1.86,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "рождение кластера"
+  ],
+  "n_docs": 237,
+  "birth_year": 2021,
+  "growth": 3.21,
+  "sparkline": "▁▁▁▁▁▁▁▁▂▃▆█",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   3,
+   4,
+   17,
+   43,
+   85,
+   128
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: всплеск термина, рождение кластера.",
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China), PetroChina Southwest Oil and Gas Field Company (China), SINOPEC Research Institute of Safety Engineering Co., Ltd., Sinopec (China).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Термин «hydrogen-blended»: 0 документов в 2017-2019, 116 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.85).",
+   "Термин «hydrogen blending ratio»: 0 документов в 2017-2019, 29 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.88).",
+   "Термин «diffusion characteristics»: 0 документов в 2017-2019, 18 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.96).",
+   "В окне 2025-2026 кластер из 15 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.93.",
+   "Термин «hydrogen blending ratios»: 0 документов в 2017-2019, 21 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.86).",
+   "Термин «hbng»: 0 документов в 2017-2019, 18 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.96).",
+   "Термин «characteristics hydrogen-blended natural»: 0 документов в 2017-2019, 13 в 2023-2025, сконцентрирован в немногих темах (концентрация 1.00)."
+  ],
+  "top_orgs": [
+   "Southwest Petroleum University",
+   "China University of Petroleum, Beijing",
+   "China University of Petroleum, East China",
+   "Yangtze University",
+   "Beijing Institute of Petrochemical Technology"
+  ],
+  "top_countries": [
+   "CN 201",
+   "US 19",
+   "JP 18",
+   "CA 8",
+   "GB 7"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "SINOPEC Research Institute of Safety Engineering Co., Ltd.",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Analysis of Leakage and Diffusion Characteristics and Hazard Range Determination of Buried Hydrogen-Blended Natural Gas Pipeline Based on CFD",
+    "year": 2024,
+    "url": "https://openalex.org/W4402293400",
+    "venue": "ACS Omega"
+   },
+   {
+    "title": "Hydrogen-Blended Natural Gas Leakage and Diffusion Characteristics Simulation and Ventilation Strategy in Utility Tunnels",
+    "year": 2025,
+    "url": "https://openalex.org/W4413619872",
+    "venue": "Energies"
+   },
+   {
+    "title": "Effects of ventilation and hydrogen blending ratio on confined combustion dynamics of leaked hydrogen-blended natural gas in utility tunnels",
+    "year": 2025,
+    "url": "https://openalex.org/W4414395973",
+    "venue": "International Communications in Heat and Mass Transfer"
+   }
+  ],
+  "aliases": [],
+  "rank": 9
+ },
+ {
+  "name": "rh, chiral, google, figure, strain, algae",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 13,
+  "rank_min": 1,
+  "rank_max": 15,
+  "score_mean": 2.2,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 67,
+  "birth_year": 2016,
+  "growth": 1.02,
+  "sparkline": "▁▄▂▄▂▃▁▃██▂▃",
+  "counts": [
+   2,
+   7,
+   3,
+   8,
+   4,
+   6,
+   1,
+   5,
+   16,
+   16,
+   4,
+   6
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 32 статей появился без родителя: сходство с лучшим кандидатом 0.89 не выше, чем с соседней темой того же окна 0.90.",
+   "В окне 2023-2024 группа из 14 статей, у которых сходство с любой более ранней работой 0.75 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.62 (2023-25 к 2019-21), у 31% соседей свежих статей нет более ранних прецедентов, рождение темы 2016."
+  ],
+  "top_orgs": [
+   "University of Calgary",
+   "Biotechnology Institute",
+   "Konkuk University",
+   "Kyung Hee University",
+   "Chinese Academy of Sciences"
+  ],
+  "top_countries": [
+   "US 23",
+   "CN 15",
+   "KR 9",
+   "IN 6",
+   "DE 6"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Bioactive metabolites of Asparagopsis stabilized in canola oil completely suppress methane emissions in beef cattle fed a feedlot diet",
+    "year": 2024,
+    "url": "https://openalex.org/W4395009685",
+    "venue": "Journal of Animal Science"
+   },
+   {
+    "title": "Transcriptomics and co-expression network analysis revealing candidate genes for the laccase activity of Trametes gibbosa",
+    "year": 2023,
+    "url": "https://openalex.org/W4318067162",
+    "venue": "BMC Microbiology"
+   },
+   {
+    "title": "Methanotroph detection and bioconversion of methane to methanol by enriched microbial consortium from rice field soil",
+    "year": 2023,
+    "url": "https://openalex.org/W4328097174",
+    "venue": "Bioresource Technology Reports"
+   }
+  ],
+  "aliases": [
+   "laccase, methyl, gene, activity, growth, pathway",
+   "laccase, methyl, gene, pathway, growth, activity",
+   "methyl, activity, pathway, growth, photosynthetic, anti",
+   "rh, chiral, supporting, information, ligand, interactions"
+  ],
+  "rank": 10
+ },
+ {
+  "name": "ccs, capture storage, storage, carbon capture, capture, ccus",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 13,
+  "rank_min": 2,
+  "rank_max": 35,
+  "score_mean": 2.11,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 92,
+  "birth_year": 2016,
+  "growth": 0.4,
+  "sparkline": "▁▁▂▁▂▁▆█▂▅▆▄",
+  "counts": [
+   2,
+   3,
+   6,
+   3,
+   8,
+   4,
+   28,
+   40,
+   8,
+   24,
+   29,
+   16
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: BP (United Kingdom), Equinor (Norway), Equinor (United Kingdom), PetroChina Southwest Oil and Gas Field Company (China), Petrobras (Brazil).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2021-2022 кластер из 17 статей появился без родителя: сходство с лучшим кандидатом 0.93 не выше, чем с соседней темой того же окна 0.94.",
+   "В окне 2021-2022 группа из 55 статей, у которых сходство с любой более ранней работой 0.76 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +1.11 (2023-25 к 2019-21), у 53% соседей свежих статей нет более ранних прецедентов, рождение темы 2016."
+  ],
+  "top_orgs": [
+   "The University of Texas at Austin",
+   "Imperial College London",
+   "Research Institute of Petroleum Exploration and Development",
+   "National Energy Technology Laboratory",
+   "Southwest Petroleum University"
+  ],
+  "top_countries": [
+   "US 52",
+   "CN 25",
+   "GB 19",
+   "NO 10",
+   "CA 7"
+  ],
+  "industry": [
+   "BP (United Kingdom)",
+   "Equinor (Norway)",
+   "Equinor (United Kingdom)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Petrobras (Brazil)",
+   "Shell (Netherlands)",
+   "Shell (United Kingdom)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Decarbonizing the energy and industry sectors in Thailand by carbon capture and storage",
+    "year": 2021,
+    "url": "https://openalex.org/W4200623274",
+    "venue": "Journal of Petroleum Science and Engineering"
+   },
+   {
+    "title": "Economic viability of full-chain CCUS-EOR in Indonesia",
+    "year": 2021,
+    "url": "https://openalex.org/W3217558566",
+    "venue": "Resources Conservation and Recycling"
+   },
+   {
+    "title": "Regional opportunities for CO2 capture and storage in Southeast Asia",
+    "year": 2022,
+    "url": "https://openalex.org/W4220875243",
+    "venue": "International journal of greenhouse gas control"
+   }
+  ],
+  "aliases": [
+   "ccus, eor, china, project, co2, ccs",
+   "energy, carbon, ccs, storage, carbon neutrality, neutrality",
+   "energy, carbon, co2, capture, growth, storage",
+   "energy, carbon, co2, growth, capture, storage"
+  ],
+  "rank": 11
+ },
+ {
+  "name": "pyrolysis, temperature, products, bio, waste, thermal",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 15,
+  "rank_min": 2,
+  "rank_max": 23,
+  "score_mean": 2.23,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 139,
+  "birth_year": 2015,
+  "growth": 0.69,
+  "sparkline": "▂▃▁▁▃▃▄█▃▇██",
+  "counts": [
+   5,
+   7,
+   3,
+   0,
+   7,
+   8,
+   13,
+   27,
+   10,
+   22,
+   27,
+   24
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2021-2022 кластер из 39 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.95.",
+   "В окне 2021-2022 группа из 11 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.79 (2023-25 к 2019-21), у 41% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "University of Seoul",
+   "University of Leeds",
+   "Shandong University of Science and Technology",
+   "Tsinghua University"
+  ],
+  "top_countries": [
+   "CN 22",
+   "IN 19",
+   "US 14",
+   "GB 11",
+   "AU 9"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Mechanism research on hydrogen production from catalytic pyrolysis of waste tire rubber",
+    "year": 2022,
+    "url": "https://openalex.org/W4295538007",
+    "venue": "Fuel"
+   },
+   {
+    "title": "Biochar-advanced thermocatalytic salvaging of the waste disposable mask with the production of hydrogen and mono-aromatic hydrocarbons",
+    "year": 2021,
+    "url": "https://openalex.org/W4200175434",
+    "venue": "Journal of Hazardous Materials"
+   },
+   {
+    "title": "Effect of heating rate and H3PO4 as catalyst on the pyrolysis of agricultural residues",
+    "year": 2022,
+    "url": "https://openalex.org/W4296818394",
+    "venue": "Journal of Analytical and Applied Pyrolysis"
+   }
+  ],
+  "aliases": [
+   "biochar, biomass, pyrolysis, content, production, bio",
+   "pyrolysis, products, temperature, bio, bio oil, biomass",
+   "pyrolysis, water, pvc, hydrogen, copper, fuel",
+   "pyrolysis, water, waste, hydrogen, pvc, days"
+  ],
+  "rank": 12
+ },
+ {
+  "name": "corrosion, coatings, coating, µm, inhibition, pipeline",
+  "domain": "Трубопроводы",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 17,
+  "rank_min": 2,
+  "rank_max": 28,
+  "score_mean": 1.86,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 110,
+  "birth_year": 2015,
+  "growth": 0.55,
+  "sparkline": "▅▂▁▂▄▂▃▂▃▄██",
+  "counts": [
+   20,
+   8,
+   3,
+   8,
+   17,
+   9,
+   13,
+   7,
+   13,
+   19,
+   38,
+   36
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China), China National Petroleum Corporation (China), ConocoPhillips (United States), Petronas (Malaysia), Saipem (Italy).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2025-2026 кластер из 16 статей появился без родителя: сходство с лучшим кандидатом 0.93 не выше, чем с соседней темой того же окна 0.93.",
+   "В окне 2025-2026 группа из 28 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.44 (2023-25 к 2019-21), у 37% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, East China",
+   "Sinopec (China)",
+   "Ohio University",
+   "Chongqing University of Science and Technology",
+   "China National Petroleum Corporation (China)"
+  ],
+  "top_countries": [
+   "CN 50",
+   "NG 15",
+   "US 13",
+   "MY 10",
+   "GB 6"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)",
+   "China National Petroleum Corporation (China)",
+   "ConocoPhillips (United States)",
+   "Petronas (Malaysia)",
+   "Saipem (Italy)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Shell (India)",
+   "Shell (Netherlands)"
+  ],
+  "examples": [
+   {
+    "title": "A Novel Self-Healing Anticorrosive Inhibitor for Pipeline Corrosion Protection in Geothermal Well Systems",
+    "year": 2025,
+    "url": "https://openalex.org/W4408740231",
+    "venue": "ACS Omega"
+   },
+   {
+    "title": "Dual-function ethoxylated cationic surfactant for pipeline corrosion and sulfate-reducing bacteria control: electrochemical and theoretical studies",
+    "year": 2025,
+    "url": "https://openalex.org/W4417361993",
+    "venue": "Scientific Reports"
+   },
+   {
+    "title": "Durable Superhydrophobic Nano‐ZnO/Epoxy Composite Coating for Natural Gas Pipeline Corrosion Resistance",
+    "year": 2026,
+    "url": "https://openalex.org/W7165680110",
+    "venue": "Surface and Interface Analysis"
+   }
+  ],
+  "aliases": [
+   "corrosion, coatings, coating, µm, inhibition, ecs",
+   "corrosion, coatings, oil, pipeline, rate, pipelines"
+  ],
+  "rank": 13
+ },
+ {
+  "name": "hydrogen, hydrogen production, economic, techno, techno economic, production",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 18,
+  "rank_min": 15,
+  "rank_max": 25,
+  "score_mean": 1.57,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 102,
+  "birth_year": 2021,
+  "growth": 1.48,
+  "sparkline": "▁▁▁▁▁▁▃▅▇▆▆█",
+  "counts": [
+   1,
+   0,
+   1,
+   0,
+   2,
+   2,
+   8,
+   17,
+   22,
+   21,
+   20,
+   28
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: ExxonMobil (United States), Hyundai Engineering (South Korea), Linde (Germany), Petronas (Malaysia), Shell (Germany)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.42 (2023-25 к 2019-21), у 46% соседей свежих статей нет более ранних прецедентов, рождение темы 2021.",
+   "В окне 2023-2024 группа из 17 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Politecnico di Milano",
+   "Saveetha University",
+   "Universiti Teknologi Petronas",
+   "University of Technology Malaysia",
+   "The University of Western Australia"
+  ],
+  "top_countries": [
+   "US 16",
+   "DE 12",
+   "AU 12",
+   "CA 10",
+   "KR 9"
+  ],
+  "industry": [
+   "ExxonMobil (United States)",
+   "Hyundai Engineering (South Korea)",
+   "Linde (Germany)",
+   "Petronas (Malaysia)",
+   "Shell (Germany)",
+   "Shell (United States)",
+   "Siemens (Germany)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "The industry transformation from fossil fuels to hydrogen will reorganize value chains: Big picture and case studies for Germany",
+    "year": 2024,
+    "url": "https://openalex.org/W4390631080",
+    "venue": "Applied Energy"
+   },
+   {
+    "title": "A comprehensive review of recent developments in hydrogen production methods using a new parameter",
+    "year": 2024,
+    "url": "https://openalex.org/W4399212392",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "The hydrogen perspective for Türkiye, which is on the Asia-Europe energy transition route. Can Türkiye become hydrogen hub?",
+    "year": 2024,
+    "url": "https://openalex.org/W4390544953",
+    "venue": "International Journal of Hydrogen Energy"
+   }
+  ],
+  "aliases": [
+   "hydrogen, chain, supply, economic, transport, supply chain",
+   "hydrogen, hydrogen production, economic, techno, supply, techno economic",
+   "hydrogen, hydrogen production, economic, techno, techno economic, supply"
+  ],
+  "rank": 14
+ },
+ {
+  "name": "fuels, fuel, maritime, alternative, shipping, marine",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 19,
+  "rank_min": 3,
+  "rank_max": 25,
+  "score_mean": 2.11,
+  "layers_max": 4,
+  "layers": [
+   "всплеск термина",
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 159,
+  "birth_year": 2016,
+  "growth": 1.39,
+  "sparkline": "▁▁▁▁▂▂▁▄▄▅██",
+  "counts": [
+   0,
+   3,
+   4,
+   2,
+   6,
+   8,
+   5,
+   21,
+   21,
+   25,
+   39,
+   42
+  ],
+  "signals": [
+   "Независимо подтверждено 4 детекторами: всплеск термина, подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Baker Hughes (Norway), Saudi Aramco (Saudi Arabia), Saudi Aramco (United States).",
+   "Мост между направлениями: 34% ближайших соседей из других областей."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.32 (2023-25 к 2019-21), у 51% соседей свежих статей нет более ранних прецедентов, рождение темы 2016.",
+   "В окне 2021-2022 кластер из 20 статей появился без родителя: сходство с лучшим кандидатом 0.90 не выше, чем с соседней темой того же окна 0.91.",
+   "В окне 2025-2026 группа из 13 статей, у которых сходство с любой более ранней работой 0.81 попадает в нижние 20% окна.",
+   "Термин «maritime industry»: 0 документов в 2017-2019, 14 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.92)."
+  ],
+  "top_orgs": [
+   "Liverpool John Moores University",
+   "Utrecht University",
+   "ETH Zurich",
+   "Chalmers University of Technology",
+   "University of Strathclyde"
+  ],
+  "top_countries": [
+   "GB 25",
+   "US 19",
+   "CN 17",
+   "IT 11",
+   "DE 10"
+  ],
+  "industry": [
+   "Baker Hughes (Norway)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Saudi Aramco (United States)"
+  ],
+  "examples": [
+   {
+    "title": "A Review of the Latest Trends in the Use of Green Ammonia as an Energy Carrier in Maritime Industry",
+    "year": 2022,
+    "url": "https://openalex.org/W4213108643",
+    "venue": "Energies"
+   },
+   {
+    "title": "Assessment Of Alternative Marine Fuels from Environmental, Technical, and Economic Perspectives Onboard Ultra Large Container Ship",
+    "year": 2022,
+    "url": "https://openalex.org/W4310155414",
+    "venue": "The International Journal of Maritime Engineering"
+   },
+   {
+    "title": "PRospective EnvironMental Impact asSEment (premise): A streamlined approach to producing databases for prospective life cycle assessment using integrated assessment models",
+    "year": 2022,
+    "url": "https://openalex.org/W4220810663",
+    "venue": "Renewable and Sustainable Energy Reviews"
+   }
+  ],
+  "aliases": [
+   "fuels, fuel, maritime, shipping, alternative, marine",
+   "maritime",
+   "maritime industry"
+  ],
+  "rank": 15
+ },
+ {
+  "name": "molten, pyrolysis, methane pyrolysis, bubble, methane, reactor",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 19,
+  "rank_min": 8,
+  "rank_max": 19,
+  "score_mean": 1.89,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 114,
+  "birth_year": 2015,
+  "growth": 1.43,
+  "sparkline": "▁▁▁▁▁▂▂▄█▆▅█",
+  "counts": [
+   3,
+   1,
+   0,
+   2,
+   3,
+   5,
+   6,
+   12,
+   29,
+   21,
+   18,
+   30
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: ExxonMobil (United States), Lukoil (Russia), PetroChina Southwest Oil and Gas Field Company (China), Saudi Aramco (Saudi Arabia), Shell (United Kingdom)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.34 (2023-25 к 2019-21), у 45% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "В окне 2021-2022 кластер из 17 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.94.",
+   "В окне 2023-2024 группа из 12 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "University of California, Santa Barbara",
+   "The University of Queensland",
+   "Ajou University",
+   "Korea Institute of Industrial Technology",
+   "Karlsruhe Institute of Technology"
+  ],
+  "top_countries": [
+   "KR 24",
+   "US 20",
+   "CN 14",
+   "DE 10",
+   "AU 9"
+  ],
+  "industry": [
+   "ExxonMobil (United States)",
+   "Lukoil (Russia)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Shell (United Kingdom)"
+  ],
+  "examples": [
+   {
+    "title": "Catalytic methane pyrolysis for simultaneous production of hydrogen and graphitic carbon using a ceramic sparger in a molten NiSn alloy",
+    "year": 2023,
+    "url": "https://openalex.org/W4321365959",
+    "venue": "Carbon"
+   },
+   {
+    "title": "Hydrogen production by methane pyrolysis in molten binary copper alloys",
+    "year": 2022,
+    "url": "https://openalex.org/W4294133264",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Hydrogen Production by Methane Pyrolysis in a Molten‐Metal Bubble Column",
+    "year": 2021,
+    "url": "https://openalex.org/W3198097823",
+    "venue": "Chemical Engineering & Technology"
+   }
+  ],
+  "aliases": [
+   "bubble, molten, pyrolysis, methane, methane pyrolysis, reactor",
+   "bubble, pyrolysis, molten, methane, methane pyrolysis, reactor"
+  ],
+  "rank": 16
+ },
+ {
+  "name": "flame, combustion, ammonia, nh3, nox, laminar",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 20,
+  "rank_min": 4,
+  "rank_max": 22,
+  "score_mean": 1.77,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 180,
+  "birth_year": 2017,
+  "growth": 1.47,
+  "sparkline": "▁▁▁▁▁▁▂▂▅▅▇█",
+  "counts": [
+   2,
+   2,
+   4,
+   4,
+   6,
+   3,
+   12,
+   12,
+   28,
+   30,
+   43,
+   52
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Baker Hughes (United States), China National Petroleum Corporation (China), Saudi Aramco (Saudi Arabia), Siemens (Germany), Siemens (Sweden)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.37 (2023-25 к 2019-21), у 56% соседей свежих статей нет более ранних прецедентов, рождение темы 2017.",
+   "В окне 2025-2026 кластер из 15 статей появился без родителя: сходство с лучшим кандидатом 0.96 не выше, чем с соседней темой того же окна 0.96.",
+   "В окне 2023-2024 группа из 15 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Zhejiang University",
+   "SINTEF",
+   "Norwegian University of Science and Technology",
+   "King Abdullah University of Science and Technology",
+   "Xi'an Jiaotong University"
+  ],
+  "top_countries": [
+   "CN 71",
+   "US 27",
+   "JP 15",
+   "DE 13",
+   "GB 12"
+  ],
+  "industry": [
+   "Baker Hughes (United States)",
+   "China National Petroleum Corporation (China)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Siemens (Germany)",
+   "Siemens (Sweden)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Applications of PLIF in fundamental research on turbulent combustion of hydrogen and hydrogen hybrid fuels: A brief review",
+    "year": 2024,
+    "url": "https://openalex.org/W4400291992",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Experimental study of the methane/hydrogen/ammonia and ethylene/ammonia oxidation: Multi-parameter measurements using a shock tube combined with laser absorption spectroscopy",
+    "year": 2023,
+    "url": "https://openalex.org/W4377018099",
+    "venue": "Combustion and Flame"
+   },
+   {
+    "title": "The combustion characteristics and stable limit of a novel combustor with gradient porous media for hydrogen-enriched natural gas",
+    "year": 2024,
+    "url": "https://openalex.org/W4400367780",
+    "venue": "Journal of the Energy Institute"
+   }
+  ],
+  "aliases": [
+   "flame, ammonia, combustion, nh3, nox, laminar",
+   "flame, combustion, ammonia, nh3, laminar, nox",
+   "flame, combustion, ammonia, nox, nh3, laminar"
+  ],
+  "rank": 17
+ },
+ {
+  "name": "plasma, clusters, n2, ammonia, nh3, nitrogen",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 20,
+  "rank_min": 17,
+  "rank_max": 38,
+  "score_mean": 1.49,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 49,
+  "birth_year": 2020,
+  "growth": 1.41,
+  "sparkline": "▁▁▁▁▁▃▁▂█▆█▄",
+  "counts": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   4,
+   1,
+   3,
+   12,
+   9,
+   13,
+   6
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: SINOPEC Research Institute of Safety Engineering Co., Ltd., Sinopec (China)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.41 (2023-25 к 2019-21), у 62% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "В окне 2023-2024 кластер из 21 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.93."
+  ],
+  "top_orgs": [
+   "King Abdullah University of Science and Technology",
+   "Warsaw University of Technology",
+   "Jilin University",
+   "University of Antwerp",
+   "Xi'an Jiaotong University"
+  ],
+  "top_countries": [
+   "CN 22",
+   "US 7",
+   "PL 6",
+   "SA 4",
+   "JP 3"
+  ],
+  "industry": [
+   "SINOPEC Research Institute of Safety Engineering Co., Ltd.",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "A review of recent studies and emerging trends in plasma-assisted combustion of ammonia as an effective hydrogen carrier",
+    "year": 2023,
+    "url": "https://openalex.org/W4379645408",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Kinetic Study for Plasma Assisted Cracking of NH3: Approaches and Challenges",
+    "year": 2023,
+    "url": "https://openalex.org/W4317436097",
+    "venue": "The Journal of Physical Chemistry A"
+   },
+   {
+    "title": "Sustainable ammonia synthesis: An in-depth review of non-thermal plasma technologies",
+    "year": 2024,
+    "url": "https://openalex.org/W4395114137",
+    "venue": "Journal of Energy Chemistry"
+   }
+  ],
+  "aliases": [
+   "plasma, ammonia, n2, clusters, nitrogen, ammonia synthesis",
+   "plasma, clusters, n2, ammonia, nitrogen, dissociation",
+   "plasma, n2, ammonia, clusters, nitrogen, ammonia synthesis",
+   "plasma, n2, clusters, ammonia, nh3, reaction"
+  ],
+  "rank": 18
+ },
+ {
+  "name": "air capture, direct air, direct, capture, air, potassium",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 23,
+  "rank_min": 21,
+  "rank_max": 28,
+  "score_mean": 1.43,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 204,
+  "birth_year": 2015,
+  "growth": 1.14,
+  "sparkline": "▁▁▁▁▂▁▃▄▃▆▇█",
+  "counts": [
+   3,
+   2,
+   6,
+   5,
+   8,
+   4,
+   16,
+   21,
+   15,
+   37,
+   42,
+   50
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Baker Hughes (Norway), Fondazione Eni Enrico Mattei, Kawasaki Heavy Industries (Japan), Repsol (Spain), SINOPEC Research Institute of Safety Engineering Co., Ltd..",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2025-2026 группа из 15 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +1.12 (2023-25 к 2019-21), у 40% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "Oak Ridge National Laboratory",
+   "Imperial College London",
+   "Université Mohammed VI Polytechnique",
+   "Georgia Institute of Technology",
+   "Tianjin University"
+  ],
+  "top_countries": [
+   "US 60",
+   "GB 21",
+   "CN 20",
+   "DE 19",
+   "CA 16"
+  ],
+  "industry": [
+   "Baker Hughes (Norway)",
+   "Fondazione Eni Enrico Mattei",
+   "Kawasaki Heavy Industries (Japan)",
+   "Repsol (Spain)",
+   "SINOPEC Research Institute of Safety Engineering Co., Ltd.",
+   "Saudi Aramco (Saudi Arabia)",
+   "Shell (Netherlands)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Modeling the Impact of Direct Air Capture on Forest Biomass and Population Dynamics",
+    "year": 2025,
+    "url": "https://openalex.org/W4408043062",
+    "venue": "Earth Systems and Environment"
+   },
+   {
+    "title": "Direct air CO₂ capture using aqueous ammonia through an experimental investigation using Box-Behnken statistical approach",
+    "year": 2025,
+    "url": "https://openalex.org/W4412811581",
+    "venue": "Chemical Engineering Journal"
+   },
+   {
+    "title": "Renewable energy vs. direct air capture and utilization at the macroeconomic level: A Computable General Equilibruim analysis in Japan",
+    "year": 2026,
+    "url": "https://openalex.org/W7124723024",
+    "venue": "Journal of Cleaner Production"
+   }
+  ],
+  "aliases": [
+   "air capture, direct air, direct, air, capture, dac",
+   "direct air, air, direct, air capture, capture, dac",
+   "direct air, direct, air, air capture, capture, capture carbon"
+  ],
+  "rank": 19
+ },
+ {
+  "name": "carbonation, mgo, cao, air, ca, hydration",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 23,
+  "rank_min": 17,
+  "rank_max": 23,
+  "score_mean": 1.56,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 65,
+  "birth_year": 2019,
+  "growth": 0.88,
+  "sparkline": "▁▁▁▁▃▃▃▄▆▇▅█",
+  "counts": [
+   0,
+   0,
+   1,
+   0,
+   4,
+   4,
+   4,
+   6,
+   11,
+   13,
+   9,
+   15
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: Shell (Netherlands), Shell (United States), Sumitomo Osaka Cement (Japan)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 21 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.92.",
+   "Тема растёт: лог-рост +0.85 (2023-25 к 2019-21), у 49% соседей свежих статей нет более ранних прецедентов, рождение темы 2019."
+  ],
+  "top_orgs": [
+   "Oak Ridge National Laboratory",
+   "Instituto Nacional del Carbón",
+   "Queens College, CUNY",
+   "Heriot-Watt University",
+   "Cranfield University"
+  ],
+  "top_countries": [
+   "US 25",
+   "GB 9",
+   "CA 7",
+   "AU 6",
+   "ES 6"
+  ],
+  "industry": [
+   "Shell (Netherlands)",
+   "Shell (United States)",
+   "Sumitomo Osaka Cement (Japan)"
+  ],
+  "examples": [
+   {
+    "title": "Armoring of MgO by a Passivation Layer Impedes Direct Air Capture of CO 2",
+    "year": 2023,
+    "url": "https://openalex.org/W4386945526",
+    "venue": "Environmental Science & Technology"
+   },
+   {
+    "title": "Passive direct air capture using calcium oxide powder: The importance of water vapor",
+    "year": 2024,
+    "url": "https://openalex.org/W4396509766",
+    "venue": "Journal of Cleaner Production"
+   },
+   {
+    "title": "Wet-carbonation-based Mineral Extraction and CO2 Sequestration Using Concrete Waste Fines at a Low Temperature",
+    "year": 2023,
+    "url": "https://openalex.org/W4361298869",
+    "venue": "Journal of Advanced Concrete Technology"
+   }
+  ],
+  "aliases": [
+   "carbonation, mgo, air, ca, ca oh, ocean",
+   "carbonation, mgo, cao, air, capture, ca"
+  ],
+  "rank": 20
+ },
+ {
+  "name": "swing adsorption tvsa",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 24,
+  "rank_min": 1,
+  "rank_max": 40,
+  "score_mean": 1.8,
+  "layers_max": 4,
+  "layers": [
+   "всплеск термина",
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 107,
+  "birth_year": 2018,
+  "growth": 1.37,
+  "sparkline": "▁▁▁▁▁▂▂▃▃▃▆█",
+  "counts": [
+   0,
+   0,
+   0,
+   3,
+   0,
+   6,
+   6,
+   12,
+   12,
+   13,
+   31,
+   46
+  ],
+  "signals": [
+   "Независимо подтверждено 4 детекторами: всплеск термина, подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Carbon Engineering (Canada), ExxonMobil (United States), Petronas (Malaysia), Saudi Aramco (Saudi Arabia), Saudi Aramco (United States).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.35 (2023-25 к 2019-21), у 58% соседей свежих статей нет более ранних прецедентов, рождение темы 2018.",
+   "В окне 2025-2026 группа из 12 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "В окне 2021-2022 кластер из 18 статей появился без родителя: сходство с лучшим кандидатом 0.93 не выше, чем с соседней темой того же окна 0.93.",
+   "Термин «swing adsorption tvsa»: 0 документов в 2017-2019, 14 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.91)."
+  ],
+  "top_orgs": [
+   "Heriot-Watt University",
+   "University of Twente",
+   "Zhejiang University",
+   "Georgia Institute of Technology",
+   "Korea Advanced Institute of Science and Technology"
+  ],
+  "top_countries": [
+   "US 30",
+   "GB 21",
+   "CN 17",
+   "NL 8",
+   "KR 7"
+  ],
+  "industry": [
+   "Carbon Engineering (Canada)",
+   "ExxonMobil (United States)",
+   "Petronas (Malaysia)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Saudi Aramco (United States)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Process-informed adsorbent design guidelines for direct air capture",
+    "year": 2022,
+    "url": "https://openalex.org/W4312053270",
+    "venue": "Chemical Engineering Journal"
+   },
+   {
+    "title": "The impact of binary water-CO2 isotherm models on the optimal performance of sorbent-based direct air capture processes.",
+    "year": 2021,
+    "url": "https://openalex.org/W4231081212",
+    "venue": "ChemRxiv"
+   },
+   {
+    "title": "Process-informed adsorbent design for direct air capture",
+    "year": 2022,
+    "url": "https://openalex.org/W4304185569",
+    "venue": "ChemRxiv"
+   }
+  ],
+  "aliases": [
+   "moisture, moisture swing, swing, adsorption, capture, sorbent"
+  ],
+  "rank": 21
+ },
+ {
+  "name": "corrosion, oil, pipeline, rate, pipeline corrosion, scale",
+  "domain": "Трубопроводы",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 24,
+  "rank_min": 21,
+  "rank_max": 24,
+  "score_mean": 1.41,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 138,
+  "birth_year": 2015,
+  "growth": 0.51,
+  "sparkline": "▅▂▂▃▅▃▄▃▅▆█▇",
+  "counts": [
+   15,
+   6,
+   4,
+   8,
+   14,
+   8,
+   11,
+   7,
+   15,
+   17,
+   25,
+   21
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China), China National Petroleum Corporation (China), ConocoPhillips (United States), PetroChina Southwest Oil and Gas Field Company (China), Petronas (Malaysia)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 группа из 17 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.39 (2023-25 к 2019-21), у 34% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, East China",
+   "Sinopec (China)",
+   "Ohio University",
+   "Southwest Petroleum University",
+   "Xi'an Shiyou University"
+  ],
+  "top_countries": [
+   "CN 43",
+   "NG 14",
+   "US 10",
+   "MY 8",
+   "EG 6"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)",
+   "China National Petroleum Corporation (China)",
+   "ConocoPhillips (United States)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Petronas (Malaysia)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Shell (India)",
+   "Shell (Netherlands)"
+  ],
+  "examples": [
+   {
+    "title": "Experiment and numerical simulation of distribution law of water-based corrosion inhibitor in natural gas gathering and transportation pipeline",
+    "year": 2023,
+    "url": "https://openalex.org/W4318561838",
+    "venue": "Petroleum Science"
+   },
+   {
+    "title": "Protective mechanism of carbon dioxide in pipelines for water containing typical corrosive anions",
+    "year": 2024,
+    "url": "https://openalex.org/W4399040870",
+    "venue": "Process Safety and Environmental Protection"
+   },
+   {
+    "title": "A long-term effective solid capsule with matrix-type structure for the anticorrosion in oil and gas fields",
+    "year": 2024,
+    "url": "https://openalex.org/W4392361259",
+    "venue": "Journal of Materials Research and Technology"
+   }
+  ],
+  "aliases": [
+   "corrosion, coatings, oil, pipeline, scale, steel",
+   "corrosion, oil, inhibitor, scale, pipeline, release"
+  ],
+  "rank": 22
+ },
+ {
+  "name": "borane, ammonia borane, hydrolysis, ab, zif, catalyst",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 25,
+  "rank_min": 16,
+  "rank_max": 26,
+  "score_mean": 1.46,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 63,
+  "birth_year": 2018,
+  "growth": 0.41,
+  "sparkline": "▂▂▁▂▄▅▃▂▃█▆█",
+  "counts": [
+   2,
+   2,
+   0,
+   3,
+   6,
+   7,
+   4,
+   3,
+   4,
+   13,
+   10,
+   14
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 17 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.93.",
+   "Тема растёт: лог-рост +0.34 (2023-25 к 2019-21), у 44% соседей свежих статей нет более ранних прецедентов, рождение темы 2018."
+  ],
+  "top_orgs": [
+   "Sichuan Normal University",
+   "Zhengzhou University",
+   "National Interuniversity Consortium of Materials Science and Technology",
+   "Van Yüzüncü Yıl Üniversitesi",
+   "Henan University of Science and Technology"
+  ],
+  "top_countries": [
+   "CN 39",
+   "TR 8",
+   "IT 4",
+   "ES 3",
+   "JP 3"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Two-dimensional molybdenum boride coordinating with ruthenium nanoparticles to boost hydrogen generation from hydrolytic dehydrogenation of ammonia borane",
+    "year": 2024,
+    "url": "https://openalex.org/W4396799303",
+    "venue": "Journal of Colloid and Interface Science"
+   },
+   {
+    "title": "Cobalt Phosphide‐Supported Single‐Atom Pt Catalysts for Efficient and Stable Hydrogen Generation from Ammonia Borane Hydrolysis",
+    "year": 2024,
+    "url": "https://openalex.org/W4399047983",
+    "venue": "Small Methods"
+   },
+   {
+    "title": "Ternary Fe–Ni–B particles supported on Cu(OH)2–Cu foam: A highly efficient and stable catalyst for hydrolysis of ammonia borane",
+    "year": 2024,
+    "url": "https://openalex.org/W4401046446",
+    "venue": "International Journal of Hydrogen Energy"
+   }
+  ],
+  "aliases": [
+   "ammonia borane, borane, hydrolysis, ab, zif, ammonia",
+   "light, doping, zif, graphene, nh, hydrolysis"
+  ],
+  "rank": 23
+ },
+ {
+  "name": "fiber, das, sensing, distributed, acoustic, optic",
+  "domain": "Трубопроводы",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 26,
+  "rank_min": 14,
+  "rank_max": 37,
+  "score_mean": 1.34,
+  "layers_max": 3,
+  "layers": [
+   "всплеск термина",
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 174,
+  "birth_year": 2015,
+  "growth": 1.35,
+  "sparkline": "▁▁▁▁▁▁▂▂▄▄▆█",
+  "counts": [
+   8,
+   5,
+   6,
+   8,
+   8,
+   8,
+   12,
+   18,
+   28,
+   34,
+   54,
+   72
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: всплеск термина, подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Aker BP (Norway), China National Petroleum Corporation (China), Equinor (United Kingdom), Petrobras (Brazil), Saudi Aramco (Saudi Arabia)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.34 (2023-25 к 2019-21), у 44% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "Термин «health monitoring»: 0 документов в 2017-2019, 15 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.92).",
+   "В окне 2025-2026 группа из 24 статей, у которых сходство с любой более ранней работой 0.81 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Dalian University of Technology",
+   "Nanjing University",
+   "Wuhan University of Technology",
+   "Xi'an University of Science and Technology",
+   "Wayne State University"
+  ],
+  "top_countries": [
+   "CN 129",
+   "US 38",
+   "GB 10",
+   "MY 9",
+   "DE 6"
+  ],
+  "industry": [
+   "Aker BP (Norway)",
+   "China National Petroleum Corporation (China)",
+   "Equinor (United Kingdom)",
+   "Petrobras (Brazil)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Schlumberger (United Kingdom)",
+   "Sinopec (China)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Pipeline structural health monitoring using distributed fiber optic sensing textile",
+    "year": 2022,
+    "url": "https://openalex.org/W4220982286",
+    "venue": "Optical Fiber Technology"
+   },
+   {
+    "title": "State-of-The-Art application and challenges of optical fibre distributed acoustic sensing in civil engineering",
+    "year": 2024,
+    "url": "https://openalex.org/W4400808232",
+    "venue": "Optical Fiber Technology"
+   },
+   {
+    "title": "Structural health monitoring of oil and gas pipelines: Developments, applications and future directions",
+    "year": 2024,
+    "url": "https://openalex.org/W4399449233",
+    "venue": "Ocean Engineering"
+   }
+  ],
+  "aliases": [
+   "health monitoring"
+  ],
+  "rank": 24
+ },
+ {
+  "name": "dac, air, netl, capture, center, air capture",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 26,
+  "rank_min": 20,
+  "rank_max": 26,
+  "score_mean": 1.47,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 211,
+  "birth_year": 2018,
+  "growth": 1.26,
+  "sparkline": "▁▁▁▁▂▂▃▄▇█▇▆",
+  "counts": [
+   0,
+   0,
+   2,
+   3,
+   8,
+   8,
+   18,
+   20,
+   41,
+   48,
+   39,
+   36
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия."
+  ],
+  "detectors": [
+   "В окне 2023-2024 группа из 11 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +1.23 (2023-25 к 2019-21), у 50% соседей свежих статей нет более ранних прецедентов, рождение темы 2018."
+  ],
+  "top_orgs": [
+   "ETH Zurich",
+   "University of Pennsylvania",
+   "Shanghai Jiao Tong University",
+   "Imperial College London",
+   "Forschungszentrum Jülich"
+  ],
+  "top_countries": [
+   "US 72",
+   "GB 23",
+   "CN 18",
+   "DE 16",
+   "CA 12"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Advancing the deployment and information management of direct air capture: A solution enabled by integrating consortium blockchain system",
+    "year": 2024,
+    "url": "https://openalex.org/W4403561699",
+    "venue": "Carbon Capture Science & Technology"
+   },
+   {
+    "title": "Capturing CO2 Emissions in the George C. Wallace Tunnel: A Case Study",
+    "year": 2024,
+    "url": "https://openalex.org/W4401923920",
+    "venue": "Intelligent Control and Automation"
+   },
+   {
+    "title": "US funds $1.2bn pilot to remove CO2 from atmosphere",
+    "year": 2023,
+    "url": "https://openalex.org/W4390417963",
+    "venue": "Physics World"
+   }
+  ],
+  "aliases": [
+   "dac, netl, air, capture, center, air capture",
+   "dac, netl, center, air, capture, scale"
+  ],
+  "rank": 25
+ },
+ {
+  "name": "methanation, capture, conversion, dual function, dfms, dual",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 27,
+  "rank_min": 11,
+  "rank_max": 29,
+  "score_mean": 1.56,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 73,
+  "birth_year": 2018,
+  "growth": 1.32,
+  "sparkline": "▁▁▁▂▁▂▂▂▄▄█▆",
+  "counts": [
+   1,
+   1,
+   2,
+   3,
+   0,
+   4,
+   5,
+   5,
+   9,
+   10,
+   23,
+   16
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Доля китайских аффилиаций выросла с 4% до 20%.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.25 (2023-25 к 2019-21), у 45% соседей свежих статей нет более ранних прецедентов, рождение темы 2018.",
+   "В окне 2023-2024 кластер из 19 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.93.",
+   "В окне 2025-2026 группа из 13 статей, у которых сходство с любой более ранней работой 0.81 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Columbia University",
+   "University of Surrey",
+   "Southeast University",
+   "Universidade do Porto",
+   "Hokkaido University"
+  ],
+  "top_countries": [
+   "US 28",
+   "CN 15",
+   "GB 7",
+   "JP 6",
+   "NL 6"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Laboratory aging of a dual function material (DFM) washcoated monolith for varying ambient direct air capture of CO2 and in situ catalytic conversion to CH4",
+    "year": 2023,
+    "url": "https://openalex.org/W4384500958",
+    "venue": "Applied Catalysis B: Environmental"
+   },
+   {
+    "title": "Continuous direct air capture and methanation using combined system of membrane-based CO2 capture and Ni-Ca based dual functional materials",
+    "year": 2023,
+    "url": "https://openalex.org/W4385709129",
+    "venue": "Applied Catalysis B: Environmental"
+   },
+   {
+    "title": "Study of ceria-composite materials for high-temperature CO2 capture and their ruthenium functionalization for methane production",
+    "year": 2023,
+    "url": "https://openalex.org/W4389265016",
+    "venue": "Catalysis Today"
+   }
+  ],
+  "aliases": [
+   "methanation, capture, conversion, dual function, dfms, ru",
+   "methanation, capture, conversion, dual, air, materials",
+   "methanation, capture, dual function, conversion, dfms, dual"
+  ],
+  "rank": 26
+ },
+ {
+  "name": "decomposition, ammonia, ammonia decomposition, ru, catalysts, catalyst",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 4,
+  "n_runs": 5,
+  "rank_median": 28,
+  "rank_min": 11,
+  "rank_max": 35,
+  "score_mean": 1.46,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 165,
+  "birth_year": 2015,
+  "growth": 1.46,
+  "sparkline": "▁▁▁▁▁▂▁▂▄▅▅█",
+  "counts": [
+   4,
+   4,
+   2,
+   3,
+   4,
+   8,
+   7,
+   15,
+   25,
+   36,
+   31,
+   62
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Johnson Matthey (United Kingdom), Saudi Aramco (Saudi Arabia), Siemens (Canada), Sinopec (China), Toyota Technological Institute."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.45 (2023-25 к 2019-21), у 53% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "В окне 2023-2024 группа из 10 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна.",
+   "В окне 2021-2022 кластер из 18 статей появился без родителя: сходство с лучшим кандидатом 0.88 не выше, чем с соседней темой того же окна 0.90."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "Dalian Institute of Chemical Physics",
+   "Dalian National Laboratory for Clean Energy",
+   "University of Chinese Academy of Sciences",
+   "Shanghai Jiao Tong University"
+  ],
+  "top_countries": [
+   "CN 78",
+   "US 18",
+   "JP 18",
+   "KR 15",
+   "GB 13"
+  ],
+  "industry": [
+   "Johnson Matthey (United Kingdom)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Siemens (Canada)",
+   "Sinopec (China)",
+   "Toyota Technological Institute",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Ru-Based Catalysts for Ammonia Decomposition: A Mini-Review",
+    "year": 2021,
+    "url": "https://openalex.org/W3184582432",
+    "venue": "Energy & Fuels"
+   },
+   {
+    "title": "Challenges and Opportunities of Ru-Based Catalysts toward the Synthesis and Utilization of Ammonia",
+    "year": 2022,
+    "url": "https://openalex.org/W4220805720",
+    "venue": "ACS Catalysis"
+   },
+   {
+    "title": "Highly Dispersed Ruthenium Nanoparticles on Y 2 O 3 as Superior Catalyst for Ammonia Decomposition",
+    "year": 2021,
+    "url": "https://openalex.org/W3124438759",
+    "venue": "ChemCatChem"
+   }
+  ],
+  "aliases": [
+   "ammonia, decomposition, ru, ammonia decomposition, catalysts, ammonia synthesis",
+   "decomposition, ammonia decomposition, ammonia, catalysts, ru, catalyst"
+  ],
+  "rank": 27
+ },
+ {
+  "name": "corrosion, mic, srb, bacteria, microbial, biofilm",
+  "domain": "Трубопроводы",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 29,
+  "rank_min": 21,
+  "rank_max": 34,
+  "score_mean": 1.19,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 68,
+  "birth_year": 2015,
+  "growth": 0.13,
+  "sparkline": "▂▃▃▂▅▂▆▂▄▄▆█",
+  "counts": [
+   3,
+   4,
+   4,
+   3,
+   7,
+   2,
+   9,
+   3,
+   6,
+   6,
+   9,
+   14
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Доля китайских аффилиаций выросла с 24% до 54%.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China), Daqing Oilfield of CNPC, Petrobras (Brazil), SINOPEC Research Institute of Safety Engineering Co., Ltd., Saudi Aramco (Saudi Arabia)."
+  ],
+  "detectors": [
+   "В окне 2025-2026 кластер из 17 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.91.",
+   "Тема растёт: лог-рост +0.13 (2023-25 к 2019-21), у 28% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "Liaoning Shihua University",
+   "Chinese Academy of Sciences",
+   "Sinopec (China)",
+   "Southwest Petroleum University",
+   "University of Twente"
+  ],
+  "top_countries": [
+   "CN 31",
+   "US 9",
+   "CA 6",
+   "NL 4",
+   "DE 3"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)",
+   "Daqing Oilfield of CNPC",
+   "Petrobras (Brazil)",
+   "SINOPEC Research Institute of Safety Engineering Co., Ltd.",
+   "Saudi Aramco (Saudi Arabia)",
+   "Shell (Netherlands)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Targeting Bacterial Biofilms on Medical Implants: Current and Emerging Approaches",
+    "year": 2025,
+    "url": "https://openalex.org/W4413023820",
+    "venue": "Antibiotics"
+   },
+   {
+    "title": "Microbiologically assisted stress corrosion cracking of X80 pipeline steel welded joint under cathodic protection",
+    "year": 2025,
+    "url": "https://openalex.org/W4416329872",
+    "venue": "Acta Materialia"
+   },
+   {
+    "title": "Residual magnetic fields from magnetic flux leaking detection accelerate microbiologically influenced corrosion of X80 pipeline steel induced by Desulfovibrio desulfuricans in sea mud environment",
+    "year": 2026,
+    "url": "https://openalex.org/W7125133293",
+    "venue": "Petroleum Science"
+   }
+  ],
+  "aliases": [
+   "srb, corrosion, bacteria, microbial, mic, reducing bacteria"
+  ],
+  "rank": 28
+ },
+ {
+  "name": "catalyst, fischer tropsch, fischer, tropsch, catalysts, synthesis",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 29,
+  "rank_min": 3,
+  "rank_max": 29,
+  "score_mean": 1.84,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 168,
+  "birth_year": 2015,
+  "growth": 0.49,
+  "sparkline": "▃▄▄▅▂▆▄▅█▆▆▃",
+  "counts": [
+   10,
+   12,
+   12,
+   18,
+   6,
+   21,
+   13,
+   15,
+   29,
+   19,
+   19,
+   9
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: Flinders University, Hyundai Motors (South Korea), Shell (India), Shell (Netherlands)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 39 статей появился без родителя: сходство с лучшим кандидатом 0.95 не выше, чем с соседней темой того же окна 0.95.",
+   "В окне 2023-2024 группа из 21 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.32 (2023-25 к 2019-21), у 34% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "University of Saskatchewan",
+   "Alliance for Safe Kids",
+   "University of Kentucky",
+   "Texas A&M University at Qatar"
+  ],
+  "top_countries": [
+   "US 33",
+   "CN 27",
+   "KR 22",
+   "RU 16",
+   "CA 13"
+  ],
+  "industry": [
+   "Flinders University",
+   "Hyundai Motors (South Korea)",
+   "Shell (India)",
+   "Shell (Netherlands)"
+  ],
+  "examples": [
+   {
+    "title": "Hydrogen for CO2 processing in heterogeneous catalytic reactions",
+    "year": 2023,
+    "url": "https://openalex.org/W4362635337",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Nano-catalysts for gas to liquids: A concise review",
+    "year": 2023,
+    "url": "https://openalex.org/W4377246060",
+    "venue": "Chemical Engineering Journal"
+   },
+   {
+    "title": "Modified Co/TiO2 catalysts for CO2 hydrogenation to fuels",
+    "year": 2023,
+    "url": "https://openalex.org/W4388571184",
+    "venue": "Journal of Catalysis"
+   }
+  ],
+  "aliases": [
+   "catalyst, catalysis, group, catalysts, zno, component",
+   "catalyst, component, support, synthesis gas, fuels, fischer"
+  ],
+  "rank": 29
+ },
+ {
+  "name": "hydrogen blending",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 30,
+  "rank_min": 27,
+  "rank_max": 39,
+  "score_mean": 0.99,
+  "layers_max": 1,
+  "layers": [
+   "всплеск термина"
+  ],
+  "n_docs": 179,
+  "birth_year": 2021,
+  "growth": 2.64,
+  "sparkline": "▁▁▁▁▁▁▁▁▂▄▆█",
+  "counts": [
+   0,
+   0,
+   1,
+   0,
+   0,
+   1,
+   4,
+   10,
+   17,
+   39,
+   53,
+   81
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China), National Grid (United States), PetroChina Southwest Oil and Gas Field Company (China), Sinopec (China).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Термин «hydrogen blending»: 0 документов в 2017-2019, 110 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.81).",
+   "Термин «hydrogen blending natural»: 0 документов в 2017-2019, 23 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.97).",
+   "Термин «pipeline hydrogen»: 0 документов в 2017-2019, 17 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.82).",
+   "Термин «blending natural gas»: 1 документов в 2017-2019, 28 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.85)."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, Beijing",
+   "Southwest Petroleum University",
+   "Beijing Institute of Petrochemical Technology",
+   "China University of Petroleum, East China",
+   "Line Corporation (Japan)"
+  ],
+  "top_countries": [
+   "CN 92",
+   "US 15",
+   "JP 9",
+   "CA 9",
+   "GB 9"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)",
+   "National Grid (United States)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "A review of technical and regulatory limits for hydrogen blending in natural gas pipelines",
+    "year": 2022,
+    "url": "https://openalex.org/W4310580240",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Hydrogen blending in natural gas pipelines: A comprehensive review of material compatibility and safety considerations",
+    "year": 2024,
+    "url": "https://openalex.org/W4404221586",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "A numerical study on hydrogen blending in natural gas pipeline by a T-Pipe",
+    "year": 2024,
+    "url": "https://openalex.org/W4393951224",
+    "venue": "Journal of Pipeline Science and Engineering"
+   }
+  ],
+  "aliases": [],
+  "rank": 30
+ },
+ {
+  "name": "zeolite, zeolites, adsorption, zsm, 13x, air",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 32,
+  "rank_min": 6,
+  "rank_max": 39,
+  "score_mean": 1.34,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 44,
+  "birth_year": 2022,
+  "growth": 1.75,
+  "sparkline": "▁▁▁▁▁▁▁▂▂▂▄█",
+  "counts": [
+   0,
+   1,
+   0,
+   2,
+   0,
+   1,
+   0,
+   5,
+   4,
+   5,
+   11,
+   22
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: Saudi Aramco (Saudi Arabia), Sinopec (China).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.75 (2023-25 к 2019-21), у 60% соседей свежих статей нет более ранних прецедентов, рождение темы 2022.",
+   "В окне 2025-2026 кластер из 26 статей появился без родителя: сходство с лучшим кандидатом 0.93 не выше, чем с соседней темой того же окна 0.93."
+  ],
+  "top_orgs": [
+   "Huazhong University of Science and Technology",
+   "King Fahd University of Petroleum and Minerals",
+   "Australian Synchrotron",
+   "Nanjing Tech University",
+   "Changchun Institute of Optics, Fine Mechanics and Physics"
+  ],
+  "top_countries": [
+   "CN 16",
+   "US 10",
+   "KR 4",
+   "ES 4",
+   "SA 3"
+  ],
+  "industry": [
+   "Saudi Aramco (Saudi Arabia)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Review of zeolitic-based sorbents for CO2 capture: Insights into functional modifications, economic feasibility and machine learning-enhanced strategies",
+    "year": 2025,
+    "url": "https://openalex.org/W4412717253",
+    "venue": "Chemical Engineering Journal Advances"
+   },
+   {
+    "title": "Isolated and Paired Metal Sites in Zeolites Using Solid‐State Ion Exchange",
+    "year": 2025,
+    "url": "https://openalex.org/W4409387460",
+    "venue": "Angewandte Chemie International Edition"
+   },
+   {
+    "title": "Unveiling specific CO2 trapping sites within MOR zeolite for promoting direct air capture of CO2",
+    "year": 2025,
+    "url": "https://openalex.org/W4406821591",
+    "venue": "Chemical Engineering Journal"
+   }
+  ],
+  "aliases": [
+   "zeolite, zeolites, adsorption, 13x, zsm, air"
+  ],
+  "rank": 31
+ },
+ {
+  "name": "electrochemical, capture, air, direct air, air capture, direct",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 32,
+  "rank_min": 14,
+  "rank_max": 32,
+  "score_mean": 1.6,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 96,
+  "birth_year": 2020,
+  "growth": 1.71,
+  "sparkline": "▁▁▁▁▁▁▁▃▃▅▇█",
+  "counts": [
+   0,
+   1,
+   0,
+   0,
+   1,
+   3,
+   4,
+   11,
+   10,
+   19,
+   29,
+   38
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: Toyota Central Research and Development Laboratories (Japan), Toyota Motor Corporation (Japan), Toyota Motor North America (United States), Toyota Physical and Chemical Research Institute.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.71 (2023-25 к 2019-21), у 56% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "В окне 2023-2024 кластер из 28 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.93."
+  ],
+  "top_orgs": [
+   "Massachusetts Institute of Technology",
+   "University of Kentucky",
+   "University of Toronto",
+   "Harvard University",
+   "University of Chinese Academy of Sciences"
+  ],
+  "top_countries": [
+   "US 42",
+   "CN 22",
+   "CA 9",
+   "AU 7",
+   "NL 7"
+  ],
+  "industry": [
+   "Toyota Central Research and Development Laboratories (Japan)",
+   "Toyota Motor Corporation (Japan)",
+   "Toyota Motor North America (United States)",
+   "Toyota Physical and Chemical Research Institute"
+  ],
+  "examples": [
+   {
+    "title": "Electrochemical direct air capture of CO2 using neutral red as reversible redox-active material",
+    "year": 2023,
+    "url": "https://openalex.org/W4317433478",
+    "venue": "Nature Communications"
+   },
+   {
+    "title": "Redox-Mediated pH Swing Systems for Electrochemical Carbon Capture",
+    "year": 2023,
+    "url": "https://openalex.org/W4388583698",
+    "venue": "Accounts of Chemical Research"
+   },
+   {
+    "title": "Electrochemical direct CO2 capture technology using redox-active organic molecules to achieve carbon-neutrality",
+    "year": 2023,
+    "url": "https://openalex.org/W4376126590",
+    "venue": "Nano Energy"
+   }
+  ],
+  "aliases": [
+   "electrochemical direct"
+  ],
+  "rank": 32
+ },
+ {
+  "name": "ni, catalyst, catalysts, carbon, catalytic, iron",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 5,
+  "n_runs": 5,
+  "rank_median": 34,
+  "rank_min": 9,
+  "rank_max": 40,
+  "score_mean": 1.37,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 70,
+  "birth_year": 2018,
+  "growth": 1.9,
+  "sparkline": "▁▁▁▁▁▁▁▁▂▅█▇",
+  "counts": [
+   0,
+   2,
+   0,
+   3,
+   1,
+   1,
+   2,
+   3,
+   6,
+   13,
+   25,
+   21
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: ExxonMobil (United States), Lukoil (Russia), Saudi Aramco (United States).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.79 (2023-25 к 2019-21), у 61% соседей свежих статей нет более ранних прецедентов, рождение темы 2018.",
+   "В окне 2023-2024 группа из 10 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "National University of Singapore",
+   "National University of Science and Technology",
+   "Loughborough University",
+   "National Energy Technology Laboratory",
+   "Hebei University of Technology"
+  ],
+  "top_countries": [
+   "US 15",
+   "CN 14",
+   "RU 7",
+   "IN 6",
+   "GB 6"
+  ],
+  "industry": [
+   "ExxonMobil (United States)",
+   "Lukoil (Russia)",
+   "Saudi Aramco (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Activated carbon supported Ni, Fe, and bimetallic NiFe catalysts for COx-free H2 production by microwave methane pyrolysis",
+    "year": 2023,
+    "url": "https://openalex.org/W4389010023",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Catalytic Activity of CO2-Derived Transition Metal–Carbon Catalysts in Methane Pyrolysis",
+    "year": 2024,
+    "url": "https://openalex.org/W4391847625",
+    "venue": "Korean Journal of Chemical Engineering"
+   },
+   {
+    "title": "Tuning the reactivity of Ni/MoS2 membrane for efficient methane pyrolysis and hydrogen production: A multi-scale study",
+    "year": 2023,
+    "url": "https://openalex.org/W4385657662",
+    "venue": "Energy Conversion and Management"
+   }
+  ],
+  "aliases": [
+   "ni, catalyst, carbon, catalysts, pyrolysis, methane",
+   "ni, catalyst, carbon, pyrolysis, methane, catalysts",
+   "ni, catalyst, catalysts, carbon, pyrolysis, catalytic",
+   "ni, catalyst, pyrolysis, carbon, catalysts, methane pyrolysis"
+  ],
+  "rank": 33
+ },
+ {
+  "name": "uk, methane, emissions, journal, gas, space",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 39,
+  "rank_min": 32,
+  "rank_max": 39,
+  "score_mean": 0.96,
+  "layers_max": 1,
+  "layers": [
+   "подтема без предшественников"
+  ],
+  "n_docs": 29,
+  "birth_year": 2021,
+  "growth": -1.67,
+  "sparkline": "▁▁▁▁▁▁▇█▁▁▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   13,
+   16,
+   0,
+   0,
+   0,
+   0
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China), ExxonMobil (United States), PetroChina Southwest Oil and Gas Field Company (China), Sinopec (China)."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 29 статей, у которых сходство с любой более ранней работой 0.76 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Columbia University",
+   "China University of Petroleum, Beijing",
+   "AGH University of Krakow",
+   "Babeș-Bolyai University",
+   "Heidelberg University"
+  ],
+  "top_countries": [
+   "US 8",
+   "CN 4",
+   "ID 3",
+   "NL 2",
+   "GB 2"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)",
+   "ExxonMobil (United States)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Quantification of methane emission rate from oil and gas wells in Romania using ground-based measurement techniques",
+    "year": 2022,
+    "url": "https://openalex.org/W4312558622",
+    "venue": "Elementa Science of the Anthropocene"
+   },
+   {
+    "title": "Air pollution, methane super-emitters, and oil and gas wells in Northern California: the relationship with migraine headache prevalence and exacerbation",
+    "year": 2021,
+    "url": "https://openalex.org/W3155271848",
+    "venue": "Environmental Health"
+   },
+   {
+    "title": "Life cycle greenhouse gas emissions of crude oil and natural gas from the Delaware Basin",
+    "year": 2021,
+    "url": "https://openalex.org/W3208461705",
+    "venue": "Journal of Cleaner Production"
+   }
+  ],
+  "aliases": [
+   "uk, methane, emissions, gas, journal, space",
+   "uk, methane, emissions, gas, journal, university"
+  ],
+  "rank": 34
+ },
+ {
+  "name": "turquoise hydrogen",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 3,
+  "n_runs": 5,
+  "rank_median": 39,
+  "rank_min": 37,
+  "rank_max": 39,
+  "score_mean": 0.94,
+  "layers_max": 1,
+  "layers": [
+   "всплеск термина"
+  ],
+  "n_docs": 141,
+  "birth_year": 2021,
+  "growth": 2.15,
+  "sparkline": "▁▁▁▁▁▁▂▃▅▇██",
+  "counts": [
+   1,
+   1,
+   1,
+   0,
+   1,
+   2,
+   5,
+   13,
+   20,
+   34,
+   37,
+   39
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: ExxonMobil (United States)."
+  ],
+  "detectors": [
+   "Термин «turquoise hydrogen»: 0 документов в 2017-2019, 64 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.60).",
+   "Термин «turquoise»: 2 документов в 2017-2019, 91 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.56).",
+   "Термин «turquoise hydrogen production»: 0 документов в 2017-2019, 21 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.76)."
+  ],
+  "top_orgs": [
+   "Korea Institute of Industrial Technology",
+   "Universidad Politécnica de Madrid",
+   "Dongguk University",
+   "Nanyang Technological University",
+   "SINTEF"
+  ],
+  "top_countries": [
+   "KR 17",
+   "US 14",
+   "CN 14",
+   "DE 11",
+   "GB 9"
+  ],
+  "industry": [
+   "ExxonMobil (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Techno-economic analysis of a novel concept for the combination of methane pyrolysis in molten salt with heliostat solar field",
+    "year": 2024,
+    "url": "https://openalex.org/W4396851068",
+    "venue": "Energy"
+   },
+   {
+    "title": "Methane pyrolysis rate measurement using electromagnetic levitation techniques for turquoise hydrogen production: Liquid In, Ga, Bi, Sn, and Cu as catalysts",
+    "year": 2023,
+    "url": "https://openalex.org/W4318464939",
+    "venue": "Chemical Engineering Journal"
+   },
+   {
+    "title": "Review of methane pyrolysis for clean turquoise hydrogen production",
+    "year": 2024,
+    "url": "https://openalex.org/W4402126815",
+    "venue": "Journal of Analytical and Applied Pyrolysis"
+   }
+  ],
+  "aliases": [],
+  "rank": 35
+ },
+ {
+  "name": "lh2 (hydrogen lh2)",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 9,
+  "rank_max": 11,
+  "score_mean": 2.08,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "тема"
+  ],
+  "n_docs": 135,
+  "birth_year": 2020,
+  "growth": 1.4,
+  "sparkline": "▁▁▁▁▁▂▂▃▂▇██",
+  "counts": [
+   0,
+   2,
+   1,
+   2,
+   2,
+   6,
+   10,
+   11,
+   10,
+   31,
+   41,
+   36
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: всплеск термина, тема.",
+   "Уже подхвачено индустрией: Eni (Italy), ExxonMobil (United States), Linde (Germany), Saudi Aramco (Saudi Arabia), Saudi Aramco (United States).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Термин «lh2»: 0 документов в 2017-2019, 27 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.74).",
+   "Тема растёт: лог-рост +1.28 (2023-25 к 2019-21), у 54% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "Термин «hydrogen lh2»: 0 документов в 2017-2019, 19 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.70)."
+  ],
+  "top_orgs": [
+   "Monash University",
+   "RWTH Aachen University",
+   "Qatar University",
+   "Commonwealth Scientific and Industrial Research Organisation",
+   "Karlsruhe Institute of Technology"
+  ],
+  "top_countries": [
+   "DE 25",
+   "AU 19",
+   "US 13",
+   "KR 11",
+   "CN 11"
+  ],
+  "industry": [
+   "Eni (Italy)",
+   "ExxonMobil (United States)",
+   "Linde (Germany)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Saudi Aramco (United States)",
+   "Toshiba Mitsubishi-Electric Industrial Systems Corporation (Japan)",
+   "Woodside (Australia)"
+  ],
+  "examples": [
+   {
+    "title": "A Techno-Economic Analysis of solar hydrogen production by electrolysis in the north of Chile and the case of exportation from Atacama Desert to Japan",
+    "year": 2020,
+    "url": "https://openalex.org/W3046596807",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Shipping the sunshine: An open-source model for costing renewable hydrogen transport from Australia",
+    "year": 2022,
+    "url": "https://openalex.org/W4229373117",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Industrial Perspective on Hydrogen Purification, Compression, Storage, and Distribution",
+    "year": 2020,
+    "url": "https://openalex.org/W3047172692",
+    "venue": "Fuel Cells"
+   }
+  ],
+  "aliases": [],
+  "rank": 36
+ },
+ {
+  "name": "net-zero (net-zero emissions)",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 11,
+  "rank_max": 12,
+  "score_mean": 2.03,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 169,
+  "birth_year": 2020,
+  "growth": 2.11,
+  "sparkline": "▁▁▁▁▁▁▂▂▅▆██",
+  "counts": [
+   0,
+   1,
+   0,
+   0,
+   1,
+   4,
+   17,
+   18,
+   49,
+   65,
+   89,
+   87
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: всплеск термина, рождение кластера.",
+   "Уже подхвачено индустрией: Aker BP (Norway), China National Offshore Oil Corporation (China), Flinders University, Gazprom (Russia), Petronas (Malaysia)."
+  ],
+  "detectors": [
+   "Термин «net-zero»: 1 документов в 2017-2019, 200 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.40).",
+   "Термин «net-zero emissions»: 0 документов в 2017-2019, 71 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.52).",
+   "Термин «achieving net-zero»: 0 документов в 2017-2019, 55 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.55).",
+   "В окне 2025-2026 кластер из 18 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.94.",
+   "Термин «achieving net-zero emissions»: 0 документов в 2017-2019, 31 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.57).",
+   "Термин «achieve net-zero»: 0 документов в 2017-2019, 24 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.62)."
+  ],
+  "top_orgs": [
+   "ETH Zurich",
+   "Joint Global Change Research Institute",
+   "Imperial College London",
+   "Commonwealth Scientific and Industrial Research Organisation",
+   "Pacific Northwest National Laboratory"
+  ],
+  "top_countries": [
+   "US 83",
+   "GB 44",
+   "CN 30",
+   "CA 27",
+   "AU 22"
+  ],
+  "industry": [
+   "Aker BP (Norway)",
+   "China National Offshore Oil Corporation (China)",
+   "Flinders University",
+   "Gazprom (Russia)",
+   "Petronas (Malaysia)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Saudi Aramco (United States)",
+   "Schlumberger (Ireland)"
+  ],
+  "examples": [
+   {
+    "title": "Early transition to near-zero emissions electricity and carbon dioxide removal is essential to achieve net-zero emissions at a low cost in Australia",
+    "year": 2025,
+    "url": "https://openalex.org/W4413212835",
+    "venue": "Communications Earth & Environment"
+   },
+   {
+    "title": "Carbon Dioxide Reduction and Removal toward Net-Zero: A Needed Change of Narrative",
+    "year": 2025,
+    "url": "https://openalex.org/W4412728612",
+    "venue": "Industrial & Engineering Chemistry Research"
+   },
+   {
+    "title": "Atmospheric alchemy: The energy and cost dynamics of direct air carbon capture",
+    "year": 2024,
+    "url": "https://openalex.org/W4400447295",
+    "venue": "MRS Energy & Sustainability"
+   }
+  ],
+  "aliases": [
+   "energy, net zero, net, zero, green deal, eu"
+  ],
+  "rank": 37
+ },
+ {
+  "name": "life, cdr, earth, water, carbon, support",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 11,
+  "rank_max": 12,
+  "score_mean": 2.0,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 86,
+  "birth_year": 2017,
+  "growth": 1.33,
+  "sparkline": "▁▁▂▁▁▁▂▂▃▄█▇",
+  "counts": [
+   0,
+   2,
+   4,
+   1,
+   3,
+   2,
+   5,
+   6,
+   9,
+   12,
+   25,
+   20
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2025-2026 группа из 12 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +1.26 (2023-25 к 2019-21), у 48% соседей свежих статей нет более ранних прецедентов, рождение темы 2017."
+  ],
+  "top_orgs": [
+   "Aarhus University",
+   "Boston University",
+   "University of Sussex",
+   "Imperial College London",
+   "International Institute for Applied Systems Analysis"
+  ],
+  "top_countries": [
+   "US 29",
+   "GB 25",
+   "DE 15",
+   "CA 9",
+   "DK 9"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Accounting Methods Dictate Carbon Removal Credit Integrity and Outcomes",
+    "year": 2026,
+    "url": "https://openalex.org/W7168166611",
+    "venue": NaN
+   },
+   {
+    "title": "Household-Scale Integrated Life-Support Systems: A Socio-Technical Framework for Distributed Infrastructure Resilience",
+    "year": 2026,
+    "url": "https://openalex.org/W7136041062",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)"
+   },
+   {
+    "title": "The Brave New World of Carbon Accounting",
+    "year": 2025,
+    "url": "https://openalex.org/W7127190277",
+    "venue": "Figshare"
+   }
+  ],
+  "aliases": [
+   "life, cdr, earth, water, carbon, forecasts"
+  ],
+  "rank": 38
+ },
+ {
+  "name": "samples, pretrained, training, line, inspection, alignment",
+  "domain": "Трубопроводы",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 6,
+  "rank_max": 27,
+  "score_mean": 1.89,
+  "layers_max": 3,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 147,
+  "birth_year": 2015,
+  "growth": 0.58,
+  "sparkline": "▂▃▁▃▃▃▃▅▅▄▇█",
+  "counts": [
+   5,
+   10,
+   3,
+   10,
+   9,
+   11,
+   11,
+   18,
+   18,
+   14,
+   26,
+   30
+  ],
+  "signals": [
+   "Независимо подтверждено 3 детекторами: подтема без предшественников, рождение кластера, тема.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China), China National Petroleum Corporation (China), Eni (Italy), Petrobras (Brazil), Saudi Aramco (Saudi Arabia)."
+  ],
+  "detectors": [
+   "В окне 2025-2026 группа из 11 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "В окне 2025-2026 кластер из 37 статей появился без родителя: сходство с лучшим кандидатом 0.93 не выше, чем с соседней темой того же окна 0.94.",
+   "Тема растёт: лог-рост +0.55 (2023-25 к 2019-21), у 34% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, Beijing",
+   "Shenyang University of Technology",
+   "Northeastern University",
+   "Beihang University",
+   "Line Corporation (Japan)"
+  ],
+  "top_countries": [
+   "CN 79",
+   "CA 11",
+   "US 9",
+   "JP 7",
+   "KR 7"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)",
+   "China National Petroleum Corporation (China)",
+   "Eni (Italy)",
+   "Petrobras (Brazil)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Incomplete multimodal industrial anomaly detection via cross-modal distillation",
+    "year": 2025,
+    "url": "https://openalex.org/W4413184869",
+    "venue": "Information Fusion"
+   },
+   {
+    "title": "Research on the signal quantization method for in-line inspection of composite defects in pipeline welds using weak magnetic method",
+    "year": 2025,
+    "url": "https://openalex.org/W4411238420",
+    "venue": "Mechanical Systems and Signal Processing"
+   },
+   {
+    "title": "Cross-attention conditional diffusion for magnetic flux leakage signal synthesis and pipeline defect uncertainty analysis",
+    "year": 2026,
+    "url": "https://openalex.org/W7139991455",
+    "venue": "Measurement"
+   }
+  ],
+  "aliases": [
+   "line, samples, inspection, line inspection, pretrained, training"
+  ],
+  "rank": 39
+ },
+ {
+  "name": "ln, scholar, google scholar, google, proton, chem",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 22,
+  "rank_max": 22,
+  "score_mean": 1.61,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 98,
+  "birth_year": 2018,
+  "growth": 0.38,
+  "sparkline": "▁▁▁▂▂▂▇▇▃▆▇█",
+  "counts": [
+   1,
+   1,
+   1,
+   3,
+   3,
+   5,
+   17,
+   18,
+   6,
+   15,
+   17,
+   22
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Sinopec (China).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 13 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.49 (2023-25 к 2019-21), у 44% соседей свежих статей нет более ранних прецедентов, рождение темы 2018."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "Southern University of Science and Technology",
+   "Fuzhou University",
+   "Zhengzhou University",
+   "University of Chinese Academy of Sciences"
+  ],
+  "top_countries": [
+   "CN 58",
+   "US 16",
+   "IN 8",
+   "JP 5",
+   "SA 5"
+  ],
+  "industry": [
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Synergistic effect of Ru-N4 sites and Cu-N3 sites in carbon nitride for highly selective photocatalytic reduction of CO2 to methane",
+    "year": 2022,
+    "url": "https://openalex.org/W4210402954",
+    "venue": "Applied Catalysis B: Environmental"
+   },
+   {
+    "title": "Tunable cobalt doping titanium nitride (Ti Co N) interlaced nanotubes enable an enhanced electronic synergy on visible-light driven hydrogen evolution",
+    "year": 2021,
+    "url": "https://openalex.org/W3136239676",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Photocatalytic Activity and Electron Storage Capability of TiO 2 Aerogels with an Adjustable Surface Area",
+    "year": 2022,
+    "url": "https://openalex.org/W4310110593",
+    "venue": "ACS Applied Energy Materials"
+   }
+  ],
+  "aliases": [
+   "ru, tio2, c3n4, photocatalytic, ag, figure"
+  ],
+  "rank": 40
+ },
+ {
+  "name": "figure, download, catalyst, catalytic, metal, reaction",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 16,
+  "rank_max": 40,
+  "score_mean": 1.3,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 81,
+  "birth_year": 2015,
+  "growth": -0.13,
+  "sparkline": "▃▁▃▃▄▅▆▆▃▅▆█",
+  "counts": [
+   7,
+   2,
+   9,
+   9,
+   12,
+   15,
+   19,
+   16,
+   8,
+   14,
+   18,
+   26
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Gazprom (Russia), Haldor Topsoe (Denmark), Johnson Matthey (United Kingdom), Shell (Netherlands), Shell (United States).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 14 статей, у которых сходство с любой более ранней работой 0.76 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост -0.02 (2023-25 к 2019-21), у 35% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "University of Chinese Academy of Sciences",
+   "Dalian Institute of Chemical Physics",
+   "Eindhoven University of Technology",
+   "University of Science and Technology of China"
+  ],
+  "top_countries": [
+   "CN 57",
+   "US 29",
+   "DE 10",
+   "RU 10",
+   "AU 8"
+  ],
+  "industry": [
+   "Gazprom (Russia)",
+   "Haldor Topsoe (Denmark)",
+   "Johnson Matthey (United Kingdom)",
+   "Shell (Netherlands)",
+   "Shell (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Computational Prediction of Graphdiyne-Supported Three-Atom Single-Cluster Catalysts",
+    "year": 2022,
+    "url": "https://openalex.org/W4220800446",
+    "venue": "CCS Chemistry"
+   },
+   {
+    "title": "Tuning CO2 Hydrogenation Selectivity by N-Doped Carbon Coating over Nickel Nanoparticles Supported on SiO2",
+    "year": 2022,
+    "url": "https://openalex.org/W4210475948",
+    "venue": "ACS Sustainable Chemistry & Engineering"
+   },
+   {
+    "title": "Catalytic Conversion of C 1 Molecules on Atomically Precise Metal Nanoclusters",
+    "year": 2021,
+    "url": "https://openalex.org/W3197058385",
+    "venue": "CCS Chemistry"
+   }
+  ],
+  "aliases": [
+   "figure, reaction, catalyst, download, catalytic, metal"
+  ],
+  "rank": 41
+ },
+ {
+  "name": "membrane, reactor, ammonia, membrane reactor, pi, decomposition",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 30,
+  "rank_max": 33,
+  "score_mean": 1.24,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 39,
+  "birth_year": 2023,
+  "growth": 1.01,
+  "sparkline": "▂▁▁▁▁▂▂▂▃▄▆█",
+  "counts": [
+   2,
+   1,
+   0,
+   1,
+   1,
+   2,
+   2,
+   2,
+   4,
+   6,
+   9,
+   14
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: Engie (United States), Saudi Aramco (Saudi Arabia).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.01 (2023-25 к 2019-21), у 52% соседей свежих статей нет более ранних прецедентов, рождение темы 2023.",
+   "В окне 2025-2026 кластер из 18 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.94."
+  ],
+  "top_orgs": [
+   "Eindhoven University of Technology",
+   "Chinese Academy of Sciences",
+   "Meiji University",
+   "Colorado School of Mines",
+   "Wuhan University of Technology"
+  ],
+  "top_countries": [
+   "CN 11",
+   "US 6",
+   "JP 5",
+   "NL 4",
+   "KR 2"
+  ],
+  "industry": [
+   "Engie (United States)",
+   "Saudi Aramco (Saudi Arabia)"
+  ],
+  "examples": [
+   {
+    "title": "Enhanced hydrogen production from ammonia decomposition by a silica membrane reactor",
+    "year": 2025,
+    "url": "https://openalex.org/W4413915651",
+    "venue": "Separation and Purification Technology"
+   },
+   {
+    "title": "Modelling the feasibility of membrane integration into periodic open cellular structures for ammonia decomposition",
+    "year": 2025,
+    "url": "https://openalex.org/W4413119007",
+    "venue": "Chemical Engineering Journal"
+   },
+   {
+    "title": "Modeling of a packed bed membrane reactor for ammonia synthesis: on the role of membrane performance and operating conditions",
+    "year": 2025,
+    "url": "https://openalex.org/W4413276756",
+    "venue": "International Journal of Hydrogen Energy"
+   }
+  ],
+  "aliases": [],
+  "rank": 42
+ },
+ {
+  "name": "lng, australia, gas, offshore, floating, natural gas",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 25,
+  "rank_max": 38,
+  "score_mean": 1.15,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 133,
+  "birth_year": 2015,
+  "growth": 0.13,
+  "sparkline": "▅▅▇▄▅▄▄▅▅▄▅█",
+  "counts": [
+   12,
+   10,
+   15,
+   9,
+   10,
+   9,
+   8,
+   12,
+   11,
+   8,
+   12,
+   20
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Доля китайских аффилиаций выросла с 1% до 19%.",
+   "Уже подхвачено индустрией: Baker Hughes (United States), China National Petroleum Corporation (China), General Electric (Qatar), Hyundai Heavy Industries (South Korea), Hyundai Motors (South Korea)."
+  ],
+  "detectors": [
+   "В окне 2025-2026 группа из 11 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.13 (2023-25 к 2019-21), у 34% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "EDF Energy (United Kingdom)",
+   "Universidade de São Paulo",
+   "China National Petroleum Corporation (China)",
+   "Seoul National University",
+   "Institut Teknologi Sepuluh Nopember"
+  ],
+  "top_countries": [
+   "US 14",
+   "GB 12",
+   "KR 11",
+   "AU 10",
+   "CN 9"
+  ],
+  "industry": [
+   "Baker Hughes (United States)",
+   "China National Petroleum Corporation (China)",
+   "General Electric (Qatar)",
+   "Hyundai Heavy Industries (South Korea)",
+   "Hyundai Motors (South Korea)",
+   "Schlumberger (Ireland)"
+  ],
+  "examples": [
+   {
+    "title": "Assessment of the Projects’ Prospects in the Economic and Technological Development of the Oil and Gas Complex in the Republic of Mozambique",
+    "year": 2025,
+    "url": "https://openalex.org/W4411832089",
+    "venue": "Resources"
+   },
+   {
+    "title": "Brazilian ssm-FLNG Offshore, a Conceptual Solution of a System as a New Frontier of National Production and Technological Innovations",
+    "year": 2025,
+    "url": "https://openalex.org/W4415907711",
+    "venue": "World Journal of Engineering and Technology"
+   },
+   {
+    "title": "Maximizing the Monetization of Natural Gas from the Búzios Field through an Offshore Hub with a SSM-FLNG",
+    "year": 2026,
+    "url": "https://openalex.org/W7161577264",
+    "venue": "Energy and Power Engineering"
+   }
+  ],
+  "aliases": [
+   "lng, offshore, australia, gas, capacity, floating"
+  ],
+  "rank": 43
+ },
+ {
+  "name": "figure, cu, catalysts, methanol, reaction, catalyst",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 35,
+  "rank_max": 36,
+  "score_mean": 1.07,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 120,
+  "birth_year": 2015,
+  "growth": -0.16,
+  "sparkline": "▃▁▃▃▄▅▅▄▃▃▆█",
+  "counts": [
+   7,
+   2,
+   7,
+   7,
+   10,
+   14,
+   14,
+   10,
+   8,
+   8,
+   16,
+   26
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Haldor Topsoe (Denmark), Johnson Matthey (United Kingdom), Shell (Netherlands), Shell (United States)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост -0.16 (2023-25 к 2019-21), у 35% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "В окне 2025-2026 группа из 17 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "University of Chinese Academy of Sciences",
+   "Dalian Institute of Chemical Physics",
+   "Eindhoven University of Technology",
+   "Dalian National Laboratory for Clean Energy"
+  ],
+  "top_countries": [
+   "CN 46",
+   "US 25",
+   "DE 8",
+   "NL 7",
+   "AU 7"
+  ],
+  "industry": [
+   "Haldor Topsoe (Denmark)",
+   "Johnson Matthey (United Kingdom)",
+   "Shell (Netherlands)",
+   "Shell (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Flame Synthesized Co–CeO 2 Catalysts for CO 2 Methanation",
+    "year": 2025,
+    "url": "https://openalex.org/W4411274772",
+    "venue": "ACS Catalysis"
+   },
+   {
+    "title": "Carbon‐Layer Modulation of CoO x @C‐350 Nanoreactors Stabilizing Co 0 ‐Co 2+ Dual‐Active Site Ratio for High‐Efficiency Ambient‐Pressure Photothermal CO 2 Methanation",
+    "year": 2025,
+    "url": "https://openalex.org/W4413087073",
+    "venue": "Advanced Functional Materials"
+   },
+   {
+    "title": "Strong Stabilization of Co Nanoparticles by CeO 2‐x Clusters in Inverse CeO x /Co Catalysts for Enhanced CO 2 Methanation",
+    "year": 2025,
+    "url": "https://openalex.org/W4414525042",
+    "venue": "Advanced Materials"
+   }
+  ],
+  "aliases": [
+   "catalysts, ceo, methanation, pd, inverse, catalyst"
+  ],
+  "rank": 44
+ },
+ {
+  "name": "moisture, moisture swing, swing, sorption, exchange, anion",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 28,
+  "rank_max": 33,
+  "score_mean": 0.97,
+  "layers_max": 1,
+  "layers": [
+   "тема"
+  ],
+  "n_docs": 31,
+  "birth_year": 2023,
+  "growth": 1.48,
+  "sparkline": "▁▁▂▁▁▁▁▁▂▃█▆",
+  "counts": [
+   0,
+   0,
+   2,
+   0,
+   1,
+   1,
+   0,
+   1,
+   3,
+   4,
+   12,
+   9
+  ],
+  "signals": [
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.48 (2023-25 к 2019-21), у 70% соседей свежих статей нет более ранних прецедентов, рождение темы 2023."
+  ],
+  "top_orgs": [
+   "Northern Arizona University",
+   "Arizona State University",
+   "The University of Texas at Austin",
+   "Columbia University",
+   "Northwest University"
+  ],
+  "top_countries": [
+   "US 15",
+   "CN 7",
+   "GB 6",
+   "NO 2",
+   "IT 2"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Development of high capacity moisture-swing DAC sorbent for direct air capture of CO2",
+    "year": 2023,
+    "url": "https://openalex.org/W4383533014",
+    "venue": "Separation and Purification Technology"
+   },
+   {
+    "title": "CO2 Absorption over Ion Exchange Resins: The Effect of Amine Functional Groups and Microporous Structures",
+    "year": 2020,
+    "url": "https://openalex.org/W3081976100",
+    "venue": "Industrial & Engineering Chemistry Research"
+   },
+   {
+    "title": "Investigation of Moisture Swing Adsorbents for Direct Air Capture by Dynamic Breakthrough Studies",
+    "year": 2025,
+    "url": "https://openalex.org/W4409970952",
+    "venue": "ACS Sustainable Chemistry & Engineering"
+   }
+  ],
+  "aliases": [
+   "moisture, moisture swing, swing, sorption, anion, exchange"
+  ],
+  "rank": 45
+ },
+ {
+  "name": "binding, ge, domain, fig, light, cells",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 31,
+  "rank_max": 31,
+  "score_mean": 0.97,
+  "layers_max": 1,
+  "layers": [
+   "подтема без предшественников"
+  ],
+  "n_docs": 14,
+  "birth_year": 2025,
+  "growth": 1.3,
+  "sparkline": "▁▁▁▁▁▁▁▁▁▁██",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   8,
+   9
+  ],
+  "signals": [
+   "Доля китайских аффилиаций выросла с 0% до 26%.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Мост между направлениями: 40% ближайших соседей из других областей.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2025-2026 группа из 14 статей, у которых сходство с любой более ранней работой 0.75 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Montana State University",
+   "Swiss Federal Institute of Aquatic Science and Technology",
+   "Institute of Food Science and Technology",
+   "National Cheng Kung University",
+   "Southern Taiwan University of Science and Technology"
+  ],
+  "top_countries": [
+   "CN 7",
+   "US 2",
+   "PK 2",
+   "RU 2",
+   "GB 2"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Alginate Beads Encapsulated Auxin-Producing PGPR as a Biofertilizer Promotes Triticum aestivum Growth",
+    "year": 2025,
+    "url": "https://openalex.org/W4406897119",
+    "venue": "ACS Omega"
+   },
+   {
+    "title": "Hunting for Extremophiles: A Systematic Screening of Freshwater Microalgae for Tolerance to High-pH and High-Alkalinity Cultivation",
+    "year": 2026,
+    "url": "https://openalex.org/W7131305387",
+    "venue": "ACS Sustainable Chemistry & Engineering"
+   },
+   {
+    "title": "A nickel gallium oxide chlorophyll mimic for green methanol synthesis",
+    "year": 2025,
+    "url": "https://openalex.org/W4416719028",
+    "venue": "Nature Communications"
+   }
+  ],
+  "aliases": [],
+  "rank": 46
+ },
+ {
+  "name": "pipelines hydrogen",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 33,
+  "rank_max": 37,
+  "score_mean": 0.95,
+  "layers_max": 1,
+  "layers": [
+   "всплеск термина"
+  ],
+  "n_docs": 16,
+  "birth_year": 2024,
+  "growth": 1.47,
+  "sparkline": "▁▁▁▁▁▁▁▃▃▄▇█",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   3,
+   5,
+   6
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: PetroChina Southwest Oil and Gas Field Company (China).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Термин «pipelines hydrogen»: 0 документов в 2017-2019, 38 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.75)."
+  ],
+  "top_orgs": [
+   "University of Calgary",
+   "Istituto Italiano della Saldatura",
+   "University of Genoa",
+   "University of Turin",
+   "Changzhou University"
+  ],
+  "top_countries": [
+   "CN 3",
+   "CA 3",
+   "IT 2",
+   "US 2",
+   "AE 1"
+  ],
+  "industry": [
+   "PetroChina Southwest Oil and Gas Field Company (China)"
+  ],
+  "examples": [
+   {
+    "title": "Research Progress and Prospects on Hydrogen Damage in Welds of Hydrogen-Blended Natural Gas Pipelines",
+    "year": 2023,
+    "url": "https://openalex.org/W4388452003",
+    "venue": "Processes"
+   },
+   {
+    "title": "Multi‐stage flexible planning of regional electricity‐HCNG‐integrated energy system considering gas pipeline retrofit and expansion",
+    "year": 2022,
+    "url": "https://openalex.org/W4294723994",
+    "venue": "IET Renewable Power Generation"
+   },
+   {
+    "title": "Influence of welding defects on hydrogen embrittlement sensitivity of girth welds in X80 pipelines",
+    "year": 2024,
+    "url": "https://openalex.org/W4398248693",
+    "venue": "International Journal of Electrochemical Science"
+   }
+  ],
+  "aliases": [],
+  "rank": 47
+ },
+ {
+  "name": "radical, nh3, yield, coupling, reaction, google",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 36,
+  "rank_max": 38,
+  "score_mean": 0.95,
+  "layers_max": 1,
+  "layers": [
+   "подтема без предшественников"
+  ],
+  "n_docs": 12,
+  "birth_year": 2021,
+  "growth": -1.39,
+  "sparkline": "▁▁▁▁▁▁█▁▁▁▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   9,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "signals": [
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Мост между направлениями: 30% ближайших соседей из других областей."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 10 статей, у которых сходство с любой более ранней работой 0.76 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Chinese Academy of Sciences",
+   "Jeonbuk National University",
+   "Korea Institute of Science and Technology",
+   "Korea University of Science and Technology",
+   "Kyung Hee University"
+  ],
+  "top_countries": [
+   "CN 3",
+   "AU 2",
+   "KR 1",
+   "US 1",
+   "DE 1"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Electrochemical Aziridination of Tetrasubstituted Alkenes with Ammonia",
+    "year": 2021,
+    "url": "https://openalex.org/W3134673889",
+    "venue": "CCS Chemistry"
+   },
+   {
+    "title": "Role of Hydrogen-bonded Bimolecular Formic Acid–Formate Complexes for Formic Acid Decomposition on Copper: A Combined First-Principles and Microkinetic Modeling Study",
+    "year": 2021,
+    "url": "https://openalex.org/W3136178627",
+    "venue": "ACS Catalysis"
+   },
+   {
+    "title": "Autothermal recirculating reactor (ARR) with Cu-BN composite as a stable reactor material for sustainable hydrogen release from ammonia",
+    "year": 2021,
+    "url": "https://openalex.org/W3166851342",
+    "venue": "Journal of Power Sources"
+   }
+  ],
+  "aliases": [
+   "radical, nh3, yield, coupling, reaction, scholar"
+  ],
+  "rank": 48
+ },
+ {
+  "name": "humid conditions",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 2,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 36,
+  "rank_max": 36,
+  "score_mean": 0.95,
+  "layers_max": 1,
+  "layers": [
+   "всплеск термина"
+  ],
+  "n_docs": 61,
+  "birth_year": 2020,
+  "growth": 1.44,
+  "sparkline": "▁▁▁▁▁▂▂▁▆▆██",
+  "counts": [
+   0,
+   2,
+   0,
+   0,
+   0,
+   3,
+   4,
+   2,
+   11,
+   12,
+   16,
+   16
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: ExxonMobil (Germany), ExxonMobil (United States), Saudi Aramco (United States)."
+  ],
+  "detectors": [
+   "Термин «humid conditions»: 0 документов в 2017-2019, 39 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.71)."
+  ],
+  "top_orgs": [
+   "Georgia Institute of Technology",
+   "Lawrence Livermore National Laboratory",
+   "Global Thermostat (United States)",
+   "Korea Advanced Institute of Science and Technology",
+   "Khalifa University of Science and Technology"
+  ],
+  "top_countries": [
+   "US 23",
+   "CN 9",
+   "KR 6",
+   "GB 6",
+   "AE 4"
+  ],
+  "industry": [
+   "ExxonMobil (Germany)",
+   "ExxonMobil (United States)",
+   "Saudi Aramco (United States)"
+  ],
+  "examples": [
+   {
+    "title": "A Fine-Tuned Fluorinated MOF Addresses the Needs for Trace CO 2 Removal and Air Capture Using Physisorption",
+    "year": 2016,
+    "url": "https://openalex.org/W2469117827",
+    "venue": "Journal of the American Chemical Society"
+   },
+   {
+    "title": "Water-Enhanced Direct Air Capture of Carbon Dioxide in Metal–Organic Frameworks",
+    "year": 2024,
+    "url": "https://openalex.org/W4390986771",
+    "venue": "Journal of the American Chemical Society"
+   },
+   {
+    "title": "Sub-Ambient Temperature Direct Air Capture of CO 2 using Amine-Impregnated MIL-101(Cr) Enables Ambient Temperature CO 2 Recovery",
+    "year": 2022,
+    "url": "https://openalex.org/W4210935750",
+    "venue": "JACS Au"
+   }
+  ],
+  "aliases": [],
+  "rank": 49
+ },
+ {
+  "name": "pyrolysis, methane, methane pyrolysis, carbon, hydrogen, reactor",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 9,
+  "rank_max": 9,
+  "score_mean": 2.16,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера"
+  ],
+  "n_docs": 43,
+  "birth_year": 2021,
+  "growth": -2.04,
+  "sparkline": "▁▁▁▁▁▁▇█▁▁▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   20,
+   23,
+   0,
+   0,
+   0,
+   0
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, рождение кластера.",
+   "Уже подхвачено индустрией: Lukoil (Russia), Shell (Netherlands), Shell (United States)."
+  ],
+  "detectors": [
+   "В окне 2021-2022 кластер из 33 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.95.",
+   "В окне 2021-2022 группа из 20 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "TU Dortmund University",
+   "National Institute of Advanced Industrial Science and Technology",
+   "Fritz Haber Institute of the Max Planck Society",
+   "Max Planck Institute for Chemical Energy Conversion",
+   "Joint Institute for High Temperatures"
+  ],
+  "top_countries": [
+   "DE 9",
+   "US 7",
+   "RU 5",
+   "CN 5",
+   "JP 4"
+  ],
+  "industry": [
+   "Lukoil (Russia)",
+   "Shell (Netherlands)",
+   "Shell (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Blue hydrogen and carbon nanotube production via direct catalytic decomposition of methane in fluidized bed reactor: Capture and extraction of carbon in the form of CNTs",
+    "year": 2021,
+    "url": "https://openalex.org/W3132212203",
+    "venue": "Energy Conversion and Management"
+   },
+   {
+    "title": "Sequestration of solid carbon in concrete: A large-scale enabler of lower-carbon intensity hydrogen from natural gas",
+    "year": 2021,
+    "url": "https://openalex.org/W3201004319",
+    "venue": "MRS Bulletin"
+   },
+   {
+    "title": "Analysis of soot formation of CH4 and C2H4 with H2 addition via ReaxFF molecular dynamics and pyrolysis–gas chromatography/mass spectrometry",
+    "year": 2021,
+    "url": "https://openalex.org/W3211801811",
+    "venue": "Journal of the Energy Institute"
+   }
+  ],
+  "aliases": [],
+  "rank": 50
+ },
+ {
+  "name": "ccus, carbon, co2, capture, ccs, carbon capture",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 10,
+  "rank_max": 10,
+  "score_mean": 2.07,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "рождение кластера"
+  ],
+  "n_docs": 55,
+  "birth_year": 2023,
+  "growth": 2.96,
+  "sparkline": "▁▁▁▁▁▁▁▁▃█▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   15,
+   40,
+   0,
+   0
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, рождение кластера.",
+   "Уже подхвачено индустрией: PetroChina Southwest Oil and Gas Field Company (China), Sinopec (China)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 51 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.95.",
+   "В окне 2023-2024 группа из 23 статей, у которых сходство с любой более ранней работой 0.78 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "National Energy Technology Laboratory",
+   "University of Lisbon",
+   "University of Calgary",
+   "The University of Texas at Austin",
+   "Chiang Mai University"
+  ],
+  "top_countries": [
+   "US 19",
+   "CN 8",
+   "GB 4",
+   "CA 3",
+   "PT 3"
+  ],
+  "industry": [
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "The contribution of carbon capture and storage to Canada's net-zero plan",
+    "year": 2023,
+    "url": "https://openalex.org/W4361280168",
+    "venue": "Journal of Cleaner Production"
+   },
+   {
+    "title": "Development of an interval double-stochastic carbon-neutral electric power system planning model: A case study of Fujian province, China",
+    "year": 2023,
+    "url": "https://openalex.org/W4386823854",
+    "venue": "Journal of Cleaner Production"
+   },
+   {
+    "title": "Evaluation of carbon capture technologies in the oil and gas industry using a socio-technical systems perspective-based decision support system under interval type-2 trapezoidal fuzzy set",
+    "year": 2024,
+    "url": "https://openalex.org/W4399367318",
+    "venue": "Digital Chemical Engineering"
+   }
+  ],
+  "aliases": [],
+  "rank": 51
+ },
+ {
+  "name": "ccus, capture, carbon capture, carbon, ccs, storage",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 15,
+  "rank_max": 15,
+  "score_mean": 1.87,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 70,
+  "birth_year": 2019,
+  "growth": 1.67,
+  "sparkline": "▁▁▁▁▂▁▁▂▃██▄",
+  "counts": [
+   0,
+   1,
+   0,
+   2,
+   3,
+   2,
+   2,
+   4,
+   8,
+   22,
+   20,
+   9
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: PetroChina Southwest Oil and Gas Field Company (China), Sinopec (China).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.55 (2023-25 к 2019-21), у 61% соседей свежих статей нет более ранних прецедентов, рождение темы 2019.",
+   "В окне 2023-2024 группа из 14 статей, у которых сходство с любой более ранней работой 0.79 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Research Institute of Petroleum Exploration and Development",
+   "The University of Texas at Austin",
+   "National Energy Technology Laboratory",
+   "Rice University",
+   "China National Chemical Corporation (China)"
+  ],
+  "top_countries": [
+   "US 15",
+   "CN 12",
+   "GB 4",
+   "CA 4",
+   "NG 3"
+  ],
+  "industry": [
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Evaluation of carbon capture technologies in the oil and gas industry using a socio-technical systems perspective-based decision support system under interval type-2 trapezoidal fuzzy set",
+    "year": 2024,
+    "url": "https://openalex.org/W4399367318",
+    "venue": "Digital Chemical Engineering"
+   },
+   {
+    "title": "Development of carbon capture and storage (CCS) hubs in Kazakhstan",
+    "year": 2024,
+    "url": "https://openalex.org/W4402990420",
+    "venue": "International journal of greenhouse gas control"
+   },
+   {
+    "title": "Industrial CO2 Capture Retrofit Database (IND CCRD)",
+    "year": 2024,
+    "url": "https://openalex.org/W4296594441",
+    "venue": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)"
+   }
+  ],
+  "aliases": [],
+  "rank": 52
+ },
+ {
+  "name": "dme, methanol, piping, compatibility, hydrogen, ammonia",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 15,
+  "rank_max": 15,
+  "score_mean": 1.75,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 328,
+  "birth_year": 2015,
+  "growth": 1.5,
+  "sparkline": "▁▂▁▁▁▂▂▃▄▅██",
+  "counts": [
+   4,
+   12,
+   8,
+   7,
+   5,
+   18,
+   14,
+   27,
+   36,
+   51,
+   89,
+   86
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China), China National Petroleum Corporation (China), ExxonMobil (Germany), ExxonMobil (United States), Gazprom (Russia).",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 12 статей, у которых сходство с любой более ранней работой 0.77 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +1.55 (2023-25 к 2019-21), у 54% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, East China",
+   "Southwest Petroleum University",
+   "Chinese Academy of Sciences",
+   "Zhejiang University",
+   "Tianjin University"
+  ],
+  "top_countries": [
+   "CN 184",
+   "CA 37",
+   "US 24",
+   "JP 19",
+   "AU 16"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)",
+   "China National Petroleum Corporation (China)",
+   "ExxonMobil (Germany)",
+   "ExxonMobil (United States)",
+   "Gazprom (Russia)",
+   "Hyundai Steel (South Korea)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Petrobras (Brazil)"
+  ],
+  "examples": [
+   {
+    "title": "Adsorption and dissociation of high-pressure hydrogen on Fe (100) and Fe2O3 (001) surfaces: Combining DFT calculation and statistical thermodynamics",
+    "year": 2022,
+    "url": "https://openalex.org/W4292333023",
+    "venue": "Acta Materialia"
+   },
+   {
+    "title": "Dissociative adsorption of hydrogen and methane molecules at high-angle grain boundaries of pipeline steel studied by density functional theory modeling",
+    "year": 2022,
+    "url": "https://openalex.org/W4306253222",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Influence of electrochemical hydrogenation parameters on microstructures prone to hydrogen-induced cracking",
+    "year": 2022,
+    "url": "https://openalex.org/W4220867679",
+    "venue": "Journal of Natural Gas Science and Engineering"
+   }
+  ],
+  "aliases": [],
+  "rank": 53
+ },
+ {
+  "name": "plasma, pyrolysis, methane, methane pyrolysis, plasma pyrolysis, conversion",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 21,
+  "rank_max": 21,
+  "score_mean": 1.63,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 74,
+  "birth_year": 2022,
+  "growth": 1.54,
+  "sparkline": "▁▁▁▁▁▁▁▃▄▆▅█",
+  "counts": [
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   7,
+   11,
+   15,
+   13,
+   22
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: ExxonMobil (United States), SINOPEC Research Institute of Safety Engineering Co., Ltd., Saudi Aramco (Saudi Arabia), Sinopec (China)."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.52 (2023-25 к 2019-21), у 53% соседей свежих статей нет более ранних прецедентов, рождение темы 2022.",
+   "В окне 2023-2024 кластер из 26 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.95."
+  ],
+  "top_orgs": [
+   "Ruhr University Bochum",
+   "Jeju National University",
+   "Centre Procédés, Energies Renouvelables et Systèmes Energétiques",
+   "Korea Institute of Machinery & Materials",
+   "Swiss Federal Laboratories for Materials Science and Technology"
+  ],
+  "top_countries": [
+   "US 16",
+   "CN 11",
+   "RU 9",
+   "DE 7",
+   "KR 7"
+  ],
+  "industry": [
+   "ExxonMobil (United States)",
+   "SINOPEC Research Institute of Safety Engineering Co., Ltd.",
+   "Saudi Aramco (Saudi Arabia)",
+   "Sinopec (China)"
+  ],
+  "examples": [
+   {
+    "title": "Methane Pyrolysis with the Use of Plasma: Review of Plasma Reactors and Process Products",
+    "year": 2023,
+    "url": "https://openalex.org/W4386475797",
+    "venue": "Energies"
+   },
+   {
+    "title": "A kinetic study of nonthermal plasma pyrolysis of methane: Insights into hydrogen and carbon material production",
+    "year": 2024,
+    "url": "https://openalex.org/W4403463477",
+    "venue": "Chemical Engineering Journal"
+   },
+   {
+    "title": "Hybrid plasma-thermal system for methane conversion to ethylene and hydrogen",
+    "year": 2023,
+    "url": "https://openalex.org/W4327601600",
+    "venue": "Chemical Engineering Journal"
+   }
+  ],
+  "aliases": [],
+  "rank": 54
+ },
+ {
+  "name": "dac units",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 18,
+  "rank_max": 18,
+  "score_mean": 1.61,
+  "layers_max": 2,
+  "layers": [
+   "всплеск термина",
+   "тема"
+  ],
+  "n_docs": 227,
+  "birth_year": 2019,
+  "growth": 1.36,
+  "sparkline": "▁▁▁▁▂▂▃▄▆██▇",
+  "counts": [
+   0,
+   0,
+   2,
+   1,
+   8,
+   9,
+   16,
+   25,
+   37,
+   49,
+   51,
+   44
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: всплеск термина, тема.",
+   "Уже подхвачено индустрией: Carbon Engineering (Canada), Universiti Teknologi Petronas."
+  ],
+  "detectors": [
+   "Термин «dac units»: 0 документов в 2017-2019, 18 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.94).",
+   "Тема растёт: лог-рост +1.28 (2023-25 к 2019-21), у 49% соседей свежих статей нет более ранних прецедентов, рождение темы 2019."
+  ],
+  "top_orgs": [
+   "Imperial College London",
+   "ETH Zurich",
+   "University of Pennsylvania",
+   "Shanghai Jiao Tong University",
+   "Carbon180"
+  ],
+  "top_countries": [
+   "US 72",
+   "GB 27",
+   "CN 19",
+   "CA 16",
+   "DE 15"
+  ],
+  "industry": [
+   "Carbon Engineering (Canada)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Technological Options for Direct Air Capture: A Comparative Process Engineering Review",
+    "year": 2022,
+    "url": "https://openalex.org/W4225643150",
+    "venue": "Annual Review of Chemical and Biomolecular Engineering"
+   },
+   {
+    "title": "Carbon Purchase Agreements, Dactories, and Supply-Chain Innovation: What Will It Take to Scale-Up Modular Direct Air Capture Technology to a Gigatonne Scale",
+    "year": 2021,
+    "url": "https://openalex.org/W3142236265",
+    "venue": "Frontiers in Climate"
+   },
+   {
+    "title": "Making Direct Air Capture Affordable; Technology, Market and Regulatory Approaches",
+    "year": 2022,
+    "url": "https://openalex.org/W4285731308",
+    "venue": "Frontiers in Climate"
+   }
+  ],
+  "aliases": [],
+  "rank": 55
+ },
+ {
+  "name": "sofc, ammonia, fuel, solid oxide, oxide fuel, fuel cells",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 31,
+  "rank_max": 31,
+  "score_mean": 1.34,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 60,
+  "birth_year": 2018,
+  "growth": 0.69,
+  "sparkline": "▁▁▁▂▃▃▂▂▃▄█▇",
+  "counts": [
+   1,
+   1,
+   0,
+   3,
+   5,
+   5,
+   3,
+   4,
+   6,
+   7,
+   16,
+   14
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +0.69 (2023-25 к 2019-21), у 46% соседей свежих статей нет более ранних прецедентов, рождение темы 2018.",
+   "В окне 2025-2026 кластер из 22 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.91."
+  ],
+  "top_orgs": [
+   "Korea University of Science and Technology",
+   "Commonwealth Scientific and Industrial Research Organisation",
+   "Monash University",
+   "Naval University of Engineering",
+   "Chung-Ang University"
+  ],
+  "top_countries": [
+   "CN 16",
+   "KR 9",
+   "AU 6",
+   "IT 6",
+   "US 4"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Ni-doping strategy for perovskite anodes towards high-performance ammonia-fueled SOFCs",
+    "year": 2025,
+    "url": "https://openalex.org/W4406828837",
+    "venue": "Journal of Power Sources"
+   },
+   {
+    "title": "Ammonia as a Hydrogen Carrier: Energetic Assessment of Processes Integrated with Fuel Cells for Power Generation",
+    "year": 2025,
+    "url": "https://openalex.org/W4406790776",
+    "venue": "Energy & Fuels"
+   },
+   {
+    "title": "Comparative Electrochemical Performance of Solid Oxide Fuel Cells: Hydrogen vs. Ammonia Fuels—A Mini Review",
+    "year": 2025,
+    "url": "https://openalex.org/W4409328464",
+    "venue": "Processes"
+   }
+  ],
+  "aliases": [],
+  "rank": 56
+ },
+ {
+  "name": "ammonia, ammonia production, production, energy, green, green ammonia",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 32,
+  "rank_max": 32,
+  "score_mean": 1.33,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 202,
+  "birth_year": 2015,
+  "growth": 1.05,
+  "sparkline": "▁▁▁▁▁▂▄▄▄▆██",
+  "counts": [
+   3,
+   1,
+   4,
+   3,
+   5,
+   11,
+   19,
+   19,
+   23,
+   33,
+   50,
+   46
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: Baker Hughes (United States), Eni (Italy), Saudi Aramco (Saudi Arabia), Shell (Germany), Shell (United States).",
+   "Мост между направлениями: 32% ближайших соседей из других областей.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +1.00 (2023-25 к 2019-21), у 50% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "В окне 2025-2026 группа из 15 статей, у которых сходство с любой более ранней работой 0.81 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Monash University",
+   "Universidade de São Paulo",
+   "National Technical University \"Kharkiv Polytechnic Institute\"",
+   "SINTEF",
+   "SINTEF Industry"
+  ],
+  "top_countries": [
+   "CN 31",
+   "US 21",
+   "DE 16",
+   "GB 16",
+   "KR 14"
+  ],
+  "industry": [
+   "Baker Hughes (United States)",
+   "Eni (Italy)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Shell (Germany)",
+   "Shell (United States)"
+  ],
+  "examples": [
+   {
+    "title": "Techno-economic comparison of ammonia cracking and separation using metal membrane and pressure swing adsorption",
+    "year": 2025,
+    "url": "https://openalex.org/W4413295103",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Modified zeolite in a sustainable, circular economy-based process for enhanced ammonium recovery from wastewater",
+    "year": 2025,
+    "url": "https://openalex.org/W4409040791",
+    "venue": "Cleaner Water"
+   },
+   {
+    "title": "System-level integration of bioconversion and catalytic reforming pathways for sustainable production of biodiesel, hydrogen, and ammonia from lignocellulosic biomass",
+    "year": 2026,
+    "url": "https://openalex.org/W7164532661",
+    "venue": "Applied Energy"
+   }
+  ],
+  "aliases": [],
+  "rank": 57
+ },
+ {
+  "name": "nitrogen, ammonia, nrr, nh3, electrochemical, reaction",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 27,
+  "rank_max": 27,
+  "score_mean": 1.32,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 68,
+  "birth_year": 2020,
+  "growth": 0.67,
+  "sparkline": "▁▁▁▂▂▂▆▅▆▅█▇",
+  "counts": [
+   0,
+   0,
+   0,
+   2,
+   2,
+   3,
+   11,
+   8,
+   10,
+   9,
+   15,
+   12
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Пока только академические группы, индустриальных заявителей нет: ранняя стадия."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +0.72 (2023-25 к 2019-21), у 43% соседей свежих статей нет более ранних прецедентов, рождение темы 2020.",
+   "В окне 2021-2022 кластер из 19 статей появился без родителя: сходство с лучшим кандидатом 0.87 не выше, чем с соседней темой того же окна 0.92."
+  ],
+  "top_orgs": [
+   "Soochow University",
+   "Jilin University",
+   "UNSW Sydney",
+   "Chonnam National University",
+   "Korea Institute of Science and Technology"
+  ],
+  "top_countries": [
+   "CN 32",
+   "KR 10",
+   "AU 8",
+   "US 8",
+   "FR 5"
+  ],
+  "industry": [],
+  "examples": [
+   {
+    "title": "Recent progress in electrocatalytic nitrogen reduction to ammonia (NRR)",
+    "year": 2022,
+    "url": "https://openalex.org/W4312130447",
+    "venue": "Coordination Chemistry Reviews"
+   },
+   {
+    "title": "Selective Electrocatalytic Reduction of Nitrate to Ammonia with Nickel Phosphide",
+    "year": 2021,
+    "url": "https://openalex.org/W3173728042",
+    "venue": "ACS Applied Materials & Interfaces"
+   },
+   {
+    "title": "Nitrate‐to‐Ammonia Conversion at an InSn‐Enriched Liquid‐Metal Electrode",
+    "year": 2022,
+    "url": "https://openalex.org/W4220868246",
+    "venue": "Angewandte Chemie International Edition"
+   }
+  ],
+  "aliases": [],
+  "rank": 58
+ },
+ {
+  "name": "amine, capture, silica, air, direct air, direct",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 30,
+  "rank_max": 30,
+  "score_mean": 1.28,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 174,
+  "birth_year": 2015,
+  "growth": 1.4,
+  "sparkline": "▁▁▁▁▂▂▂▂▆█▇▆",
+  "counts": [
+   3,
+   3,
+   0,
+   2,
+   7,
+   10,
+   8,
+   11,
+   29,
+   46,
+   35,
+   30
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 20 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.94.",
+   "Тема растёт: лог-рост +1.38 (2023-25 к 2019-21), у 49% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "Georgia Institute of Technology",
+   "Lawrence Livermore National Laboratory",
+   "Global Thermostat (United States)",
+   "National Energy Technology Laboratory",
+   "Shanghai Jiao Tong University"
+  ],
+  "top_countries": [
+   "US 86",
+   "CN 43",
+   "KR 13",
+   "JP 12",
+   "GB 10"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)"
+  ],
+  "examples": [
+   {
+    "title": "Recent advances in amine-functionalized silica adsorbents for CO2 capture",
+    "year": 2024,
+    "url": "https://openalex.org/W4400749089",
+    "venue": "Renewable and Sustainable Energy Reviews"
+   },
+   {
+    "title": "Degradation of amine-functionalized adsorbents in carbon capture and direct air capture applications: Mechanism and solutions",
+    "year": 2024,
+    "url": "https://openalex.org/W4402328721",
+    "venue": "Separation and Purification Technology"
+   },
+   {
+    "title": "A comprehensive evaluation of amine-impregnated silica materials for direct air capture of carbon dioxide",
+    "year": 2023,
+    "url": "https://openalex.org/W4384831090",
+    "venue": "Separation and Purification Technology"
+   }
+  ],
+  "aliases": [],
+  "rank": 59
+ },
+ {
+  "name": "corrosion, corroded, pipelines, corroded pipelines, prediction, pipeline corrosion",
+  "domain": "Трубопроводы",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 33,
+  "rank_max": 33,
+  "score_mean": 1.28,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 67,
+  "birth_year": 2015,
+  "growth": 0.75,
+  "sparkline": "▂▁▁▂▂▂▃▃▃▆█▆",
+  "counts": [
+   4,
+   1,
+   0,
+   3,
+   4,
+   4,
+   6,
+   5,
+   6,
+   11,
+   16,
+   10
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China), PetroChina Southwest Oil and Gas Field Company (China), Sinopec (China), Universiti Teknologi Petronas.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +0.66 (2023-25 к 2019-21), у 40% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "В окне 2023-2024 кластер из 16 статей появился без родителя: сходство с лучшим кандидатом 0.91 не выше, чем с соседней темой того же окна 0.92."
+  ],
+  "top_orgs": [
+   "Southwest Petroleum University",
+   "China University of Petroleum, Beijing",
+   "Western University",
+   "University of Calgary",
+   "China National Petroleum Corporation (China)"
+  ],
+  "top_countries": [
+   "CN 39",
+   "CA 11",
+   "US 5",
+   "IR 4",
+   "AU 3"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)",
+   "PetroChina Southwest Oil and Gas Field Company (China)",
+   "Sinopec (China)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Development of machine learning algorithms for predicting internal corrosion of crude oil and natural gas pipelines",
+    "year": 2023,
+    "url": "https://openalex.org/W4385064916",
+    "venue": "Computers & Chemical Engineering"
+   },
+   {
+    "title": "Analysis of machine learning models and data sources to forecast burst pressure of petroleum corroded pipelines: A comprehensive review",
+    "year": 2023,
+    "url": "https://openalex.org/W4388299784",
+    "venue": "Engineering Failure Analysis"
+   },
+   {
+    "title": "Prediction of external corrosion rate for buried oil and gas pipelines: A novel deep learning method with DNN and attention mechanism",
+    "year": 2024,
+    "url": "https://openalex.org/W4398762790",
+    "venue": "International Journal of Pressure Vessels and Piping"
+   }
+  ],
+  "aliases": [],
+  "rank": 60
+ },
+ {
+  "name": "methanol, methanol production, production, methanol synthesis, economic, life cycle",
+  "domain": "СПГ и газохимия",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 26,
+  "rank_max": 26,
+  "score_mean": 1.15,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 76,
+  "birth_year": 2015,
+  "growth": -0.39,
+  "sparkline": "▂▁▂▂▄▄▅▄▂▃▄█",
+  "counts": [
+   3,
+   0,
+   4,
+   3,
+   9,
+   9,
+   10,
+   8,
+   4,
+   5,
+   9,
+   18
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: Saudi Aramco (Saudi Arabia).",
+   "Мост между направлениями: 43% ближайших соседей из других областей.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост -0.36 (2023-25 к 2019-21), у 27% соседей свежих статей нет более ранних прецедентов, рождение темы 2015.",
+   "В окне 2021-2022 кластер из 18 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.92."
+  ],
+  "top_orgs": [
+   "King Fahd University of Petroleum and Minerals",
+   "Technische Universität Berlin",
+   "Ulsan National Institute of Science and Technology",
+   "Shiraz University",
+   "Fusion Academy"
+  ],
+  "top_countries": [
+   "US 12",
+   "CN 11",
+   "KR 9",
+   "SA 7",
+   "CA 6"
+  ],
+  "industry": [
+   "Saudi Aramco (Saudi Arabia)"
+  ],
+  "examples": [
+   {
+    "title": "CO2 utilization for methanol production; Part I: Process design and life cycle GHG assessment of different pathways",
+    "year": 2021,
+    "url": "https://openalex.org/W3173003827",
+    "venue": "Journal of CO2 Utilization"
+   },
+   {
+    "title": "Methanol production from natural gas reforming and CO2 capturing process, simulation, design, and technical-economic analysis",
+    "year": 2022,
+    "url": "https://openalex.org/W4308902070",
+    "venue": "Energy"
+   },
+   {
+    "title": "Flexible methanol production process using biomass/municipal solid waste and hydrogen produced by electrolysis and natural gas pyrolysis",
+    "year": 2022,
+    "url": "https://openalex.org/W4309287420",
+    "venue": "Fuel"
+   }
+  ],
+  "aliases": [],
+  "rank": 61
+ },
+ {
+  "name": "co2 capture, power plant, power, capture, combined cycle, gas combined",
+  "domain": "CCUS и метановые утечки",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 34,
+  "rank_max": 34,
+  "score_mean": 1.07,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 130,
+  "birth_year": 2015,
+  "growth": 0.0,
+  "sparkline": "▇▇▅▄▇▃▆█▄▇▅▅",
+  "counts": [
+   14,
+   13,
+   10,
+   8,
+   14,
+   6,
+   11,
+   17,
+   7,
+   14,
+   10,
+   9
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: Air Products (United States), Honeywell (United States), Linde (Germany), Petrobras (Brazil), Shell (Netherlands)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 кластер из 21 статей появился без родителя: сходство с лучшим кандидатом 0.92 не выше, чем с соседней темой того же окна 0.93.",
+   "Тема растёт: лог-рост -0.03 (2023-25 к 2019-21), у 24% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "University of Sheffield",
+   "Instituto Nacional de Electricidad y Energías Limpias",
+   "Imperial College London",
+   "Norwegian University of Science and Technology",
+   "North China Electric Power University"
+  ],
+  "top_countries": [
+   "US 30",
+   "GB 29",
+   "CN 23",
+   "MX 12",
+   "NO 7"
+  ],
+  "industry": [
+   "Air Products (United States)",
+   "Honeywell (United States)",
+   "Linde (Germany)",
+   "Petrobras (Brazil)",
+   "Shell (Netherlands)"
+  ],
+  "examples": [
+   {
+    "title": "Techno-economic evaluation of CO2 capture and storage retrofit in decarbonizing different thermal power plants: A case study in China",
+    "year": 2024,
+    "url": "https://openalex.org/W4390646587",
+    "venue": "Applied Thermal Engineering"
+   },
+   {
+    "title": "Multi-criteria evaluation of carbon capture technologies in steel, cement, petrochemical, and fertilizer industries: Insights for emerging and developed countries",
+    "year": 2024,
+    "url": "https://openalex.org/W4404948531",
+    "venue": "The Science of The Total Environment"
+   },
+   {
+    "title": "Modeling and optimization of carbon-negative NGCC plant enabled by modular direct air capture",
+    "year": 2023,
+    "url": "https://openalex.org/W4366980042",
+    "venue": "Applied Energy"
+   }
+  ],
+  "aliases": [],
+  "rank": 62
+ },
+ {
+  "name": "blue hydrogen",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 33,
+  "rank_max": 33,
+  "score_mean": 0.98,
+  "layers_max": 1,
+  "layers": [
+   "всплеск термина"
+  ],
+  "n_docs": 147,
+  "birth_year": 2021,
+  "growth": 1.4,
+  "sparkline": "▁▁▁▁▁▁▃▅▄▄██",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   2,
+   14,
+   24,
+   21,
+   19,
+   38,
+   42
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: Equinor (Norway), Gazprom (Russia), Repsol (Spain), Saipem (Italy), Woodside (Australia).",
+   "Мост между направлениями: 34% ближайших соседей из других областей."
+  ],
+  "detectors": [
+   "Термин «blue hydrogen»: 1 документов в 2017-2019, 78 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.81).",
+   "Термин «blue hydrogen production»: 1 документов в 2017-2019, 27 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.87)."
+  ],
+  "top_orgs": [
+   "SINTEF",
+   "SINTEF Industry",
+   "Universidad Politécnica de Madrid",
+   "Politecnico di Milano",
+   "University of Calgary"
+  ],
+  "top_countries": [
+   "US 18",
+   "CA 15",
+   "GB 15",
+   "AU 14",
+   "KR 11"
+  ],
+  "industry": [
+   "Equinor (Norway)",
+   "Gazprom (Russia)",
+   "Repsol (Spain)",
+   "Saipem (Italy)",
+   "Woodside (Australia)"
+  ],
+  "examples": [
+   {
+    "title": "Comparative assessment of blue hydrogen from steam methane reforming, autothermal reforming, and natural gas decomposition technologies for natural gas-producing regions",
+    "year": 2022,
+    "url": "https://openalex.org/W4207064172",
+    "venue": "Energy Conversion and Management"
+   },
+   {
+    "title": "A framework for assessing economics of blue hydrogen production from steam methane reforming using carbon capture storage & utilisation",
+    "year": 2021,
+    "url": "https://openalex.org/W3165791150",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "Review of Cryogenic Carbon Capture Innovations and Their Potential Applications",
+    "year": 2021,
+    "url": "https://openalex.org/W3185075362",
+    "venue": "C – Journal of Carbon Research"
+   }
+  ],
+  "aliases": [],
+  "rank": 63
+ },
+ {
+  "name": "green ammonia",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 30,
+  "rank_max": 30,
+  "score_mean": 0.97,
+  "layers_max": 1,
+  "layers": [
+   "всплеск термина"
+  ],
+  "n_docs": 106,
+  "birth_year": 2020,
+  "growth": 2.09,
+  "sparkline": "▁▁▁▁▁▁▁▄▅▄▆█",
+  "counts": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   3,
+   2,
+   14,
+   21,
+   15,
+   26,
+   36
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: Siemens (Germany)."
+  ],
+  "detectors": [
+   "Термин «green ammonia»: 0 документов в 2017-2019, 62 в 2023-2025, сконцентрирован в немногих темах (концентрация 0.63)."
+  ],
+  "top_orgs": [
+   "Delft University of Technology",
+   "Monash University",
+   "University of Rostock",
+   "Sichuan University",
+   "Universidad Politécnica de Madrid"
+  ],
+  "top_countries": [
+   "CN 24",
+   "US 14",
+   "DE 11",
+   "GB 11",
+   "AU 8"
+  ],
+  "industry": [
+   "Siemens (Germany)"
+  ],
+  "examples": [
+   {
+    "title": "Techno-economic assessment of blue and green ammonia as energy carriers in a low-carbon future",
+    "year": 2022,
+    "url": "https://openalex.org/W4210616822",
+    "venue": "Energy Conversion and Management"
+   },
+   {
+    "title": "Ammonia as Green Fuel in Internal Combustion Engines: State-of-the-Art and Future Perspectives",
+    "year": 2022,
+    "url": "https://openalex.org/W4286697497",
+    "venue": "Frontiers in Mechanical Engineering"
+   },
+   {
+    "title": "Prospects of low and zero-carbon renewable fuels in 1.5-degree net zero emission actualisation by 2050: A critical review",
+    "year": 2022,
+    "url": "https://openalex.org/W4298624635",
+    "venue": "Carbon Capture Science & Technology"
+   }
+  ],
+  "aliases": [],
+  "rank": 64
+ },
+ {
+  "name": "inspection, pipeline, pipelines, corrosion, maintenance, pipe",
+  "domain": "Трубопроводы",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 32,
+  "rank_max": 32,
+  "score_mean": 0.96,
+  "layers_max": 2,
+  "layers": [
+   "подтема без предшественников",
+   "тема"
+  ],
+  "n_docs": 163,
+  "birth_year": 2015,
+  "growth": 0.59,
+  "sparkline": "▃▃▁▄▄▅▄▇█▆▇█",
+  "counts": [
+   7,
+   9,
+   3,
+   11,
+   10,
+   13,
+   11,
+   19,
+   25,
+   18,
+   21,
+   24
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: подтема без предшественников, тема.",
+   "Уже подхвачено индустрией: China National Offshore Oil Corporation (China), China National Petroleum Corporation (China), Eni (Italy), Petrobras (Brazil), Saudi Aramco (Saudi Arabia)."
+  ],
+  "detectors": [
+   "В окне 2023-2024 группа из 16 статей, у которых сходство с любой более ранней работой 0.80 попадает в нижние 20% окна.",
+   "Тема растёт: лог-рост +0.47 (2023-25 к 2019-21), у 35% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "China University of Petroleum, Beijing",
+   "Shenyang University of Technology",
+   "Northeastern University",
+   "Beihang University",
+   "University of British Columbia"
+  ],
+  "top_countries": [
+   "CN 79",
+   "CA 12",
+   "US 11",
+   "RU 7",
+   "KR 6"
+  ],
+  "industry": [
+   "China National Offshore Oil Corporation (China)",
+   "China National Petroleum Corporation (China)",
+   "Eni (Italy)",
+   "Petrobras (Brazil)",
+   "Saudi Aramco (Saudi Arabia)",
+   "Sinopec (China)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "A Decade Review of the Art of Inspection and Monitoring Technologies for Long-Distance Oil and Gas Pipelines in Permafrost Areas",
+    "year": 2023,
+    "url": "https://openalex.org/W4319923835",
+    "venue": "Energies"
+   },
+   {
+    "title": "Magnetic Permeability Perturbation-Based RFID Sensor for Pipeline Internal Corrosion Monitoring",
+    "year": 2023,
+    "url": "https://openalex.org/W4323644244",
+    "venue": "IEEE Transactions on Industrial Electronics"
+   },
+   {
+    "title": "A novel stress concentration inspection method for marine oil and gas pipeline based on UNSM",
+    "year": 2024,
+    "url": "https://openalex.org/W4392913371",
+    "venue": "Ocean Engineering"
+   }
+  ],
+  "aliases": [],
+  "rank": 65
+ },
+ {
+  "name": "corrosion, scc, steel, cathodic, cracking, stress",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 34,
+  "rank_max": 34,
+  "score_mean": 0.96,
+  "layers_max": 2,
+  "layers": [
+   "рождение кластера",
+   "тема"
+  ],
+  "n_docs": 52,
+  "birth_year": 2015,
+  "growth": -0.41,
+  "sparkline": "▅▁▁▆▃▆█▆▁▄▆▆",
+  "counts": [
+   5,
+   1,
+   1,
+   6,
+   3,
+   6,
+   9,
+   6,
+   1,
+   4,
+   6,
+   6
+  ],
+  "signals": [
+   "Независимо подтверждено 2 детекторами: рождение кластера, тема.",
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China).",
+   "Мост между направлениями: 37% ближайших соседей из других областей.",
+   "Годовой темп с 2023 вырос более чем вдвое."
+  ],
+  "detectors": [
+   "В окне 2021-2022 кластер из 15 статей появился без родителя: сходство с лучшим кандидатом 0.94 не выше, чем с соседней темой того же окна 0.94.",
+   "Тема растёт: лог-рост -0.25 (2023-25 к 2019-21), у 36% соседей свежих статей нет более ранних прецедентов, рождение темы 2015."
+  ],
+  "top_orgs": [
+   "University of Science and Technology Beijing",
+   "Mexican Institute of Petroleum",
+   "E.O. Paton Electric Welding Institute",
+   "China National Petroleum Corporation (China)",
+   "Tianjin University"
+  ],
+  "top_countries": [
+   "CN 23",
+   "MX 6",
+   "UA 6",
+   "CA 2",
+   "KR 2"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)"
+  ],
+  "examples": [
+   {
+    "title": "Multiscale characterization of seawater pipe erosion of B10 copper–nickel alloy welded joints",
+    "year": 2022,
+    "url": "https://openalex.org/W4210901471",
+    "venue": "Scientific Reports"
+   },
+   {
+    "title": "A Review of Factors Affecting SCC Initiation and Propagation in Pipeline Carbon Steels",
+    "year": 2022,
+    "url": "https://openalex.org/W4292688571",
+    "venue": "Metals"
+   },
+   {
+    "title": "Evidence of hydrogen gas evolution accelerating the cathodic coating delamination",
+    "year": 2022,
+    "url": "https://openalex.org/W4286688631",
+    "venue": "Corrosion Communications"
+   }
+  ],
+  "aliases": [],
+  "rank": 66
+ },
+ {
+  "name": "digital, pipeline, algorithm, real time, operational, twins",
+  "domain": "Трубопроводы",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 39,
+  "rank_max": 39,
+  "score_mean": 0.96,
+  "layers_max": 1,
+  "layers": [
+   "подтема без предшественников"
+  ],
+  "n_docs": 11,
+  "birth_year": 2021,
+  "growth": -0.85,
+  "sparkline": "▁▁▁▁▁▁▅█▁▁▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   4,
+   7,
+   0,
+   0,
+   0,
+   0
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: China National Petroleum Corporation (China)."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 11 статей, у которых сходство с любой более ранней работой 0.76 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Queensland Seafood Industry Association",
+   "Ayuntamiento de Sevilla",
+   "University of Córdoba",
+   "Tongji University",
+   "China National Petroleum Corporation (China)"
+  ],
+  "top_countries": [
+   "CN 5",
+   "AU 4",
+   "ES 1",
+   "IN 1",
+   "KR 1"
+  ],
+  "industry": [
+   "China National Petroleum Corporation (China)"
+  ],
+  "examples": [
+   {
+    "title": "Automatic fault diagnosis algorithm for hot water pipes based on infrared thermal images",
+    "year": 2022,
+    "url": "https://openalex.org/W4224441480",
+    "venue": "Building and Environment"
+   },
+   {
+    "title": "Research on ultrasonic defect identification method of well control manifold pipeline based on IAFSA-SVM",
+    "year": 2022,
+    "url": "https://openalex.org/W4211112840",
+    "venue": "Measurement"
+   },
+   {
+    "title": "On-site leakage locating of underground natural gas pipeline based on Ne tracer by miniature time-of-flight mass spectrometry",
+    "year": 2022,
+    "url": "https://openalex.org/W4311763682",
+    "venue": "Talanta"
+   }
+  ],
+  "aliases": [],
+  "rank": 67
+ },
+ {
+  "name": "hydrogen, energy, eu, fuel, al2o3, oil",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 35,
+  "rank_max": 35,
+  "score_mean": 0.95,
+  "layers_max": 1,
+  "layers": [
+   "подтема без предшественников"
+  ],
+  "n_docs": 41,
+  "birth_year": 2021,
+  "growth": -1.95,
+  "sparkline": "▁▁▁▁▁▁▇█▁▁▁▁",
+  "counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   18,
+   23,
+   0,
+   0,
+   0,
+   0
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: ExxonMobil (United States), Gazprom (Russia), Universiti Teknologi Petronas."
+  ],
+  "detectors": [
+   "В окне 2021-2022 группа из 41 статей, у которых сходство с любой более ранней работой 0.76 попадает в нижние 20% окна."
+  ],
+  "top_orgs": [
+   "Ulsan National Institute of Science and Technology",
+   "ETH Zurich",
+   "Paul Scherrer Institute",
+   "Potsdam Institute for Climate Impact Research",
+   "Technische Universität Berlin"
+  ],
+  "top_countries": [
+   "US 5",
+   "DE 5",
+   "KR 4",
+   "PL 3",
+   "CH 3"
+  ],
+  "industry": [
+   "ExxonMobil (United States)",
+   "Gazprom (Russia)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Green, Turquoise, Blue, or Grey? Environmentally friendly Hydrogen Production in Transforming Energy Systems",
+    "year": 2022,
+    "url": "https://openalex.org/W4214526694",
+    "venue": "Progress in Energy and Combustion Science"
+   },
+   {
+    "title": "PRospective EnvironMental Impact asSEment (premise): A streamlined approach to producing databases for prospective life cycle assessment using integrated assessment models",
+    "year": 2022,
+    "url": "https://openalex.org/W4220810663",
+    "venue": "Renewable and Sustainable Energy Reviews"
+   },
+   {
+    "title": "Latest eco-friendly avenues on hydrogen production towards a circular bioeconomy: Currents challenges, innovative insights, and future perspectives",
+    "year": 2022,
+    "url": "https://openalex.org/W4294576351",
+    "venue": "Renewable and Sustainable Energy Reviews"
+   }
+  ],
+  "aliases": [],
+  "rank": 68
+ },
+ {
+  "name": "combustion, ammonia, engine, ignition, fuel, engines",
+  "domain": "Водород и пиролиз метана",
+  "runs_seen": 1,
+  "n_runs": 5,
+  "rank_median": 41,
+  "rank_min": 40,
+  "rank_max": 40,
+  "score_mean": 0.92,
+  "layers_max": 1,
+  "layers": [
+   "тема"
+  ],
+  "n_docs": 85,
+  "birth_year": 2020,
+  "growth": 2.01,
+  "sparkline": "▁▁▁▁▁▂▁▃▅███",
+  "counts": [
+   2,
+   0,
+   0,
+   0,
+   1,
+   3,
+   1,
+   8,
+   13,
+   22,
+   22,
+   20
+  ],
+  "signals": [
+   "Уже подхвачено индустрией: Johnson Matthey (United Kingdom), Toyota Industries (United States), Toyota Motor Corporation (Switzerland), Universiti Teknologi Petronas."
+  ],
+  "detectors": [
+   "Тема растёт: лог-рост +2.01 (2023-25 к 2019-21), у 59% соседей свежих статей нет более ранних прецедентов, рождение темы 2020."
+  ],
+  "top_orgs": [
+   "Beijing Institute of Technology",
+   "Tianjin University",
+   "Harbin Engineering University",
+   "Shanghai Jiao Tong University",
+   "Częstochowa University of Technology"
+  ],
+  "top_countries": [
+   "CN 35",
+   "GB 8",
+   "PL 7",
+   "IN 6",
+   "ES 6"
+  ],
+  "industry": [
+   "Johnson Matthey (United Kingdom)",
+   "Toyota Industries (United States)",
+   "Toyota Motor Corporation (Switzerland)",
+   "Universiti Teknologi Petronas"
+  ],
+  "examples": [
+   {
+    "title": "Experimental study on ammonia/hydrogen/air combustion in spark ignition engine conditions",
+    "year": 2020,
+    "url": "https://openalex.org/W3008320384",
+    "venue": "Fuel"
+   },
+   {
+    "title": "Hydrogen generation system for ammonia–hydrogen fuelled internal combustion engines",
+    "year": 2015,
+    "url": "https://openalex.org/W897327606",
+    "venue": "International Journal of Hydrogen Energy"
+   },
+   {
+    "title": "NH3 as a Transport Fuel in Internal Combustion Engines: A Technical Review",
+    "year": 2019,
+    "url": "https://openalex.org/W2916988918",
+    "venue": "Journal of Energy Resources Technology"
+   }
+  ],
+  "aliases": [],
+  "rank": 69
+ }
+]

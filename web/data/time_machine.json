@@ -1,0 +1,556 @@
+{
+ "cutoff": 2021,
+ "future": "2024–2026",
+ "pool": 22678,
+ "top": 30,
+ "base_rate": 0.054,
+ "top_rate": 0.3,
+ "lift": 5.6,
+ "lift_ci": [
+  2.5,
+  8.8
+ ],
+ "rule": "взлёт — доля работ arXiv в 2024–2026 не меньше чем втрое выше доли 2019–2021 и не меньше 30 работ",
+ "items": [
+  {
+   "term": "ml inference",
+   "p": 0.936,
+   "takeoff": false,
+   "docs_then": 17,
+   "docs_later": 60,
+   "growth": 1.6,
+   "market_after": {
+    "hn": 6,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 11,
+    "yc": 1,
+    "press": 0
+   }
+  },
+  {
+   "term": "integration network",
+   "p": 0.933,
+   "takeoff": false,
+   "docs_then": 14,
+   "docs_later": 17,
+   "growth": 0.5,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 5
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "excess deaths",
+   "p": 0.932,
+   "takeoff": false,
+   "docs_then": 13,
+   "docs_later": 5,
+   "growth": 0.2,
+   "market_after": {
+    "hn": 28,
+    "yc": 0,
+    "press": 2
+   },
+   "market_before": {
+    "hn": 35,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "machine unlearning",
+   "p": 0.928,
+   "takeoff": true,
+   "docs_then": 18,
+   "docs_later": 770,
+   "growth": 19.1,
+   "market_after": {
+    "hn": 9,
+    "yc": 0,
+    "press": 1
+   },
+   "market_before": {
+    "hn": 3,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "blockchain interoperability",
+   "p": 0.927,
+   "takeoff": false,
+   "docs_then": 16,
+   "docs_later": 16,
+   "growth": 0.4,
+   "market_after": {
+    "hn": 1,
+    "yc": 0,
+    "press": 14
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "autonomous ai",
+   "p": 0.925,
+   "takeoff": true,
+   "docs_then": 12,
+   "docs_later": 388,
+   "growth": 14.5,
+   "market_after": {
+    "hn": 129,
+    "yc": 14,
+    "press": 58
+   },
+   "market_before": {
+    "hn": 3,
+    "yc": 3,
+    "press": 1
+   }
+  },
+  {
+   "term": "trillion parameter",
+   "p": 0.923,
+   "takeoff": true,
+   "docs_then": 6,
+   "docs_later": 46,
+   "growth": 3.4,
+   "market_after": {
+    "hn": 26,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 11,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "document layout",
+   "p": 0.922,
+   "takeoff": false,
+   "docs_then": 28,
+   "docs_later": 80,
+   "growth": 1.3,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "pytorch library",
+   "p": 0.922,
+   "takeoff": false,
+   "docs_then": 15,
+   "docs_later": 33,
+   "growth": 1.0,
+   "market_after": {
+    "hn": 11,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 10,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "drug repurposing",
+   "p": 0.916,
+   "takeoff": false,
+   "docs_then": 37,
+   "docs_later": 52,
+   "growth": 0.6,
+   "market_after": {
+    "hn": 3,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "editing model",
+   "p": 0.916,
+   "takeoff": true,
+   "docs_then": 6,
+   "docs_later": 132,
+   "growth": 9.8,
+   "market_after": {
+    "hn": 5,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "parametric 3d",
+   "p": 0.914,
+   "takeoff": false,
+   "docs_then": 13,
+   "docs_later": 36,
+   "growth": 1.2,
+   "market_after": {
+    "hn": 6,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "detailed 3d",
+   "p": 0.91,
+   "takeoff": false,
+   "docs_then": 45,
+   "docs_later": 152,
+   "growth": 1.5,
+   "market_after": {
+    "hn": 4,
+    "yc": 1,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "consensus mechanism",
+   "p": 0.909,
+   "takeoff": false,
+   "docs_then": 82,
+   "docs_later": 209,
+   "growth": 1.1,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 2
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "sparse training",
+   "p": 0.906,
+   "takeoff": false,
+   "docs_then": 51,
+   "docs_later": 153,
+   "growth": 1.3,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "stay at home",
+   "p": 0.904,
+   "takeoff": false,
+   "docs_then": 45,
+   "docs_later": 10,
+   "growth": 0.1,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 47,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "linear attention",
+   "p": 0.903,
+   "takeoff": true,
+   "docs_then": 17,
+   "docs_later": 499,
+   "growth": 13.1,
+   "market_after": {
+    "hn": 6,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "jax",
+   "p": 0.902,
+   "takeoff": true,
+   "docs_then": 28,
+   "docs_later": 346,
+   "growth": 5.5,
+   "market_after": {
+    "hn": 22,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 53,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "stylegan2",
+   "p": 0.902,
+   "takeoff": false,
+   "docs_then": 55,
+   "docs_later": 55,
+   "growth": 0.4,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 15,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "clinical documentation",
+   "p": 0.9,
+   "takeoff": true,
+   "docs_then": 6,
+   "docs_later": 101,
+   "growth": 7.5,
+   "market_after": {
+    "hn": 0,
+    "yc": 2,
+    "press": 2
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 1,
+    "press": 0
+   }
+  },
+  {
+   "term": "sars cov 2 infection",
+   "p": 0.9,
+   "takeoff": false,
+   "docs_then": 30,
+   "docs_later": 14,
+   "growth": 0.2,
+   "market_after": {
+    "hn": 24,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 45,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "synthetic training",
+   "p": 0.9,
+   "takeoff": false,
+   "docs_then": 109,
+   "docs_later": 402,
+   "growth": 1.6,
+   "market_after": {
+    "hn": 1,
+    "yc": 0,
+    "press": 4
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 2,
+    "press": 0
+   }
+  },
+  {
+   "term": "copa",
+   "p": 0.898,
+   "takeoff": false,
+   "docs_then": 13,
+   "docs_later": 13,
+   "growth": 0.4,
+   "market_after": {
+    "hn": 3,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "document understanding",
+   "p": 0.897,
+   "takeoff": true,
+   "docs_then": 44,
+   "docs_later": 379,
+   "growth": 3.9,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 1
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 1,
+    "press": 0
+   }
+  },
+  {
+   "term": "ai benchmarking",
+   "p": 0.897,
+   "takeoff": false,
+   "docs_then": 5,
+   "docs_later": 15,
+   "growth": 1.3,
+   "market_after": {
+    "hn": 12,
+    "yc": 1,
+    "press": 3
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "multi agent rl",
+   "p": 0.897,
+   "takeoff": false,
+   "docs_then": 44,
+   "docs_later": 147,
+   "growth": 1.5,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 2,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "maml",
+   "p": 0.897,
+   "takeoff": false,
+   "docs_then": 142,
+   "docs_later": 121,
+   "growth": 0.4,
+   "market_after": {
+    "hn": 4,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 1,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "d2c",
+   "p": 0.897,
+   "takeoff": false,
+   "docs_then": 4,
+   "docs_later": 19,
+   "growth": 2.1,
+   "market_after": {
+    "hn": 3,
+    "yc": 7,
+    "press": 2
+   },
+   "market_before": {
+    "hn": 7,
+    "yc": 8,
+    "press": 0
+   }
+  },
+  {
+   "term": "embodied ai",
+   "p": 0.896,
+   "takeoff": true,
+   "docs_then": 31,
+   "docs_later": 912,
+   "growth": 13.2,
+   "market_after": {
+    "hn": 15,
+    "yc": 2,
+    "press": 18
+   },
+   "market_before": {
+    "hn": 5,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "awareness training",
+   "p": 0.895,
+   "takeoff": false,
+   "docs_then": 6,
+   "docs_later": 14,
+   "growth": 1.0,
+   "market_after": {
+    "hn": 8,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 10,
+    "yc": 1,
+    "press": 0
+   }
+  }
+ ]
+}

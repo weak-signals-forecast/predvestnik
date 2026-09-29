@@ -1,0 +1,2263 @@
+{
+ "query": "перспективные решения в финтехе",
+ "seeds": [
+  "fintech",
+  "payments",
+  "banking",
+  "KYC"
+ ],
+ "date": "2026-09-19",
+ "model": "Логистическая регрессия",
+ "stats": {
+  "работ за 2025–2026": 566,
+  "работ за 2019–2022": 581,
+  "новых репозиториев": 285,
+  "заголовков новостей": 14,
+  "фраз-кандидатов": 417,
+  "отсеяно как штампы": 181,
+  "проверено кандидатов": 160,
+  "исключено на ступени 1 (публикации)": 90,
+  "исключено на ступени 2 (Википедия)": 10,
+  "исключено моделью и правилами": 36,
+  "слабых сигналов": 5,
+  "под наблюдением": 4,
+  "с уверенностью ≥ 75 %": 2,
+  "исключено": 136,
+  "секунд": 38
+ },
+ "signals": [
+  {
+   "technology": "платежи x402",
+   "technology_original": "x402 payments",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.846,
+   "score_interval_90": [
+    0.591,
+    0.956
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "TinyML",
+    "query": "TinyML",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 4.1
+   },
+   "description": "«платежи x402» (x402 payments): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 33 научные публикации (рост ×16.3 к 2019–2021), 84 новости за год, 10396 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "AI agents are executing millions of micro-payments on XRP Ledger, but hardly any tokens are being bought",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWDU3SkpWZUI1MVFjd28zZ3gzMXNkRlFCRklRbWV4V0JPb0NWZmFnRFhLYjRxNm1waDExVkpsM3FyOVcwbURuMmEzS19aMTZnbWJObHYtQWREb0JZY1pvVEdES1Y0OFV3YldyV0pVaS10VWR6YjltRDZRMWZ5SkFPZHZSRVdhV05fbll1aHoxWnpCSUF6bmdJQ20teU1WM3k3YmViQjhBZ3NLTDlKV2dDZG9EWi0?oc=5",
+    "source_name": "CryptoRank",
+    "source_type": "новости",
+    "published": "2026-09-08",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 10 396",
+    "↑ доля препринтов: 52%",
+    "↑ упоминания в Википедии: 0",
+    "↓ рост публикаций к 2019–2021: ×16.3"
+   ],
+   "takeoff": {
+    "probability": 0.984,
+    "percentile": 0.99,
+    "horizon": "2029–2031",
+    "baseline_per_year": 15.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 3.12,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 3.526,
+    "oa_recent_log": 2.791,
+    "oa_growth": 2.791,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.0,
+    "oa_preprint_share": 0.515,
+    "oa_company_share": 0.0,
+    "oa_fields": 2.0,
+    "news_1y": 84.0,
+    "news_30d_share": 0.131,
+    "news_sources": 45.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 1.609,
+    "hn_growth": 1.609,
+    "gh_total_log": 9.249,
+    "gh_new_share": 0.977,
+    "gh_max_stars_log": 11.462,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Free-Riding the Agentic Web: A Systematic Security Analysis of x402 Payments",
+     "url": "https://doi.org/10.48550/arxiv.2605.30998",
+     "source_name": "arXiv (Cornell University)",
+     "source_type": "препринт",
+     "published": "2026-05-29",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "Free-Riding the Agentic Web: A Systematic Security Analysis of x402 Payments. The x402 protocol has crossed from prototype to infrastructure for the agentic web, driving 130 million all-time transactions and embedded in Google Cloud, Cloudflare, and Stripe. Yet bridging synchronous HTTP requests with asynchronous blockchain finality creates state-synchronization challenges, and x402's security has so far been examined only in piecemeal vendor disclosures. It is moreover not one artefact but a stack of an HTTP semantic, per-chain schemes, and a long tail of SDK and deployment choices whose required guarantees prior work has not established. We perform a systematic security analysis organized ",
+     "extra": {}
+    },
+    {
+     "title": "AI agents are executing millions of micro-payments on XRP Ledger, but hardly any tokens are being bought",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWDU3SkpWZUI1MVFjd28zZ3gzMXNkRlFCRklRbWV4V0JPb0NWZmFnRFhLYjRxNm1waDExVkpsM3FyOVcwbURuMmEzS19aMTZnbWJObHYtQWREb0JZY1pvVEdES1Y0OFV3YldyV0pVaS10VWR6YjltRDZRMWZ5SkFPZHZSRVdhV05fbll1aHoxWnpCSUF6bmdJQ20teU1WM3k3YmViQjhBZ3NLTDlKV2dDZG9EWi0?oc=5",
+     "source_name": "CryptoRank",
+     "source_type": "новости",
+     "published": "2026-09-08",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "x402 and Agentic Commerce: Redefining Autonomous Payments in Financial Services | Amazon Web Services",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSm4yYzV5MjJXZzE0al9CUGNSSlo0bnVDNGhZSjJRUlpEQTI5XzFHZUx6ZHZGOFVMNlhxLTZXMndSUzdLSVp6d1lPR1dWejdBVWNwaFhfWnZ1cHZTRFAxcDlESjJVdk5VelVXSXB0V05oTFhzd0NTZTY4YnRGSlRTdzRZbW5zelJyTmdPQTFkSFlPMFEyWWxBcE5ZOUM1MWxPUE82MWtINnFGZWgtTkY3VUVCcEdNcVc1VTNJ?oc=5",
+     "source_name": "aws.amazon.com",
+     "source_type": "новости",
+     "published": "2026-03-15",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Launching the x402 Foundation with Coinbase, and support for x402 transactions",
+     "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1DNVR6cV9yeVBUWmtqMTh2TnMzbVJTRzE0TEhxUUNWUWpVUnhmZVVEdU5WQTlrak9maW5HejhnRlBZam02eVlBVA?oc=5",
+     "source_name": "Cloudflare Blog",
+     "source_type": "новости",
+     "published": "2025-09-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Linux Foundation is Launching the x402 Foundation and Welcoming the Contribution of the x402 Protocol",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdHpHY3NpRC1wX1I4M1pIbkVwNFhGN0sweWNBMW82ckhWQjY2d1VVcDcxRjZic0pkZFpNNmdmcElYdXcwR1lkWldHNG5oT0pSanpwZ3dPQXhHaUd0RGR6bkZBX2plY0tCU3hwMFB1NHhadk4wVEY0b2lZLWEzWW42UThaYXlQZzkzajRRdVBueWtMejRCWThYR1BwQWt4OVdWQXdpbTZxbUt1U084WG0tVmdGWEFHbDV2T2p1ZVpkQzliVEhza1RIWGstRGdndVRsZFJDYk930gHmAUFVX3lxTE83VkJYZWQ3RnJWU2ViWFhhazd3ZThMV1h1SDJBbnZWRzd5WC1qSjMxVmZZajdSTEtiNmd1cnBtRzJmakw0VnJFTjNVdXpJbTZ1dHJsWjlGTC1PT0ZmU19HMXBCWmFPRjZOekVDVGNFVXZWcXgzM1hHdW9uWHpqUWZrS2FGX0tUWHB5dVc4SEpsUENvVjZIREtVWTFoN056cVluc2o2TTlRM2wtdWhaQ1poaWp0bnU5cW13QS02WjlKQW5INGFnQTBpWjVuYUdKbU9LVC1SSmdZRVM1OVQ1NXdZWG11Ukd3?oc=5",
+     "source_name": "Linux Foundation",
+     "source_type": "новости",
+     "published": "2026-04-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "internet-court/internet-court-skill: The trust layer for agent-to-agent commerce — natural-language mandates, ERC-7710 delegated permissions, x402 payments, escrow, and dispute resolution as one open,",
+     "url": "https://github.com/internet-court/internet-court-skill",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-06-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 5855
+     }
+    },
+    {
+     "title": "AgentlyHQ/aixyz: Next.js-like framework building AI Agents that are payment-native. Bootstrap your agent with A2A, MCP, x402 payments, and ERC-8004 identity.",
+     "url": "https://github.com/AgentlyHQ/aixyz",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-13",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 82
+     }
+    }
+   ]
+  },
+  {
+   "technology": "навыки агентов",
+   "technology_original": "agent skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.773,
+   "score_interval_90": [
+    0.216,
+    0.974
+   ],
+   "status": "слабый сигнал",
+   "confident": true,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 6.65
+   },
+   "description": "«навыки агентов» (agent skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 1267 научных публикаций (рост ×71.9 к 2019–2021), 100 новостей за год, 241510 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Навыки агентов (Agent Skills): что это такое и почему это больше, чем «папка с промптами»",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Jb25tX3l2eF85NG9PYWxJUm9XWUYxMEVzS2tadEZOeW9LSmNSOEh4UXFkdWVPMmFraVUtQUQ0OHF5eF92Z3A5T2ZsZVpJcWs0RUJDc21WT2RHekdCMDNsM0ZRVdIBV0FVX3lxTE1LQkc4aDFhUVJscFljVEdTZUlHd3ZxYWNmWXRjQU1HZHhRRHU1SGVSU09ydklPbXRTY0hYejdodm1JUThfLVZBeldtOHZuMDdTS0Y2UHkzSQ?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-12-26",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 241 510",
+    "↑ рост обсуждений разработчиков: 5.33",
+    "↑ доля препринтов: 57%",
+    "↑ обсуждений разработчиков за год: 413"
+   ],
+   "takeoff": {
+    "probability": 0.99,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 525.9,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 3.25,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 7.145,
+    "oa_recent_log": 6.267,
+    "oa_growth": 4.275,
+    "oa_age": 16.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.026,
+    "oa_preprint_share": 0.572,
+    "oa_company_share": 0.179,
+    "oa_fields": 17.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.31,
+    "news_sources": 59.0,
+    "news_press_share": 0.03,
+    "hn_12m_log": 6.026,
+    "hn_growth": 5.333,
+    "gh_total_log": 12.395,
+    "gh_new_share": 0.997,
+    "gh_max_stars_log": 12.678,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.792
+   },
+   "sources": [
+    {
+     "title": "Навыки агентов (Agent Skills): что это такое и почему это больше, чем «папка с промптами»",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Jb25tX3l2eF85NG9PYWxJUm9XWUYxMEVzS2tadEZOeW9LSmNSOEh4UXFkdWVPMmFraVUtQUQ0OHF5eF92Z3A5T2ZsZVpJcWs0RUJDc21WT2RHekdCMDNsM0ZRVdIBV0FVX3lxTE1LQkc4aDFhUVJscFljVEdTZUlHd3ZxYWNmWXRjQU1HZHhRRHU1SGVSU09ydklPbXRTY0hYejdodm1JUThfLVZBeldtOHZuMDdTS0Y2UHkzSQ?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-12-26",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "AI-скиллы для агентов: что это и как написать SKILL.md — журнал «Код»",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Sd25qcmhOTVFiNU5ZMktlcXhZOUhKNzVWZG5FeHRnTlhZeGtzbUJfTGIwdHQ5MkEzeXZYMXNYWXd4S204UUxZNFQxX0NhVGN0NjlDUVV1YWN1UzdxSUh1bw?oc=5",
+     "source_name": "Журнал «Код",
+     "source_type": "новости",
+     "published": "2026-07-03",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Anthropic сделала базовые навыки ИИ-агентов открытым стандартом",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWk45bUw0WVdXZG1qN09IblZ0eURaNWc5N19WM2JyQ0U0VWRKdFRmZjk2eTNOMlF1Y2J0U2J5YWFlVkxWNlROVkEteTBJTU91OHg1MFhqMTNVVl9EN18yN0hmNXBZNU9oYkdidkZnZXlId0s5dWt4UUNQUVI4SGVESEV4SlY2Z3hETEhhNnZqT3lOZ9IBlwFBVV95cUxOOVA4S0lGSHVLQjdnQlRLMk9xZFVXUjY4WXMwMXhfWm9VNjNIcVd2cDd3dGlDcE9LWWhXcFB5UEl5ZVVtSUd4eHlzUkJKZGF1eVdTWjMxVDIzRGZhOE82aThNb0NuMVFwRG9rYVpLMll4VTBHMGxManJ5UTRobmNNR0Q3aWF3bnRJeXlzdTRzSFROMkFMRkow?oc=5",
+     "source_name": "3DNews",
+     "source_type": "новости",
+     "published": "2025-12-23",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Equipping agents for the real world with Agent Skills",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWW0xVE5YRGtqWngtWmtwS0xPVkZqZWg1ck5OU2FpYVVHd1lBNHZyVmhGX1U2aTFBbHVycmVIYzNNSEJVbWFyTEdNM2FwNlBWTFBtakR6a3phZlZOM3NvQ2lTZmR1NWl5Y1ZHSTBaeXBybF9MOUdhdEJjNzVFc2ktazFEMXpfTVhidkY2cENZY2NJYmUxeGc?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "SkillOpt turns AI agent skills into trainable assets",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVnNvSVRPRlBOSkktb3ozS1BGeUU5ZmFJSGQzT04zQ0IzeDMtTGVxT1FXc1JQNm1LTTJ5NndZLXN1SE9tM3FBSkVsbWt2S3ZueWJSLXVTQmFRZTVaQ3A0aUE5anFPRWVfaXlLVHFFc0JOTW5VU3ZWUGUzb3lQZ1dkdzRNdEhwa3JkaEdIYnhEbWtmN1kwZ044?oc=5",
+     "source_name": "Microsoft",
+     "source_type": "новости",
+     "published": "2026-06-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "NVIDIA-Verified Agent Skills Provide Capability Governance for AI Agents | NVIDIA Technical Blog",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd2drOXFmNVBGaHFIY2FOMFpoOUpiTXJ0YmFmcVJTa0VZSjR4bjBfNnc5QW1RUGJUMjYtalVfZGU0YV9ZenRucXBGM1dJZzNxY2hJcXdKdVpuWGxsZUh6UGtZV0JDcTJqRGYwcHA0RlB3N2dTR2JLSGlETUhnUkhxRnVaN2Nfd2plRmJCVTNzRnZFMmZYSmh1R05raHh5d1NVa01XUllWZnVDMEE?oc=5",
+     "source_name": "NVIDIA Developer",
+     "source_type": "новости",
+     "published": "2026-05-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "RKiding/Awesome-finance-skills: A collection of Awesome Finance Agent Skills for free and easy to start | 一系列开源免费的金融分析Agent Skills",
+     "url": "https://github.com/RKiding/Awesome-finance-skills",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-31",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 3019
+     }
+    },
+    {
+     "title": "LLMQuant/awesome-trading-agents: Curated list of LLM-driven trading agents, MCP servers, and agent skills for market research, strategy, and execution.",
+     "url": "https://github.com/LLMQuant/awesome-trading-agents",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 825
+     }
+    }
+   ]
+  },
+  {
+   "technology": "машинные платежи",
+   "technology_original": "machine payments",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.699,
+   "score_interval_90": [
+    0.406,
+    0.878
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.52
+   },
+   "description": "«машинные платежи» (machine payments): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 63 научные публикации (рост ×7.3 к 2019–2021), 100 новостей за год, 2210 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "ИИ, оплати!",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qVjM5Z1lLSW9lM3U5X29FWmpEZkZQVWMyY0tlWEUxZGs5RjJDaUNQbEZhRFV0cmdsWjhXNVg3S0ZVR1dIQkFUbDlBU085S25ab0E?oc=5",
+    "source_name": "sostav.ru",
+    "source_type": "новости",
+    "published": "2026-03-31",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 2 210",
+    "↑ рост обсуждений разработчиков: 1.79",
+    "↑ число изданий: 60",
+    "↑ доля препринтов: 25%"
+   ],
+   "takeoff": {
+    "probability": 0.965,
+    "percentile": 0.96,
+    "horizon": "2029–2031",
+    "baseline_per_year": 20.9,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.159,
+    "oa_recent_log": 3.085,
+    "oa_growth": 1.986,
+    "oa_age": 6.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.079,
+    "oa_preprint_share": 0.254,
+    "oa_company_share": 0.077,
+    "oa_fields": 7.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.13,
+    "news_sources": 60.0,
+    "news_press_share": 0.03,
+    "hn_12m_log": 1.792,
+    "hn_growth": 1.792,
+    "gh_total_log": 7.701,
+    "gh_new_share": 0.955,
+    "gh_max_stars_log": 11.462,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.792
+   },
+   "sources": [
+    {
+     "title": "ИИ, оплати!",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qVjM5Z1lLSW9lM3U5X29FWmpEZkZQVWMyY0tlWEUxZGs5RjJDaUNQbEZhRFV0cmdsWjhXNVg3S0ZVR1dIQkFUbDlBU085S25ab0E?oc=5",
+     "source_name": "sostav.ru",
+     "source_type": "новости",
+     "published": "2026-03-31",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Stripe запустила Machine Payments — приём платежей от ИИ-агентов через USDC и протокол x402",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9VWEpkX1pzTGNucDRUVGtGcUtZc2tKSjRQc2RYQlZuQl9XRVpVWWJLTDVvTWloSHNzY184Si1nazYxNkNoQTk3cURPdExJaTdYVmJjU3huU2FFbm1iOHlCcmY5Sy00N3PSAVhBVV95cUxNN3d3V1R2bWFRUE5FN0dXTUNjQWgxUVFxN2NNMTBENWRlQkZTaGxGbEFaUWVHcWdlZGNBcVNxU1lOTjE4VTFYQnNEMFF3ckhXNE00akRmVEhh?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-02-16",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Stripe представила платежи для ИИ-агентов на базе USDC и протокола x402",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaC1iaTlfWWhjNFBaTzVpOWxVMjJNczhwWVA2TUpOWlFNS21yczI5UkFhVmRFMmNVZkp4TnQxaW44WU8yVS1uSTlXZkZKd3U1VUtlLV9zUWp0dDdiY0NtOFFlWkl3N09Pa1pNZklvMHQ2Y0E2T09mUnVjMGhpbnpLOHdrc1dfV2V0Qm82WVVCQk82Q253blctQkk4Q2M3RjQ?oc=5",
+     "source_name": "ForkLog",
+     "source_type": "новости",
+     "published": "2026-02-11",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Why Stripe’s Machine Payments Protocol Signals A Turning Point For Micropayments",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbGUxQi1idDE2REF0N2h6TC1hRnFqdkdJVVFUV01Mcndmb3RqbG1qd2tLSkJ4WUFCSnBSdlVOeGt6TG9NY09ZTlJxbm1CVnI1SUt2V3V0VllJa2E1d0luamU4X3h3cnpuOVJNQTFTeFVBMVI1blNKQUZrYzllcVBENHlRbUlqLV9LOVI0TG9aWWhlZjN0WFRkZWFZUVNnSkZiMkhJOWFkeHBtaklYRHhGU3dB?oc=5",
+     "source_name": "Forrester",
+     "source_type": "новости",
+     "published": "2026-03-23",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "The Architecture of Autonomous Wealth: Inside Tempo’s Machine Payment Protocol",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPR1dScHhVMzN4QUZzWGxJS1lNUnNoS0o1UkZzcmEtTkRBQVU1dllXaW9LWnZHTXhpREt0RFF0aUYxekNmNllFb21xUk5VS2o5VS1WanNHMno5eVFhS3NEMmVzS2VEa2hZLXVfU2U3aVgycmR4UDNQMzBQc0pyN0pKaG8tMjhlV1plektPcTBiUDk0Ty01WWZoX2NrNXM0MHdfS1JMZ0tPcXF2cmdkX29XWjVINHFGNGJaOVVfOXJn?oc=5",
+     "source_name": "Medium",
+     "source_type": "новости",
+     "published": "2026-03-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Agents that transact: Introducing Amazon Bedrock AgentCore payments, built with Coinbase and Stripe",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPMXNyY283Rl9BMERPUGJoNHljdU5TUEpRM1FNYllNX3NMMllnVTJ1NHFSbG9fTzZBWUFST2JhRk00R0FpODdNV1pXcGs2V1NQOWFoaVpIZ0VNMUwwd3Rqb3BZdGZOV2l5YXRiNEY1UUdoSUF1SHZRXy1oSkc4MlNfdDJIM1o0UlpNSHYzVVhwZEVJR3JmQVNteEpQcTBOVS1PSmxmR2tWZ1YtUGY4QUlNYW8zZnRQUzlPYTcxQjZFellxVWJRUU1fZ0t2VW5RYWJMTnNERjN3cXBIMW1R?oc=5",
+     "source_name": "Amazon Web Services (AWS)",
+     "source_type": "новости",
+     "published": "2026-05-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "wevm/mppx: TypeScript Interface for Machine Payments Protocol",
+     "url": "https://github.com/wevm/mppx",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-21",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 176
+     }
+    },
+    {
+     "title": "tempoxyz/mpp-specs: Specifications for the Machine Payments Protocol - powered by the \"Payment\" HTTP authentication scheme",
+     "url": "https://github.com/tempoxyz/mpp-specs",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-01-05",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 93
+     }
+    }
+   ]
+  },
+  {
+   "technology": "агентные платежи",
+   "technology_original": "agentic payments",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.619,
+   "score_interval_90": [
+    0.276,
+    0.887
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Векторные базы данных",
+    "query": "vector database",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.64
+   },
+   "description": "«агентные платежи» (agentic payments): 1 свежая работа по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 182 научные публикации (рост ×27.2 к 2019–2021), 100 новостей за год, 7760 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "XVII Международный ПЛАС-Форум \"Платежный бизнес и денежное обращение\"",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5ZN0tkMndqQ3JrdUdRbHdHbVRiUkpkbWc5aXNDUDE3bVY3aURsSHZuRlZqcldCRXF5VjJoMk1YMzlHMHlyelhReUJTYw?oc=5",
+    "source_name": "Интерфакс",
+    "source_type": "новости",
+    "published": "2026-09-07",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 7 760",
+    "↑ доля препринтов: 45%",
+    "↓ рост публикаций к 2019–2021: ×27.2",
+    "↓ доля свежих новостей за месяц: 93%"
+   ],
+   "takeoff": {
+    "probability": 0.964,
+    "percentile": 0.96,
+    "horizon": "2029–2031",
+    "baseline_per_year": 71.6,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 3.12,
+    "recent_docs": 1,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.209,
+    "oa_recent_log": 4.285,
+    "oa_growth": 3.304,
+    "oa_age": 13.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.071,
+    "oa_preprint_share": 0.451,
+    "oa_company_share": 0.234,
+    "oa_fields": 9.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.93,
+    "news_sources": 57.0,
+    "news_press_share": 0.06,
+    "hn_12m_log": 2.773,
+    "hn_growth": 1.856,
+    "gh_total_log": 8.957,
+    "gh_new_share": 0.954,
+    "gh_max_stars_log": 11.934,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "Present vs. Provable: A Conformance-Testing Methodology for the Authority Layer of Agentic Payments",
+     "url": "https://doi.org/10.5281/zenodo.21208547",
+     "source_name": "Zenodo (CERN European Organization for Nuclear Research)",
+     "source_type": "препринт",
+     "published": "2026-07-08",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "Present vs. Provable: A Conformance-Testing Methodology for the Authority Layer of Agentic Payments. Autonomous agents now authorize and execute payments without a human approving each transaction. Existing payment protocols verify identity, cryptography, and settlement, yet they leave one question unanswered: can a verifier prove that an executed payment is the one the principal actually authorized? This paper isolates that question as the distinction between a payment parameter being present on the wire and being provable at the boundary, and it introduces a conformance-testing methodology for the authority layer where the answer is decided. The methodology uses fail-closed differential ve",
+     "extra": {}
+    },
+    {
+     "title": "XVII Международный ПЛАС-Форум \"Платежный бизнес и денежное обращение\"",
+     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5ZN0tkMndqQ3JrdUdRbHdHbVRiUkpkbWc5aXNDUDE3bVY3aURsSHZuRlZqcldCRXF5VjJoMk1YMzlHMHlyelhReUJTYw?oc=5",
+     "source_name": "Интерфакс",
+     "source_type": "новости",
+     "published": "2026-09-07",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Стандарт ИИ-микротранзакций x402 от Coinbase переходит в Linux Foundation",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CcjA1US0xN2ptZ2FxTEhhV1kyUzNRWEZDN2Y5VzNic21ET2RVaEF2R1FENWNBc0YyRHZQaW5QNmlCNmpBckR4OHBvSGhjU2V5MlVxUFpUekp1d3JpdEFB0gFYQVVfeXFMTVdwVFBCdEVIelhiZXhUN241T3ZienRzVmx5dWQyV19iSFNKeDVPekxqTkJyNDM2YlY4WUFLZkY3ajF5WTJzQ3l2RFZtZkV0TzVzSGlIYk5hTg?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2026-04-02",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Payment trends in 2026: Innovation, Trust, & Growth",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSHc1Q3JqTkZQYmowblhPa25nQ25Hd0trRUpPSTdqOE11STlld2FzTzlrejdmX3VBWHR6b1BISmhjUVhnLTNFTEdnVlVtbHNmd3loZXVPamRpMHpmdUx2Qkt0b2hZc3JRUFhIV1hfbnh3MmExa1ExejZSU3oyQlgyN1V4SHBTRWtpTDluOFdQLTI3QVBUbm1Wd1hIWEg1Ukt5dFl2RA?oc=5",
+     "source_name": "mastercard.com",
+     "source_type": "новости",
+     "published": "2026-05-17",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Agentic Payments: The Next Evolution in the Payments Value Chain | Amazon Web Services",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObnFJUjh3bXBCQzh2a2ZySGcxZFcta01sc1BNRjdDWUNRX3JwN29JT3htazdJVlNPdDdBYzhSQVlYeWV3WDB6T3BzQVJqcmhLajhvYjR4RW13eTUxaTV1eTBmTk1Eb3dqenM3S2w1SUhPZ0xMNjlZeE50WF80Zmd0dTVIem1YTHhxRm1ySHRZcUhXakRYam1jTm53aWZyT3p5cHVKckZ1bw?oc=5",
+     "source_name": "aws.amazon.com",
+     "source_type": "новости",
+     "published": "2025-11-13",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Agentic Payments from the Ground Up: What the Onchain Data Tells Us",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPY2QyWnJkWTZfWnRmT3VrRHlrQ2NMQl9fSDB4WENkR25mbWc0aEgza0hDX2c2UTFUZlkxWVZGTkh0ejVLTmEzZEhueDduNXFGTFNTSUxtb1pPT0hodnNPSXBUSUhXalV3Q2oxNVpsRTQ0Z1IzTS1qUllqNERfcFloOU42Zmd6a1RhblY0amczd2p1VVhYOWhz?oc=5",
+     "source_name": "visa.com",
+     "source_type": "новости",
+     "published": "2026-07-14",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Visa and Mastercard Join Rain’s Agentic Commerce Coalition",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbm1GWXZGMENXWDBvZEdFekRrSjBDVk5ud2VLY3NreW1LWlhCZ2h0aldxS1oySzBwQ0NoQUtxMXk0NERZbFEycDhFNG9yTzFINHpPTVM5M0xiLUgzUXZZbmUtZmtqMUNxUTZMMkZCMVlKTldsRWZZTWQxN3NzcHQ1RlhfaXpSVkYwaGJEeURCTDA3NVYzYmh1RTZhbXV2bmpYaDVxU094dmJNNU5iaGFsRFVObnJHUQ?oc=5",
+     "source_name": "pymnts.com",
+     "source_type": "новости",
+     "published": "2026-08-18",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "worldliberty/agentpay-sdk: An open SDK for agentic payments. Let AI agents make payments, hold funds, and move money across chains with policy enforcement and human approval built in.",
+     "url": "https://github.com/worldliberty/agentpay-sdk",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-17",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 462
+     }
+    },
+    {
+     "title": "solana-foundation/pay-kit: Building blocks for Agentic payments (x402, MPP, AP2) for TypeScript, Rust, Go, Python, Ruby, PHP, Lua, Kotlin and Swift.",
+     "url": "https://github.com/solana-foundation/pay-kit",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-18",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 73
+     }
+    }
+   ]
+  },
+  {
+   "technology": "enable banking",
+   "technology_original": "enable banking",
+   "name_source": "название оставлено на языке оригинала",
+   "score": 0.509,
+   "score_interval_90": [
+    0.198,
+    0.898
+   ],
+   "status": "слабый сигнал",
+   "confident": false,
+   "historical_twin": {
+    "name": "Квантизация моделей",
+    "query": "model quantization",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.57
+   },
+   "description": "«enable banking» (enable banking): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 244 научные публикации (рост ×4.4 к 2019–2021), 7 новостей за год, 763 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Enable Banking and A-Tono Partner to Power Made-in-Italy Open Banking Innovation for 26,000+ Businesses and Consumers",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZkY0NGE0Z2pGMXV5NHZPZU4wYUZKZ1pvS3JVYWpWcENoMy1TMF9uajZOa3FIUng4N21mUkNxbUlnTzhfUzQ3WEZINTFET0FzVmNfYWRPbjBSNWtJUW0yLW5TYjZuMEc3cExaZEVVTmZxSnFwMnlxUmxkMC1ZRlZuVFlUSm5NYllUZ1g3QmktQ3pCZnV2Ym1vN0JGdHZmMGpnVmFHS01FbDJ0RkJtWlNINktVNVdHUzNFOXYta28zX3ZWRDFDUldDSjVoaWVneG5WNFBackJB?oc=5",
+    "source_name": "FF News",
+    "source_type": "новости",
+    "published": "2025-10-19",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ доля пресс-релизов: 14%",
+    "↑ упоминания в Википедии: 2",
+    "↓ число репозиториев: 763",
+    "↓ доля препринтов: 7%"
+   ],
+   "takeoff": {
+    "probability": 0.754,
+    "percentile": 0.77,
+    "horizon": "2029–2031",
+    "baseline_per_year": 53.7,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.501,
+    "oa_recent_log": 4.002,
+    "oa_growth": 1.489,
+    "oa_age": 15.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.176,
+    "oa_preprint_share": 0.066,
+    "oa_company_share": 0.03,
+    "oa_fields": 12.0,
+    "news_1y": 7.0,
+    "news_30d_share": 0.286,
+    "news_sources": 6.0,
+    "news_press_share": 0.143,
+    "hn_12m_log": 0.693,
+    "hn_growth": 0.693,
+    "gh_total_log": 6.639,
+    "gh_new_share": 0.831,
+    "gh_max_stars_log": 8.195,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.099
+   },
+   "sources": [
+    {
+     "title": "Enable Banking and A-Tono Partner to Power Made-in-Italy Open Banking Innovation for 26,000+ Businesses and Consumers",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZkY0NGE0Z2pGMXV5NHZPZU4wYUZKZ1pvS3JVYWpWcENoMy1TMF9uajZOa3FIUng4N21mUkNxbUlnTzhfUzQ3WEZINTFET0FzVmNfYWRPbjBSNWtJUW0yLW5TYjZuMEc3cExaZEVVTmZxSnFwMnlxUmxkMC1ZRlZuVFlUSm5NYllUZ1g3QmktQ3pCZnV2Ym1vN0JGdHZmMGpnVmFHS01FbDJ0RkJtWlNINktVNVdHUzNFOXYta28zX3ZWRDFDUldDSjVoaWVneG5WNFBackJB?oc=5",
+     "source_name": "FF News",
+     "source_type": "новости",
+     "published": "2025-10-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Fiserv to Power Embedded Banking and Payments for Datavault AI, Including Its NIL Exchange",
+     "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOUS1hVDJGaTl6QnR1eFM1OWpMSjI3T1U1MTd3YzNYR01oV1J6dEh3b1pkVEk3TElaNUFQeTlycTJMRDVFblhkRFhuU1FzbDdZbEdmQmVGMXpHRkoxN2pnQUZPUE5QNENnY2drZEdTZHhnZE9icWhBT0hwOUduM3VlNGVBWVZfcDNQZFJQblNTWG1QLWNweWJLOEdkZFB5dm1WT1lSdV96STNFRWNHXzltQ2NTRURwSFFXQVk5azV4OUZqLTM1R2VzU010MjBMVE10YzFudDJKb2NSRkFFSnpla0lrcEZFYWlaSlhWSENrYl9IRTA?oc=5",
+     "source_name": "GlobeNewswire",
+     "source_type": "пресс-релиз",
+     "published": "2026-07-21",
+     "language": "en",
+     "trust": "пониженный",
+     "trust_reason": "пресс-релиз: первичный индикатор, требует независимого подтверждения",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Athletes Expected to Get No-Cost Wallets for Sponsor Earnings",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcTZpd09pbkt3ejFMVGIzVTZidzFpZlhEdXBBTmtYcnNhVVR2SWEwWEdaalNCU0lzbWlvQWRZMWI1NUU3N2x2TXpzY05lUDFJdTZsU3JFc0tJQWUwaVNkSms5cW1NQW9JbllaNzZCLWp0NXdzaWR6VDlmc2huUEFGYnhGdFA4TklNSGVhZk1XWkFYMEhXaTJTSm5vOTRYUjFxU3FGQTR6OUpKOUxCZHg2UC1weERxcU9p?oc=5",
+     "source_name": "Stock Titan",
+     "source_type": "новости",
+     "published": "2026-07-21",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "elcukro/bank-mcp: Give your AI assistant secure, read-only access to your bank accounts. MCP server supporting Plaid, Teller, Enable Banking, and Tink.",
+     "url": "https://github.com/elcukro/bank-mcp",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-02-21",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 45
+     }
+    },
+    {
+     "title": "noskillish/bankmcp: BankMCP™: your AI can now read your bank. Self-hosted, read-only MCP server for your own bank accounts via open banking (Enable Banking). Standard MCP; tested with Claude and Ollam",
+     "url": "https://github.com/noskillish/bankmcp",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-09-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 241
+     }
+    }
+   ]
+  },
+  {
+   "technology": "децентрализованный KYC",
+   "technology_original": "decentralized kyc",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.481,
+   "score_interval_90": [
+    0.169,
+    0.609
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "Антифрод на машинном обучении",
+    "query": "fraud detection machine learning",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 1.18
+   },
+   "description": "«децентрализованный KYC» (decentralized kyc): 6 свежих работ по запросу за 2025–2026 годы против 2 за 2019–2022. В открытых источниках: 13 научных публикаций (рост ×3.6 к 2019–2021), 7 новостей за год, 259 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Decentralized KYC transforms identity security",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMTRRWVJTd09RbXJreFd1eE5IX0xzSlNUNm5XbzFSLTVPM2tpdTBLQXl2VlZ4azdmaFFuQkdmMXliaExJU05XcklITzZHSVlwUGJfNjFFSW1xaWhsWEd6bmxyV2FoQXhKZV9LaTU3dGVKVDJPYVJBWHpVSjh6czRmdExibGtDUEVkZWRMYTROcm9sSW1GM1lKVk91dzZqdVRTVUs5OA?oc=5",
+    "source_name": "VentureBeat",
+    "source_type": "новости",
+    "published": "2026-02-17",
+    "language": "en",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↑ упоминания в Википедии: 0",
+    "↑ число научных областей: 2",
+    "↓ доля публикаций последнего года: 38%",
+    "↑ просмотры статьи в Википедии: 0"
+   ],
+   "takeoff": {
+    "probability": 0.643,
+    "percentile": 0.7,
+    "horizon": "2029–2031",
+    "baseline_per_year": 3.9,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.75,
+    "recent_docs": 6,
+    "prior_docs": 2
+   },
+   "features": {
+    "oa_total_log": 2.639,
+    "oa_recent_log": 1.58,
+    "oa_growth": 1.292,
+    "oa_age": 1.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.385,
+    "oa_preprint_share": 0.154,
+    "oa_company_share": 0.1,
+    "oa_fields": 2.0,
+    "news_1y": 7.0,
+    "news_30d_share": 0.0,
+    "news_sources": 6.0,
+    "news_press_share": 0.0,
+    "hn_12m_log": 0.0,
+    "hn_growth": 0.0,
+    "gh_total_log": 5.561,
+    "gh_new_share": 0.347,
+    "gh_max_stars_log": 7.367,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.0
+   },
+   "sources": [
+    {
+     "title": "Web3-Based Identity and KYC Innovations for Next-Generation FinTech",
+     "url": "https://doi.org/10.1145/3771991",
+     "source_name": "ACM Transactions on the Web",
+     "source_type": "научная публикация",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Web3-Based Identity and KYC Innovations for Next-Generation FinTech. The growing reliance on digital financial services necessitates a secure, efficient, and privacy-centric approach to identity verification and Know Your Customer (KYC) compliance. Traditional identity management systems rely on centralized databases, making them susceptible to data breaches, inefficiencies, and regulatory constraints. Over 10 billion identity records have been exposed in centralized KYC breaches, leading to a 60% increase in financial fraud cases. The rise of Decentralized Finance (DeFi) has further complicated KYC compliance, requiring innovative solutions that balance privacy and regulatory requirements. ",
+     "extra": {}
+    },
+    {
+     "title": "Analysis of the Application of Blockchain Technology in Banking",
+     "url": "https://doi.org/10.54097/qs66y041",
+     "source_name": "Frontiers in Business Economics and Management",
+     "source_type": "научная публикация",
+     "published": "2025-03-21",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Analysis of the Application of Blockchain Technology in Banking. This paper discusses the application of blockchain technology in the banking industry, highlighting its role in business upgrading, restructuring, and addressing various challenges. Blockchain technology provides a decentralized KYC process, enhances transparency and security in shareholding management, and facilitates the establishment of a decentralized governance structure within banks. It also introduces operational efficiencies by automating processes and integrating data verification into transaction processing. By ensuring data truth and integrity, blockchain reduces fraud risks and bolsters customer trust. However, it p",
+     "extra": {}
+    },
+    {
+     "title": "Decentralized KYC: Enhancing Identity Verification with Blockchain Technology",
+     "url": "https://doi.org/10.1007/978-3-031-87584-7_99",
+     "source_name": "Studies in systems, decision and control",
+     "source_type": "научная публикация",
+     "published": "2025-01-01",
+     "language": "en",
+     "trust": "высокий",
+     "trust_reason": "научная публикация, патентная база, регулятор или университет",
+     "snippet": "Decentralized KYC: Enhancing Identity Verification with Blockchain Technology. ",
+     "extra": {}
+    },
+    {
+     "title": "Decentralized KYC transforms identity security",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMTRRWVJTd09RbXJreFd1eE5IX0xzSlNUNm5XbzFSLTVPM2tpdTBLQXl2VlZ4azdmaFFuQkdmMXliaExJU05XcklITzZHSVlwUGJfNjFFSW1xaWhsWEd6bmxyV2FoQXhKZV9LaTU3dGVKVDJPYVJBWHpVSjh6czRmdExibGtDUEVkZWRMYTROcm9sSW1GM1lKVk91dzZqdVRTVUs5OA?oc=5",
+     "source_name": "VentureBeat",
+     "source_type": "новости",
+     "published": "2026-02-17",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "CinCin: Cheers to Money Laundering - by Jason Mikula",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUk1MYk01eENhWC0wai12SWRvcTZhOUpvSV9BY2RwN1dKWUh3TWNORjlwaTRIeEljSXZObVhKeEwwdTFjVUd2azBMdEpCR1d5eVlZbHhndDBYX2dwdFBrRVJuX2tqcjgzQ1MwUmJ4U0JNV0l2Y1VyZGFWbk5HYng3Y0RkV2M?oc=5",
+     "source_name": "Fintech Business Weekly | Jason Mikula",
+     "source_type": "новости",
+     "published": "2026-03-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Best KYC: Best 13 KYC Softwares in 2025",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTTNOclpMb0prY1BpX3lFV3hWRjdSOWxXQVY0WUJCV0FFODV3bnREd1kycTF3aDgzeGNfVTB2d3RiMWhZUUZuZGZKb2wtLVl5MFB2MTU2Y3YtM1p0SjgxUXkyc2wzQ09mMUhmQ2hzSFhQckVjUGszN2t5bXYwZG0xbS1RVWs?oc=5",
+     "source_name": "OCNJ Daily",
+     "source_type": "новости",
+     "published": "2025-12-29",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    }
+   ]
+  },
+  {
+   "technology": "навыки Claude",
+   "technology_original": "claude skills",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.47,
+   "score_interval_90": [
+    0.078,
+    0.9
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "NFT-маркетплейсы",
+    "query": "NFT marketplace",
+    "year": 2021,
+    "fate": "к 2026 году угасла как хайп",
+    "label_now": "faded_hype",
+    "distance": 5.78
+   },
+   "description": "«навыки Claude» (claude skills): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 85 научных публикаций (рост ×40.3 к 2019–2021), 100 новостей за год, 209636 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Навыки (Skills) для Claude: почему папка с Markdown-файлами может оказаться важнее кастомных GPT",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tSkRIcU1IRjRkZ3dUNkx0US05NUFITHZyY1JhREl4YTR4VzNQZzgtTE45NFBWYlQ0dGtIbU5FNEd1cG9VaUVId1ducHjSAVdBVV95cUxQUjZUODVLckNUVUctUnBvYzJTNEEwS3JCQngxTXJ2QXJCQkUyNzNPRW55UDFha2NOak1fVWRPVlZCM0pzVkdneWpZaVVPVWlfcVVjUDZtYVU?oc=5",
+    "source_name": "Хабр",
+    "source_type": "новости",
+    "published": "2025-10-17",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 209 636",
+    "↑ рост обсуждений разработчиков: 4.86",
+    "↑ обсуждений разработчиков за год: 128",
+    "↓ рост публикаций к 2019–2021: ×40.3"
+   ],
+   "takeoff": {
+    "probability": 0.997,
+    "percentile": 1.0,
+    "horizon": "2029–2031",
+    "baseline_per_year": 39.3,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.93,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 4.454,
+    "oa_recent_log": 3.695,
+    "oa_growth": 3.695,
+    "oa_age": 0.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.012,
+    "oa_preprint_share": 0.035,
+    "oa_company_share": 0.133,
+    "oa_fields": 4.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.1,
+    "news_sources": 62.0,
+    "news_press_share": 0.01,
+    "hn_12m_log": 4.86,
+    "hn_growth": 4.86,
+    "gh_total_log": 12.253,
+    "gh_new_share": 1.005,
+    "gh_max_stars_log": 12.463,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 0.693
+   },
+   "sources": [
+    {
+     "title": "Навыки (Skills) для Claude: почему папка с Markdown-файлами может оказаться важнее кастомных GPT",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE0tSkRIcU1IRjRkZ3dUNkx0US05NUFITHZyY1JhREl4YTR4VzNQZzgtTE45NFBWYlQ0dGtIbU5FNEd1cG9VaUVId1ducHjSAVdBVV95cUxQUjZUODVLckNUVUctUnBvYzJTNEEwS3JCQngxTXJ2QXJCQkUyNzNPRW55UDFha2NOak1fVWRPVlZCM0pzVkdneWpZaVVPVWlfcVVjUDZtYVU?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-17",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Предприниматели и Claude Code Skills: как зафиксировать рутину в навык вместо повторного промпта",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5DTXN0ZnliNEdfYllnZlJjRUJkWjZWS1Z5bmd6N2dnLTRLVHJZMTZLNDRId1ptbDA2ZzJ4d3B5NjluektNaGQ2NFpuWFctOTNsZXc?oc=5",
+     "source_name": "sostav.ru",
+     "source_type": "новости",
+     "published": "2026-07-22",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Вот почему Claude Skills намного лучше MCP",
+     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1rQThqV1ItSkFHTElDZl80cWVkU05MMDlpLXZGRkVHSWZ5eW1sdGRiTnlZaTFQUWxIUy1obXVYTk9FZEVuM25z0gFXQVVfeXFMTm5iMkpsVEYxejZldUFKUzNIOU9BdWFKcFJuTnZGSTNKZlZac1VIV2E2VV9XSlNGazFqQ2EtUGJtUG50MVN4dU8yNUtibnMzd1FVX1dLVENr?oc=5",
+     "source_name": "Хабр",
+     "source_type": "новости",
+     "published": "2025-10-18",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Equipping agents for the real world with Agent Skills",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWW0xVE5YRGtqWngtWmtwS0xPVkZqZWg1ck5OU2FpYVVHd1lBNHZyVmhGX1U2aTFBbHVycmVIYzNNSEJVbWFyTEdNM2FwNlBWTFBtakR6a3phZlZOM3NvQ2lTZmR1NWl5Y1ZHSTBaeXBybF9MOUdhdEJjNzVFc2ktazFEMXpfTVhidkY2cENZY2NJYmUxeGc?oc=5",
+     "source_name": "Anthropic",
+     "source_type": "новости",
+     "published": "2025-10-16",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "How to build reusable Skills in Anthropic’s Claude AI",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSGNLOEhCZmR2bHZVVXF5UHJDRWlRTkNCbjB1MklxMDJVb25TRjRLYlgxeHdzeGpHQ1lLdXlZOS1KVVhuTjBJVWFQc0dnOUxIWlBkRWlFaVEzUXFOajBGSWJHbGhMeGJmWGZsWWlvYi1tay1oSFVPUk1qNW50eVNzRFlHMEZ2ZUFZX1J0bnNMcG16dy1Mc0w5LWYtOUxjS2swanRvN1FkMTBvUQ?oc=5",
+     "source_name": "Journal of Accountancy",
+     "source_type": "новости",
+     "published": "2026-06-07",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Top 7 Claude Skills for Product Managers",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fdnF2YW0yNWVSLW1UZVpKSmJ4c2RKNEo0dEJ0YXRGc0YxNU81N0diSE44Q0YyVjh4MDFEdEdrdU5oaTBXd25Hang1TXRLUHdvR052OENVcGl6WWdxdnowdm1LemdjOHJ0NXBjNE5n?oc=5",
+     "source_name": "Snyk",
+     "source_type": "новости",
+     "published": "2026-04-27",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "LLMQuant/awesome-trading-agents: Curated list of LLM-driven trading agents, MCP servers, and agent skills for market research, strategy, and execution.",
+     "url": "https://github.com/LLMQuant/awesome-trading-agents",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-04-22",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 825
+     }
+    },
+    {
+     "title": "ajeeshworkspace/indian-trading-skills: Claude Skills for Indian equity investors and traders — NSE/BSE stocks, F&O derivatives, institutional flows, and market breadth analysis",
+     "url": "https://github.com/ajeeshworkspace/indian-trading-skills",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-03-12",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 75
+     }
+    }
+   ]
+  },
+  {
+   "technology": "платёжные рельсы",
+   "technology_original": "payment rails",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.4,
+   "score_interval_90": [
+    0.153,
+    0.578
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "TinyML",
+    "query": "TinyML",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 3.63
+   },
+   "description": "«платёжные рельсы» (payment rails): 0 свежих работ по запросу за 2025–2026 годы против 0 за 2019–2022. В открытых источниках: 297 научных публикаций (рост ×37.7 к 2019–2021), 100 новостей за год, 4932 репозитория. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Stripe и Swift соревнуются за контроль над инфраструктурой глобальных платежей следующего поколения",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUXpXQkNuLWhBYlRvdlFuWDlLRC1TNnhsNU0xblRFbkN4bGc2dmRlNXR5NEk0N3o3VUh3LUdMSUZJZ1Zyck1veFljT1c0cnljcmR2TVJjdG5feUVQVVNCQlpKNEhTM3FEU09YOHZ2b3ZmN2JSUFhjSGM1enhUNEF6MlNLajlnMTk4bVpnSkJMRTBwSThUUkJHSHByOWF0TjN6TktNOGlSMjdmSWo2ejRYaHlFc1hwNElCYl83ZE9GQ2tNLXczWTFnV2ZGVG9MV1k?oc=5",
+    "source_name": "CoinDesk",
+    "source_type": "новости",
+    "published": "2026-07-17",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 4 932",
+    "↓ рост публикаций к 2019–2021: ×37.7",
+    "↑ доля препринтов: 32%",
+    "↑ рост обсуждений разработчиков: 1.72"
+   ],
+   "takeoff": {
+    "probability": 0.963,
+    "percentile": 0.96,
+    "horizon": "2029–2031",
+    "baseline_per_year": 124.8,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 1.66,
+    "recent_docs": 0,
+    "prior_docs": 0
+   },
+   "features": {
+    "oa_total_log": 5.697,
+    "oa_recent_log": 4.835,
+    "oa_growth": 3.631,
+    "oa_age": 5.0,
+    "oa_peak_ratio": 1.0,
+    "oa_last_share": 0.121,
+    "oa_preprint_share": 0.316,
+    "oa_company_share": 0.236,
+    "oa_fields": 10.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.64,
+    "news_sources": 57.0,
+    "news_press_share": 0.1,
+    "hn_12m_log": 2.639,
+    "hn_growth": 1.723,
+    "gh_total_log": 8.504,
+    "gh_new_share": 0.918,
+    "gh_max_stars_log": 11.462,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 2.197
+   },
+   "sources": [
+    {
+     "title": "Stripe и Swift соревнуются за контроль над инфраструктурой глобальных платежей следующего поколения",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUXpXQkNuLWhBYlRvdlFuWDlLRC1TNnhsNU0xblRFbkN4bGc2dmRlNXR5NEk0N3o3VUh3LUdMSUZJZ1Zyck1veFljT1c0cnljcmR2TVJjdG5feUVQVVNCQlpKNEhTM3FEU09YOHZ2b3ZmN2JSUFhjSGM1enhUNEF6MlNLajlnMTk4bVpnSkJMRTBwSThUUkJHSHByOWF0TjN6TktNOGlSMjdmSWo2ejRYaHlFc1hwNElCYl83ZE9GQ2tNLXczWTFnV2ZGVG9MV1k?oc=5",
+     "source_name": "CoinDesk",
+     "source_type": "новости",
+     "published": "2026-07-17",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Хакеры получают доступ к криптокошелькам через Google Docs и Claude AI",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQk1CVTRTMUwxeG5Hc2cwdHExajllUjhsM1F2czJJa3otNmpBaXdDdk1LR2p4bHJwS0o1d0ctTEFFRFhPcE00RjR2T3dVa0UzSklZNkpycUhTb2tXcXZhaWhZVlY1azlUSlRPUFVGOHNrc3g5OGNDaHREakl4WG4xX3gtUTRKMndQWklvY1FfZE9DUlh6QUkyV1pSWEIxcVJYMXBXUHJJcGlROHplRHRQMXdn?oc=5",
+     "source_name": "CryptoRank",
+     "source_type": "новости",
+     "published": "2026-09-01",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Топ-менеджеры считают, что заявка Stripe на $53 млрд за PayPal выведет 400 млн пользователей на крипто-рельсы",
+     "url": "https://news.google.com/rss/articles/CBMi7wVBVV95cUxQejRZVkpPeGl0ZjNSWVBnaFdzaHFjc0NtOE5ySmloY0ozZlFPSlA4QjdhSmR4Z1RBQUlBc2libTVpRUJYNkUzWlk5X3JkbkZfaHhEajVfX1Y0Z0dSUjZMTlVyYjRsMjFkZURxOEhjTUJjNzF6STRXbE82dlJqY1RWdmM2UHdzOHQtWk5JQzd5ZjZmS29BNDk4X3FlcHpWVTE1ZVFuUHpRdXJaVmRlRTRiXzlyNVZPbDlOYUtCVkFxb2pvUlppR3kya0JWcUJ1cmVhNTBTZDFjSDhGNEdDM0lCQnl6LVRfVEk1SGxUVjJuU0VvUk9aOXdjX3N4Qm5tUlFQdDFPb19NMGdiN0tVLU5zZ3RzTWVldUlQN2U1aDZ6WTNkb21rRkZGTnA5MkdPbWtGUUM4RHpHd24yeUdROTMxZmdITnF4eEc0ZUFEQmFNUHhCUG9DX1BzRzFhbHoyS3pBSUlyckljbzAwS0NBQUdyYUtPa01CbVdPRy1XUk1VNFdmNVlhWFNKb3NsX0loNklMeWd2VjkzbV9aNVZiQkYtaEoyTW1Pb1B6bjRrUzQ3a1JUX1VraENja3J1RkhpU3RfdjNOamtiTWZBWHFrbjJiWEs1MDd3azJfMVR0bklIMFJCOG05UWJVeUUtVEtsZHU0Um9xSGlkeXVQYlVZVmdWTGVFTGEtTkswRXpNVVhYeDhjVi13ZG0wMktMa082SFNpMlJNbG5QTDcxdkk5T2JvVkhDUVYwdjhjMzB6OEZ6dExlUmVzT2tSVUVZVzlGcWpTQWhFLWUwQVo4eWJMYW9hN3k4a1F1OWJQN0NzdFJST0x1c0QzR25KMEstdlJLdzhYcXBxdmk0bFVzekphV0FKbDNxa0NjS0FxVy1uVVhTdXpGSWxkMkFCMmRocjlrNjJoVkl1MXZ4OUtIcHYyRWtITDdpdTR4ZV8yM3V3amJFSTdoRTAxV1NzZHVOVlBtMzRXSlpVbGlkSC1VeVcxLVBv?oc=5",
+     "source_name": "Yellow.com",
+     "source_type": "новости",
+     "published": "2026-09-09",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Lawmakers spar over payment rails",
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNalpZckRpQVpDajZfZWVQZFAycDRYYTlwWGlHVmJCNjVsb2VLOUx1eDdSLXZHc0RGRnZPUmRYVUdUaHdyYnFNUktnLThSQ3dJdTFCb0NQWXZpMWpFdnVaNnN2SE5rUXdieFFRc3hwcnY5cE1ZeUUxMGVGOEdreGUtZg?oc=5",
+     "source_name": "Payments Dive",
+     "source_type": "новости",
+     "published": "2026-06-25",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "White House Pushes FinTech Access to Payment Rails",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUGstNHVkTF9iN05reFUwRmxvNmdEZVdnWlFxdDFlZ05ieWVBUkVFVkNxUXdIMGlkbkZyaHh3aXBkVmVQTTVvVTE5bEZrakxpX2JraUItV0FmOXFjWjFVb1M3WUJaUzdaV2FwamkwbUI3U3p2bVBBYUhQd3FpcGNZWTdhOTd1UVFMb0QzUVln?oc=5",
+     "source_name": "PYMNTS.com",
+     "source_type": "новости",
+     "published": "2026-05-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Stripe, Visa And Mastercard Race To Build AI Agent Payment Rails",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYlJUVGVEMnFORDFQVHhOcWFWVEJvVkV6V1lzYkJsTFFFWm8xUFFnZ3hYa1JpM0xRV1FOTnZRVXV1VkszdThkTjE0eHp3RTZydWtmMXVyTk9ldF95Y1pqR1FzbXMyS3MwRi04UUt6OVhNWWE4c1gxdG5JTzVfVXhnU1IxNTB6UTdVNVpENnpEamZ2US1qZFJJa2hGOFZsczY0VVI1VktlaVBlOVZoMlRCb3FaYy1KbUU?oc=5",
+     "source_name": "Forbes",
+     "source_type": "новости",
+     "published": "2026-03-19",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Hainrixz/agente-pagokit: Claude Code plugin that picks and implements the right payment method for your app — from your terminal. 42 providers, 136 payment rails, and deterministic validators that blo",
+     "url": "https://github.com/Hainrixz/agente-pagokit",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2026-05-20",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 55
+     }
+    },
+    {
+     "title": "daydreamsai/lucid-agents: Lucid Agents Commerce SDK. Bootstrap AI agents in 60 seconds that can pay, sell, and participate in agentic commerce supply chains. Our protocol agnostic SDK provides CLI-gen",
+     "url": "https://github.com/daydreamsai/lucid-agents",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-11-04",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 196
+     }
+    }
+   ]
+  },
+  {
+   "technology": "платежи на блокчейне",
+   "technology_original": "blockchain payments",
+   "name_source": "сборка по словарю терминов",
+   "score": 0.377,
+   "score_interval_90": [
+    0.152,
+    0.551
+   ],
+   "status": "под наблюдением",
+   "confident": false,
+   "historical_twin": {
+    "name": "Квантизация моделей",
+    "query": "model quantization",
+    "year": 2021,
+    "fate": "к 2026 году стала мейнстримом",
+    "label_now": "mainstream",
+    "distance": 2.07
+   },
+   "description": "«платежи на блокчейне» (blockchain payments): 1 свежая работа по запросу за 2025–2026 годы против 1 за 2019–2022. В открытых источниках: 137 научных публикаций (рост ×2.7 к 2019–2021), 100 новостей за год, 2827 репозиториев. Отдельной статьи в Википедии нет.",
+   "description_generated": false,
+   "generator": null,
+   "advantage": "В найденных источниках преимущество явно не сформулировано; подключите языковую модель для резюме.",
+   "advantage_is_original_en": true,
+   "case": {
+    "title": "Hyundai внедряет стейблкоины для трансграничных казначейских переводов",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxObG9mSHJQa0wzWVQ0NmFFX081VU5wODg5SjRoVW90RlJfVjFybHZ2c1hTcENZVUlVMHNvR1M2LWdFcDJKWHdRWUstV1d3dlJ2VjlYa2dmdWJTU2JCVVl3aFlqU0xiVDBFSUhpTXRxNE81S1pXNXZiYm0temwxNHBUSDYxY0tRaXFqYm41R2VxcVdDVmhuWjBmZWJORlpaSmxhM3A1SF9KRXVUeDRGbVVjakF0NkZhSmJRWThhZkRKRTlqZUJKQVNhaFNGbnE3Q2FKNXNfZ3hB?oc=5",
+    "source_name": "CoinDesk",
+    "source_type": "новости",
+    "published": "2026-07-10",
+    "language": "ru",
+    "trust": "средний",
+    "trust_reason": "новостной источник без отраслевой специализации",
+    "snippet": "",
+    "extra": {}
+   },
+   "why_weak_signal": [
+    "↓ число репозиториев: 2 827",
+    "↑ просмотры статьи в Википедии: 0",
+    "↑ число изданий: 48",
+    "↑ рост обсуждений разработчиков: 0.69"
+   ],
+   "takeoff": {
+    "probability": 0.762,
+    "percentile": 0.78,
+    "horizon": "2029–2031",
+    "baseline_per_year": 25.1,
+    "criterion": "среднегодовое число научных публикаций через 3–5 лет минимум втрое выше, чем за три года до даты прогноза, и не меньше 15 работ за эти годы"
+   },
+   "evidence": {
+    "burst": 2.09,
+    "recent_docs": 1,
+    "prior_docs": 1
+   },
+   "features": {
+    "oa_total_log": 4.927,
+    "oa_recent_log": 3.262,
+    "oa_growth": 0.993,
+    "oa_age": 9.0,
+    "oa_peak_ratio": 0.963,
+    "oa_last_share": 0.182,
+    "oa_preprint_share": 0.19,
+    "oa_company_share": 0.087,
+    "oa_fields": 8.0,
+    "news_1y": 100.0,
+    "news_30d_share": 0.24,
+    "news_sources": 48.0,
+    "news_press_share": 0.01,
+    "hn_12m_log": 1.099,
+    "hn_growth": 0.693,
+    "gh_total_log": 7.947,
+    "gh_new_share": 0.651,
+    "gh_max_stars_log": 8.165,
+    "wiki_article": 0.0,
+    "wiki_age": 0.0,
+    "wiki_views_log": 0.0,
+    "wiki_mentions_log": 1.609
+   },
+   "sources": [
+    {
+     "title": "Agent-to-Agent Finance: Blockchain Payments and Trust Infrastructure for Autonomous AI Agents",
+     "url": "https://doi.org/10.48550/arxiv.2607.00245",
+     "source_name": "arXiv (Cornell University)",
+     "source_type": "препринт",
+     "published": "2026-06-30",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "препринт: без рецензирования, но с проверяемыми авторами",
+     "snippet": "Agent-to-Agent Finance: Blockchain Payments and Trust Infrastructure for Autonomous AI Agents. Autonomous artificial intelligence (AI) agents are beginning to occupy a position between analytical tools and transacting counterparties. They can interpret goals, call external tools, negotiate with other agents, access data and computation, and in some settings initiate payments or blockchain transactions. This development creates a distinct problem for financial markets: if software agents can act economically under delegated authority, market participants need infrastructure for identity, authorisation, payment, verification, reputation and accountability. This chapter develops the concept of ",
+     "extra": {}
+    },
+    {
+     "title": "Hyundai внедряет стейблкоины для трансграничных казначейских переводов",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxObG9mSHJQa0wzWVQ0NmFFX081VU5wODg5SjRoVW90RlJfVjFybHZ2c1hTcENZVUlVMHNvR1M2LWdFcDJKWHdRWUstV1d3dlJ2VjlYa2dmdWJTU2JCVVl3aFlqU0xiVDBFSUhpTXRxNE81S1pXNXZiYm0temwxNHBUSDYxY0tRaXFqYm41R2VxcVdDVmhuWjBmZWJORlpaSmxhM3A1SF9KRXVUeDRGbVVjakF0NkZhSmJRWThhZkRKRTlqZUJKQVNhaFNGbnE3Q2FKNXNfZ3hB?oc=5",
+     "source_name": "CoinDesk",
+     "source_type": "новости",
+     "published": "2026-07-10",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Cosmos Labs признала ошибку после атак на шесть блокчейнов",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVWtxUjllUElTa2tDTkRjNnFjb21OTnBlZE1qR2ZjNGVFVlB5Uk5LdmZHbXk4RGlqTTBQWGNLejhqMzJTRUk5S1REVmpoek5wREJTd1RkRE5nc0dGTFdLdmJDbl9WemFiTVI3Z0U1cjJ4ME5MSGJEUW15cU5sSkxoLWltZXEzTWVBUnVtTER6ckNMR2FEb2xIZ05vWXZaU0U?oc=5",
+     "source_name": "CryptoRank",
+     "source_type": "новости",
+     "published": "2026-08-30",
+     "language": "ru",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Coins in Motion: Building agentic blockchain payments for in-vehicle experiences",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMDZMN3JITWI4Q2lzbENINmRYMTRZWTlIVGdQTm8yRlR5WmoxTTk5QjFZN0o2T1JoRUxtSWZpVVFhNE51WkpmdTJvRGt2MlRUNWFNTFc5UERGY054NTFkTXVXUEQ0cHNYYk1qV1EyemFqTWNZRUJPeE9TZ0RTVDBaYnBWUEdHY05WX0RRcGh4N0FXdUFvOFl1TzNPUnkyaXdfcGotUzkzUl9QMkRhUUQ1eEpKYWx5eVVRRDlFSQ?oc=5",
+     "source_name": "aws.amazon.com",
+     "source_type": "новости",
+     "published": "2026-07-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Autonomous Machine Economies: Blockchain Payments for AI Agents",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE11eUtrTlgtOHNBcTdoMmlDdFZ6ckxuR2g1ZWV6Q0VaZC1hQ08wOVRkZGk1MDJGYnFHLVpJcnVyaW9hUUt3Y0Zmd3dvOGxoYlh3UGlmbEViQ2tCOTdwSFJQU3dtZFA3S28?oc=5",
+     "source_name": "Chainlink",
+     "source_type": "новости",
+     "published": "2026-05-15",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "Binance, PayPal, and Ripple join Mastercard’s massive new push into blockchain payments",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQUjExUG00U1hSZUNXNHNnaThzNHR5cks2cFA1Qkl4ZkNtM2g4YVhVNVZsZ081WFhmNExkMlNLVGNieWJQa19VM1ZpLUIxS29vZTZaUHA4ZmhnZnFPcEtWdnY0QV9wUGJ5VXRaUDJHX3YxdFRxNkFVZmN1RU5vdlJuX3JtQlBrWkJqZVpsZWE4ZHZlS3cwdlNjdWlqa1N2VzF2aFpXbDFQMnJSNUJWb3JtNGgtMm93X0s3eW03RVdENF9DSHA1TEhLOC13?oc=5",
+     "source_name": "CoinDesk",
+     "source_type": "новости",
+     "published": "2026-03-11",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "новостной источник без отраслевой специализации",
+     "snippet": "",
+     "extra": {}
+    },
+    {
+     "title": "xpaysh/awesome-x402: 🚀 Curated list of x402 resources: HTTP 402 Payment Required protocol for blockchain payments, crypto micropayments, AI agents, API monetization. Includes SDKs (TypeScript, Python,",
+     "url": "https://github.com/xpaysh/awesome-x402",
+     "source_name": "GitHub",
+     "source_type": "репозиторий",
+     "published": "2025-11-02",
+     "language": "en",
+     "trust": "средний",
+     "trust_reason": "код разработчика: подтверждает практическую реализацию",
+     "snippet": "",
+     "extra": {
+      "stars": 288
+     }
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "technology": "agentic ai",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 15929 публикаций, первые работы 15 лет назад"
+  },
+  {
+   "technology": "агент ИИ",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 26714 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "ci cd",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6472 публикаций, первые работы 11 лет назад"
+  },
+  {
+   "technology": "pci dss",
+   "score": 0.0,
+   "reason": "отраслевой стандарт или регуляторная рамка: по ТЗ не включается в слабые сигналы"
+  },
+  {
+   "technology": "financial ecosystems",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4923 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "explainable ai xai",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 11746 публикаций, первые работы 15 лет назад"
+  },
+  {
+   "technology": "algorithmic trading",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4490 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "digital finance",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8229 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Кредитование в DeFi",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4262 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "digital financial",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16391 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "financial landscape",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4453 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Верификация личности через NFT",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6935 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "платежи Digital",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 15205 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "API Rest",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6630 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "transaction fraud",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "платежи Operations",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "financial operations",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3810 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "digital transactions",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4428 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "комплаенс Regulatory",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 38790 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "протокол платежей",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "infrastructure cost",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "Автономные агенты закупок и цепей поставок, работающие в ERP/e-mail/м…",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16194 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "детекция Fraud",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 27018 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "options data",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "equity research",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "banking fraud",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "market data",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 18948 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "платежи Global",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "fund transfers",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "churn prediction",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3411 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "агент Multi",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 137964 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Многофакторная аутентификация",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3578 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "banking operations",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3858 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "personal finance",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4696 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "banking domain",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "financial data",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 30696 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "cr dito",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "financial fraud",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 7805 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "zero-knowledge proofs",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 6961 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "investment banking",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "behavioral analytics",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4903 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "banking account",
+   "score": 0.0,
+   "reason": "ниже порога новизны на первой ступени"
+  },
+  {
+   "technology": "financial literacy",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 45679 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "mobile banking",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 13368 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "graph neural",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 66453 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "customer trust",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9693 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "retail banking",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3453 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Биометрия в банках",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 9060 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "portfolio management",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 14640 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "квантовые вычисления",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 61182 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "card fraud",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5396 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "аутентификация User",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 12411 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "financial inclusion",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 39388 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "online banking",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 5823 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "transaction processing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 8768 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "synthetic dataset",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 31153 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "private equity",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 14234 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Protocols",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 11763 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "платежи Online",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 4411 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "stock market",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 115560 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "allows users",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 72172 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "bank accounts",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 10161 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "financial services",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 74276 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "credit card",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 20115 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "access control",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 69350 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "money transfers",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3310 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "batch processing",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 17447 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "безопасность Concerns",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 30675 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "Периферийные вычисления",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 66025 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "cost reduction",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 62019 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "emerging economies",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 59154 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "digital economy",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 60373 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "скоринг Risk",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 103398 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "long short-term",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 127866 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "random forest",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 306658 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "capital markets",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 61515 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "память Short Term",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 147208 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "crime prevention",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 16083 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "credit risk",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 35669 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "financial markets",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 110845 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "supply chains",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 354667 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "feature selection",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 128727 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "user interface",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 118651 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "financial institutions",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 99726 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "a share",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 3023770 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "natural resource",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 61598 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "commercial banks",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 55318 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "stock exchange",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 137152 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "social responsibility",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 157460 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "corporate social",
+   "score": 0.0,
+   "reason": "сформированное научное направление: 107277 публикаций, первые работы 16 лет назад"
+  },
+  {
+   "technology": "next js",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 7 лет"
+  },
+  {
+   "technology": "платежи Unified",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 10 лет"
+  },
+  {
+   "technology": "spring boot",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 9 лет"
+  },
+  {
+   "technology": "платежи Gateway",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 21 лет"
+  },
+  {
+   "technology": "quantitative finance",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 20 лет"
+  },
+  {
+   "technology": "node js",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 17 лет"
+  },
+  {
+   "technology": "ИИ-native банковские ядра",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 20 лет"
+  },
+  {
+   "technology": "платежи Fraud",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 7 лет"
+  },
+  {
+   "technology": "investment research",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 19 лет"
+  },
+  {
+   "technology": "идентичность Fraud",
+   "score": 0.0,
+   "reason": "зрелая технология: отдельная статья в Википедии существует 20 лет"
+  },
+  {
+   "technology": "claude code",
+   "score": 0.007,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "mcp server",
+   "score": 0.008,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "протокол моделей контекста",
+   "score": 0.002,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "инструменты LLM",
+   "score": 0.059,
+   "reason": "модель не относит к слабым сигналам (уверенность 6%)"
+  },
+  {
+   "technology": "financial ai",
+   "score": 0.271,
+   "reason": "модель не относит к слабым сигналам (уверенность 27%)"
+  },
+  {
+   "technology": "платежи Stablecoin",
+   "score": 0.225,
+   "reason": "модель не относит к слабым сигналам (уверенность 23%)"
+  },
+  {
+   "technology": "ai-powered fraud",
+   "score": 0.19,
+   "reason": "модель не относит к слабым сигналам (уверенность 19%)"
+  },
+  {
+   "technology": "shadcn ui",
+   "score": 0.058,
+   "reason": "модель не относит к слабым сигналам (уверенность 6%)"
+  },
+  {
+   "technology": "ai-driven fraud",
+   "score": 0.155,
+   "reason": "модель не относит к слабым сигналам (уверенность 15%)"
+  },
+  {
+   "technology": "KYC AML",
+   "score": 0.119,
+   "reason": "модель не относит к слабым сигналам (уверенность 12%)"
+  },
+  {
+   "technology": "python client",
+   "score": 0.005,
+   "reason": "модель не относит к слабым сигналам (уверенность 0%)"
+  },
+  {
+   "technology": "платежи upi",
+   "score": 0.008,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "AML KYC",
+   "score": 0.06,
+   "reason": "модель не относит к слабым сигналам (уверенность 6%)"
+  },
+  {
+   "technology": "платежи в криптовалюте",
+   "score": 0.066,
+   "reason": "модель не относит к слабым сигналам (уверенность 7%)"
+  },
+  {
+   "technology": "fintech app",
+   "score": 0.119,
+   "reason": "модель не относит к слабым сигналам (уверенность 12%)"
+  },
+  {
+   "technology": "fintech fraud",
+   "score": 0.097,
+   "reason": "модель не относит к слабым сигналам (уверенность 10%)"
+  },
+  {
+   "technology": "KYC Automated",
+   "score": 0.192,
+   "reason": "модель не относит к слабым сигналам (уверенность 19%)"
+  },
+  {
+   "technology": "trading bot",
+   "score": 0.337,
+   "reason": "модель не относит к слабым сигналам (уверенность 34%)"
+  },
+  {
+   "technology": "api client",
+   "score": 0.008,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "платежи Integration",
+   "score": 0.021,
+   "reason": "модель не относит к слабым сигналам (уверенность 2%)"
+  },
+  {
+   "technology": "платежи Stripe",
+   "score": 0.106,
+   "reason": "модель не относит к слабым сигналам (уверенность 11%)"
+  },
+  {
+   "technology": "fintech adoption",
+   "score": 0.229,
+   "reason": "модель не относит к слабым сигналам (уверенность 23%)"
+  },
+  {
+   "technology": "автоматизация комплаенс",
+   "score": 0.199,
+   "reason": "модель не относит к слабым сигналам (уверенность 20%)"
+  },
+  {
+   "technology": "real-time fraud",
+   "score": 0.031,
+   "reason": "модель не относит к слабым сигналам (уверенность 3%)"
+  },
+  {
+   "technology": "real-time threat",
+   "score": 0.01,
+   "reason": "модель не относит к слабым сигналам (уверенность 1%)"
+  },
+  {
+   "technology": "real-world banking",
+   "score": 0.047,
+   "reason": "модель не относит к слабым сигналам (уверенность 5%)"
+  },
+  {
+   "technology": "gateway integration",
+   "score": 0.025,
+   "reason": "модель не относит к слабым сигналам (уверенность 3%)"
+  },
+  {
+   "technology": "комплаенс AML",
+   "score": 0.184,
+   "reason": "модель не относит к слабым сигналам (уверенность 18%)"
+  },
+  {
+   "technology": "telegram bot",
+   "score": 0.022,
+   "reason": "модель не относит к слабым сигналам (уверенность 2%)"
+  },
+  {
+   "technology": "combines blockchain",
+   "score": 0.082,
+   "reason": "модель не относит к слабым сигналам (уверенность 8%)"
+  },
+  {
+   "technology": "transaction tracking",
+   "score": 0.052,
+   "reason": "модель не относит к слабым сигналам (уверенность 5%)"
+  },
+  {
+   "technology": "платежи Offline",
+   "score": 0.101,
+   "reason": "модель не относит к слабым сигналам (уверенность 10%)"
+  },
+  {
+   "technology": "платежи Infrastructure",
+   "score": 0.047,
+   "reason": "модель не относит к слабым сигналам (уверенность 5%)"
+  },
+  {
+   "technology": "prediction markets",
+   "score": 0.087,
+   "reason": "модель не относит к слабым сигналам (уверенность 9%)"
+  },
+  {
+   "technology": "децентрализованная идентичность",
+   "score": 0.078,
+   "reason": "модель не относит к слабым сигналам (уверенность 8%)"
+  },
+  {
+   "technology": "fintech sector",
+   "score": 0.035,
+   "reason": "модель не относит к слабым сигналам (уверенность 3%)"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+.git
+.venv
+.env
+**/__pycache__
+.pytest_cache
+data/cache
+data/openalex
+data/patents
+data/embeddings
+data/runs
+data/clusters
+data/signals
+data/signals_prev
+data/forecast
+data/*.log
+data/dataset/*.log
+data/wsignals.db
+вводные данные
+docs
+src
+tests
+node_modules

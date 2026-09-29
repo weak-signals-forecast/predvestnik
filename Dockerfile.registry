@@ -1,0 +1,23 @@
+# Контейнер базы слабых сигналов: поиск по базе (USER-bge-m3 на CPU) + выбор YandexGPT + ТОП-15 в формате ТЗ.
+# Корпус не нужен: всё для ответа — в artifacts/registry (python -m registry.bundle). Модель векторов скачивается
+# при сборке образа и дальше работает без интернета; интернет нужен только для YandexGPT.
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 HF_HOME=/models
+WORKDIR /app
+
+RUN pip install torch==2.* --index-url https://download.pytorch.org/whl/cpu
+COPY requirements-registry.txt .
+RUN pip install -r requirements-registry.txt
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('deepvk/USER-bge-m3')"
+ENV HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+
+COPY wsignals/__init__.py wsignals/intent.py ./wsignals/
+COPY registry_service ./registry_service
+COPY artifacts/registry ./artifacts/registry
+COPY web ./web
+
+EXPOSE 8010
+HEALTHCHECK --interval=15s --timeout=8s --start-period=120s --retries=8 \
+  CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8010/api/registry/health', timeout=6).status == 200 else 1)"
+CMD ["uvicorn", "registry_service.main:app", "--host", "0.0.0.0", "--port", "8010"]

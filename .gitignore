@@ -1,0 +1,51 @@
+# секреты и окружение
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+
+# кэш запросов к открытым источникам и локальная база
+data/cache/
+data/wsignals.db
+data/dataset/*.log
+ui/.streamlit/secrets.toml
+
+# сырые данные и тяжёлые производные: воспроизводятся через make ingest / embed / stabilize
+data/openalex/
+data/patents/
+data/embeddings/
+data/runs/
+data/signals_prev/
+data/*.log
+data/clusters/*
+!data/clusters/report.md
+!data/clusters/topics.csv
+!data/clusters/umap.png
+data/forecast/features_*.csv
+data/forecast/forecast.csv
+data/forecast/forecast_topics.csv
+data/signals/backtest_*.csv
+*.parquet
+*.npz
+
+# временные файлы Office
+~$*
+
+# материалы организаторов не публикуются в репозитории
+вводные данные/
+reports/*.txt
+reports/smoke_search.json
+data/docker_build.log
+
+# симлинк на виртуальное окружение, а не каталог
+.venv
+data/registry.db
+
+# набор данных контейнера базы сигналов (python -m registry.bundle) — нужен для docker compose, 6 МБ
+!artifacts/registry/*.parquet
+!artifacts/registry/*.npy
+!artifacts/registry/*.gz

@@ -1,0 +1,107 @@
+# Направления мониторинга. У каждого:
+#   cpc      - коды CPC для патентного слоя (Google Patents / Lens), пока не используются
+#   queries  - фразы для поиска по заголовку и аннотации в OpenAlex
+# Каждая фраза запрашивается отдельно, результаты объединяются и дедуплицируются по id.
+# Слова в двойных кавычках ищутся как точная фраза: без них OpenAlex ищет слова
+# по отдельности, и "pipeline digital twin" тянет цифровые двойники водопроводов.
+#
+#   relevance - фильтр релевантности на ингесте. Применяется к заголовку и аннотации
+#               (без аннотации: к заголовку и названию темы OpenAlex), без учёта регистра.
+#     all_of  - список групп-регексов, документ должен совпасть с каждой группой
+#               (без аннотации проверяется только первая группа по заголовку и теме OpenAlex)
+#     none_of - список регексов-исключений, любое совпадение выбрасывает документ
+
+hydrogen:
+  title: Водород и пиролиз метана
+  cpc:
+  - C01B3/
+  - C01B32/05
+  - C25B1/
+  - H01M8/
+  queries:
+  - methane pyrolysis hydrogen
+  - turquoise hydrogen
+  - blue hydrogen natural gas reforming
+  - hydrogen blending natural gas pipeline
+  - hydrogen embrittlement pipeline steel
+  - ammonia hydrogen carrier
+  relevance:
+    all_of:
+    - hydrogen|methane|natural gas|syngas|\bh2\b|\bch4\b
+    none_of:
+    - nitrate reduction|nitrate-to-ammonia|photocatalytic degradation|dye degradation|lithium[- ]ion|solar cell
+ccus_methane:
+  title: CCUS и мониторинг метановых утечек
+  cpc:
+  - B01D53/
+  - G01M3/
+  - G01N21/
+  - E21B41/0057
+  - Y02C20/
+  queries:
+  - '"CO2 capture" "natural gas"'
+  - '"carbon capture" "gas processing"'
+  - '"CO2 storage" "saline aquifer"'
+  - '"CO2 storage" "depleted gas"'
+  - '"methane emissions" "oil and gas"'
+  - '"methane" satellite "oil and gas"'
+  - '"methane leak" detection'
+  - '"direct air capture"'
+  relevance:
+    all_of:
+    - natural gas|methane|\bch4\b|oil and gas|oil & gas|\bgas (field|plant|processing|turbine|power|well|flar)|flue gas|co2 (capture|storage|sequestration|removal|adsorption|absorption)|carbon
+      (capture|dioxide capture|removal)|direct air capture|\bdac\b|saline aquifer|geological storage|\bccs\b|\bccus\b
+    none_of:
+    - ruminant|cattle|livestock|manure|rice paddy|enteric
+lng_gaschem:
+  title: СПГ и малотоннажная газохимия
+  cpc:
+  - F25J1/
+  - F25J3/
+  - C07C29/15
+  - C01C1/04
+  - C10G2/
+  queries:
+  - small-scale LNG liquefaction
+  - floating LNG
+  - gas to liquids Fischer-Tropsch
+  - methanol from natural gas
+  - ammonia synthesis natural gas
+  - boil-off gas LNG
+  relevance:
+    all_of:
+    - \blng\b|liquefied natural gas|natural gas|methane|\bch4\b|syngas|synthesis gas|fischer|boil-off|gas-to-liquid|\bgtl\b|\bflng\b|liquefaction|cryogenic|regasification|\bfsru\b|natural
+      gas liquids|\bngl\b|gas processing|gas turbine|methanol (synthesis|production|plant|economy|fuel|reactor|yield|selectivity)|methanol-to|methanol
+      to (olefin|gasoline|jet|hydrogen|dme)|gas-to-methanol|methane-to-methanol|methane to methanol|dimethyl ether|\bdme\b|\be-?methanol\b|renewable
+      methanol|green methanol|ammonia (synthesis|production|plant|cracking|decomposition|carrier|fuel|economy)|green ammonia|blue ammonia|haber
+    none_of:
+    - aneurysm|blood|clinical|patients
+    - antioxidant|phytochemical|flavonoid|phenolic (content|compound)|(plant|leaf|leaves|methanol|methanolic|ethanol|ethanolic|aqueous|crude|bark|root|seed|fruit)
+      extract|anti-?cancer|anti-?inflammatory|antimicrobial activity|antibacterial activity|medicinal plant|pharmacolog|cytotoxic|bioactive compound|essential
+      oil|in silico|molecular docking|traditional medicine|ethnobotan
+pipelines:
+  title: 'Трубопроводы: коррозия, мониторинг, цифровые двойники'
+  cpc:
+  - F17D5/
+  - F16L58/
+  - F16L55/
+  - C23F13/
+  - G01N27/
+  - G01N29/
+  queries:
+  - '"pipeline corrosion"'
+  - '"in-line inspection" pipeline'
+  - '"distributed fiber optic" pipeline'
+  - '"distributed acoustic sensing" pipeline'
+  - '"pipeline" "digital twin" gas'
+  - '"gas pipeline" leak detection'
+  - '"cathodic protection" pipeline'
+  relevance:
+    all_of:
+    - pipeline|\bpipes?\b|piping|\btubing\b|gas transmission|gas distribution|gas network
+    - \bgas\b|\boil\b|petroleum|hydrocarbon|crude|\blng\b|hydrogen|corrosion|in-line inspection|\bili\b|\bpig(ging|s)?\b|cathodic|steel|x52|x60|x65|x70|x80|x100|api
+      5l|girth weld|distributed (acoustic|fiber|fibre|optical)|\bdas\b|magnetic flux leakage|\bmfl\b|guided wave|third-party|stress corrosion|hydrogen
+      embrittlement|compressor station|scada
+    none_of:
+    - aneurysm|artery|blood|vascular|sewer|wastewater|water supply|water distribution|drinking water|dormitor|data pipeline|machine learning pipeline|processing
+      pipeline|analysis pipeline|software pipeline

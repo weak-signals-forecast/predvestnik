@@ -1,0 +1,14 @@
+# Минимум для юнит-тестов правил в CI: без torch, UMAP и BigQuery.
+requests
+python-dotenv
+pyyaml
+numpy
+pandas
+scipy
+scikit-learn
+pytest
+# API и хранилище: без них tests/test_api_smoke.py, test_wall_budget.py и test_release_finish.py
+# не собираются или пропускаются. Версии — те же, что в requirements-service.txt.
+fastapi==0.141.*
+pydantic==2.*
+sqlalchemy==2.0.*
