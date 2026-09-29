@@ -193,7 +193,7 @@ function localSearch(q) {
     .sort((a, b) => b.hit - a.hit || b.s * (0.6 + 0.4 * b.e.card.strength) - a.s * (0.6 + 0.4 * a.e.card.strength));
   const cards = scored.slice(0, 40).map((x) => x.e.card);
   if (!cards.length) {
-    status.innerHTML = `<div class="note">По запросу «${esc(q)}» в демонстрационной выборке ничего не нашлось. ` +
+    status.innerHTML = `<div class="note">По запросу «${esc(q)}» ничего не нашлось. ` +
       `На этом стенде нет живого поиска по всей базе — попробуйте другие слова или один из примеров выше.</div>`;
     return;
   }
@@ -201,7 +201,7 @@ function localSearch(q) {
   status.innerHTML = `<p><b>ТОП-${Math.min(TOP, cards.length)}</b> по запросу «${esc(q)}» — подобраны по словам запроса ` +
     `и упорядочены по совпадению и силе сигнала` +
     (cards.length > TOP ? `; ниже — ещё ${cards.length - TOP} по теме` : "") + `.</p>` +
-    (partial ? `<div class="note">Точного совпадения со всеми словами запроса в выборке нет — показаны ближайшие ` +
+    (partial ? `<div class="note">Точного совпадения со всеми словами запроса нет — показаны ближайшие ` +
       `по части слов.</div>` : "") +
     `<div class="note">Это стенд без живого поиска: YandexGPT здесь запрос не разбирает, а полная база ` +
     `(${fmt(DATA.registry_size)} технологий) доступна в развёрнутом сервисе.</div>`;
