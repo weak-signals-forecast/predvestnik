@@ -404,8 +404,8 @@ class Registry:
         strength = float(cand.strength.get(i, 0.0))
         explain = c.get("explain") or []
         num = lambda v: ("+" if v >= 0 else "−") + f"{abs(v):.2f}".replace(".", ",")
-        explanation = (f"Сила сигнала {round(strength * 100)} из 100 (итоговый балл двух моделей; кандидатов по запросу: {len(cand)}) "
-                       f"по запросу). Главные вклады в балл экспертной модели (SHAP): " +
+        explanation = (f"Сила сигнала {round(strength * 100)} из 100 (итоговый балл двух моделей; кандидатов по запросу: {len(cand)}). "
+                       f"Главные вклады в балл экспертной модели (SHAP): " +
                        "; ".join(f"{x['label'][:1].lower() + x['label'][1:]} {num(x['value'])}" for x in explain[:5]) + ".") if explain else ""
         txt = lambda f: (c.get(f) or {}).get("text") if isinstance(c.get(f), dict) else None
         return {
