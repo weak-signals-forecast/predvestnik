@@ -55,7 +55,7 @@ def _lines(path: str):
         return
 
 
-ARXIV_SETS = ("cs", "stat", "eess", "q-fin", "econ", "quant-ph")   # порядок = приоритет владельца
+ARXIV_SETS = ("cs", "stat", "eess", "q-fin", "econ", "quant-ph", "cond-mat", "physics", "q-bio")   # порядок = приоритет владельца
 
 
 def _arxiv_cats(cats) -> list[str]:
