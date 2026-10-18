@@ -1,6 +1,7 @@
 """Модель слабого сигнала по экспертной разметке: градиентный бустинг и разложение балла по признакам (SHAP).
 
-    python -m registry.expert_model          # сравнение с логистической регрессией, обучение, SHAP
+    python -m registry.expert_model [--axes]  # сравнение с логистической регрессией, обучение, SHAP
+    --axes: плюс оси слабости (registry/axes.py); результат с суффиксом _axes, прежние файлы не трогаются
 
 Итоговая модель — градиентный бустинг (по качеству наравне с регрессией: ROC AUC 0,78 против 0,80 — в пределах
 разброса), потому что его балл раскладывается по признакам точно (SHAP, TreeExplainer): вклад каждого признака в
@@ -20,11 +21,16 @@ import joblib
 import numpy as np
 import pandas as pd
 
+from .axes import AXES
 from .corpus import REGISTRY as REG
 from .ranker import FEATURES
 
 EXTRA = ["first_year", "theory_share", "academic_share"]
 ALL = FEATURES + EXTRA
+WITH_AXES = "--axes" in sys.argv
+SUFFIX = "_axes" if WITH_AXES else ""
+if WITH_AXES:
+    ALL = ALL + AXES
 
 
 def table() -> pd.DataFrame:
@@ -35,6 +41,11 @@ def table() -> pd.DataFrame:
     r["first_year"] = first_year(r.key)
     r["theory_share"] = theory_share(r.key)
     r["academic_share"] = rubric_share(r.key, ACADEMIC_RUBRICS)
+    if WITH_AXES:
+        from . import axes
+        r = r.merge(axes.load(REG)[["key"] + AXES], on="key", how="left")
+        r["layer_lag_hn"] = r.layer_lag_hn.fillna(-1)
+        r["layer_lag_market"] = r.layer_lag_market.fillna(-1)
     return r
 
 
@@ -86,13 +97,13 @@ def main() -> int:
     oof = np.zeros(len(y))
     for tr, te in StratifiedKFold(5, shuffle=True, random_state=0).split(X, y):
         oof[te] = models()[best].fit(X.iloc[tr], y[tr]).predict_proba(X.iloc[te])[:, 1]
-    d[["key", "phrase", "y"]].assign(oof=oof).to_csv(REG / "expert_oof.csv", index=False)
+    d[["key", "phrase", "y"]].assign(oof=oof).to_csv(REG / f"expert_oof{SUFFIX}.csv", index=False)
     m = models()[best].fit(X, y)
-    joblib.dump({"model": m, "features": ALL, "name": best}, REG / "expert_model.joblib")
+    joblib.dump({"model": m, "features": ALL, "name": best}, REG / f"expert_model{SUFFIX}.joblib")
     r["expert_p"] = m.predict_proba(r[ALL].astype(float))[:, 1]
-    r[["key", "phrase", "expert_p"] + ALL].to_parquet(REG / "expert_scored.parquet")
+    r[["key", "phrase", "expert_p"] + ALL].to_parquet(REG / f"expert_scored{SUFFIX}.parquet")
     shap_values(m, r)
-    print(f"итоговая: {best} -> expert_model.joblib, expert_scored.parquet ({len(r)} кандидатов), expert_shap.parquet")
+    print(f"итоговая: {best} -> expert_model{SUFFIX}.joblib, expert_scored{SUFFIX}.parquet ({len(r)} кандидатов)")
     return 0
 
 
@@ -109,7 +120,7 @@ def shap_values(m, r: pd.DataFrame) -> None:
     out = pd.DataFrame(sv, columns=ALL)
     out.insert(0, "key", sub.key.values)
     out["base_value"] = float(np.ravel(ex.expected_value)[-1])
-    out.to_parquet(REG / "expert_shap.parquet")
+    out.to_parquet(REG / f"expert_shap{SUFFIX}.parquet")
     Xv = sub[ALL].astype(float)
     glob = []
     for j, f in enumerate(ALL):
@@ -118,15 +129,16 @@ def shap_values(m, r: pd.DataFrame) -> None:
         corr = float(np.corrcoef(v[ok], sv[ok, j])[0, 1]) if ok.sum() > 2 and np.std(v[ok]) > 0 else 0.0
         glob.append({"feature": f, "mean_abs": float(np.abs(sv[:, j]).mean()), "direction": corr})
     glob.sort(key=lambda x: -x["mean_abs"])
-    (REG / "expert_shap_global.json").write_text(json.dumps(glob, ensure_ascii=False, indent=1), encoding="utf-8")
+    (REG / f"expert_shap_global{SUFFIX}.json").write_text(json.dumps(glob, ensure_ascii=False, indent=1), encoding="utf-8")
     try:                                                  # картинка для презентации
         import matplotlib
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
+        from .axes import LABELS as AXES_LABELS
         from .export_web import LABELS
-        shap.summary_plot(sv, Xv.rename(columns=lambda c: LABELS.get(c, c)), show=False, max_display=15)
+        shap.summary_plot(sv, Xv.rename(columns=lambda c: {**LABELS, **AXES_LABELS}.get(c, c)), show=False, max_display=18)
         plt.tight_layout()
-        plt.savefig(REG / "expert_shap_beeswarm.png", dpi=160)
+        plt.savefig(REG / f"expert_shap_beeswarm{SUFFIX}.png", dpi=160)
         plt.close()
     except Exception as e:
         print("картинка SHAP не построена:", str(e)[:120])

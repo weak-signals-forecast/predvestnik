@@ -135,13 +135,16 @@ async function liveSearch(q) {
     advantage: s.advantage ? { text: s.advantage, generated: true } : null,
     case: s.case ? { text: s.case, generated: true } : null,
     passport: s.passport, verification: s.verification, kind: s.kind, explain_rule: s.explain_rule,
+    axes: s.axes || null, parent_note: s.parent_note || null, subsignals: s.subsignals || [],
     sources: (s.sources || []).map((x) => ({ title: x.title, url: x.url, source_name: x.name, published: x.date,
       source_type: x.type, language: x.language, trust: x.trust })),
   }));
   status.innerHTML = `<p><b>ТОП-${Math.min(TOP, cards.length)}</b> по запросу «${esc(d.query)}»` +
     (d.area ? ` (область: ${esc(d.area)})` : "") + ` — найдены в базе из ${fmt(d.meta.base_size)} слабых сигналов, ` +
     `отобраны ${d.mode.startsWith("выбор") ? "YandexGPT" : "по силе сигнала"} и упорядочены по силе сигнала` +
-    (cards.length > TOP ? `; ниже — ещё ${cards.length - TOP} по теме` : "") + `.</p>`;
+    (cards.length > TOP ? `; ниже — ещё ${cards.length - TOP} по теме` : "") + `.</p>` +
+    (d.excluded && d.excluded.length ? `<div class="note"><b>Исключено из выдачи:</b> ` +
+      d.excluded.map((x) => `${esc(x.name || x.term_en)} — ${esc(x.reason)}`).join("; ") + `.</div>` : "");
   renderList(list, cards);
 }
 
@@ -398,6 +401,8 @@ function cardHtml(c) {
         <div class="panel"><h4>Почему ранняя стадия</h4>
           ${p.why_early ? `<p>${esc(p.why_early)}</p>` : ""}
           ${where ? `<p class="small"><b>Где найден:</b> ${esc(where)}</p>` : ""}
+          ${c.parent_note ? `<p class="small"><b>Родитель:</b> ${esc(c.parent_note)}</p>` : ""}
+          ${c.subsignals && c.subsignals.length ? `<p class="small"><b>Подсигналы направления:</b> ${c.subsignals.map((x) => esc(x.name || x.term_en)).join("; ")}</p>` : ""}
           ${p.doubt ? `<p class="small"><b>Чего пока не знаем:</b> ${esc(p.doubt)}</p>` : ""}</div>
         <div class="panel"><h4>Зачем бизнесу</h4>
           ${c.advantage && c.advantage.text ? `<p><b>Какую проблему решает.</b> ${esc(c.advantage.text)}</p>` : ""}
@@ -427,6 +432,7 @@ function cardHtml(c) {
         </section>
         <section class="wide">
           <h3>Почему такой балл ранжирования</h3>
+          ${axesBars(c.axes)}
           ${explainSentence(c)}
           ${c.explain && c.explain.length ? waterfall(c.explain) : (c.explain_rule ? `<p>${esc(c.explain_rule)}</p>` : "")}
           <p class="muted" style="font-size:13px;margin:8px 0 0">Как читать: от средней технологии каждый признак сдвигает балл — зелёный вверх, красный вниз; последняя строка — итог. Вклады посчитаны методом SHAP для модели, обученной на ≈1 000 размеченных технологиях; наведите на признак, чтобы увидеть его значение.</p>
@@ -582,6 +588,20 @@ function ladderView(ladder) {
 function step(s) {
   const cls = s.present === true ? "on" : s.present === false ? "off" : "na";
   return `<div class="step ${cls}"><b>${esc(s.layer)}</b>${esc(s.value)}</div>`;
+}
+
+// оси слабости (версия 2 порядка): полоски 0–100 по тем же стилям, что балл в строке
+function axesBars(a) {
+  if (!a) return "";
+  const items = [["Новое, а не улучшение известного", a.incremental == null ? null : 1 - a.incremental,
+                  "Чем выше, тем дальше кандидат от зрелой родительской технологии"],
+                 ["Ранняя стадия S-кривой", a.stage_early, "Ускорение роста доли работ: выше — до перегиба"],
+                 ["Только в науке", a.layer_early, "1 — следов в сообществе, стартапах и прессе ещё нет"],
+                 ["Новизна текста работ", a.novelty, "Расстояние свежих работ до всего, что писали раньше"]]
+    .filter(([, v]) => v != null);
+  if (!items.length) return "";
+  return `<div class="axes">${items.map(([t, v, tip]) => `<div class="axis" title="${esc(tip)}"><span class="axis-name">${esc(t)}</span>` +
+    `<div class="meter"><div class="fill" style="width:${Math.round(v * 100)}%"></div></div><span class="val">${Math.round(v * 100)}</span></div>`).join("")}</div>`;
 }
 
 function textBlock(title, t) {
