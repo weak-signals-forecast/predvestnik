@@ -61,6 +61,7 @@ async function renderTimeMachine() {
     if (!r.ok) return;
     t = await r.json();
   } catch { return; }
+  renderTimeMachineTopics();
   const pct = (v) => (v < 0.1 ? `${(v * 100).toFixed(1).replace(".", ",")} %` : `${Math.round(v * 100)} %`);
   const num1 = (v) => String(v).replace(".", ",");
   const market = (m) => [m.yc ? `стартапов YC: ${m.yc}` : "", m.press ? `пресса: ${m.press}` : "",
@@ -74,6 +75,33 @@ async function renderTimeMachine() {
     `<ul class="src">${t.items.map((x) => `<li>${x.takeoff ? "✅" : "▫️"} <b>${esc(x.term)}</b>` +
       `<div class="meta">работ в arXiv: ${fmt(x.docs_then)} в ${t.cutoff - 2}–${t.cutoff} → ${fmt(x.docs_later)} в ${esc(t.future)}; ` +
       `доля выросла в ${num1(x.growth)} раза; после ${t.cutoff}: ${esc(market(x.market_after))}</div></li>`).join("")}</ul>`;
+}
+
+// машины времени по темам (registry/time_machine_topic.py): срез, тема, опережение в годах
+async function renderTimeMachineTopics() {
+  let idx;
+  try {
+    const r = await fetch("data/time_machine_index.json", { cache: "no-store" });
+    if (!r.ok) return;
+    idx = await r.json();
+  } catch { return; }
+  const box = $("#time-machine");
+  for (const it of idx.items || []) {
+    let t;
+    try { t = await (await fetch(`data/${it.file}`, { cache: "no-store" })).json(); } catch { continue; }
+    const pct = (v) => `${Math.round(v * 100)} %`;
+    const lead = t.mean_lead != null ? `Из них стали массовыми ${t.n_mass}, в среднем через ${String(t.mean_lead).replace(".", ",")} года после среза: ` +
+      `система показала бы их за ${String(t.mean_lead).replace(".", ",")} года до массовости.` : "Ни одна пока не стала массовой.";
+    const div = document.createElement("div");
+    div.innerHTML = `<h4>Срез ${t.cutoff}, тема «${esc(t.title)}»</h4>` +
+      `<p>Реестр собран по данным до конца ${t.cutoff} года; ${esc(t.how)}. Тема задана группами корпуса (${t.groups.map(esc).join(", ")}), ` +
+      `а не списком слов. <b>Из топ-${t.top} взлетели ${pct(t.top_rate)} против ${pct(t.base_rate)} среди ${fmt(t.pool)} кандидатов темы.</b> ${lead}</p>` +
+      `<ul class="src">${t.items.map((x) => `<li>${x.takeoff ? "✅" : "▫️"} <b>${esc(x.term)}</b>` +
+        `<div class="meta">работ: ${fmt(x.docs_then)} в ${t.cutoff - 2}–${t.cutoff} → ${fmt(x.docs_later)} в ${esc(t.future)}` +
+        `${x.mass_year ? `; массовой стала в ${x.mass_year} (опережение ${x.lead_years} г.)` : "; массовой пока не стала"}` +
+        `${x.incremental ? `; улучшение известного: ${esc(x.parent || "")}` : ""}</div></li>`).join("")}</ul>`;
+    box.appendChild(div);
+  }
 }
 
 function globalBlock(title, g) {
@@ -136,7 +164,7 @@ async function liveSearch(q) {
     case: s.case ? { text: s.case, generated: true } : null,
     passport: s.passport, verification: s.verification, kind: s.kind, explain_rule: s.explain_rule,
     axes: s.axes || null, parent_note: s.parent_note || null, subsignals: s.subsignals || [],
-    abstract: s.abstract || null,
+    abstract: s.abstract || null, confidence: s.confidence == null ? null : s.confidence,
     sources: (s.sources || []).map((x) => ({ title: x.title, url: x.url, source_name: x.name, published: x.date,
       source_type: x.type, language: x.language, trust: x.trust })),
   }));
@@ -144,6 +172,8 @@ async function liveSearch(q) {
     (d.area ? ` (область: ${esc(d.area)})` : "") + ` — найдены в базе из ${fmt(d.meta.base_size)} слабых сигналов, ` +
     `отобраны ${d.mode.startsWith("выбор") ? "YandexGPT" : "по силе сигнала"} и упорядочены по силе сигнала` +
     (cards.length > TOP ? `; ниже — ещё ${cards.length - TOP} по теме` : "") + `.</p>` +
+    (d.stats ? `<p class="small muted">Кандидатов по запросу: ${fmt(d.stats.candidates)}; исключено с причиной: ${d.stats.excluded}; ` +
+      `показано: ${d.stats.shown}; источников у показанных: ${fmt(d.stats.sources)}; с уверенностью модели выше 75 %: ${d.stats.confident_75}.</p>` : "") +
     (d.excluded && d.excluded.length ? `<div class="note"><b>Исключено из выдачи:</b> ` +
       d.excluded.map((x) => `${esc(x.name || x.term_en)} — ${esc(x.reason)}`).join("; ") + `.</div>` : "");
   renderList(list, cards);
@@ -435,6 +465,7 @@ function cardHtml(c) {
         </section>
         <section class="wide">
           <h3>Почему такой балл ранжирования</h3>
+          ${c.confidence != null ? `<p class="small"><b>Уверенность модели:</b> ${Math.round(c.confidence * 100)} % — калиброванная вероятность того, что эксперт признал бы запись слабым сигналом (по разметке 1 026 записей); балл ранжирования выше — порядок среди записей базы, не вероятность.</p>` : ""}
           ${axesBars(c.axes)}
           ${explainSentence(c)}
           ${c.explain && c.explain.length ? waterfall(c.explain) : (c.explain_rule ? `<p>${esc(c.explain_rule)}</p>` : "")}

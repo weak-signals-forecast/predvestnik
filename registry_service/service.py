@@ -202,6 +202,8 @@ class Registry:
         self.select_cache = self._load_jsonl("select_cache.jsonl", lambda x: (x["query"], x["phrase"]))
         # извлечённые моделью факты по записям базы (registry/llm_axes.py): родитель, механизм, тип, абстракт
         self.llm_axes = self._load_jsonl("llm_axes.jsonl", lambda x: x["key"]) if RANK_V2 else {}
+        cal_p = BUNDLE / "calibration.json"                 # балл → калиброванная вероятность (registry/calibrate.py)
+        self.calibration = json.loads(cal_p.read_text(encoding="utf-8")) if RANK_V2 and cal_p.exists() else None
         hy = CACHE_DIR / "hyde.json"
         self.hyde_cache = json.loads(hy.read_text(encoding="utf-8")) if hy.exists() else {}
 
@@ -437,8 +439,11 @@ class Registry:
                     continue
                 shown.append(i)
                 more.append({**self.card(query, i, len(shown), ext), "unverified": True})
+        confident = sum(1 for s_ in signals + more if (s_.get("confidence") or 0) > 0.75)
         return {"query": query, "area": area, "mode": mode, "signals": signals, "more": more,
                 "excluded": excluded, "ranking": "v2" if RANK_V2 else "v1",
+                "stats": {"candidates": len(cand), "excluded": len(excluded), "shown": len(signals) + len(more),
+                          "confident_75": confident, "sources": sum(len(s_.get("sources") or []) for s_ in signals + more)},
                 "meta": {"candidates": len(cand), "base_size": len(self.sig), "llm_calls": usage["calls"],
                          "llm_tokens": usage["tokens"], "llm_errors": usage["errors"][:3],
                          "took_s": round(time.time() - t0, 1)}}
@@ -453,7 +458,8 @@ class Registry:
             row = self._row(i)
             strength = rank.weakness(row)
             v2 = {"axes": rank.axes_view(row), "parent_note": rank.parent_note(row),
-                  "subsignals": [{"term_en": self.ph[j], "name": self.sig.name_ru[j]} for j in (subs or [])]}
+                  "subsignals": [{"term_en": self.ph[j], "name": self.sig.name_ru[j]} for j in (subs or [])],
+                  "confidence": rank.confidence(row, self.calibration)}
             la = self.llm_axes.get(k) or {}
             if la.get("abstract") and la.get("quote_ok"):      # абстракт печатается только с проверенной цитатой
                 v2["abstract"] = {"text": la["abstract"], "mechanism": la.get("mechanism"), "quote": la.get("quote"),

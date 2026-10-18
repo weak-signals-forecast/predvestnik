@@ -133,3 +133,15 @@ def axes_view(row: dict) -> dict:
         "weakness": weakness(row),
     }
     return {k: (round(v, 3) if isinstance(v, float) else v) for k, v in out.items()}
+
+
+def confidence(row: dict, table: dict | None) -> float | None:
+    """Калиброванная вероятность «эксперт признал бы слабым сигналом» по таблице registry/calibrate.py,
+    округлённая до 0,05 (разметка небольшая, точнее нечестно). None — без таблицы или без балла с осями."""
+    if not table:
+        return None
+    p = _f(row.get("expert_p_axes"))
+    if p != p:
+        return None
+    v = float(np.interp(min(max(p, 0.0), 1.0), table["x"], table["y"]))
+    return round(round(v / 0.05) * 0.05, 2)
