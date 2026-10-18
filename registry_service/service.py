@@ -375,8 +375,8 @@ class Registry:
     def _order(self, t: pd.DataFrame) -> pd.Series:
         """Порядок кандидатов. v1: половина близости, половина балла, ярус 1 разметки первым.
         v2: близость × слабость (оси, без эшелона) — registry_service/rank.py."""
-        if RANK_V2:
-            return rank.order(t, t.relevance, self.axes)
+        if RANK_V2:                                   # близость именно к запросу, без примеси доли рубрик области
+            return rank.order(t, t.rel_query if "rel_query" in t else t.relevance, self.axes)
         tier = t.tier.fillna(2) - 1 if "tier" in t else 0
         return 0.5 * t.relevance.rank(pct=True) + 0.5 * t.expert - tier
 
