@@ -19,14 +19,14 @@ def test_parent_found_for_tail_and_without_first_word():
     p = axes.parent_axis(a, docs_now, cutoff=2026)
     assert p.parent[2] == "quantization"            # самый объёмный из зрелых родителей
     assert p.parent[1] == "quantization"
-    assert p.parent[3] is None and np.isnan(p.incremental_lex[3])
+    assert pd.isna(p.parent[3]) and np.isnan(p.incremental_lex[3])
     assert p.incremental_lex[2] > p.incremental_lex[1] > 0
 
 
 def test_parent_must_be_mature():
     a = pd.DataFrame({"phrase": ["young parent", "child of young parent"], "first_year": [2024, 2025]})
     p = axes.parent_axis(a, np.array([5000.0, 10.0]), cutoff=2026)
-    assert p.parent[1] is None                       # родитель моложе cutoff−PARENT_AGE — не зрелый
+    assert pd.isna(p.parent[1])                      # родитель моложе cutoff−PARENT_AGE — не зрелый
 
 
 def test_stage_axis_accel_and_peak():
@@ -81,6 +81,6 @@ def test_compute_end_to_end(tmp_path):
     out = axes.compute(tmp_path, cutoff=2026)
     assert list(out.key) == phrases
     assert out.parent[1] == "language models" and out.incremental_lex[1] > 3
-    assert out.parent[2] is None
+    assert pd.isna(out.parent[2])
     assert out.stage_recent_share[1] == 1.0
     assert set(axes.AXES) <= set(out.columns)

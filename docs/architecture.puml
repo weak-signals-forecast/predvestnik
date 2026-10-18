@@ -1,0 +1,57 @@
+@startuml
+' Предвестник — архитектура: сбор по расписанию → сборка базы → сервис ответа. PlantUML, рендер: plantuml docs/architecture.puml
+skinparam componentStyle rectangle
+skinparam defaultFontName Arial
+
+package "1. Сбор (по расписанию, сервер)" {
+  [OpenAlex\nподобласти × годы] as OA
+  [arXiv OAI\ncs, stat, eess, q-fin, econ,\nquant-ph, cond-mat] as AX
+  [HF Daily Papers] as HF
+  [Hacker News, YC,\nпресса, CORDIS, Wikipedia] as BIZ
+  database "~/gpb_corpus\njsonl.gz" as CORPUS
+  OA --> CORPUS
+  AX --> CORPUS
+  HF --> CORPUS
+  BIZ --> CORPUS
+}
+
+package "2. Сборка базы (registry/)" {
+  [build: фразы, сущности,\nряды по годам] as BUILD
+  [score: показатели,\nкандидаты] as SCORE
+  [business: слой рынка] as BUS
+  [axes: родитель, S-кривая,\nпереход слоёв, стандарт] as AXES
+  [embed_docs + predecessors:\nвекторы, новизна документов] as DOC
+  [expert_model (GBM, разметка)\nhistory_model (GBM, метка из будущего)\nSHAP] as MODELS
+  [llm_assess / llm_axes:\nназвания, описания, родитель,\nмеханизм, тип, абстракт (кэш)] as LLMOFF
+  [bundle → artifacts/registry] as BUNDLE
+  CORPUS --> BUILD
+  BUILD --> SCORE
+  CORPUS --> BUS
+  SCORE --> AXES
+  BUS --> AXES
+  CORPUS --> DOC
+  DOC --> AXES
+  AXES --> MODELS
+  MODELS --> LLMOFF
+  LLMOFF --> BUNDLE
+}
+
+package "3. Ответ на запрос (registry_service/)" {
+  database "PostgreSQL\nregistry_signals, actors, runs" as PG
+  [service: запрос → вектор (USER-bge-m3)\n→ ближайшие → порядок близость × слабость\n→ исключения с причиной → карточка] as SVC
+  [YandexGPT Pro:\nпо теме ли, цитата (кэш)] as LLMON
+  [Витрина web/] as WEB
+  BUNDLE --> PG
+  BUNDLE --> SVC
+  SVC <--> LLMON
+  SVC --> PG
+  SVC --> WEB
+}
+
+package "Проверка" {
+  [Машина времени: срезы 2017 и 2021,\nметка из будущего] as TM
+  [Отложенные запросы:\nручная оценка ТОП-10] as EVAL
+  MODELS ..> TM
+  SVC ..> EVAL
+}
+@enduml

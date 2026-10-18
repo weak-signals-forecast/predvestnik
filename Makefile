@@ -5,7 +5,31 @@
 PY := .venv/bin/python
 Q ?= слабые сигналы в кибербезопасности
 
-.PHONY: dataset train timemachine-collect timemachine takeoff takeoff-score search api ui up down test-service
+.PHONY: dataset train timemachine-collect timemachine takeoff takeoff-score search api ui up down test-service \
+        registry-build registry-score registry-axes registry-models registry-bundle registry-serve eval-queries test
+
+# ---------------------------------------------------------------------------------------------
+# База слабых сигналов (registry/ → artifacts/registry → registry_service). Корпус: GPB_CORPUS, реестр: GPB_REGISTRY.
+GPB_CORPUS ?= $(HOME)/gpb_corpus
+GPB_REGISTRY ?= $(GPB_CORPUS)/registry
+REG_ENV = GPB_CORPUS=$(GPB_CORPUS) GPB_REGISTRY=$(GPB_REGISTRY)
+
+registry-build:   ## словарь фраз, сущности, ряды по годам (нужен корпус; часы)
+	$(REG_ENV) $(PY) -m registry.build all
+registry-score:   ## показатели фраз и кандидаты + бизнес-слой
+	$(REG_ENV) $(PY) -m registry.score && $(REG_ENV) $(PY) -m registry.business
+registry-axes:    ## оси слабости: родитель, S-кривая, переход слоёв, стандарт -> axes.parquet
+	$(REG_ENV) $(PY) -m registry.axes
+registry-models:  ## экспертная и историческая модели с осями (нужны expert_labels.csv и registry_2021)
+	$(REG_ENV) $(PY) -m registry.expert_model --axes && $(REG_ENV) $(PY) -m registry.history_model --axes
+registry-bundle:  ## набор данных для сервиса: artifacts/registry (bundle) + оси базы (bundle axes)
+	$(REG_ENV) $(PY) -m registry.bundle && $(REG_ENV) $(PY) -m registry.bundle axes
+registry-serve:   ## сервис базы сигналов с порядком v2 на http://localhost:8010
+	REGISTRY_RANK_V2=1 $(PY) -m uvicorn registry_service.main:app --port 8010
+eval-queries:     ## отложенные запросы через сервис -> таблица для ручной оценки
+	$(PY) scripts/eval_queries.py --queries $(QUERIES) --out $(OUT)
+test:             ## юнит-тесты без сети и без корпуса
+	$(PY) -m pytest -q tests
 
 dataset:          ## признаки 298 технологий из открытых источников (кэшируется в data/cache)
 	$(PY) -m wsignals.dataset
@@ -44,54 +68,52 @@ test-service:     ## тесты сервиса без сети
 	$(PY) -m pytest -q tests/test_wsignals.py
 
 # ---------------------------------------------------------------------------------------------
-# Исследовательский прототип (первая версия): корпус OpenAlex, кластеризация, прогноз на 2029–2031
+# Исследовательский прототип (первая версия, legacy/): корпус OpenAlex, кластеризация, прогноз на 2029–2031.
+# В сервисе не используется, см. legacy/README.md
 FROM ?= 2015-01-01
 SEEDS ?= 5
 
 .PHONY: setup ingest patents embed cluster terms signals stabilize backtest forecast dashboard test all clean
 
 setup:            ## виртуальное окружение и зависимости
-	python3 -m venv .venv && .venv/bin/pip install -q -r requirements.txt
+	python3 -m venv .venv && .venv/bin/pip install -q -r legacy/requirements.txt
 	@test -f .env || cp .env.example .env
 	@echo "Впишите OPENALEX_MAILTO (и ключ, если есть) в .env"
 
 ingest:           ## статьи и препринты OpenAlex по всем направлениям с фильтром релевантности
-	$(PY) src/ingest_openalex.py --all --from $(FROM)
+	$(PY) legacy/src/ingest_openalex.py --all --from $(FROM)
 
 patents:          ## патенты Google Patents через BigQuery (нужен GCP_PROJECT в .env)
-	$(PY) src/ingest_patents.py --all --from $(FROM)
+	$(PY) legacy/src/ingest_patents.py --all --from $(FROM)
 
 embed:            ## эмбеддинги bge-base с кэшем (считает только новые документы)
-	$(PY) src/embed.py
+	$(PY) legacy/src/embed.py
 
 cluster:          ## один прогон: темы, окна, сироты, признаки
-	$(PY) src/cluster.py
+	$(PY) legacy/src/cluster.py
 
 terms:            ## лексический детектор всплеска терминов
-	$(PY) src/terms.py
+	$(PY) legacy/src/terms.py
 
 signals:          ## склейка трёх слоёв в карточки
-	$(PY) src/signals.py
+	$(PY) legacy/src/signals.py
 
 stabilize:        ## N прогонов с разными зёрнами -> устойчивый ранг (data/signals/stable.md)
-	$(PY) src/stabilize.py --seeds $(SEEDS)
+	$(PY) legacy/src/stabilize.py --seeds $(SEEDS)
 
 backtest:         ## ретроспектива лексического детектора (data/signals/backtest.md)
-	$(PY) src/backtest_terms.py
+	$(PY) legacy/src/backtest_terms.py
 
 forecast:         ## обучаемый предсказатель: временная валидация + прогноз на 2029-2031
-	$(PY) src/forecast.py
+	$(PY) legacy/src/forecast.py
 
 score:            ## проверить зафиксированный прогноз по текущим данным (после 2029)
-	$(PY) src/forecast.py --score data/forecast/forecast_terms.csv
+	$(PY) legacy/src/forecast.py --score data/forecast/forecast_terms.csv
 
 dashboard:        ## самодостаточный HTML-дашборд (data/signals/dashboard.html)
-	$(PY) src/dashboard.py
+	$(PY) legacy/src/dashboard.py
 
-test:             ## юнит-тесты правил (не требуют данных)
-	$(PY) -m pytest -q tests
-
-all: ingest embed stabilize backtest forecast dashboard
+legacy-all: ingest embed stabilize backtest forecast dashboard
 
 clean:            ## удалить производные данные, оставить сырые
 	rm -rf data/clusters data/runs data/signals_prev

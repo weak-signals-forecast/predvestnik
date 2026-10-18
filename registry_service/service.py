@@ -200,6 +200,8 @@ class Registry:
                     shutil.copy(f, CACHE_DIR / f.name)
         self.lock = threading.Lock()
         self.select_cache = self._load_jsonl("select_cache.jsonl", lambda x: (x["query"], x["phrase"]))
+        # извлечённые моделью факты по записям базы (registry/llm_axes.py): родитель, механизм, тип, абстракт
+        self.llm_axes = self._load_jsonl("llm_axes.jsonl", lambda x: x["key"]) if RANK_V2 else {}
         hy = CACHE_DIR / "hyde.json"
         self.hyde_cache = json.loads(hy.read_text(encoding="utf-8")) if hy.exists() else {}
 
@@ -452,6 +454,12 @@ class Registry:
             strength = rank.weakness(row)
             v2 = {"axes": rank.axes_view(row), "parent_note": rank.parent_note(row),
                   "subsignals": [{"term_en": self.ph[j], "name": self.sig.name_ru[j]} for j in (subs or [])]}
+            la = self.llm_axes.get(k) or {}
+            if la.get("abstract") and la.get("quote_ok"):      # абстракт печатается только с проверенной цитатой
+                v2["abstract"] = {"text": la["abstract"], "mechanism": la.get("mechanism"), "quote": la.get("quote"),
+                                  "first_work": la.get("first_work"), "parent_llm": la.get("parent"),
+                                  "kind_llm": la.get("kind"), "why_not_mature": la.get("why_not_mature") or [],
+                                  "generated": True, "model": la.get("model")}
         explain = c.get("explain") or []
         num = lambda v: ("+" if v >= 0 else "−") + f"{abs(v):.2f}".replace(".", ",")
         explanation = (f"Сила сигнала {round(strength * 100)} из 100 (итоговый балл двух моделей; кандидатов по запросу: {len(cand)}). "

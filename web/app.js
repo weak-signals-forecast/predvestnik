@@ -136,6 +136,7 @@ async function liveSearch(q) {
     case: s.case ? { text: s.case, generated: true } : null,
     passport: s.passport, verification: s.verification, kind: s.kind, explain_rule: s.explain_rule,
     axes: s.axes || null, parent_note: s.parent_note || null, subsignals: s.subsignals || [],
+    abstract: s.abstract || null,
     sources: (s.sources || []).map((x) => ({ title: x.title, url: x.url, source_name: x.name, published: x.date,
       source_type: x.type, language: x.language, trust: x.trust })),
   }));
@@ -396,6 +397,8 @@ function cardHtml(c) {
       <div class="kicker">Технология · ${esc(c.name_ru || c.name)}</div>
       <h3 class="blk">Что за сигнал</h3>
       <p class="big">${esc(what || "Описание появится после подключения YandexGPT.")}</p>
+      ${c.abstract && c.abstract.text ? `<p><b>Почему в выдаче.</b> ${esc(c.abstract.text)} <span class="gen">генеративное резюме по источникам карточки${c.abstract.quote ? `; цитата: «${esc(c.abstract.quote)}»` : ""}</span></p>` : ""}
+      ${c.abstract && c.abstract.why_not_mature && c.abstract.why_not_mature.length ? `<p class="small"><b>Почему это не зрелая технология и не хайп:</b> ${c.abstract.why_not_mature.map(esc).join("; ")}.</p>` : ""}
       <div class="tri">
         <div class="panel"><h4>Почему сейчас</h4>${nowTxt}</div>
         <div class="panel"><h4>Почему ранняя стадия</h4>
