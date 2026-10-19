@@ -81,6 +81,32 @@ def sources_for(keys_by_phrase: dict[str, str], workers: int = 6) -> dict[str, l
     return acc
 
 
+DOMAINS = (   # область по группе (раздел arXiv, подобласть OpenAlex); порядок важен — первое совпадение
+    ("Биотех и медицина", r"^ax:(q-bio|physics\.(bio|med)-ph)"),
+    ("Финтех и экономика", r"^(ax:(q-fin|econ)|oa:(1404|2003))"),
+    ("Инженерия и электроника", r"^(oa:(2207|2208|2209)|ax:(eess\.(SP|SY)|cs\.(AR|ET|SY)|physics\.(app-ph|optics|ins-det|acc-ph)))"),
+    ("Материалы и физика", r"^(ax:(cond-mat|quant-ph|physics|hep|astro|nucl|gr-qc|atom-ph|nlin|chao-dyn|math-ph)|oa:3107)"),
+    ("ИИ и ПО", r"."),
+)
+
+
+def domain_of(reg: Path, s: pd.DataFrame) -> pd.Series:
+    """Область фразы: та, в чьих группах у её сущности больше всего документов за свежие годы (groups.npz)."""
+    import re
+    g = np.load(reg / "groups.npz")
+    groups = [str(x) for x in g["groups"]]
+    dom_idx = [next(i for i, (_, rx) in enumerate(DOMAINS) if re.search(rx, gr)) for gr in groups]
+    ap_ = pd.read_parquet(reg / "all_phrases.parquet", columns=["key", "eid"]).drop_duplicates("key")
+    eid = s.key.map(dict(zip(ap_.key, ap_.eid))).fillna(-1).astype(int).values
+    grp = g["grp"]
+    agg = np.zeros((len(DOMAINS), grp.shape[1]), np.int64)
+    for gi, di in enumerate(dom_idx):
+        agg[di] += grp[gi]
+    best = agg.argmax(axis=0)
+    names = np.array([d for d, _ in DOMAINS], dtype=object)
+    return pd.Series(np.where(eid >= 0, names[best[np.maximum(eid, 0)]], "ИИ и ПО"), index=s.index)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "artifacts" / "registry_mini"))
@@ -88,6 +114,7 @@ def main() -> int:
     ap.add_argument("--area", default="другое", help="тег области для всех записей набора")
     ap.add_argument("--models", default="registry_v3")
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--quota", default="", help="квоты по областям вместо --top: «ИИ и ПО=1500,Материалы и физика=1000»")
     a = ap.parse_args()
     from .signal_base import is_fragment, is_umbrella
     from registry_service.rank import STANDARD_HEAD
@@ -110,7 +137,16 @@ def main() -> int:
           & (s.first_year > MATURE_YEAR) & (np.expm1(s.sci_log_volume) >= MIN_VOLUME)
           & ~ph.map(lambda p: bool(STANDARD_HEAD.search(p))))
     ok &= ~s.generic.fillna(False).astype(bool)
-    b = s[ok].nlargest(a.top, "blend").reset_index(drop=True)
+    if a.quota:
+        # квоты по областям: модели обучены на ИИ, при общем отборе физика и биотех вытесняются целиком
+        s["domain"] = domain_of(reg, s)
+        quota = dict(q.split("=") for q in a.quota.split(","))
+        b = pd.concat([s[ok & (s.domain == d)].nlargest(int(n), "blend") for d, n in quota.items()])
+        b = b.sort_values("blend", ascending=False).reset_index(drop=True)
+        print("по областям: " + ", ".join(f"{d} {int((b.domain == d).sum())}" for d in quota), flush=True)
+    else:
+        b = s[ok].nlargest(a.top, "blend").reset_index(drop=True)
+        b["domain"] = a.area
     b["ph"] = b.phrase.str.replace("_", " ")
     print(f"кандидатов {len(s):,}, после фильтров {int(ok.sum()):,}, в набор {len(b)}".replace(",", " "), flush=True)
 
@@ -173,7 +209,7 @@ def main() -> int:
     # signals.parquet в контракте сервиса
     sig = pd.DataFrame({
         "key": b.key, "phrase": b.phrase, "name_ru": [cards[k]["name_ru"] for k in b.key], "description_ru": "",
-        "areas": [[a.area]] * len(b), "areas_our": [[]] * len(b), "aliases": [[]] * len(b), "kind": None,
+        "areas": [[d] for d in b.domain], "areas_our": [[]] * len(b), "aliases": [[]] * len(b), "kind": None,
         "first_year": b.first_year.astype(float), "expert": b.blend.astype(float), "expert_p": b.expert_p.astype(float),
         "history_p": b.history_p.astype(float), "learned": b.learned.astype(float), "biz": 0.0, "org_sim": 0.0,
         "meas": [f"работ по годам — " + ", ".join(f"{y}: {int(n)}" for y, n in zip(years[-6:], docs_y[i, -6:]))
