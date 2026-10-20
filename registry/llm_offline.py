@@ -93,6 +93,23 @@ def prompts(out: Path) -> None:
     print(f"записей {len(keys)}; промптов {len(rows)} (проверка {n_as}, оси {len(rows) - n_as}) -> {out}")
 
 
+_CJK = re.compile(r"[^\W\d_A-Za-zА-Яа-яЁёΑ-Ωα-ω]")   # буква не латиницы, не кириллицы и не греческого (β-Ga2O3)
+_GLUED = re.compile(r"[а-яё][A-Za-z]|[A-Za-z][а-яё]", re.I)
+
+
+def clean_name(s: str) -> str:
+    """Русское название без иероглифов и склеек латиницы с кириллицей («КаузальныйStudent»); иначе пусто."""
+    s = (s or "").strip()
+    if not s or _CJK.search(s) or _GLUED.search(s) or not re.search(r"[а-яё]", s, re.I):
+        return ""
+    return s
+
+
+def clean_text(s: str) -> str:
+    s = (s or "").strip()
+    return "" if _CJK.search(s) else s
+
+
 def _json_array(raw: str):
     m = re.search(r"\[.*\]", raw or "", re.S)
     try:
@@ -118,7 +135,20 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
         if any(k not in ph for k in keys):      # промпт от другой версии набора
             continue
         if a["id"].startswith("as:"):
-            ok = llm_assess._validate(_json_array(a["raw"]), len(keys), [ph[k] for k in keys])
+            rows = _json_array(a["raw"])
+            ok = llm_assess._validate(rows, len(keys), [ph[k] for k in keys])
+            # ответ «не технология» без русского названия _validate отбрасывает (название обязательно), но сам вердикт
+            # нужен для отсева: принимаем его с пустым названием, если фраза повторена дословно и флаги — булевы
+            for x in rows if isinstance(rows, list) else []:
+                j = x.get("i") if isinstance(x, dict) else None
+                if not isinstance(j, int) or isinstance(j, bool) or not 1 <= j <= len(keys) or (j - 1) in ok:
+                    continue
+                flags = [x.get("is_technology"), x.get("is_product_or_brand"), x.get("is_generic_phrase")]
+                if (all(isinstance(f, bool) for f in flags) and not (flags[0] and not flags[1] and not flags[2])
+                        and llm_assess._norm(x.get("phrase")) == llm_assess._norm(ph[keys[j - 1]])):
+                    ok[j - 1] = {"is_technology": flags[0], "is_product_or_brand": flags[1], "is_generic_phrase": flags[2],
+                                 "name_ru": "", "description_ru": "", "areas": [], "keep": False,
+                                 "reject_reason": str(x.get("reject_reason") or "не конкретная технология")[:200]}
             bad["as"] += len(keys) - len(ok)
             for i, v in ok.items():
                 assess[keys[i]] = {"phrase": ph[keys[i]], **v, "model": MODEL}
@@ -133,31 +163,42 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
         v = assess.get(k)
         if not v:
             continue
-        sig.at[i, "name_ru"], sig.at[i, "description_ru"] = v["name_ru"], v["description_ru"]
+        name, desc = clean_name(v["name_ru"]), clean_text(v["description_ru"])
+        if desc:
+            sig.at[i, "description_ru"] = desc
+        if name:                                     # битое название (иероглифы, склейка) — остаётся английский термин
+            sig.at[i, "name_ru"] = name
+            named += 1
         c = cards.get(k)
         if c is not None:
-            c["name_ru"], c["description"] = v["name_ru"], v["description_ru"]
+            if name:
+                c["name_ru"] = name
+            if desc:
+                c["description"] = desc
             c["unverified"] = not v["keep"]
             if not v["keep"]:
                 c["reject_reason"] = v["reject_reason"]
-        named += 1
-    # не технология по проверке (обрывок, бренд, общая фраза) или рубрика по осям — из набора убираются:
-    # это ровно то, ради чего проверка задумана (llm_assess: «отсев не-технологий»)
-    # убирается только при согласии двух независимых ответов: проверка «не технология» И тип по осям не предметный
-    # (нет ответа, «рубрика» или «задача»); рубрика по осям убирается сама по себе
-    junk_kind = {"", "рубрика", "задача"}
+    # удаляется запись, только когда оба ответа явно говорят «не технология»: проверка — не технология, тип по осям —
+    # рубрика или задача; рубрика по осям — сама по себе. Пустой тип — это не ответ, а его отсутствие (на тесте так
+    # уходили настоящие темы физики). Одиночный вердикт «не технология» — отметка G: сервис снижает балл
+    # (rank.GENERAL_PENALTY), запись опускается, но не пропадает.
+    junk_kind = {"рубрика", "задача"}
     drop = {k for k, v in assess.items() if not v["keep"] and (axes.get(k) or {}).get("kind", "") in junk_kind}
     drop |= {k for k, x in axes.items() if x.get("kind") == "рубрика"}
+    general = {k for k, v in assess.items() if not v["keep"]} - drop
     keep_idx = [i for i, k in enumerate(sig.key) if k not in drop]
+    ax_p = BUNDLE / "axes.parquet"
     if drop:
         E_old = np.load(BUNDLE / "emb.npy")
         sig = sig.iloc[keep_idx].reset_index(drop=True)
         np.save(BUNDLE / "emb.npy", E_old[keep_idx])
         cards = {k: c for k, c in cards.items() if k not in drop}
-        ax_p = BUNDLE / "axes.parquet"
-        if ax_p.exists():
-            ap_ = pd.read_parquet(ax_p)
-            ap_[~ap_.key.isin(drop)].reset_index(drop=True).to_parquet(ax_p)
+    if ax_p.exists():
+        ap_ = pd.read_parquet(ax_p)
+        ap_ = ap_[~ap_.key.isin(drop)].reset_index(drop=True)
+        ap_["verdict"] = np.where(ap_.key.isin(general), "G", None)
+        ap_.to_parquet(ax_p)
+    print(f"общая формулировка (G, балл снижен): {len(general)}")
     for x in axes.values():                          # стандарт по ответу модели — в блок «исключено» (rank.is_standard)
         if x.get("kind") == "стандарт или протокол":
             sig.loc[sig.key == x["key"], "kind"] = "протокол"

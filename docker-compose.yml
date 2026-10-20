@@ -54,10 +54,15 @@ services:
       context: .
       dockerfile: Dockerfile.registry
     image: wsignals-registry:latest
-    env_file: .env
+    env_file:
+      - path: .env
+        required: false
     environment:
       DATABASE_URL: postgresql+psycopg://wsignals:wsignals@db:5432/wsignals
-      REGISTRY_CACHE: /cache
+      REGISTRY_CACHE: ${REGISTRY_CACHE:-/cache/v5}   # своя папка кэша на набор: старый кэш v3 не подменяет ответы модели v5
+      # база v5 и порядок v2 по умолчанию; прежняя база: REGISTRY_BUNDLE=/app/artifacts/registry REGISTRY_RANK_V2=0
+      REGISTRY_BUNDLE: ${REGISTRY_BUNDLE:-/app/artifacts/registry_v5}
+      REGISTRY_RANK_V2: ${REGISTRY_RANK_V2:-1}
     volumes:
       - registry_cache:/cache
     ports:
