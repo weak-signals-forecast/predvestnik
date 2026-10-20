@@ -17,6 +17,6 @@ data/dataset/*.log
 data/wsignals.db
 вводные данные
 docs
-src
+legacy
 tests
 node_modules

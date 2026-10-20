@@ -39,12 +39,42 @@ def files(corpus: Path = CORPUS) -> list[tuple[str, str]]:
 
 
 def _skip_openalex(r: dict) -> bool:
-    src = r.get("source") or {}
-    name = (src.get("name") or "") if isinstance(src, dict) else str(src)
+    src = r.get("source") or (r.get("primary_location") or {}).get("source") or {}
+    name = (src.get("name") or src.get("display_name") or "") if isinstance(src, dict) else str(src)
     if name.startswith("arXiv"):
         return True
     au = r.get("authorships") or []
-    return not any(a.get("institutions") for a in au if isinstance(a, dict)) and not (r.get("references") or [])
+    return (not any(a.get("institutions") for a in au if isinstance(a, dict))
+            and not (r.get("references") or r.get("referenced_works") or []))
+
+
+# Два формата записей OpenAlex: сокращённый (openalex_harvest.py: year, abstract, keywords — строки) и полный объект
+# API (download_openalex.py: publication_year, abstract_inverted_index, keywords — словари). Читаются одинаково.
+def _oa_year(r: dict):
+    y = r.get("year") or r.get("publication_year")
+    try:
+        return int(y)
+    except (TypeError, ValueError):
+        return None
+
+
+def _oa_abstract(r: dict) -> str:
+    if r.get("abstract"):
+        return r["abstract"]
+    inv = r.get("abstract_inverted_index")
+    if not inv:
+        return ""
+    return " ".join(w for _, w in sorted((p, w) for w, ps in inv.items() for p in ps))
+
+
+def _oa_keywords(r: dict) -> list[str]:
+    out = []
+    for k in r.get("keywords") or []:
+        if isinstance(k, dict):
+            k = k.get("display_name") or k.get("keyword") or ""
+        if k:
+            out.append(str(k))
+    return out
 
 
 def _lines(path: str):
@@ -55,7 +85,7 @@ def _lines(path: str):
         return
 
 
-ARXIV_SETS = ("cs", "stat", "eess", "q-fin", "econ", "quant-ph")   # порядок = приоритет владельца
+ARXIV_SETS = ("cs", "stat", "eess", "q-fin", "econ", "quant-ph", "cond-mat", "physics", "q-bio")   # порядок = приоритет владельца
 
 
 def _arxiv_cats(cats) -> list[str]:
@@ -82,9 +112,10 @@ def docs(source: str, path: str):
             r = json.loads(l)
             if _skip_openalex(r):
                 continue
-            kw = " ; ".join(k for k in r.get("keywords") or [] if k)
-            yield {"year": r.get("year"), "group": f"oa:{sub}", "title": r.get("title") or "",
-                   "text": " . ".join([r.get("title") or "", r.get("abstract") or "", kw]), "id": r.get("id"),
+            kw = " ; ".join(_oa_keywords(r))
+            title = r.get("title") or r.get("display_name") or ""
+            yield {"year": _oa_year(r), "group": f"oa:{sub}", "title": title,
+                   "text": " . ".join([title, _oa_abstract(r), kw]), "id": r.get("id"),
                    "doi": r.get("doi")}
     elif source == "arxiv":
         set_name = re.search(r"set=([^/]+)", path).group(1).split(":")[-1]

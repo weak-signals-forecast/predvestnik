@@ -1,0 +1,351 @@
+{
+ "cutoff": 2017,
+ "future": "2020–2022",
+ "topic": "nlp",
+ "title": "Обработка естественного языка и языковые модели",
+ "groups": [
+  "ax:cs.CL"
+ ],
+ "pool": 269,
+ "top": 15,
+ "base_rate": 0.119,
+ "top_rate": 0.333,
+ "lift": 2.8,
+ "lift_ci": null,
+ "how": "модель, обученная на срезе 2021, применена к признакам на срез 2017",
+ "rule": "взлёт — доля работ arXiv в 2020–2022 не меньше чем втрое выше доли 2015–2017 и не меньше 30 работ; массовость — доля ≥ 0,1 % работ источника за год",
+ "mean_lead": 3.0,
+ "n_mass": 1,
+ "items": [
+  {
+   "term": "vector embedding",
+   "p": 0.891,
+   "takeoff": true,
+   "docs_then": 64,
+   "docs_later": 579,
+   "growth": 8.9,
+   "mass_year": 2020,
+   "lead_years": 3,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "multimodal translation",
+   "p": 0.803,
+   "takeoff": false,
+   "docs_then": 11,
+   "docs_later": 9,
+   "growth": 0.8,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "stance detection",
+   "p": 0.794,
+   "takeoff": false,
+   "docs_then": 19,
+   "docs_later": 123,
+   "growth": 6.2,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "zero resource",
+   "p": 0.794,
+   "takeoff": false,
+   "docs_then": 19,
+   "docs_later": 81,
+   "growth": 4.1,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "lstm language",
+   "p": 0.792,
+   "takeoff": false,
+   "docs_then": 0,
+   "docs_later": 0,
+   "growth": NaN,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "hierarchical attention",
+   "p": 0.783,
+   "takeoff": true,
+   "docs_then": 10,
+   "docs_later": 312,
+   "growth": 28.5,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "dialogue generation",
+   "p": 0.783,
+   "takeoff": true,
+   "docs_then": 7,
+   "docs_later": 251,
+   "growth": 31.5,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "attention gated",
+   "p": 0.776,
+   "takeoff": false,
+   "docs_then": 10,
+   "docs_later": 67,
+   "growth": 6.2,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "amr parsing",
+   "p": 0.773,
+   "takeoff": false,
+   "docs_then": 9,
+   "docs_later": 28,
+   "growth": 2.9,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "sarcasm detection",
+   "p": 0.772,
+   "takeoff": false,
+   "docs_then": 27,
+   "docs_later": 160,
+   "growth": 5.8,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "acoustic tokens",
+   "p": 0.758,
+   "takeoff": false,
+   "docs_then": 7,
+   "docs_later": 0,
+   "growth": 0.1,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "dialog generation",
+   "p": 0.746,
+   "takeoff": true,
+   "docs_then": 6,
+   "docs_later": 52,
+   "growth": 7.6,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "neural text",
+   "p": 0.853,
+   "takeoff": true,
+   "docs_then": 6,
+   "docs_later": 122,
+   "growth": 17.6,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": true,
+   "parent": "text",
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "morphological reinflection",
+   "p": 0.722,
+   "takeoff": false,
+   "docs_then": 0,
+   "docs_later": 0,
+   "growth": NaN,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "deep lstm",
+   "p": 0.719,
+   "takeoff": false,
+   "docs_then": 21,
+   "docs_later": 141,
+   "growth": 6.5,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  }
+ ]
+}

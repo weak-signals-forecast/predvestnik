@@ -1,0 +1,351 @@
+{
+ "cutoff": 2021,
+ "future": "2024–2026",
+ "topic": "nlp",
+ "title": "Обработка естественного языка и языковые модели",
+ "groups": [
+  "ax:cs.CL"
+ ],
+ "pool": 1419,
+ "top": 15,
+ "base_rate": 0.061,
+ "top_rate": 0.533,
+ "lift": 8.7,
+ "lift_ci": null,
+ "how": "предсказания вне обучения (5-кратная кросс-валидация на срезе обучения)",
+ "rule": "взлёт — доля работ arXiv в 2024–2026 не меньше чем втрое выше доли 2019–2021 и не меньше 30 работ; массовость — доля ≥ 0,1 % работ источника за год",
+ "mean_lead": 3.2,
+ "n_mass": 4,
+ "items": [
+  {
+   "term": "fact verification",
+   "p": 0.926,
+   "takeoff": false,
+   "docs_then": 36,
+   "docs_later": 228,
+   "growth": 6.2,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "document understanding",
+   "p": 0.923,
+   "takeoff": true,
+   "docs_then": 64,
+   "docs_later": 494,
+   "growth": 7.6,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "text encoder",
+   "p": 0.921,
+   "takeoff": true,
+   "docs_then": 64,
+   "docs_later": 1045,
+   "growth": 16.1,
+   "mass_year": 2023,
+   "lead_years": 2,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "model fine",
+   "p": 0.854,
+   "takeoff": true,
+   "docs_then": 138,
+   "docs_later": 1888,
+   "growth": 13.6,
+   "mass_year": 2022,
+   "lead_years": 1,
+   "incremental": false,
+   "parent": "model",
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "full context",
+   "p": 0.849,
+   "takeoff": true,
+   "docs_then": 19,
+   "docs_later": 321,
+   "growth": 16.1,
+   "mass_year": 2026,
+   "lead_years": 5,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "shopping assistant",
+   "p": 0.839,
+   "takeoff": false,
+   "docs_then": 13,
+   "docs_later": 66,
+   "growth": 4.8,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "semantic drift",
+   "p": 0.821,
+   "takeoff": true,
+   "docs_then": 23,
+   "docs_later": 492,
+   "growth": 20.5,
+   "mass_year": 2026,
+   "lead_years": 5,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "autoregressive language",
+   "p": 0.818,
+   "takeoff": true,
+   "docs_then": 26,
+   "docs_later": 326,
+   "growth": 12.1,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "models understand",
+   "p": 0.815,
+   "takeoff": true,
+   "docs_then": 17,
+   "docs_later": 196,
+   "growth": 10.9,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "conversational systems",
+   "p": 0.801,
+   "takeoff": false,
+   "docs_then": 95,
+   "docs_later": 366,
+   "growth": 3.8,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "speech to speech translation",
+   "p": 0.798,
+   "takeoff": true,
+   "docs_then": 12,
+   "docs_later": 112,
+   "growth": 8.7,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "lead generation",
+   "p": 0.797,
+   "takeoff": false,
+   "docs_then": 30,
+   "docs_later": 85,
+   "growth": 2.8,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "bi encoder",
+   "p": 0.782,
+   "takeoff": false,
+   "docs_then": 23,
+   "docs_later": 150,
+   "growth": 6.3,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "russian news",
+   "p": 0.77,
+   "takeoff": false,
+   "docs_then": 9,
+   "docs_later": 10,
+   "growth": 1.1,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  },
+  {
+   "term": "triple extraction",
+   "p": 0.768,
+   "takeoff": false,
+   "docs_then": 13,
+   "docs_later": 96,
+   "growth": 6.9,
+   "mass_year": null,
+   "lead_years": null,
+   "incremental": false,
+   "parent": null,
+   "market_after": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   },
+   "market_before": {
+    "hn": 0,
+    "yc": 0,
+    "press": 0
+   }
+  }
+ ]
+}

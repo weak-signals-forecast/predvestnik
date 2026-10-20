@@ -30,6 +30,8 @@ import requests
 
 from wsignals import intent
 
+from . import rank
+
 BUNDLE = Path(os.getenv("REGISTRY_BUNDLE", Path(__file__).resolve().parents[1] / "artifacts" / "registry"))
 CACHE_DIR = Path(os.getenv("REGISTRY_CACHE", BUNDLE / "cache"))
 MODEL = os.getenv("REGISTRY_EMB_MODEL", "deepvk/USER-bge-m3")
@@ -38,7 +40,14 @@ TOPIC, KEEP, TOP, DUP_SIM = 80, 40, 15, 0.88
 EXTRA = 60                     # «ещё по теме» без проверки моделью — чтобы список листался дальше
 DUP_NEAR = 0.80                # близость для склейки фраз с общим словом в итоговой выдаче
 AREA_NAMED, VOTE_NN, MIN_AREA_SHARE = 0.75, 100, 0.30
+# Версия 2 порядка и фильтров (registry_service/rank.py): оси слабости, исключения с причиной, порядок по запросу,
+# группировка подсигналов. По умолчанию выключена: демонстрационный путь остаётся прежним байт в байт.
+RANK_V2 = os.getenv("REGISTRY_RANK_V2", "0") == "1"
+DROP_MATURE = os.getenv("REGISTRY_DROP_MATURE", "1" if RANK_V2 else "0") == "1"
 SEM_TOP = 5                  # столько ближайших по смыслу проходят мимо фильтра области
+# переранжирование ближайших кросс-энкодером (registry_service/rerank.py); эффект — docs/EVAL.md, scripts/eval_retrieval.py
+RERANK = os.getenv("REGISTRY_RERANK", "0") == "1"
+RERANK_MIN = 0.1             # вероятность соответствия ниже — кандидат не по теме и не идёт в выдачу, пока хватает других
 VOTE_STRONG, NAME_MID, VOTE_MID = 0.35, 0.42, 0.20
 BATCH, MAX_CALLS = 10, 4
 AREA_NAMES = {"Edge": "Edge AI: ИИ на устройствах и периферийные вычисления",
@@ -170,6 +179,21 @@ class Registry:
         self.E = np.load(BUNDLE / "emb.npy").astype(np.float32)
         with gzip.open(BUNDLE / "cards.json.gz", "rt", encoding="utf-8") as fh:
             self.cards = json.load(fh)
+        # адаптер запроса: кросс-энкодер, дистиллированный в матрицу над вектором запроса (scripts/distill_adapter.py)
+        ad = BUNDLE / "query_adapter.npy"
+        self.adapter = np.load(ad).astype(np.float32) if ad.exists() and os.getenv("REGISTRY_ADAPTER", "1") == "1" else None
+        self.reranker = None
+        if RERANK:
+            from .rerank import Reranker
+            self.reranker = Reranker()
+        self.axes = None
+        ax_p = BUNDLE / "axes.parquet"
+        if RANK_V2 and ax_p.exists():
+            self.axes = pd.read_parquet(ax_p).drop_duplicates("key")
+        if DROP_MATURE and ax_p.exists():            # записи, которые экспертная проверка базы признала зрелыми («M»)
+            verdict = pd.read_parquet(ax_p, columns=["key", "verdict"]).drop_duplicates("key").set_index("key").verdict
+            keep = ~self.sig.key.map(verdict).eq("M").values
+            self.sig, self.E = self.sig[keep].reset_index(drop=True), self.E[keep]
         self.examples = json.loads((BUNDLE / "examples.json").read_text(encoding="utf-8"))
         self.model_global = json.loads((BUNDLE / "model_global.json").read_text(encoding="utf-8"))
         self.m = SentenceTransformer(MODEL, device="cpu")
@@ -186,6 +210,10 @@ class Registry:
                     shutil.copy(f, CACHE_DIR / f.name)
         self.lock = threading.Lock()
         self.select_cache = self._load_jsonl("select_cache.jsonl", lambda x: (x["query"], x["phrase"]))
+        # извлечённые моделью факты по записям базы (registry/llm_axes.py): родитель, механизм, тип, абстракт
+        self.llm_axes = self._load_jsonl("llm_axes.jsonl", lambda x: x["key"]) if RANK_V2 else {}
+        cal_p = BUNDLE / "calibration.json"                 # балл → калиброванная вероятность (registry/calibrate.py)
+        self.calibration = json.loads(cal_p.read_text(encoding="utf-8")) if RANK_V2 and cal_p.exists() else None
         hy = CACHE_DIR / "hyde.json"
         self.hyde_cache = json.loads(hy.read_text(encoding="utf-8")) if hy.exists() else {}
 
@@ -290,6 +318,13 @@ class Registry:
                         self.select_cache[(query, rec["phrase"])] = rec
                         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
+    def _doc_text(self, i: int) -> str:
+        """Текст записи для кросс-энкодера: русское название, термин, описание и заголовки первых источников."""
+        c = self.cards.get(self.sig.key[i]) or {}
+        desc = self.sig.description_ru[i] if isinstance(self.sig.description_ru[i], str) else ""
+        ts = [(d.get("title") or "") for d in (c.get("sources") or [])][:3]
+        return ". ".join(x for x in [self.sig.name_ru[i], self.ph[i], desc] + ts if x)
+
     def _sources(self, i: int, n: int = 3) -> list[dict]:
         c = self.cards.get(self.sig.key[i]) or {}
         return [{"title": (d.get("title") or "")[:180], "url": d.get("url") or "",
@@ -314,6 +349,9 @@ class Registry:
         topic = intent.split(query).domain or query
         qv = self.m.encode([topic], normalize_embeddings=True)[0]
         area = self.area_of(qv)
+        if self.adapter is not None:
+            qv = self.adapter @ qv
+            qv = qv / np.linalg.norm(qv)
         rel = self.E @ qv
         hy = self.hyde(query, usage) if use_hyde else None
         if hy:
@@ -333,9 +371,14 @@ class Registry:
         else:
             t["relevance"] = t.rel_query
         near = t.nlargest(TOPIC, "relevance")
-        tier = near.tier.fillna(2) - 1 if "tier" in near else 0       # ярус 1 экспертной разметки базы — первым
-        near = near.assign(order=0.5 * near.relevance.rank(pct=True) + 0.5 * near.expert - tier).sort_values(
-            "order", ascending=False)
+        if self.reranker is not None:
+            # близость к запросу — по кросс-энкодеру (пара «запрос — текст записи»), а не по векторам; явно чужие темы
+            # (вероятность < RERANK_MIN) отходят, если по теме остаётся хотя бы KEEP // 4 кандидатов
+            p = 1 / (1 + np.exp(-self.reranker.scores(query, [self._doc_text(i) for i in near.index])))
+            near = near.assign(rel_query=p)
+            if (p >= RERANK_MIN).sum() >= KEEP // 4:
+                near = near[p >= RERANK_MIN]
+        near = near.assign(order=self._order(near)).sort_values("order", ascending=False)
         picked: list[int] = []
         for i in near.index:
             if picked and float((self.E[picked] @ self.E[i]).max()) >= DUP_SIM:
@@ -347,9 +390,7 @@ class Registry:
         out["strength"] = out.expert                 # итоговый балл (смесь моделей) — та же шкала, что на странице
         # «ещё по теме» за пределами 40 кандидатов: следующие по тому же порядку, без дублей; моделью не проверяются
         far = t.nlargest(TOPIC * 3, "relevance")
-        ftier = far.tier.fillna(2) - 1 if "tier" in far else 0
-        far = far.assign(order=0.5 * far.relevance.rank(pct=True) + 0.5 * far.expert - ftier).sort_values(
-            "order", ascending=False)
+        far = far.assign(order=self._order(far)).sort_values("order", ascending=False)
         extra: list[int] = []
         for i in far.index:
             if i in picked or float((self.E[picked + extra] @ self.E[i]).max()) >= DUP_SIM:
@@ -362,6 +403,23 @@ class Registry:
         self._extra = ext
         return out, area
 
+    def _order(self, t: pd.DataFrame) -> pd.Series:
+        """Порядок кандидатов. v1: половина близости, половина балла, ярус 1 разметки первым.
+        v2: близость × слабость (оси, без эшелона) — registry_service/rank.py."""
+        if RANK_V2:                                   # близость именно к запросу, без примеси доли рубрик области
+            return rank.order(t, t.rel_query if "rel_query" in t else t.relevance, self.axes)
+        tier = t.tier.fillna(2) - 1 if "tier" in t else 0
+        return 0.5 * t.relevance.rank(pct=True) + 0.5 * t.expert - tier
+
+    def _row(self, i: int) -> dict:
+        """Запись базы вместе с её осями (для фильтров и карточки v2)."""
+        r = {k: self.sig.at[i, k] for k in ("key", "phrase", "kind", "first_year", "expert")}
+        if self.axes is not None:
+            a = self.axes[self.axes.key == r["key"]]
+            if len(a):
+                r.update(a.iloc[0].to_dict())
+        return r
+
     # ---------- ответ ----------
     def answer(self, query: str, use_llm: bool = True) -> dict:
         t0 = time.time()
@@ -371,18 +429,34 @@ class Registry:
             self.select(query, area, cand, usage)
         judged = cand.index.map(lambda i: self.select_cache.get((query, self.ph[i])))
         mode = "выбор YandexGPT" if use_llm and any(j is not None for j in judged) else "без модели: порядок поиска"
+        excluded: list[dict] = []
+        subs: dict[int, list[int]] = {}
         if mode.startswith("выбор"):
             ok = [i for i, j in zip(cand.index, judged) if accepted(j)]
-            tier = self.sig.tier if "tier" in self.sig else pd.Series(1, index=self.sig.index)
-            ok = sorted(ok, key=lambda i: (float(tier[i]), -float(self.sig.expert[i])))
         else:
             ok = list(cand.index)
-        top: list[int] = []
-        for i in ok:                                  # ТОП-15 и «ещё по теме»: все принятые без дублей
-            if not any(_dup(self.ph[i], self.ph[j], float(self.E[i] @ self.E[j])) for j in top):
-                top.append(i)
-        signals = [self.card(query, i, rank, cand) for rank, i in enumerate(top[:TOP], 1)]
-        more = [self.card(query, i, rank, cand) for rank, i in enumerate(top[TOP:], TOP + 1)]
+        if RANK_V2:
+            kept = []
+            for i in ok:                              # исключения с причиной: стандарт, зрелое, зрелое по проверке базы
+                ex = rank.exclusion(self._row(i))
+                if ex:
+                    excluded.append({"term_en": self.ph[i], "name": self.sig.name_ru[i], "code": ex[0], "reason": ex[1]})
+                else:
+                    kept.append(i)
+            order = cand.order if "order" in cand else self._order(cand)
+            ok = sorted(kept, key=lambda i: -float(order[i]))
+            grouped = rank.group(ok, lambda i, j: _dup(self.ph[i], self.ph[j], float(self.E[i] @ self.E[j])))
+            top = [i for i, _ in grouped]
+            subs = {i: s for i, s in grouped}
+        else:
+            ok = sorted(ok, key=lambda i: (float(self.sig.tier[i]) if "tier" in self.sig else 1.0,
+                                           -float(self.sig.expert[i]))) if mode.startswith("выбор") else ok
+            top = []
+            for i in ok:                              # ТОП-15 и «ещё по теме»: все принятые без дублей
+                if not any(_dup(self.ph[i], self.ph[j], float(self.E[i] @ self.E[j])) for j in top):
+                    top.append(i)
+        signals = [self.card(query, i, rank_, cand, subs.get(i)) for rank_, i in enumerate(top[:TOP], 1)]
+        more = [self.card(query, i, rank_, cand, subs.get(i)) for rank_, i in enumerate(top[TOP:], TOP + 1)]
         ext = getattr(self, "_extra", None)
         if ext is not None and len(ext):
             rejected = {i for i, j in zip(cand.index, judged) if j is not None and not accepted(j)}
@@ -392,16 +466,33 @@ class Registry:
                     continue
                 shown.append(i)
                 more.append({**self.card(query, i, len(shown), ext), "unverified": True})
+        confident = sum(1 for s_ in signals + more if (s_.get("confidence") or 0) > 0.75)
         return {"query": query, "area": area, "mode": mode, "signals": signals, "more": more,
+                "excluded": excluded, "ranking": "v2" if RANK_V2 else "v1",
+                "stats": {"candidates": len(cand), "excluded": len(excluded), "shown": len(signals) + len(more),
+                          "confident_75": confident, "sources": sum(len(s_.get("sources") or []) for s_ in signals + more)},
                 "meta": {"candidates": len(cand), "base_size": len(self.sig), "llm_calls": usage["calls"],
                          "llm_tokens": usage["tokens"], "llm_errors": usage["errors"][:3],
                          "took_s": round(time.time() - t0, 1)}}
 
-    def card(self, query: str, i: int, rank: int, cand: pd.DataFrame) -> dict:
+    def card(self, query: str, i: int, rank_: int, cand: pd.DataFrame, subs: list[int] | None = None) -> dict:
         k = self.sig.key[i]
         c = self.cards.get(k, {})
         sel = self.select_cache.get((query, self.ph[i])) or {}
         strength = float(cand.strength.get(i, 0.0))
+        v2: dict = {}
+        if RANK_V2:
+            row = self._row(i)
+            strength = rank.weakness(row)
+            v2 = {"axes": rank.axes_view(row), "parent_note": rank.parent_note(row),
+                  "subsignals": [{"term_en": self.ph[j], "name": self.sig.name_ru[j]} for j in (subs or [])],
+                  "confidence": rank.confidence(row, self.calibration)}
+            la = self.llm_axes.get(k) or {}
+            if la.get("abstract") and la.get("quote_ok"):      # абстракт печатается только с проверенной цитатой
+                v2["abstract"] = {"text": la["abstract"], "mechanism": la.get("mechanism"), "quote": la.get("quote"),
+                                  "first_work": la.get("first_work"), "parent_llm": la.get("parent"),
+                                  "kind_llm": la.get("kind"), "why_not_mature": la.get("why_not_mature") or [],
+                                  "generated": True, "model": la.get("model")}
         explain = c.get("explain") or []
         num = lambda v: ("+" if v >= 0 else "−") + f"{abs(v):.2f}".replace(".", ",")
         explanation = (f"Сила сигнала {round(strength * 100)} из 100 (итоговый балл двух моделей; кандидатов по запросу: {len(cand)}). "
@@ -409,7 +500,8 @@ class Registry:
                        "; ".join(f"{x['label'][:1].lower() + x['label'][1:]} {num(x['value'])}" for x in explain[:5]) + ".") if explain else ""
         txt = lambda f: (c.get(f) or {}).get("text") if isinstance(c.get(f), dict) else None
         return {
-            "rank": rank,
+            "rank": rank_,
+            **v2,
             "name": sel.get("headline") or c.get("name_ru") or self.sig.name_ru[i],
             "term_en": c.get("name") or self.ph[i],
             "description": txt("description") or self.sig.description_ru[i],

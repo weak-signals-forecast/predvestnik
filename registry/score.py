@@ -43,7 +43,7 @@ from .corpus import CORPUS, CUTOFF, SOURCES, YEARS, REGISTRY
 REG = REGISTRY
 # окна считаются от года среза (машина времени): при срезе 2026 — R 2024–2026, B 2019–2022
 R = tuple(range(CUTOFF - 2, CUTOFF + 1))
-B = tuple(range(CUTOFF - 7, CUTOFF - 3))
+B = tuple(y for y in range(CUTOFF - 7, CUTOFF - 3) if y >= YEARS[0])   # срез 2017: корпус с 2012, база 2012–2013
 E = tuple(range(2012, CUTOFF - 7))
 MIN_VOLUME = 5
 import os
@@ -52,7 +52,9 @@ MIN_GROWTH = 1.0          # доля выросла минимум вдвое
 NEW_SINCE = CUTOFF - 4
 MAX_RATE = 1e-3           # фраза есть больше чем в 0,1 % свежих работ источника — уже массовая тема
 MAX_SPREAD = 0.80
-MIN_SOURCES = 2
+# два независимых источника (OpenAlex + arXiv). Для корпуса, где область есть только в arXiv (cond-mat без
+# OpenAlex по материалам), порог опускается переменной окружения — и это честно записывается в документацию.
+MIN_SOURCES = int(os.environ.get("REGISTRY_MIN_SOURCES", "2"))
 WEAK_VOLUME = 200         # выше этого объёма тема уже скорее «горячая», чем «слабая»: мягкий штраф
 MIN_SPREAD_DOCS = 20      # энтропию считаем, только когда документов по группам достаточно
 FRAGMENT_SHARE = 0.8      # обрывок: надфраза покрывает не меньше 80 % его документов

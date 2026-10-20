@@ -86,5 +86,36 @@ def main() -> int:
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and (len(sys.argv) < 2 or sys.argv[1] != "axes"):
     sys.exit(main())
+
+
+def axes_bundle() -> int:
+    """Оси слабости и новые баллы для записей базы -> artifacts/registry/axes.parquet (читает сервис при REGISTRY_RANK_V2=1).
+
+        python -m registry.bundle axes
+
+    Берёт axes.parquet (registry/axes.py), expert_scored_axes.parquet и history_scored_axes.parquet (модели с осями),
+    вердикт экспертной проверки базы (data/labels/base_review.csv). Записи базы без осей получают NaN: сервис
+    тогда использует прежний балл."""
+    from .axes import AXES
+    base = pd.read_parquet(OUT / "signals.parquet", columns=["key"])
+    ax = pd.read_parquet(REG / "axes.parquet").drop_duplicates("key")[["key", "parent", "docs_now"] + AXES]
+    out = base.merge(ax, on="key", how="left")
+    for name, col in (("expert_scored_axes.parquet", "expert_p"), ("history_scored_axes.parquet", "history_p")):
+        p = REG / name
+        if p.exists():
+            s = pd.read_parquet(p, columns=["key", col]).drop_duplicates("key").rename(columns={col: col + "_axes"})
+            out = out.merge(s, on="key", how="left")
+    review = ROOT / "data" / "labels" / "base_review.csv"
+    if review.exists():
+        rv = pd.read_csv(review)[["key", "verdict"]].drop_duplicates("key")
+        out = out.merge(rv, on="key", how="left")
+    out.to_parquet(OUT / "axes.parquet")
+    print(f"оси базы: {len(out)} записей, без осей {int(out.stage_accel.isna().sum())}, "
+          f"с новым баллом {int(out.get('expert_p_axes', pd.Series(dtype=float)).notna().sum())} -> {OUT / 'axes.parquet'}")
+    return 0
+
+
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "axes":
+    sys.exit(axes_bundle())
