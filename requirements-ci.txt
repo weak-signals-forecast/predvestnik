@@ -4,6 +4,7 @@ python-dotenv
 pyyaml
 numpy
 pandas
+pyarrow==21.*
 scipy
 scikit-learn
 pytest
