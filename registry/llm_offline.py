@@ -105,6 +105,21 @@ _CJK = re.compile(r"[^\W\d_A-Za-zА-Яа-яЁёΑ-Ωα-ω]")   # буква не
 _GLUED = re.compile(r"[а-яё][A-Za-z]|[A-Za-z][а-яё]", re.I)
 
 
+# служебные слова испанского, португальского, французского, немецкого, индонезийского: новые подобласти OpenAlex
+# приносят неанглийские работы, их фразы — не названия технологий («sistem penerimaan murid baru»)
+_FOREIGN = set("""en la el los las del para con por una que mediante tiempos desaf vac investigaci educaci
+do da das dos em com ao na comportamento gest une des les du et pour avec dans sur strat und mit von zur eine
+dan yang pada dalam di untuk terhadap pengaruh sebagai berbasis menggunakan dengan ke dari meningkatkan sistem
+penerimaan murid baru magang hijau solusi energi terbarukan efisiensi operasional ekstrak""".split())
+_FOREIGN_STRONG = {"berbasis", "untuk", "pengaruh", "terhadap", "meningkatkan", "sebagai", "dengan", "mediante", "para"}
+
+
+def foreign_phrase(phrase: str) -> bool:
+    w = phrase.replace("_", " ").split()
+    hits = [x for x in w if x in _FOREIGN]
+    return len(hits) >= 2 or any(x in _FOREIGN_STRONG for x in w)
+
+
 def clean_name(s: str) -> str:
     """Русское название без иероглифов и склеек латиницы с кириллицей («КаузальныйStudent»); иначе пусто."""
     s = (s or "").strip()
@@ -202,6 +217,7 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool, ref: Path |
     junk_kind = {"рубрика", "задача"}
     drop = {k for k, v in assess.items() if not v["keep"] and (axes.get(k) or {}).get("kind", "") in junk_kind}
     drop |= {k for k, x in axes.items() if x.get("kind") == "рубрика"}
+    drop |= {k for k, p in zip(sig.key, sig.phrase) if foreign_phrase(p)}
     general = {k for k, v in assess.items() if not v["keep"]} - drop
     keep_idx = [i for i, k in enumerate(sig.key) if k not in drop]
     ax_p = BUNDLE / "axes.parquet"
