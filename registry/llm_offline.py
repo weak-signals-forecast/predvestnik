@@ -36,9 +36,10 @@ B_AXES = int(os.getenv("LLM_BATCH_AXES", "3"))
 MODEL = os.getenv("LLM_OFFLINE_MODEL", "Qwen2.5-7B-Instruct")
 
 
-def _load():
-    sig = pd.read_parquet(BUNDLE / "signals.parquet")
-    with gzip.open(BUNDLE / "cards.json.gz", "rt", encoding="utf-8") as fh:
+def _load(bundle: Path | None = None):
+    bundle = bundle or BUNDLE
+    sig = pd.read_parquet(bundle / "signals.parquet")
+    with gzip.open(bundle / "cards.json.gz", "rt", encoding="utf-8") as fh:
         cards = json.load(fh)
     return sig, cards
 
@@ -125,11 +126,18 @@ def _json_array(raw: str):
         return []
 
 
-def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
+def import_answers(answers: Path, prompts_file: Path, reembed: bool, ref: Path | None = None) -> None:
+    """ref — набор, по которому строились промпты (после пересборки базы часть записей ушла, у части изменилось
+    написание фразы): ответы проверяются по фразам и источникам ref, в набор идут только записи, которые в нём есть."""
     sig, cards = _load()
     pr = {r["id"]: r for r in (json.loads(l) for l in prompts_file.read_text(encoding="utf-8").splitlines() if l.strip())}
     ph = dict(zip(sig.key, sig.phrase))
     items = {it["key"]: it for it in _axes_items(sig, cards)}
+    ph_ref, items_ref = dict(ph), dict(items)
+    if ref:
+        rs, rc = _load(ref)
+        ph_ref.update(dict(zip(rs.key, rs.phrase)))
+        items_ref.update({it["key"]: it for it in _axes_items(rs, rc)})
     assess, axes, bad = {}, {}, {"as": 0, "ax": 0}
     for l in answers.read_text(encoding="utf-8").splitlines():
         if not l.strip():
@@ -139,11 +147,11 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
         if not p:
             continue
         keys = p["keys"]
-        if any(k not in ph for k in keys):      # промпт от другой версии набора
+        if any(k not in ph_ref for k in keys):  # промпт от неизвестной версии набора
             continue
         if "as:" in a["id"]:
             rows = _json_array(a["raw"])
-            ok = llm_assess._validate(rows, len(keys), [ph[k] for k in keys])
+            ok = llm_assess._validate(rows, len(keys), [ph_ref[k] for k in keys])
             # ответ «не технология» без русского названия _validate отбрасывает (название обязательно), но сам вердикт
             # нужен для отсева: принимаем его с пустым названием, если фраза повторена дословно и флаги — булевы
             for x in rows if isinstance(rows, list) else []:
@@ -152,18 +160,20 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
                     continue
                 flags = [x.get("is_technology"), x.get("is_product_or_brand"), x.get("is_generic_phrase")]
                 if (all(isinstance(f, bool) for f in flags) and not (flags[0] and not flags[1] and not flags[2])
-                        and llm_assess._norm(x.get("phrase")) == llm_assess._norm(ph[keys[j - 1]])):
+                        and llm_assess._norm(x.get("phrase")) == llm_assess._norm(ph_ref[keys[j - 1]])):
                     ok[j - 1] = {"is_technology": flags[0], "is_product_or_brand": flags[1], "is_generic_phrase": flags[2],
                                  "name_ru": "", "description_ru": "", "areas": [], "keep": False,
                                  "reject_reason": str(x.get("reject_reason") or "не конкретная технология")[:200]}
             bad["as"] += len(keys) - len(ok)
             for i, v in ok.items():
-                assess[keys[i]] = {"phrase": ph[keys[i]], **v, "model": MODEL}
+                if keys[i] in ph:
+                    assess[keys[i]] = {"phrase": ph[keys[i]], **v, "model": MODEL}
         else:
-            got = llm_axes.parse(a["raw"], [items[k] for k in keys])
+            got = llm_axes.parse(a["raw"], [items_ref[k] for k in keys])
             bad["ax"] += len(keys) - len(got)
             for x in got:
-                axes[x["key"]] = {**x, "model": MODEL}
+                if x["key"] in ph:
+                    axes[x["key"]] = {**x, "phrase": ph[x["key"]], "model": MODEL}
 
     named = 0
     for i, k in enumerate(sig.key):
@@ -247,6 +257,7 @@ def main() -> int:
     ap.add_argument("--answers", default="answers.jsonl")
     ap.add_argument("--prompts", default="prompts.jsonl")
     ap.add_argument("--no-reembed", action="store_true")
+    ap.add_argument("--ref", default="", help="import: набор, по которому строились промпты")
     ap.add_argument("--only-missing", action="store_true", help="prompts: только записи без ответа в кэше набора")
     a = ap.parse_args()
     if a.cmd == "prompts":
@@ -254,7 +265,7 @@ def main() -> int:
     elif a.cmd == "reembed":
         reembed_bundle()
     else:
-        import_answers(Path(a.answers), Path(a.prompts), not a.no_reembed)
+        import_answers(Path(a.answers), Path(a.prompts), not a.no_reembed, Path(a.ref) if a.ref else None)
     return 0
 
 
