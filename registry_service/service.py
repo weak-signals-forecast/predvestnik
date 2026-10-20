@@ -179,6 +179,9 @@ class Registry:
         self.E = np.load(BUNDLE / "emb.npy").astype(np.float32)
         with gzip.open(BUNDLE / "cards.json.gz", "rt", encoding="utf-8") as fh:
             self.cards = json.load(fh)
+        # адаптер запроса: кросс-энкодер, дистиллированный в матрицу над вектором запроса (scripts/distill_adapter.py)
+        ad = BUNDLE / "query_adapter.npy"
+        self.adapter = np.load(ad).astype(np.float32) if ad.exists() and os.getenv("REGISTRY_ADAPTER", "1") == "1" else None
         self.reranker = None
         if RERANK:
             from .rerank import Reranker
@@ -346,6 +349,9 @@ class Registry:
         topic = intent.split(query).domain or query
         qv = self.m.encode([topic], normalize_embeddings=True)[0]
         area = self.area_of(qv)
+        if self.adapter is not None:
+            qv = self.adapter @ qv
+            qv = qv / np.linalg.norm(qv)
         rel = self.E @ qv
         hy = self.hyde(query, usage) if use_hyde else None
         if hy:
