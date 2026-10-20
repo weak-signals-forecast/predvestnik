@@ -71,25 +71,32 @@ def assess_prompt() -> str:
     return llm_assess.PROMPT.replace(TECH_OLD, TECH_NEW)
 
 
-def prompts(out: Path) -> None:
+def prompts(out: Path, only_missing: bool = False) -> None:
     sig, cards = _load()
+    if only_missing:                     # только записи без ответа в кэше набора (новые после пересборки)
+        done = set()
+        p = BUNDLE / "cache" / "llm_assess.jsonl"
+        if p.exists():
+            done = {json.loads(l)["phrase"] for l in p.read_text(encoding="utf-8").splitlines() if l.strip()}
+        sig = sig[~sig.phrase.isin(done)].reset_index(drop=True)
+    pre = "d-" if only_missing else ""     # другие id: ответы обоих прогонов можно склеить в один файл
     rows = []
     keys = list(sig.key)
     for s in range(0, len(sig), B_ASSESS):
         part = sig.iloc[s:s + B_ASSESS]
         listing = "\n".join(f"{i}. {ph}" + "".join(f"\n   — {t}" for t in _titles(cards.get(k) or {}, llm_assess.TITLES))
                             for i, (k, ph) in enumerate(zip(part.key, part.phrase), 1))
-        rows.append({"id": f"as:{s}", "keys": list(part.key), "prompt": assess_prompt().replace("{items}", listing),
+        rows.append({"id": f"{pre}as:{s}", "keys": list(part.key), "prompt": assess_prompt().replace("{items}", listing),
                      "max_new": 180 * len(part)})
     items = _axes_items(sig, cards)
     for s in range(0, len(items), B_AXES):
         part = items[s:s + B_AXES]
-        rows.append({"id": f"ax:{s}", "keys": [it["key"] for it in part], "prompt": llm_axes.prompt_for(part),
+        rows.append({"id": f"{pre}ax:{s}", "keys": [it["key"] for it in part], "prompt": llm_axes.prompt_for(part),
                      "max_new": 450 * len(part)})
     with out.open("w", encoding="utf-8") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
-    n_as = sum(1 for r in rows if r["id"].startswith("as:"))
+    n_as = sum(1 for r in rows if "as:" in r["id"])
     print(f"записей {len(keys)}; промптов {len(rows)} (проверка {n_as}, оси {len(rows) - n_as}) -> {out}")
 
 
@@ -134,7 +141,7 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
         keys = p["keys"]
         if any(k not in ph for k in keys):      # промпт от другой версии набора
             continue
-        if a["id"].startswith("as:"):
+        if "as:" in a["id"]:
             rows = _json_array(a["raw"])
             ok = llm_assess._validate(rows, len(keys), [ph[k] for k in keys])
             # ответ «не технология» без русского названия _validate отбрасывает (название обязательно), но сам вердикт
@@ -240,9 +247,10 @@ def main() -> int:
     ap.add_argument("--answers", default="answers.jsonl")
     ap.add_argument("--prompts", default="prompts.jsonl")
     ap.add_argument("--no-reembed", action="store_true")
+    ap.add_argument("--only-missing", action="store_true", help="prompts: только записи без ответа в кэше набора")
     a = ap.parse_args()
     if a.cmd == "prompts":
-        prompts(Path(a.out))
+        prompts(Path(a.out), a.only_missing)
     elif a.cmd == "reembed":
         reembed_bundle()
     else:
