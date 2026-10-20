@@ -101,7 +101,8 @@ def embed_items(names: list[str], cards: list[dict]) -> np.ndarray:
 
 
 DOMAINS = (   # область по группе (раздел arXiv, подобласть OpenAlex); порядок важен — первое совпадение
-    ("Биотех и медицина", r"^ax:(q-bio|physics\.(bio|med)-ph)"),
+    ("Биотех и медицина", r"^(ax:(q-bio|physics\.(bio|med)-ph)|oa:(1305|2204|2502))"),
+    ("Энергетика", r"^oa:(2102|2104|2105)"),
     ("Финтех и экономика", r"^(ax:(q-fin|econ)|oa:(1404|2003))"),
     ("Инженерия и электроника", r"^(oa:(2207|2208|2209)|ax:(eess\.(SP|SY)|cs\.(AR|ET|SY)|physics\.(app-ph|optics|ins-det|acc-ph)))"),
     ("Материалы и физика", r"^(ax:(cond-mat|quant-ph|physics|hep|astro|nucl|gr-qc|atom-ph|nlin|chao-dyn|math-ph)|oa:3107)"),

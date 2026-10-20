@@ -77,7 +77,7 @@ def event_time(reg: Path, eid: np.ndarray, cutoff: int, last: int) -> np.ndarray
 def load_slice(reg: Path, cutoff: int, last: int) -> tuple[pd.DataFrame, list[str]]:
     r = features(reg, cutoff, with_axes=True)
     feats = [f for f in FEATS + AXES if f in r.columns]
-    r["T"] = event_time(reg, r.eid.astype(int).values, cutoff, last)
+    r["t_event"] = event_time(reg, r.eid.astype(int).values, cutoff, last)
     r["H"] = last - cutoff
     return r, feats
 
@@ -87,10 +87,10 @@ def expand(r: pd.DataFrame, feats: list[str]) -> tuple[np.ndarray, np.ndarray]:
     X, y = [], []
     base = r[feats].astype(float).values
     for t in range(1, int(r.H.max()) + 1):
-        at_risk = ((r.T == 0) & (r.H >= t)) | (r.T >= t)
+        at_risk = ((r.t_event == 0) & (r.H >= t)) | (r.t_event >= t)
         m = at_risk.values
         X.append(np.column_stack([base[m], np.full(m.sum(), t)]))
-        y.append((r.T.values[m] == t).astype(int))
+        y.append((r.t_event.values[m] == t).astype(int))
     return np.vstack(X), np.concatenate(y)
 
 
@@ -128,6 +128,33 @@ def grade(p: np.ndarray, edges: np.ndarray) -> np.ndarray:
     return np.array(GRADES)[np.minimum(idx, len(GRADES) - 1)]
 
 
+MIN_DOMAIN = 300
+
+
+def domains(reg: Path, r: pd.DataFrame) -> np.ndarray:
+    """Область термина (mini_bundle.domain_of): шкала строится внутри области. Правило взлёта считает долю от всего
+    arXiv, где взрывной рост даёт информатика: на проверке частота взлёта у ИИ ~2,6 %, у физики и инженерии ~0,3–0,4 %,
+    и общая шкала повторяла бы отрасль, а не шансы термина среди соседей."""
+    from .mini_bundle import domain_of
+    return domain_of(reg, r).values
+
+
+def domain_edges(p: np.ndarray, dom: np.ndarray) -> dict:
+    out = {"*": grade_edges(p)}
+    for d in np.unique(dom):
+        if (dom == d).sum() >= MIN_DOMAIN:
+            out[d] = grade_edges(p[dom == d])
+    return out
+
+
+def domain_grade(p: np.ndarray, dom: np.ndarray, edges: dict) -> np.ndarray:
+    g = np.empty(len(p), dtype=object)
+    for d in np.unique(dom):
+        m = dom == d
+        g[m] = grade(p[m], edges.get(d, edges["*"]))
+    return g
+
+
 def auc(y, p) -> float:
     from sklearn.metrics import roc_auc_score
     return float(roc_auc_score(y, p)) if 0 < y.sum() < len(y) else float("nan")
@@ -146,20 +173,34 @@ def validate(a) -> dict:
     res = {"train": f"{tr_cut} (события до {te_cut})", "test": f"{te_cut} (события до {LAST})",
            "n_train": len(train[0]), "n_test": len(test), "edges_p3": [round(float(e), 4) for e in edges], "horizons": []}
     for k in range(1, H + 1):
-        yk = ((test["T"] > 0) & (test["T"] <= k)).values.astype(int)
+        yk = ((test["t_event"] > 0) & (test["t_event"] <= k)).values.astype(int)
         res["horizons"].append({"k": k, "base_rate": round(float(yk.mean()), 4), "mean_pred": round(float(P[:, k - 1].mean()), 4),
                                 "auc": round(auc(yk, P[:, k - 1]), 3)})
-    y5 = ((test["T"] > 0) & (test["T"] <= H)).values.astype(int)
+    y5 = ((test["t_event"] > 0) & (test["t_event"] <= H)).values.astype(int)
     dec = pd.qcut(P[:, H - 1], 10, labels=False, duplicates="drop")
     res["calibration"] = [{"decile": int(d), "pred": round(float(P[dec == d, H - 1].mean()), 4),
                            "obs": round(float(y5[dec == d].mean()), 4), "n": int((dec == d).sum())} for d in np.unique(dec)]
     g = grade(P[:, HORIZON_GRADE - 1], edges)
-    y3 = ((test["T"] > 0) & (test["T"] <= HORIZON_GRADE)).values.astype(int)
+    y3 = ((test["t_event"] > 0) & (test["t_event"] <= HORIZON_GRADE)).values.astype(int)
     res["grades"] = [{"grade": G, "n": int((g == G).sum()), "pred_p3": round(float(P[g == G, HORIZON_GRADE - 1].mean()), 4)
                       if (g == G).any() else None, "obs_3y": round(float(y3[g == G].mean()), 4) if (g == G).any() else None,
                       f"obs_{H}y": round(float(y5[g == G].mean()), 4) if (g == G).any() else None} for G in GRADES]
+    # шкала внутри области: границы — квантили обучающего среза в той же области; подъём против средней по области
+    dom_tr, dom_te = domains(tr_reg, train[0]), domains(te_reg, test)
+    dedges = domain_edges(P_tr[:, HORIZON_GRADE - 1], dom_tr)
+    gd = domain_grade(P[:, HORIZON_GRADE - 1], dom_te, dedges)
+    base_d = pd.Series(y5).groupby(dom_te).mean()
+    exp = base_d.reindex(dom_te).values
+    res["domain_base"] = {d: round(float(v), 4) for d, v in base_d.items()}
+    res["domain_auc"] = {d: round(auc(y5[dom_te == d], P[dom_te == d, H - 1]), 3) for d in np.unique(dom_te)}
+    res["domain_grades"] = [{"grade": G, "n": int((gd == G).sum()), "events": int(y5[gd == G].sum()),
+                             "expected": round(float(exp[gd == G].sum()), 1),
+                             "lift": round(float(y5[gd == G].sum() / max(exp[gd == G].sum(), 1e-9)), 2)} for G in GRADES]
+    res["domain_cells"] = [{"domain": d, "grade": G, "n": int(((dom_te == d) & (gd == G)).sum()),
+                            "obs": round(float(y5[(dom_te == d) & (gd == G)].mean()), 4) if ((dom_te == d) & (gd == G)).any() else None}
+                           for d in np.unique(dom_te) for G in GRADES]
     test = test.assign(p1=P[:, 0], p3=P[:, min(2, H - 1)], pH=P[:, H - 1], grade=g)
-    res["top_test"] = test.sort_values("p3", ascending=False).head(25)[["phrase", "grade", "p3", "pH", "T"]] \
+    res["top_test"] = test.sort_values("p3", ascending=False).head(25)[["phrase", "grade", "p3", "pH", "t_event"]] \
         .round(3).to_dict("records")
     return res
 
@@ -168,12 +209,15 @@ def apply(a) -> None:
     from .corpus import REGISTRY
     train = [load_slice(reg, cut, LAST) for reg, cut in _slices(a.train)]
     m, feats = fit(train)
-    edges = grade_edges(cumulative(m, train[0][0], feats, HORIZON_GRADE)[:, HORIZON_GRADE - 1])
+    reg0 = _slices(a.train)[0][0]
+    dedges = domain_edges(cumulative(m, train[0][0], feats, HORIZON_GRADE)[:, HORIZON_GRADE - 1], domains(reg0, train[0][0]))
     now = features(REGISTRY, int(os.environ.get("REGISTRY_CUTOFF", "2026")), with_axes=True)
     P = cumulative(m, now, feats, 5)
+    dom_now = domains(REGISTRY, now)
     cut = int(os.environ.get("REGISTRY_CUTOFF", "2026"))
     half = (P >= 0.5).argmax(axis=1) + 1
-    rt = pd.DataFrame({"key": now.key, "rating": grade(P[:, HORIZON_GRADE - 1], edges), "p_takeoff_1y": P[:, 0],
+    rt = pd.DataFrame({"key": now.key, "rating": domain_grade(P[:, HORIZON_GRADE - 1], dom_now, dedges),
+                       "rating_domain": dom_now, "p_takeoff_1y": P[:, 0],
                        "p_takeoff_3y": P[:, 2], "p_takeoff_5y": P[:, 4],
                        "takeoff_year": np.where(P[:, 4] >= 0.5, cut + half, 0)})
     rt.to_parquet(REGISTRY / "rating.parquet", index=False)
@@ -185,17 +229,30 @@ def apply(a) -> None:
         ax.to_parquet(b / "axes.parquet")
         with gzip.open(b / "cards.json.gz", "rt", encoding="utf-8") as fh:
             cards = json.load(fh)
+        hist = json.loads(Path(a.hist).read_text(encoding="utf-8"))      # проверка вне времени (validate --out)
+        H = max(h["k"] for h in hist["horizons"])
+        lifts = {g["grade"]: g["lift"] for g in hist["domain_grades"]}
         idx = rt.set_index("key")
         n = 0
         for k, c in cards.items():
             if k not in idx.index:
                 continue
             x = idx.loc[k]
-            c["rating"] = {"grade": x.rating, "p1": round(float(x.p_takeoff_1y), 3), "p3": round(float(x.p_takeoff_3y), 3),
-                           "p5": round(float(x.p_takeoff_5y), 3), "year": int(x.takeoff_year) or None}
-            yr = f", ожидаемо к {int(x.takeoff_year)}" if x.takeoff_year else ""
-            fact = (f"Рейтинг {x.rating}: вероятность взлёта за 3 года {x.p_takeoff_3y:.0%}, за 5 лет {x.p_takeoff_5y:.0%}{yr} "
-                    f"(модель времени до взлёта, проверена на срезе 2021)")
+            lf = lifts.get(x.rating)
+            c["rating"] = {"grade": x.rating, "domain": x.rating_domain, "lift": lf, "horizon": H,
+                           "p_model_3y": round(float(x.p_takeoff_3y), 3)}
+            # в карточке — во сколько раз чаще среднего по своей области взлетали технологии с таким рейтингом на
+            # проверке по прошлому (как уровень дефолтов по рейтингу), а не модельный процент: модель ранжирует хорошо,
+            # но абсолютные вероятности в верхних децилях завышает примерно вдвое
+            if lf is None:
+                fact = f"Рейтинг {x.rating} в области «{x.rating_domain}»"
+            elif lf >= 1.5:
+                fact = (f"Рейтинг {x.rating} в области «{x.rating_domain}»: на проверке по прошлому технологии с таким рейтингом "
+                        f"взлетали за {H} лет в {lf:.1f} раза чаще среднего по своей области").replace(".", ",")
+            else:
+                fact = (f"Рейтинг {x.rating} в области «{x.rating_domain}»: на проверке по прошлому технологии с таким рейтингом "
+                        f"взлетали за {H} лет " + (f"в {1 / max(lf, 1e-3):.0f} раз реже среднего по своей области" if lf < 0.5
+                                                   else "примерно как в среднем по своей области"))
             c["facts"] = [f for f in (c.get("facts") or []) if not f.startswith("Рейтинг ")] + [fact]
             n += 1
         with gzip.open(b / "cards.json.gz", "wt", encoding="utf-8") as fh:
@@ -210,6 +267,7 @@ def main() -> int:
     ap.add_argument("--train", required=True)
     ap.add_argument("--test", default="")
     ap.add_argument("--bundle", default="")
+    ap.add_argument("--hist", default="", help="результат validate --out: исторический уровень взлёта по рейтингам")
     ap.add_argument("--out", default="")
     a = ap.parse_args()
     if a.cmd == "validate":
