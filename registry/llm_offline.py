@@ -120,6 +120,36 @@ def foreign_phrase(phrase: str) -> bool:
     return len(hits) >= 2 or any(x in _FOREIGN_STRONG for x in w)
 
 
+# обрывок заголовка со сказуемым: «doping unlocks», «topology governs», «regulation stabilizes» — в химических и
+# материаловедческих заголовках часто пишут «X stabilizes Y». Существительные на -s («triggers», «transforms»,
+# «controls», «drives» в смысле накопителей редки в наборе) в список не входят, кроме drives.
+_VERB = re.compile(r"^(stabiliz|regulat|enabl|boost|unlock|reveal|driv|govern|promot|improv|enhanc|achiev|induc|suppress|"
+                   r"mediat|facilitat|accelerat|dictat|determin|modulat|activat|inhibit|empower|redefin|outperform|"
+                   r"decoupl|steer)(es|s)$")
+
+
+def verb_fragment(phrase: str) -> bool:
+    return any(_VERB.match(x) for x in phrase.replace("_", " ").split())
+
+
+def prune(bundle: Path | None = None) -> None:
+    """Убрать из набора неанглийские фразы и обрывки со сказуемым (signals, emb, cards, axes — согласованно)."""
+    global BUNDLE
+    if bundle:
+        BUNDLE = bundle
+    sig, cards = _load()
+    drop = {k for k, p in zip(sig.key, sig.phrase) if foreign_phrase(p) or verb_fragment(p)}
+    keep = [i for i, k in enumerate(sig.key) if k not in drop]
+    E = np.load(BUNDLE / "emb.npy")
+    sig.iloc[keep].reset_index(drop=True).to_parquet(BUNDLE / "signals.parquet")
+    np.save(BUNDLE / "emb.npy", E[keep])
+    with gzip.open(BUNDLE / "cards.json.gz", "wt", encoding="utf-8") as fh:
+        json.dump({k: c for k, c in cards.items() if k not in drop}, fh, ensure_ascii=False)
+    ax = pd.read_parquet(BUNDLE / "axes.parquet")
+    ax[~ax.key.isin(drop)].reset_index(drop=True).to_parquet(BUNDLE / "axes.parquet")
+    print(f"убрано {len(drop)}: осталось {len(keep)}")
+
+
 def clean_name(s: str) -> str:
     """Русское название без иероглифов и склеек латиницы с кириллицей («КаузальныйStudent»); иначе пусто."""
     s = (s or "").strip()
@@ -217,7 +247,7 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool, ref: Path |
     junk_kind = {"рубрика", "задача"}
     drop = {k for k, v in assess.items() if not v["keep"] and (axes.get(k) or {}).get("kind", "") in junk_kind}
     drop |= {k for k, x in axes.items() if x.get("kind") == "рубрика"}
-    drop |= {k for k, p in zip(sig.key, sig.phrase) if foreign_phrase(p)}
+    drop |= {k for k, p in zip(sig.key, sig.phrase) if foreign_phrase(p) or verb_fragment(p)}
     general = {k for k, v in assess.items() if not v["keep"]} - drop
     keep_idx = [i for i, k in enumerate(sig.key) if k not in drop]
     ax_p = BUNDLE / "axes.parquet"
@@ -331,7 +361,7 @@ def names_import(answers: Path, prompts_file: Path) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["prompts", "import", "reembed", "names", "names-import"])
+    ap.add_argument("cmd", choices=["prompts", "import", "reembed", "names", "names-import", "prune"])
     ap.add_argument("--out", default="prompts.jsonl")
     ap.add_argument("--answers", default="answers.jsonl")
     ap.add_argument("--prompts", default="prompts.jsonl")
@@ -343,6 +373,8 @@ def main() -> int:
         prompts(Path(a.out), a.only_missing)
     elif a.cmd == "reembed":
         reembed_bundle()
+    elif a.cmd == "prune":
+        prune()
     elif a.cmd == "names":
         names_prompts(Path(a.out))
     elif a.cmd == "names-import":
