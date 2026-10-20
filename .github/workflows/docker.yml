@@ -19,7 +19,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -75,6 +75,21 @@ jobs:
           root=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8501/)
           echo "ui root: $root"
           test "$root" = "200"
+
+      - name: Сборка и запуск финального registry v6
+        run: |
+          docker compose up -d --build registry
+          for i in $(seq 1 90); do
+            code=$(curl -s -o /tmp/registry_health.json -w '%{http_code}' http://localhost:8010/api/registry/health || echo 000)
+            echo "registry health: $code"
+            [ "$code" = "200" ] && break
+            sleep 5
+          done
+          test "$code" = "200" || { docker compose logs registry; exit 1; }
+          cat /tmp/registry_health.json; echo
+
+      - name: Сквозной поиск по финальной базе v6
+        run: python scripts/smoke_registry_release.py http://127.0.0.1:8010
 
       - name: Логи при отказе
         if: failure()
