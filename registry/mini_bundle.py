@@ -81,6 +81,25 @@ def sources_for(keys_by_phrase: dict[str, str], workers: int = 6) -> dict[str, l
     return acc
 
 
+EMB_TITLES, EMB_SEQ = 3, 128
+
+
+def item_text(name: str, card: dict) -> str:
+    """Текст для вектора записи: название и заголовки первых источников. Короткое английское название само по себе
+    неоднозначно для модели векторов («multilayer» рядом с «multimodal»), заголовки задают предмет."""
+    ts = [(d.get("title") or "").strip()[:160] for d in (card.get("sources") or []) if d.get("title")][:EMB_TITLES]
+    return ". ".join([name] + ts)
+
+
+def embed_items(names: list[str], cards: list[dict]) -> np.ndarray:
+    from sentence_transformers import SentenceTransformer
+    m = SentenceTransformer("deepvk/USER-bge-m3", device="cpu")
+    m.max_seq_length = EMB_SEQ
+    E = m.encode([item_text(n, c) for n, c in zip(names, cards)], batch_size=32, normalize_embeddings=True,
+                 convert_to_numpy=True)
+    return E.astype(np.float16)
+
+
 DOMAINS = (   # область по группе (раздел arXiv, подобласть OpenAlex); порядок важен — первое совпадение
     ("Биотех и медицина", r"^ax:(q-bio|physics\.(bio|med)-ph)"),
     ("Финтех и экономика", r"^(ax:(q-fin|econ)|oa:(1404|2003))"),
@@ -162,9 +181,9 @@ def main() -> int:
     tot_y = np.array([tot.get(f"openalex|{y}", 0) + tot.get(f"arxiv|{y}", 0) for y in years])
     share_y = docs_y / np.maximum(tot_y, 1) * 100
     recent = docs_y[:, [years.index(y) for y in range(CUTOFF - 2, CUTOFF + 1)]].sum(axis=1)
-    base_ = docs_y[:, [years.index(y) for y in range(CUTOFF - 7, CUTOFF - 3)]].sum(axis=1)
+    base_ = docs_y[:, [years.index(y) for y in range(max(CUTOFF - 7, YEARS[0]), CUTOFF - 3)]].sum(axis=1)
     growth = (share_y[:, [years.index(y) for y in range(CUTOFF - 2, CUTOFF + 1)]].mean(axis=1) + 1e-6) / \
-             (share_y[:, [years.index(y) for y in range(CUTOFF - 7, CUTOFF - 3)]].mean(axis=1) + 1e-6)
+             (share_y[:, [years.index(y) for y in range(max(CUTOFF - 7, YEARS[0]), CUTOFF - 3)]].mean(axis=1) + 1e-6)
 
     # SHAP экспертной модели — вклад признаков в балл (как в полном наборе)
     import joblib
@@ -220,11 +239,7 @@ def main() -> int:
         sig["share:" + ar] = 0.0
     sig.to_parquet(out / "signals.parquet")
 
-    from sentence_transformers import SentenceTransformer
-    m = SentenceTransformer("deepvk/USER-bge-m3", device="cpu")
-    m.max_seq_length = 64
-    E = m.encode([cards[k]["name_ru"] for k in b.key], batch_size=64, normalize_embeddings=True, convert_to_numpy=True)
-    np.save(out / "emb.npy", E.astype(np.float16))
+    np.save(out / "emb.npy", embed_items([cards[k]["name_ru"] for k in b.key], [cards[k] for k in b.key]))
     with gzip.open(out / "cards.json.gz", "wt", encoding="utf-8") as fh:
         json.dump(cards, fh, ensure_ascii=False)
 

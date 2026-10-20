@@ -43,7 +43,7 @@ from .corpus import CORPUS, CUTOFF, SOURCES, YEARS, REGISTRY
 REG = REGISTRY
 # окна считаются от года среза (машина времени): при срезе 2026 — R 2024–2026, B 2019–2022
 R = tuple(range(CUTOFF - 2, CUTOFF + 1))
-B = tuple(range(CUTOFF - 7, CUTOFF - 3))
+B = tuple(y for y in range(CUTOFF - 7, CUTOFF - 3) if y >= YEARS[0])   # срез 2017: корпус с 2012, база 2012–2013
 E = tuple(range(2012, CUTOFF - 7))
 MIN_VOLUME = 5
 import os

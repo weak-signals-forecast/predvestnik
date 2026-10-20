@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "file": "time_machine_2017_nlp.json",
+   "cutoff": 2017,
+   "topic": "nlp",
+   "title": "Обработка естественного языка и языковые модели"
+  },
+  {
    "file": "time_machine_2021_nlp.json",
    "cutoff": 2021,
    "topic": "nlp",

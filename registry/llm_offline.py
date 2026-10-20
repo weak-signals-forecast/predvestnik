@@ -128,6 +128,23 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
             if not v["keep"]:
                 c["reject_reason"] = v["reject_reason"]
         named += 1
+    # не технология по проверке (обрывок, бренд, общая фраза) или рубрика по осям — из набора убираются:
+    # это ровно то, ради чего проверка задумана (llm_assess: «отсев не-технологий»)
+    drop = {k for k, v in assess.items() if not v["keep"]} | {k for k, x in axes.items() if x.get("kind") == "рубрика"}
+    keep_idx = [i for i, k in enumerate(sig.key) if k not in drop]
+    if drop:
+        E_old = np.load(BUNDLE / "emb.npy")
+        sig = sig.iloc[keep_idx].reset_index(drop=True)
+        np.save(BUNDLE / "emb.npy", E_old[keep_idx])
+        cards = {k: c for k, c in cards.items() if k not in drop}
+        ax_p = BUNDLE / "axes.parquet"
+        if ax_p.exists():
+            ap_ = pd.read_parquet(ax_p)
+            ap_[~ap_.key.isin(drop)].reset_index(drop=True).to_parquet(ax_p)
+    for x in axes.values():                          # стандарт по ответу модели — в блок «исключено» (rank.is_standard)
+        if x.get("kind") == "стандарт или протокол":
+            sig.loc[sig.key == x["key"], "kind"] = "протокол"
+    print(f"убрано из набора: {len(drop)} (не технология или рубрика)")
     sig.to_parquet(BUNDLE / "signals.parquet")
     with gzip.open(BUNDLE / "cards.json.gz", "wt", encoding="utf-8") as fh:
         json.dump(cards, fh, ensure_ascii=False)
@@ -144,17 +161,23 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
           f"оси {len(axes)} ({len(axes) / n:.0%}), с проверенной цитатой {sum(x['quote_ok'] for x in axes.values())}; "
           f"отброшено ответов: проверка {bad['as']}, оси {bad['ax']}")
     if reembed:
-        from sentence_transformers import SentenceTransformer
-        m = SentenceTransformer("deepvk/USER-bge-m3", device="cpu")
-        m.max_seq_length = 64
-        E = m.encode(list(sig.name_ru), batch_size=64, normalize_embeddings=True, convert_to_numpy=True)
-        np.save(BUNDLE / "emb.npy", E.astype(np.float16))
-        print(f"векторы названий пересчитаны: {E.shape}")
+        reembed_bundle(sig, cards)
+
+
+def reembed_bundle(sig: pd.DataFrame | None = None, cards: dict | None = None) -> None:
+    """Векторы записей: русское название (или английская фраза) и заголовки источников (mini_bundle.item_text)."""
+    from .mini_bundle import embed_items
+    if sig is None:
+        sig, cards = _load()
+    names = [f"{n}. {d}" if isinstance(d, str) and d else n for n, d in zip(sig.name_ru, sig.description_ru)]
+    E = embed_items(names, [cards.get(k) or {} for k in sig.key])
+    np.save(BUNDLE / "emb.npy", E)
+    print(f"векторы записей пересчитаны: {E.shape}")
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["prompts", "import"])
+    ap.add_argument("cmd", choices=["prompts", "import", "reembed"])
     ap.add_argument("--out", default="prompts.jsonl")
     ap.add_argument("--answers", default="answers.jsonl")
     ap.add_argument("--prompts", default="prompts.jsonl")
@@ -162,6 +185,8 @@ def main() -> int:
     a = ap.parse_args()
     if a.cmd == "prompts":
         prompts(Path(a.out))
+    elif a.cmd == "reembed":
+        reembed_bundle()
     else:
         import_answers(Path(a.answers), Path(a.prompts), not a.no_reembed)
     return 0
