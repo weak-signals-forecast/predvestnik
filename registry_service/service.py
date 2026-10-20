@@ -48,6 +48,10 @@ SEM_TOP = 5                  # столько ближайших по смысл
 # переранжирование ближайших кросс-энкодером (registry_service/rerank.py); эффект — docs/EVAL.md, scripts/eval_retrieval.py
 RERANK = os.getenv("REGISTRY_RERANK", "0") == "1"
 RERANK_MIN = 0.1             # вероятность соответствия ниже — кандидат не по теме и не идёт в выдачу, пока хватает других
+# абстракт открытой модели не печатается, если в нём чужая письменность (иероглифы, арабица) или склейка
+# кириллицы с латиницей внутри слова («автoregressive»): так модель иногда срывается на другой язык
+_BROKEN = re.compile(r"[\u0600-\u06ff\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]|[а-яё][A-Za-z]|[A-Za-z][а-яё]", re.I)
+
 VOTE_STRONG, NAME_MID, VOTE_MID = 0.35, 0.42, 0.20
 BATCH, MAX_CALLS = 10, 4
 AREA_NAMES = {"Edge": "Edge AI: ИИ на устройствах и периферийные вычисления",
@@ -488,10 +492,12 @@ class Registry:
                   "subsignals": [{"term_en": self.ph[j], "name": self.sig.name_ru[j]} for j in (subs or [])],
                   "confidence": rank.confidence(row, self.calibration)}
             la = self.llm_axes.get(k) or {}
-            if la.get("abstract") and la.get("quote_ok"):      # абстракт печатается только с проверенной цитатой
+            if (la.get("abstract") and la.get("quote_ok")      # абстракт печатается только с проверенной цитатой
+                    and not _BROKEN.search(la["abstract"] + " " + (la.get("mechanism") or ""))):
                 v2["abstract"] = {"text": la["abstract"], "mechanism": la.get("mechanism"), "quote": la.get("quote"),
                                   "first_work": la.get("first_work"), "parent_llm": la.get("parent"),
-                                  "kind_llm": la.get("kind"), "why_not_mature": la.get("why_not_mature") or [],
+                                  "kind_llm": la.get("kind"),
+                                  "why_not_mature": [w for w in la.get("why_not_mature") or [] if not _BROKEN.search(w)],
                                   "generated": True, "model": la.get("model")}
         explain = c.get("explain") or []
         num = lambda v: ("+" if v >= 0 else "−") + f"{abs(v):.2f}".replace(".", ",")
