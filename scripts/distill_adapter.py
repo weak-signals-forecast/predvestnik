@@ -1,7 +1,7 @@
 """Дистилляция кросс-энкодера в «адаптер запроса»: онлайн остаётся векторный поиск, но порядок — как у кросс-энкодера.
 
     REGISTRY_BUNDLE=artifacts/registry_v5d python scripts/distill_adapter.py inputs --out-dir distill/
-    (кластер) for_cesga/server/teacher_scores.py: distill/pairs.jsonl + docs.jsonl -> teacher.npz
+    (GPU) gpu/teacher_scores.py: distill/pairs.jsonl + docs.jsonl -> teacher.npz
     REGISTRY_BUNDLE=artifacts/registry_v5d python scripts/distill_adapter.py train --dir distill/ --teacher teacher.npz
 
 Учитель — BAAI/bge-reranker-v2-m3 на полном тексте записи (название, термин, описание, три заголовка), на A100.
