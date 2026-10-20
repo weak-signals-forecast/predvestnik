@@ -515,10 +515,12 @@ class Registry:
             "case": txt("case"),
             "why_signal": sel.get("why"),
             "score": round(strength, 3),
+            "rating": c.get("rating") if isinstance(c.get("rating"), dict) else None,
             "explanation": explanation,
             "sources": [{"name": s.get("source_name"), "title": s.get("title"), "url": s.get("url"),
                          "date": s.get("published"), "type": s.get("source_type"), "language": s.get("language"),
-                         "trust": s.get("trust")} for s in (c.get("sources") or [])],
+                         "trust": s.get("trust")} for s in (c.get("sources") or [])
+                        if str(s.get("url") or "").startswith(("https://", "http://"))],
             "series": c.get("series"), "ladder": c.get("ladder"), "facts": c.get("facts"),
             "shap": {"expert": explain, "history": c.get("explain_history")},
             "actors": c.get("actors"),

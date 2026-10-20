@@ -1,9 +1,9 @@
-// Слабые сигналы: страница выдачи. Данные — data/demo.json (выгрузка реестра), позже — API реестра.
+// Слабые сигналы: страница выдачи. Карточки всегда приходят из живого API реестра.
 // Контракт карточки описан в registry/export_web.py.
 "use strict";
 
 const DATA_URL = "data/demo.json";
-const API_URL = null; // когда появится эндпоинт реестра: "/api/registry/search"
+const API_URL = "/api/registry/search";
 
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -147,18 +147,29 @@ async function liveSearch(q) {
   status.innerHTML = `<div class="note">Ищем по базе слабых сигналов: поиск и выбор YandexGPT занимают до минуты…</div>`;
   let d;
   try {
-    const r = await fetch("api/registry/search", { method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query: q }) });
-    if (!r.ok) throw new Error(String(r.status));
-    d = await r.json();
+    let last;
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      try {
+        const r = await fetch(API_URL, { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: q }) });
+        if (!r.ok) throw new Error(String(r.status));
+        d = await r.json();
+        break;
+      } catch (err) {
+        last = err;
+        if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+      }
+    }
+    if (!d) throw last;
   } catch {
-    localSearch(q);
+    status.innerHTML = `<div class="note">Поиск не загрузился. Повторите запрос.</div>`;
+    list.innerHTML = "";
     return;
   }
   const cards = [...d.signals, ...(d.more || [])].map((s) => ({ unverified: !!s.unverified,
     key: s.term_en, name_ru: s.name, name: s.term_en, facts: s.facts || [], ladder: s.ladder || [], series: s.series,
     explain: (s.shap || {}).expert || [], explain_history: (s.shap || {}).history, actors: s.actors, twin: s.twin,
-    strength: s.score, why: s.why_signal ? { text: s.why_signal, generated: true } : null,
+    strength: s.score, rating: s.rating || null, why: s.why_signal ? { text: s.why_signal, generated: true } : null,
     description: s.description ? { text: s.description, generated: true } : null,
     advantage: s.advantage ? { text: s.advantage, generated: true } : null,
     case: s.case ? { text: s.case, generated: true } : null,
@@ -176,69 +187,6 @@ async function liveSearch(q) {
       `показано: ${d.stats.shown}; источников у показанных: ${fmt(d.stats.sources)}; с уверенностью модели выше 75 %: ${d.stats.confident_75}.</p>` : "") +
     (d.excluded && d.excluded.length ? `<div class="note"><b>Исключено из выдачи:</b> ` +
       d.excluded.map((x) => `${esc(x.name || x.term_en)} — ${esc(x.reason)}`).join("; ") + `.</div>` : "");
-  renderList(list, cards);
-}
-
-// без API (статический стенд): подбираем карточки из выгрузки по словам запроса, без языковой модели
-const STOP_WORDS = (("перспективн технолог нов что как какие какой каких для при без или это его они она оно " +
-  "на подход появляют появля ранние ранн прямо сейчас будущ тренд тренды сигнал сигналы слаб слабые " +
-  "the and for with new technology technologies").split(" "));
-const norm = (s) => String(s ?? "").toLowerCase().replace(/ё/g, "е");
-const words = (s) => (norm(s).match(/[a-zа-я0-9]+/g) || []).filter((w) => w.length >= 3);
-const stem = (w) => (w.length > 6 ? w.slice(0, w.length > 8 ? 6 : 5) : w);
-const STOP = new Set(STOP_WORDS.map(stem));
-// длинные основы — по префиксу («технологии» → «технол» не равно «техно»), короткие — только точно («при» ≠ «приложение»)
-const isStop = (w) => STOP.has(w) || STOP_WORDS.some((s) => s.length >= 5 && w.startsWith(s.slice(0, 5)));
-
-let INDEX = null;
-function buildIndex() {
-  const byKey = new Map();
-  for (const r of Object.values(DATA.results)) {
-    for (const c of r.cards) {
-      const e = byKey.get(c.key) || { card: c, areas: new Set() };
-      if (e.card.unverified && !c.unverified) e.card = c; // проверенная версия карточки важнее
-      e.areas.add(r.area);
-      byKey.set(c.key, e);
-    }
-  }
-  INDEX = [...byKey.values()].map((e) => {
-    const c = e.card, txt = (f) => (c[f] && c[f].text) || "";
-    return { card: c, areas: e.areas, title: words(`${c.name} ${c.name_ru}`).map(stem),
-      body: words(`${txt("description")} ${txt("why")} ${txt("advantage")} ${txt("case")}`).map(stem) };
-  });
-}
-
-function localSearch(q) {
-  if (!INDEX) buildIndex();
-  const status = $("#status"), list = $("#results");
-  const terms = [...new Set(words(q).map(stem).filter((w) => !isStop(w)))];
-  const areas = new Set(DATA.examples.filter((ex) => ex.match.some((m) => norm(q).includes(m))).map((ex) => ex.area));
-  const has = (arr, t) => arr.some((w) => w.startsWith(t) || t.startsWith(w) && w.length >= 4);
-  list.innerHTML = "";
-  const scored = INDEX.map((e) => {
-    let s = 0, hit = 0;
-    for (const t of terms) {
-      const w = has(e.title, t) ? 3 : has(e.body, t) ? 1 : 0;
-      s += w; hit += w > 0;
-    }
-    if ([...e.areas].some((a) => areas.has(a))) s += 2;
-    return { e, s, hit };
-  }).filter((x) => x.s > 0)
-    .sort((a, b) => b.hit - a.hit || b.s * (0.6 + 0.4 * b.e.card.strength) - a.s * (0.6 + 0.4 * a.e.card.strength));
-  const cards = scored.slice(0, 40).map((x) => x.e.card);
-  if (!cards.length) {
-    status.innerHTML = `<div class="note">По запросу «${esc(q)}» ничего не нашлось. ` +
-      `На этом стенде нет живого поиска по всей базе — попробуйте другие слова или один из примеров выше.</div>`;
-    return;
-  }
-  const partial = terms.length > 1 && scored[0].hit < terms.length;
-  status.innerHTML = `<p><b>ТОП-${Math.min(TOP, cards.length)}</b> по запросу «${esc(q)}» — подобраны по словам запроса ` +
-    `и упорядочены по совпадению и силе сигнала` +
-    (cards.length > TOP ? `; ниже — ещё ${cards.length - TOP} по теме` : "") + `.</p>` +
-    (partial ? `<div class="note">Точного совпадения со всеми словами запроса нет — показаны ближайшие ` +
-      `по части слов.</div>` : "") +
-    `<div class="note">Это стенд без живого поиска: YandexGPT здесь запрос не разбирает, а полная база ` +
-    `(${fmt(DATA.registry_size)} технологий) доступна в развёрнутом сервисе.</div>`;
   renderList(list, cards);
 }
 
@@ -269,29 +217,10 @@ function renderList(list, cards) {
   list.appendChild(btn);
 }
 
-function findResult(q) {
-  const norm = (s) => s.toLowerCase().replace(/ё/g, "е").trim();
-  const exact = DATA.results[q] || Object.values(DATA.results).find((r) => norm(r.query) === norm(q));
-  if (exact) return { res: exact, fallback: false };
-  // демо без API: подбираем пример по области, упомянутой в запросе
-  const hit = DATA.examples.find((ex) => ex.match.some((m) => norm(q).includes(m)));
-  return hit ? { res: DATA.results[hit.query], fallback: true } : { res: null, fallback: false };
-}
-
 function search(q) {
   document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c.title === q)));
   history.replaceState(null, "", `?q=${encodeURIComponent(q)}`);
-  const { res, fallback } = findResult(q);
-  const status = $("#status"), list = $("#results");
-  list.innerHTML = "";
-  if (!res || fallback) {
-    liveSearch(q);
-    return;
-  }
-  status.innerHTML =
-    `<p><b>ТОП-${Math.min(TOP, res.cards.length)}</b> по запросу «${esc(res.query)}» — отобраны из ${fmt(res.pool_size)} близких по теме ` +
-    `и упорядочены по силе сигнала` + (res.cards.length > TOP ? `; ниже — ещё ${res.cards.length - TOP} по теме` : "") + `.</p>`;
-  renderList(list, res.cards);
+  liveSearch(q);
 }
 
 function row(c, n) {

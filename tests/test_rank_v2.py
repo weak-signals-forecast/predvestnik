@@ -12,6 +12,8 @@ def test_exclusion_standard_by_rule_and_by_kind():
     assert rank.exclusion({"phrase": "ultra ethernet", "first_year": 2024}) == ("standard", "отраслевой стандарт или протокол")
     assert rank.exclusion({"phrase": "a2a protocol", "first_year": 2025})[0] == "standard"
     assert rank.exclusion({"phrase": "universal chiplet interconnect express", "first_year": 2025})[0] == "standard"
+    assert rank.exclusion({"phrase": "FIPS 203", "first_year": 2024})[0] == "standard"
+    assert rank.exclusion({"phrase": "FIPS203", "first_year": 2024})[0] == "standard"
     # тема вокруг стандарта — не стандарт: голова фразы не имя стандарта
     assert rank.exclusion({"phrase": "mcp security", "first_year": 2025}) is None
     assert rank.exclusion({"phrase": "cxl shared memory", "first_year": 2025}) is None

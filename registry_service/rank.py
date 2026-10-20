@@ -21,7 +21,7 @@ MATURE_YEAR = 2019
 INC_MAX, INC_PENALTY = 3.0, 0.15
 GENERAL_PENALTY = 0.35         # вердикт «G» экспертной проверки базы: общая формулировка, не конкретная технология
 W_EXPERT, W_HISTORY = 0.7, 0.3
-_STD = (r"\b(v?\d+\.\d+|version \d|rfc ?\d+|ieee ?\d|iso ?\d|iec ?\d|3gpp|etsi|w3c|oasis|ietf)\b|"
+_STD = (r"\b(v?\d+\.\d+|version \d|rfc ?\d+|fips ?\d+|ieee ?\d|iso ?\d|iec ?\d|3gpp|etsi|w3c|oasis|ietf)\b|"
         r"\b(protocol|protocols|standard|standards|specification|spec|interconnect express|ethernet|wi-?fi \d|"
         r"bluetooth|usb|hdmi|pcie|pci express|nvlink|cxl|ucie|uefi|onnx|openapi|a2a|mcp)\b")
 STANDARD = re.compile(_STD, re.I)                        # имя стандарта где угодно в названии
