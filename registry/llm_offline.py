@@ -58,6 +58,19 @@ def _axes_items(sig: pd.DataFrame, cards: dict) -> list[dict]:
     return out
 
 
+# Промпт проверки писался под ИИ: «технология» — метод, устройство, архитектура или протокол. Для физики, материалов,
+# энергетики и биотеха так выпадают материалы и эффекты («альтермагнитные сверхпроводники» → «не технология»,
+# тест на CESGA 20.10). Здесь определение расширено; остальной промпт и проверка ответа — как в llm_assess.
+TECH_OLD = "is_technology = true только для конкретного метода, устройства, архитектуры или протокола."
+TECH_NEW = ("is_technology = true для конкретного метода, устройства, архитектуры, протокола, материала или класса "
+            "материалов, физического или биологического эффекта, на котором строится технология.")
+
+
+def assess_prompt() -> str:
+    assert TECH_OLD in llm_assess.PROMPT
+    return llm_assess.PROMPT.replace(TECH_OLD, TECH_NEW)
+
+
 def prompts(out: Path) -> None:
     sig, cards = _load()
     rows = []
@@ -66,7 +79,7 @@ def prompts(out: Path) -> None:
         part = sig.iloc[s:s + B_ASSESS]
         listing = "\n".join(f"{i}. {ph}" + "".join(f"\n   — {t}" for t in _titles(cards.get(k) or {}, llm_assess.TITLES))
                             for i, (k, ph) in enumerate(zip(part.key, part.phrase), 1))
-        rows.append({"id": f"as:{s}", "keys": list(part.key), "prompt": llm_assess.PROMPT.replace("{items}", listing),
+        rows.append({"id": f"as:{s}", "keys": list(part.key), "prompt": assess_prompt().replace("{items}", listing),
                      "max_new": 180 * len(part)})
     items = _axes_items(sig, cards)
     for s in range(0, len(items), B_AXES):
@@ -130,7 +143,11 @@ def import_answers(answers: Path, prompts_file: Path, reembed: bool) -> None:
         named += 1
     # не технология по проверке (обрывок, бренд, общая фраза) или рубрика по осям — из набора убираются:
     # это ровно то, ради чего проверка задумана (llm_assess: «отсев не-технологий»)
-    drop = {k for k, v in assess.items() if not v["keep"]} | {k for k, x in axes.items() if x.get("kind") == "рубрика"}
+    # убирается только при согласии двух независимых ответов: проверка «не технология» И тип по осям не предметный
+    # (нет ответа, «рубрика» или «задача»); рубрика по осям убирается сама по себе
+    junk_kind = {"", "рубрика", "задача"}
+    drop = {k for k, v in assess.items() if not v["keep"] and (axes.get(k) or {}).get("kind", "") in junk_kind}
+    drop |= {k for k, x in axes.items() if x.get("kind") == "рубрика"}
     keep_idx = [i for i, k in enumerate(sig.key) if k not in drop]
     if drop:
         E_old = np.load(BUNDLE / "emb.npy")
