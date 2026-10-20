@@ -254,7 +254,7 @@ def main() -> int:
         if (v3 / name).exists():
             (out / name).write_text((v3 / name).read_text(encoding="utf-8"), encoding="utf-8")
     n_src = sum(1 for k in b.key if src.get(k))
-    print(f"-> {out}: записей {len(sig)}, с источниками {n_src}, векторы {E.shape}")
+    print(f"-> {out}: записей {len(sig)}, с источниками {n_src}, векторы {len(sig)}×1024")
     return 0
 
 
