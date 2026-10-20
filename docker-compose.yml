@@ -59,9 +59,9 @@ services:
         required: false
     environment:
       DATABASE_URL: postgresql+psycopg://wsignals:wsignals@db:5432/wsignals
-      REGISTRY_CACHE: ${REGISTRY_CACHE:-/cache/v5d}   # своя папка кэша на набор: старый кэш v3 не подменяет ответы модели v5
-      # база v5 и порядок v2 по умолчанию; прежняя база: REGISTRY_BUNDLE=/app/artifacts/registry REGISTRY_RANK_V2=0
-      REGISTRY_BUNDLE: ${REGISTRY_BUNDLE:-/app/artifacts/registry_v5d}
+      REGISTRY_CACHE: ${REGISTRY_CACHE:-/cache/v6}   # своя папка кэша на набор: старый кэш v3 не подменяет ответы модели v5
+      # база v6 и порядок v2 по умолчанию; прежняя база: REGISTRY_BUNDLE=/app/artifacts/registry REGISTRY_RANK_V2=0
+      REGISTRY_BUNDLE: ${REGISTRY_BUNDLE:-/app/artifacts/registry_v6}
       REGISTRY_RANK_V2: ${REGISTRY_RANK_V2:-1}
     volumes:
       - registry_cache:/cache
