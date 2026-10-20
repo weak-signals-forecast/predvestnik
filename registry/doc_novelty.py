@@ -66,7 +66,8 @@ def main() -> int:
     b = Path(a.bundle)
     sig = pd.read_parquet(b / "signals.parquet", columns=["key"])
     ap_ = pd.read_parquet(REGISTRY / "all_phrases.parquet", columns=["key", "eid"]).drop_duplicates("key")
-    eid2key = {int(e): k for k, e in zip(ap_.key, ap_.eid) if k in set(sig.key)}
+    keys = set(sig.key)
+    eid2key = {int(e): k for k, e in zip(ap_.key, ap_.eid) if k in keys}
     phrases = [l for l in (REGISTRY / "vocab.txt").read_text(encoding="utf-8").split("\n") if l]
     p2e = np.load(REGISTRY / "phrase2entity.npy")
     _WANT = {ph: eid2key[int(e)] for ph, e in zip(phrases, p2e) if int(e) in eid2key}
