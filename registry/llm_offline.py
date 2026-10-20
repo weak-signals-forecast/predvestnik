@@ -266,9 +266,72 @@ def reembed_bundle(sig: pd.DataFrame | None = None, cards: dict | None = None) -
     print(f"векторы записей пересчитаны: {E.shape}")
 
 
+NAMES_PROMPT = """Переведи на русский названия технологий из научных работ. Название — 2–6 слов, как его написал бы
+русскоязычный специалист; устоявшиеся аббревиатуры и имена собственные оставь латиницей. Опирайся на заголовок работы.
+Верни СТРОГО JSON-массив: [{"i": <номер>, "term": "<английский термин дословно>", "name_ru": "<русское название>"}]
+
+{items}"""
+NAMES_BATCH = 10
+
+
+def names_prompts(out: Path) -> None:
+    """Перевод названий записей, у которых нет русского названия (другой, более крупной моделью)."""
+    sig, cards = _load()
+    todo = sig[~sig.name_ru.str.contains("[а-яА-ЯёЁ]", regex=True)].reset_index(drop=True)
+    rows = []
+    for s in range(0, len(todo), NAMES_BATCH):
+        part = todo.iloc[s:s + NAMES_BATCH]
+        items = "\n".join(f"{j}. {ph.replace('_', ' ')}" + "".join(f"\n   — {t}" for t in _titles(cards.get(k) or {}, 1))
+                          for j, (k, ph) in enumerate(zip(part.key, part.phrase), 1))
+        rows.append({"id": f"n:{s}", "keys": list(part.key), "prompt": NAMES_PROMPT.replace("{items}", items),
+                     "max_new": 40 * len(part)})
+    with out.open("w", encoding="utf-8") as fh:
+        for r in rows:
+            fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+    print(f"записей без русского названия {len(todo)}; промптов {len(rows)} -> {out}")
+
+
+def names_import(answers: Path, prompts_file: Path) -> None:
+    sig, cards = _load()
+    pr = {r["id"]: r for r in (json.loads(l) for l in prompts_file.read_text(encoding="utf-8").splitlines() if l.strip())}
+    ph = dict(zip(sig.key, sig.phrase))
+    pos = {k: i for i, k in enumerate(sig.key)}
+    got = {}
+    for l in answers.read_text(encoding="utf-8").splitlines():
+        a = json.loads(l) if l.strip() else {}
+        p = pr.get(a.get("id"))
+        if not p:
+            continue
+        for x in _json_array(a["raw"]) or []:
+            j = x.get("i") if isinstance(x, dict) else None
+            if not isinstance(j, int) or isinstance(j, bool) or not 1 <= j <= len(p["keys"]):
+                continue
+            k = p["keys"][j - 1]
+            if k in ph and llm_assess._norm(x.get("term")) == llm_assess._norm(ph[k].replace("_", " ")):
+                name = clean_name(str(x.get("name_ru") or ""))
+                if name:
+                    got[k] = name[:80]
+    for k, name in got.items():
+        sig.at[pos[k], "name_ru"] = name
+        if k in cards:
+            cards[k]["name_ru"] = name
+    sig.to_parquet(BUNDLE / "signals.parquet")
+    with gzip.open(BUNDLE / "cards.json.gz", "wt", encoding="utf-8") as fh:
+        json.dump(cards, fh, ensure_ascii=False)
+    idx = [pos[k] for k in got]
+    if idx:
+        from .mini_bundle import embed_items
+        E = np.load(BUNDLE / "emb.npy")
+        names = [f"{sig.name_ru[i]}. {sig.description_ru[i]}" if isinstance(sig.description_ru[i], str) and sig.description_ru[i]
+                 else sig.name_ru[i] for i in idx]
+        E[idx] = embed_items(names, [cards.get(sig.key[i]) or {} for i in idx])
+        np.save(BUNDLE / "emb.npy", E)
+    print(f"русских названий добавлено {len(got)}; векторы пересчитаны у {len(idx)} записей")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["prompts", "import", "reembed"])
+    ap.add_argument("cmd", choices=["prompts", "import", "reembed", "names", "names-import"])
     ap.add_argument("--out", default="prompts.jsonl")
     ap.add_argument("--answers", default="answers.jsonl")
     ap.add_argument("--prompts", default="prompts.jsonl")
@@ -280,6 +343,10 @@ def main() -> int:
         prompts(Path(a.out), a.only_missing)
     elif a.cmd == "reembed":
         reembed_bundle()
+    elif a.cmd == "names":
+        names_prompts(Path(a.out))
+    elif a.cmd == "names-import":
+        names_import(Path(a.answers), Path(a.prompts))
     else:
         import_answers(Path(a.answers), Path(a.prompts), not a.no_reembed, Path(a.ref) if a.ref else None)
     return 0

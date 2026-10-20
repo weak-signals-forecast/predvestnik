@@ -45,6 +45,9 @@ AREA_NAMED, VOTE_NN, MIN_AREA_SHARE = 0.75, 100, 0.30
 RANK_V2 = os.getenv("REGISTRY_RANK_V2", "0") == "1"
 DROP_MATURE = os.getenv("REGISTRY_DROP_MATURE", "1" if RANK_V2 else "0") == "1"
 SEM_TOP = 5                  # столько ближайших по смыслу проходят мимо фильтра области
+# переранжирование ближайших кросс-энкодером (registry_service/rerank.py); эффект — docs/EVAL.md, scripts/eval_retrieval.py
+RERANK = os.getenv("REGISTRY_RERANK", "0") == "1"
+RERANK_MIN = 0.1             # вероятность соответствия ниже — кандидат не по теме и не идёт в выдачу, пока хватает других
 VOTE_STRONG, NAME_MID, VOTE_MID = 0.35, 0.42, 0.20
 BATCH, MAX_CALLS = 10, 4
 AREA_NAMES = {"Edge": "Edge AI: ИИ на устройствах и периферийные вычисления",
@@ -176,6 +179,10 @@ class Registry:
         self.E = np.load(BUNDLE / "emb.npy").astype(np.float32)
         with gzip.open(BUNDLE / "cards.json.gz", "rt", encoding="utf-8") as fh:
             self.cards = json.load(fh)
+        self.reranker = None
+        if RERANK:
+            from .rerank import Reranker
+            self.reranker = Reranker()
         self.axes = None
         ax_p = BUNDLE / "axes.parquet"
         if RANK_V2 and ax_p.exists():
@@ -308,6 +315,13 @@ class Registry:
                         self.select_cache[(query, rec["phrase"])] = rec
                         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
+    def _doc_text(self, i: int) -> str:
+        """Текст записи для кросс-энкодера: русское название, термин, описание и заголовки первых источников."""
+        c = self.cards.get(self.sig.key[i]) or {}
+        desc = self.sig.description_ru[i] if isinstance(self.sig.description_ru[i], str) else ""
+        ts = [(d.get("title") or "") for d in (c.get("sources") or [])][:3]
+        return ". ".join(x for x in [self.sig.name_ru[i], self.ph[i], desc] + ts if x)
+
     def _sources(self, i: int, n: int = 3) -> list[dict]:
         c = self.cards.get(self.sig.key[i]) or {}
         return [{"title": (d.get("title") or "")[:180], "url": d.get("url") or "",
@@ -351,6 +365,13 @@ class Registry:
         else:
             t["relevance"] = t.rel_query
         near = t.nlargest(TOPIC, "relevance")
+        if self.reranker is not None:
+            # близость к запросу — по кросс-энкодеру (пара «запрос — текст записи»), а не по векторам; явно чужие темы
+            # (вероятность < RERANK_MIN) отходят, если по теме остаётся хотя бы KEEP // 4 кандидатов
+            p = 1 / (1 + np.exp(-self.reranker.scores(query, [self._doc_text(i) for i in near.index])))
+            near = near.assign(rel_query=p)
+            if (p >= RERANK_MIN).sum() >= KEEP // 4:
+                near = near[p >= RERANK_MIN]
         near = near.assign(order=self._order(near)).sort_values("order", ascending=False)
         picked: list[int] = []
         for i in near.index:
